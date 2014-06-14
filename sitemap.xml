@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/introduction.html</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/stumpwm/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/emacs/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/sbcl/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/screen/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/git/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/chrome/</loc>
+  </url>
+
+</urlset>

@@ -1,0 +1,53 @@
+#related-pages_navbox {
+    float: right;
+}
+
+
+kbd {
+    padding: 0.1em 0.2em;
+    margin: 0 0.2em;
+    border: thin dashed #AAAAAA;
+    white-space: nowrap;
+}
+
+.built-in {
+    color: green;
+}
+
+.custom {
+    color: orange;
+}
+
+figure {
+    display: table;
+    padding: 0.7em;
+    padding-bottom: 0.5em;
+    border: thin solid lightgray;
+    background: linen;
+}
+
+dd figure {
+    margin-left: 1.5em;
+}
+
+dd p:first-child {
+    margin-top: 0.5em;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.2em;
+}
+
+dl {
+    margin: 1.5em;
+}
+
+dl dt {
+    margin-left: 0em;
+}
+
+dl dd {
+    margin-left: 1em;
+}

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="http://www.hexstreamsoft.com/introduction.html" />
+    <link rel="license" href="http://www.hexstreamsoft.com/UNLICENSE" />
+    <meta name="description" content="Hexstream's window manager status quo." />
+    <title>StumpWM | Tools | Status quo | HexstreamSoft</title>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../tools.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1783234-6', 'hexstreamsoft.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+    <nav id="site-nav">
+
+      <nav class="breadcrumbs-and-extras">
+
+        <nav class="breadcrumbs">
+          <a href="http://www.hexstreamsoft.com/">HexstreamSoft</a>
+          <span class="separator"> » </span>
+          <a href="../../">Status quo</a>
+          <span class="separator"> » </span>
+          <a href="../">Tools</a>
+          <span class="separator"> » </span>
+          <a class="here">StumpWM</a>
+          <div class="float-clear"></div>
+        </nav>
+
+        <nav id="meta-nav">
+          <a href="http://status-quo.hexstreamsoft.com/tools/stumpwm/">
+            <abbr title="Canonical">C</abbr>
+          </a>
+          <a href="https://github.com/Hexstream/status-quo.hexstreamsoft.com/blob/master/tools/stumpwm/index.html">
+            <abbr title="Source">S</abbr>
+          </a>
+        </nav>
+
+        <nav>
+          <a href="../">
+            Tools
+            <span>1/6</span>
+          </a>
+          <a class="sequential-link next" href="../emacs/">→</a>
+        </nav>
+
+        <div class="float-clear"></div>
+
+      </nav>
+
+      <nav class="ancestors-nav">
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1>
+            <a class="here">
+              StumpWM
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="#overview">Overview</a>
+            </li>
+            <li>
+              <a href="#routinely-used-commands">Routinely used</a>
+            </li>
+            <li>
+              <a href="#rarely-used-commands">Rarely used</a>
+            </li>
+            <li>
+              <a href="#almost-never-used-commands">Almost never used</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1><a href="../">Tools</a></h1>
+          <ul>
+            <li>
+              <a class="here">
+                StumpWM
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../emacs/">Emacs</a></li>
+            <li><a href="../sbcl/">SBCL</a></li>
+            <li><a href="../screen/">Screen</a></li>
+            <li><a href="../git/">git</a></li>
+            <li><a href="../chrome/">Chrome</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="status-quo_navbox">
+          <h1>
+            <a href="../../">Status quo</a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../">
+                Tools
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../../specifications/">Specifications</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1>
+            <a href="http://www.hexstreamsoft.com/">HexstreamSoft</a>
+          </h1>
+          <ul>
+            <li><a href="http://www.hexstreamsoft.com/introduction.html">Introduction</a></li>
+            <li><a href="http://www.hexstreamsoft.com/libraries/">Libraries</a></li>
+            <li><a href="http://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="http://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="http://www.hexstreamsoft.com/resources/">Resources</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://worknotes.hexstreamsoft.com/">Worknotes</a></li>
+            <li>
+              <a href="../../">
+                Status quo
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-06-13">13 june 2014</time><span>.</span></p>
+
+    <main>
+
+      <header id="page-header">
+        <h1>StumpWM</h1>
+        <p class="description">Window manager.</p>
+      </header>
+
+      <nav class="navbox" id="related-pages_navbox">
+        <h1>Related pages</h1>
+        <ul>
+          <li><a href="http://www.nongnu.org/stumpwm/">Go to home</a></li>
+          <li><a href="https://github.com/Hexstream/hexstream-stumpwmrc">See my config</a></li>
+        </ul>
+      </nav>
+
+      <p>On this page, I document only the StumpWM commands that I use <em>interactively</em>.</p>
+
+      <p><span class="built-in">Green</span> means built-in, <span class="custom">orange</span> means custom.</p>
+
+      <section id="overview">
+
+        <h1 class="breadcrumbs">
+          <a href="#overview" class="anchor">⚓</a>
+          <a href="#">StumpWM</a>
+          <span class="separator"> » </span>
+          <a class="here">Overview</a>
+        </h1>
+
+        <p>I've been using StumpWM day-in-day-out for years and I can't imagine living without it.</p>
+
+        <p>Despite this, my typical StumpWM usage patterns are <strong>very</strong> unsophisticated.</p>
+
+        <p>Despite <em>that</em>, StumpWM still greatly increases my productivity, or at least it greatly diminishes my frustration with life. This is no small feat!</p>
+
+        <section id="overview_workspaces">
+
+          <h1 class="breadcrumbs">
+            <a href="#overview_workspaces" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#overview">Overview</a>
+            <span class="separator"> » </span>
+            <a class="here">Workspaces</a>
+          </h1>
+
+          <p>Complex juggling of transient workspaces (what StumpWM calls "groups") isn't something that particularly appeals to me in life.</p>
+
+          <p><small>(I figure that if I created and deleted workspaces for specific tasks as I need them, in the general case I would either have to check their numbers before switching to them, or else assign them names so I can switch to them that way. But naming things is hard and I hate stupid names. So this approach <em>seems</em> just plain slow and prohibitively taxing on my precious cognitive resources... Though I haven't actually tried it, so what do I know.)</small></p>
+
+          <p>So I just have 4 permanent workspaces (imported from my pre-StumpWM days) that are set up in <a href="https://github.com/Hexstream/hexstream-stumpwmrc/blob/master/hexstream-stumpwmrc.lisp">my <code>.stumpwmrc</code> file</a>:</p>
+
+          <dl>
+
+            <dt class="custom" id="overview_workspaces_normal">① Normal <a href="#overview_workspaces_normal" class="anchor">⚓</a></dt>
+            <dd>
+              <p>Despite the name I normally don't use this one, calling it "Misc" would be more accurate.</p>
+              <p>One particular recurring use for it is when I'm in the middle of something and the Ubuntu update thing (whatever it's called) pops up, the window doesn't even have time to render and I can immediately shoot it out of the way to this workspace with <kbd>Ctrl-t g m <var>1</var></kbd>, pretty much by muscle memory alone. <small>(I know there's a feature to automatically assign particular types of windows to particular workspaces, but it could be easier to setup and anyway I don't really care.)</small></p>
+            </dd>
+
+            <dt class="custom" id="overview_workspaces_dev">② Dev <a href="#overview_workspaces_dev" class="anchor">⚓</a></dt>
+            <dd>
+              <p>Most of the real action happens in this workspace.</p>
+              <p>What's more, most everything happens in 3 windows:</p>
+
+              <dl>
+
+                <td>① Emacs</td>
+                <dd>
+                  <p>For all programming and other text editing needs.</p>
+                </dd>
+
+                <td>② Browser (Google Chrome)</td>
+                <dd><p>For all web browsing needs. (Except occasional firefox testing.)</p></dd>
+
+                <td>③ Terminal (gnome-terminal)</td>
+                <dd>
+                  <p>Runs <code>screen</code> to accomodate an unlimited number of terminals in the one window, though I usually have no more than 3 or 4 at once.</p>
+                  <p><small>(I frequently find myself opening more terminal windows to do something quick and then forget to close them so I sometimes have up to 3 additional nonsense terminal windows open that I then have to close... Bad habits die hard.)</small></p>
+                </dd>
+
+              </dl>
+
+            </dd>
+
+            <dt class="custom" id="overview_workspaces_games">③ Games <a href="#overview_workspaces_games" class="anchor">⚓</a></dt>
+            <dd>
+              <p>For when I want to waste some time in one way or another.</p>
+              <p>I also use it if I want some background music.<br /><small>(<code>mplayer <var>sound-file</var> -loop 0</code>)</small></p>
+              <p>And sometimes if I just want to do something trivial (but potentially involving more than one window) real quick.</p>
+            </dd>
+
+            <dt class="custom" id="overview_workspaces_chat">④ Chat <a href="#overview_workspaces_chat" class="anchor">⚓</a></dt>
+            <dd>
+              <p>For rare IRC-ing occasions.</p>
+              <p>I also sometimes use it for other purposes if the <code class="custom">Normal</code> workspace is cluttered up with other stuff.</p>
+            </dd>
+
+          </dl>
+
+        </section>
+
+      </section>
+
+      <section id="routinely-used-commands">
+
+        <nav class="section-nav">
+
+          <nav class="navbox">
+            <h1>
+              <a class="here">Routinely used</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li>
+                <a href="#routinely-used-commands_workspaces-and-windows">Workspaces and windows</a>
+              </li>
+              <li>
+                <a href="#routinely-used-commands_apps">Apps</a>
+              </li>
+              <li>
+                <a href="#routinely-used-commands_misc">Misc</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="#rarely-used-commands" class="navbox-next">⬇</a>
+
+        </nav>
+
+        <h1 class="breadcrumbs">
+          <a href="#routinely-used-commands" class="anchor">⚓</a>
+          <a href="#">StumpWM</a>
+          <span class="separator"> » </span>
+          <a class="here">Routinely used commands</a>
+        </h1>
+
+        <section id="routinely-used-commands_workspaces-and-windows">
+
+          <h1 class="breadcrumbs">
+            <a href="#routinely-used-commands_workspaces-and-windows" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#routinely-used-commands">Routinely used commands</a>
+            <span class="separator"> » </span>
+            <a class="here">Workspaces and windows</a>
+          </h1>
+
+          <dl>
+
+            <dt id="vgroups"><kbd class="built-in">Ctrl-t G</kbd> <a href="#vgroups" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">vgroups</code></p>
+              <figure>
+                <img src="vgroups.png" alt="[Example vgroups output]"/>
+                <figcaption>Example vgroups output.<br /><small>(By default, shown on the top right of the screen.)</small></figcaption>
+              </figure>
+              <p>Show all (non-hidden) workspace numbers and names,
+                <br />along with all of their window numbers and titles.</p>
+              <p>The selected workspace and selected window in each workspace are indicated with a star.</p>
+              <p>This shows so much information at once that I never use <kbd class="built-in">ctrl-t w</kbd> (<code class="built-in">windows</code>).</p>
+              <p>(Auto-hides at the next window manager command or after a timeout.
+                <br />I almost always hide it immediately with <kbd class="built-in">Ctrl-t Ctrl-g</kbd>.)</p>
+            </dd>
+
+            <dt id="gselect"><kbd class="built-in">Ctrl-t g 1</kbd>, <kbd class="built-in">Ctrl-t g 2</kbd>, <kbd class="built-in">Ctrl-t g 3</kbd>, <kbd class="built-in">Ctrl-t g 4</kbd> <a href="#gselect" class="anchor">⚓</a></dt>
+            <dt><kbd class="custom">Super-1</kbd>, <kbd class="custom">Super-2</kbd>, <kbd class="custom">Super-3</kbd>, <kbd class="custom">Super-4</kbd></dt>
+            <dd>
+              <p><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code>, <code class="built-in">gselect 4</code>.</p>
+              <p>Switch to one of my <a href="#overview_workspaces">4 workspaces</a>. If I already have both hands on the keyboard, I usually use the built-in bindings. Otherwise, I use my custom one-keystroke bindings.</p>
+            </dd>
+
+            <dt id="other-in-frame"><kbd class="built-in">Ctrl-t Ctrl-t</kbd> <a href="#other-in-frame" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">other-in-frame</code></p>
+              <p>Display the current frame's most recently selected window.</p>
+              <p>This lets one quickly switch back and forth between two windows, which I tend to do way more than splitting the screen into multiple frames.</p>
+            </dd>
+
+            <dt id="select-window-by-number"><kbd class="built-in">Ctrl-t <var>digit</var></kbd> <a href="#select-window-by-number" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">select-window-by-number</code></p>
+              <p>Select the window with the corresponding <var>digit</var> in the current workspace, switching to the frame it's associated with in the process.</p>
+            </dd>
+
+            <dt id="pull-hidden-next"><kbd class="built-in">Ctrl-t n</kbd>, <kbd class="built-in">Ctrl-t p</kbd> <a href="#pull-hidden-next" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">pull-hidden-next</code>, <code class="built-in">pull-hidden-previous</code>.</p>
+              <p>Select the next or previous window in the current frame.</p>
+            </dd>
+
+            <dt id="delete"><kbd class="built-in">Ctrl-t Ctrl-k</kbd> <a href="#delete" class="anchor">⚓</a></dt>
+            <dt><kbd class="custom">Super-a</kbd></dt>
+            <dd>
+              <p><code class="built-in">delete</code></p>
+              <p>Close current window normally.</p>
+            </dd>
+
+            <dt id="kill"><kbd class="built-in">Ctrl-t Ctrl-K</kbd> <a href="#kill" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">kill</code></p>
+              <p>Close current window forcibly, killing the underlying application.</p>
+            </dd>
+
+            <dt id="gmove"><kbd class="built-in">Ctrl-t g m</kbd> <a href="#gmove" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code>gmove</code></p>
+              <p>Move the current window to another workspace.</p>
+              <p>Particularly useful if, for instance, a chat window pops up while I'm in the <code class="custom">Dev</code> workspace because someone messages me. Then I send it to the <code class="custom">Chat</code> workspace with <kbd>Ctrl-t g m 4 RET</kbd>.</p>
+            </dd>
+
+          </dl>
+
+          <footer>
+
+            <p>Non-routinely used workspaces and windows commands:<br /><a href="#fullscreen"><code class="built-in">fullscreen</code></a> (rarely), <a href="#list-window-properties"><code class="built-in">list-window-properties</code></a> (almost never).</p>
+
+          </footer>
+
+        </section>
+
+        <section id="routinely-used-commands_apps">
+
+          <h1 class="breadcrumbs">
+            <a href="#routinely-used-commands_apps" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#routinely-used-commands">Routinely used commands</a>
+            <span class="separator"> » </span>
+            <a class="here">Apps</a>
+          </h1>
+
+          <dl>
+
+            <dt id="emacs"><kbd class="custom">Ctrl-t e e</kbd> (mnemonic: "Execute Emacs") <a href="#emacs" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">emacs</code></p>
+              <p>Start an emacs instance, or switch to it if there's already one.</p>
+              <p>(Switching to it as in going to the correct workspace and selecting its window, pulling it in the current frame first if necessary. I'm not sure what happens if there are multiple emacs windows (emacs frames), I almost always use only one.)</p>
+            </dd>
+
+            <dt id="google-chrome"><kbd class="custom">Ctrl-t e b</kbd> (mnemonic: "Execute Browser") <a href="#google-chrome" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">google-chrome</code></p>
+              <p>Make a new browser window, regardless of if there's already one or not.</p>
+            </dd>
+
+            <dt id="gnome-terminal"><kbd class="custom">Ctrl-t e c</kbd> (mnemonic: "Execute Console") <a href="#gnome-terminal" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">gnome-terminal</code></p>
+              <p>Start a terminal instance, or switch to it if there's already one.</p>
+              <p>(I almost always use a single terminal window, with <code>screen</code>. I sometimes open another terminal window to try something real quick and then immediately close it.)</p>
+            </dd>
+
+            <dt id="nautilus"><kbd class="custom">Super-e</kbd> <a href="#nautilus" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">exec nautilus</code></p>
+              <p>Open file browser in home directory.</p>
+              <p>(Keybinding inspired by Windows' <kbd>Win-E</kbd>.)</p>
+            </dd>
+
+          </dl>
+
+        </section>
+
+        <section id="routinely-used-commands_misc">
+
+          <h1 class="breadcrumbs">
+            <a href="#routinely-used-commands_misc" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#routinely-used-commands">Routinely used commands</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
+          <dl>
+
+            <dt id="send-escape"><kbd class="built-in">Ctrl-t t</kbd> <a href="#send-escape" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code>send-escape</code></p>
+              <p>Send a <kbd>Ctrl-t</kbd> to the current application.</p>
+            </dd>
+
+            <dt id="banish"><kbd class="built-in">Ctrl-t b</kbd> <a href="#banish" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code>banish</code></p>
+              <p>Put the cursor out of the way at the bottom right corner of the screen.</p>
+            </dd>
+
+            <dt id="amixer-master"><kbd class="custom">Ctrl-t x v</kbd> <a href="#amixer-master" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">amixer-master</code></p>
+              <p>Change the global sound level. Asks for a percentage.</p>
+              <p><code>1</code>, <code>2</code>, <code>3</code> and <code>4</code> are shortcuts for 25%, 50%, 75% and 100%, respectively.
+                <br />Enter <code>01</code> for 1%. (Sometimes useful with headphones, surprisingly.)</p>
+            </dd>
+
+            <dt id="open-parens"><kbd class="custom">F32</kbd> <small>(my physical Right Shift is mapped to F32)</small> <a href="#open-parens" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">open-parens</code></p>
+              <p>Send "(" and ")" to the current application, then "left" to put the cursor inside the parentheses.</p>
+              <p>Works with almost all applications, but not <code>gnome-terminal</code>, for some reason.</p>
+            </dd>
+
+            <dt id="open-double-quotes"><kbd class="custom">Ctrl-F32</kbd> <a href="#open-double-quotes" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">open-double-quotes</code></p>
+              <p>Send two double quotes to the current application, then "left" to put the cursor inside them.</p>
+              <p>Works with almost all applications, but not <code>gnome-terminal</code>, for some reason.</p>
+            </dd>
+
+          </dl>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#routinely-used-commands">
+            "<span>Routinely used commands</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+      <section id="rarely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#rarely-used-commands" class="anchor">⚓</a>
+          <a href="#">StumpWM</a>
+          <span class="separator"> » </span>
+          <a class="here">Rarely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt id="fullscreen"><kbd class="custom">Super-f</kbd> <a href="#fullscreen" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">fullscreen</code></p>
+            <p>Make the current window fullscreen.</p>
+          </dd>
+
+          <dt id="super-bookmarks"><kbd class="custom">Super-d</kbd> (qwerty: <kbd>Super-h</kbd>) (mnemonic: "Horaire" ("schedule")) <a href="#super-bookmarks" class="anchor">⚓</a></dt>
+          <dt><kbd class="custom">Super-y</kbd> (qwerty: <kbd>Super-t</kbd>) (mnemonic: "Terrebonne" (my city))</dt>
+          <dd>
+            <p><code class="custom">exec google-chrome http://horairetele.canoe.com</code><br /><code class="custom">exec google-chrome http://www.meteomedia.com/weather/caqc0750</code></p>
+
+            <p>TV schedule, weather. Think of them as "super bookmarks".</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+      <section id="almost-never-used-commands">
+
+        <nav class="section-nav">
+
+          <nav class="navbox">
+            <h1>
+              <a class="here">Almost never used</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li>
+                <a href="#almost-never-used-commands_help">Help</a>
+              </li>
+              <li>
+                <a href="#almost-never-used-commands_frames">Frames</a>
+              </li>
+              <li>
+                <a href="#almost-never-used-commands_misc">Misc</a>
+              </li>
+            </ul>
+          </nav>
+
+        </nav>
+
+        <h1 class="breadcrumbs">
+          <a href="#almost-never-used-commands" class="anchor">⚓</a>
+          <a href="#">StumpWM</a>
+          <span class="separator"> » </span>
+          <a class="here">Almost never used commands</a>
+        </h1>
+
+        <section id="almost-never-used-commands_help">
+
+          <h1 class="breadcrumbs">
+            <a href="#almost-never-used-commands_help" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#almost-never-used-commands">Almost never used commands</a>
+            <span class="separator"> » </span>
+            <a class="here">Help</a>
+          </h1>
+
+          <dl>
+
+            <dt id="where-is"><kbd class="built-in">Ctrl-t h w</kbd> <a href="#where-is" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">where-is</code></p>
+              <p>Show what key sequence(s) will invoke the given <var>command</var>.</p>
+              <p>If the command is not bound to any key sequence, you can still invoke it by name with <kbd class="built-in">Ctrl-t ;</kbd> (<code class="built-in">colon</code>).</p>
+            </dd>
+
+            <dt id="describe-key"><kbd class="built-in">Ctrl-t h k</kbd> <a href="#describe-key" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">describe-key</code></p>
+              <p>Show what command, if any, is bound to the given <var>key sequence</var>.</p>
+            </dd>
+
+            <dt id="describe-command"><kbd class="built-in">Ctrl-t h c</kbd> <a href="#describe-command" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">describe-command</code></p>
+              <p>Show a small description for a command.</p>
+            </dd>
+
+            <dt id="keybindings-summary"><kbd class="built-in">Ctrl-t ?</kbd> <a href="#keybindings-summary" class="anchor">⚓</a></dt>
+            <dd>
+              <p>Show a summary of built-in keybindings.</p>
+              <p><small>(It seems this command is hardcoded because <kbd class="built-in">ctrl-t h k ctrl-t ?</kbd> says <kbd class="built-in">ctrl-t ?</kbd> is not bound.)</small></p>
+            </dd>
+
+            <dt id="partial-key-sequence-help"><kbd class="built-in"><var>partial-key-sequence</var> Ctrl-h</kbd> <a href="#partial-key-sequence-help" class="anchor">⚓</a></dt>
+            <dd>
+              <p>Lists all keybindings reachable from the <var>partial-key-sequence</var>.</p>
+              <p>For instance, <kbd class="built-in">Ctrl-t h Ctrl-h</kbd> usefully lists all interactive help commands!</p>
+              <p>(I almost never use those anymore, but they're of particular importance to newbies or those actively trying to learn more keybindings and commands. Or people documenting their StumpWM status quo!)</p>
+            </dd>
+
+          </dl>
+
+          <p>There's also <kbd class="built-in">Ctrl-t h f</kbd> (<code class="built-in">describe-function</code>) and <kbd class="built-in">Ctrl-t h v</kbd> (<code class="built-in">describe-variable</code>) but I never use them.</p>
+
+        </section>
+
+        <section id="almost-never-used-commands_frames">
+
+          <h1 class="breadcrumbs">
+            <a href="#almost-never-used-commands_frames" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#almost-never-used-commands">Almost never used commands</a>
+            <span class="separator"> » </span>
+            <a class="here">Frames</a>
+          </h1>
+
+          <p>StumpWM's ability to imitate emacs' windowing system is one of its most touted features, and yet I almost never use it. I usually have a single frame (and therefore a single window) visible in each workspace.</p>
+          <p>I think I'm simply not using enough windows at once to make it worthwhile, besides rare special cases where I do need to see 2 or more windows at the same time. Also, with my 2003 vintage hardware I only have one screen at 1024x768, which is a pretty small resolution these days (I guess? I'm so out of the loop for these things), at least in the desktop category.</p>
+
+          <dl>
+
+            <dt id="vsplit"><kbd class="built-in">Ctrl-t s</kbd> <a href="#vsplit" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">vsplit</code></p>
+              <p>Equivalent to emacs' <kbd>C-x 2</kbd> (<code>split-window-vertically</code>).</p>
+              <p>Useful if I need to see 2 windows at the same time.</p>
+            </dd>
+
+            <dt id="hsplit"><kbd class="built-in">Ctrl-t S</kbd> <a href="#hsplit" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">hsplit</code></p>
+              <p>Equivalent to emacs' <kbd>C-x 3</kbd> (<code>split-window-horizontally</code>).</p>
+              <p>Useful in very special situations where I want to do a side-by-side comparison.</p>
+            </dd>
+
+            <dt id="only"><kbd class="built-in">Ctrl-t Q</kbd> <a href="#only" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">only</code></p>
+              <p>Equivalent to emacs' <kbd>C-x 1</kbd> (<code>delete-other-windows</code>).</p>
+              <p>Effectively returns the current workspace to the usual mode of operation, in my case.</p>
+            </dd>
+
+            <dt id="fnext"><kbd class="built-in">Ctrl-t o</kbd> <a href="#fnext" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">fnext</code></p>
+              <p>Equivalent to emacs' <kbd>C-x o</kbd> (<code>other-window</code>).</p>
+            </dd>
+
+            <dt id="balance-frames"><kbd class="built-in">Ctrl-t +</kbd> <a href="#balance-frames" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">balance-frames</code></p>
+              <p>Equivalent to emacs' <kbd>C-x +</kbd> (<code>balance-windows</code>).</p>
+              <p>I almost always invoke this right after splitting twice in the same orientation, to have a 1/3:1/3:1/3 split instead of 1/2:1/4:1/4.</p>
+            </dd>
+
+            <dt id="iresize"><kbd class="built-in">Ctrl-t r</kbd> <a href="#iresize" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">iresize</code></p>
+              <p>Useful in very special situations where I need very specific frame sizes.</p>
+              <p>Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to expand or shrink the frame vertically.</p>
+              <p>Use <kbd>C-f</kbd> and <kbd>C-b</kbd> to expand or shrink the frame horizontally.</p>
+              <p>Use <kbd>RET</kbd> to exit <code>iresize</code> mode.</p>
+            </dd>
+
+          </dl>
+
+        </section>
+
+        <section id="almost-never-used-commands_misc">
+
+          <h1 class="breadcrumbs">
+            <a href="#almost-never-used-commands_misc" class="anchor">⚓</a>
+            <a href="#">StumpWM</a>
+            <span class="separator"> » </span>
+            <a href="#almost-never-used-commands">Almost never used commands</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
+          <dl>
+
+            <dt id="loadrc"><kbd class="custom">Ctrl-t x l</kbd> <a href="#loadrc" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">loadrc</code></p>
+              <p>Reload <code>.stumpwmrc</code> config file.</p>
+              <p>Not quite like having a real <abbr title="Read-Eval-Print-Loop">REPL</abbr>, but usually good enough for simple casual configuration editing and testing.</p>
+            </dd>
+
+            <dt id="lastmsg"><kbd class="built-in">Ctrl-t m</kbd> <a href="#lastmsg" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">lastmsg</code></p>
+              <p>Display the last StumpWM message again, in case you missed it.</p>
+              <p>Use it multiple times in a row to display previous messages.</p>
+            </dd>
+
+            <dt id="lastmsg-no-timeout"><kbd class="custom">Ctrl-t M</kbd> <a href="#lastmsg-no-timeout" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">lastmsg-no-timeout</code></p>
+              <p>Display the last message StumpWM displayed again, "indefinitely" until another message comes up or until explicitly dismissed with <kbd class="built-in">Ctrl-t Ctrl-g</kbd>. Sometimes useful for longer messages.</p>
+            </dd>
+
+            <dt id="list-window-properties"><kbd class="custom">Ctrl-t x p</kbd> <a href="#list-window-properties" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">list-window-properties</code></p>
+              <p>Display the X window properties of the current window. Potentially useful notably to know what arguments to give to <code>run-or-raise</code> or to use the feature allowing to assign particular application windows that pop up to particular workspaces, which I just do manually...</p>
+            </dd>
+
+            <dt id="activate-screensaver"><kbd class="custom">Ctrl-t x b</kbd> (mnemonic: "Blank screen") <a href="#activate-screensaver" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="custom">activate-screensaver</code></p>
+              <p>Activate the screensaver, lock the screen.<br />But usually I just let the screensaver auto-activate with its timeout...</p>
+            </dd>
+
+            <dt id="colon"><kbd class="built-in">Ctrl-t ;</kbd> <a href="#colon" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">colon</code></p>
+              <p>Invoke a StumpWM command by name. Similar to emacs' <kbd>M-x</kbd> (<code>execute-extended-command</code>).</p>
+              <p>Allows one to invoke a command that doesn't (yet) have an assigned keybinding.</p>
+              <p>I use this when I need to invoke <code class="built-in">gfloat-new</code> or <code class="built-in">renumber</code>, which is almost never.</p>
+            </dd>
+
+            <dt id="eval"><kbd class="built-in">Ctrl-t :</kbd> <a href="#eval" class="anchor">⚓</a></dt>
+            <dd>
+              <p><code class="built-in">eval</code></p>
+              <p>Make the underlying Common Lisp implementation evaluate an expression and print any values it returns. Similar to emacs' <kbd>M-:</kbd> (<code>eval-expression</code>).</p>
+              <p>You can think of it as a one-shot <abbr title="Read-Eval-Print-Loop">REPL</abbr>.</p>
+            </dd>
+
+          </dl>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#almost-never-used-commands">
+            "<span>Almost never used commands</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Fstumpwm%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="https://github.com/Hexstream/status-quo.hexstreamsoft.com/blob/master/tools/stumpwm/index.html"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Fstumpwm%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </footer>
+
+  </body>
+</html>
