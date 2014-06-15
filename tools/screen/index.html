@@ -65,6 +65,29 @@
         <div class="level-separator"></div>
 
         <nav class="navbox">
+          <h1>
+            <a class="here">
+              Screen
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="#overview">Overview</a>
+            </li>
+            <li>
+              <a href="#routinely-used-commands">Routinely used</a>
+            </li>
+            <li>
+              <a href="#rarely-used-commands">Rarely used</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
           <h1><a href="../">Tools</a></h1>
           <ul>
             <li><a href="../stumpwm/">StumpWM</a></li>
@@ -129,7 +152,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-05-24">24 may 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-06-14">14 june 2014</time><span>.</span></p>
 
     <main>
 
@@ -142,11 +165,121 @@
         <h1>Related pages</h1>
         <ul>
           <li><a href="http://www.gnu.org/software/screen/">Go to home</a></li>
-          <li><a href="https://github.com/Hexstream/hexstream-screenrc">See my config</a></li>
+          <li><a href="https://github.com/Hexstream/hexstream-screenrc/blob/master/.screenrc">See my config</a></li>
         </ul>
       </nav>
 
-      <p>Stub.</p>
+      <p>On this page, I document only the Screen commands that I use <em>interactively</em>.</p>
+
+      <section id="overview">
+
+        <h1 class="breadcrumbs">
+          <a href="#overview" class="anchor">⚓</a>
+          <a href="#">Screen</a>
+          <span class="separator"> » </span>
+          <a class="here">Overview</a>
+        </h1>
+
+        <p>My use of Screen couldn't be more simplistic. I only use the most basic commands to multiplex any number of virtual terminals in the one parent terminal and that's it.</p>
+
+        <p>Since I don't use the "splitting" features, I like to call Screen "windows" "virtual terminals".</p>
+
+        <p>I have 2 permanent virtual terminals, declared in <a href="https://github.com/Hexstream/hexstream-screenrc/blob/master/.screenrc">my .screenrc</a>:</p>
+
+        <dl>
+
+          <dt>home</dt>
+          <dd>In my home directory. I'm thinking of getting rid of this one because I don't really actually use it...</dd>
+
+          <dt>worknotes</dt>
+          <dd>In my worknotes.hexstreamsoft.com repository.</dd>
+
+        </dl>
+
+        <p>If I want to work on a particular project, I simply <a href="#screen">open a new virtual terminal</a>, <a href="#title">rename it</a> and <code>cd</code> it to the right git repo. I usually work on only 1 or 2 projects at a time in one day.</p>
+
+      </section>
+
+      <section id="routinely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#routinely-used-commands" class="anchor">⚓</a>
+          <a href="#">Screen</a>
+          <span class="separator"> » </span>
+          <a class="here">Routinely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt id="meta"><kbd class="built-in">Ctrl-a a</kbd> <a href="#meta" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">meta</code></p>
+            <p>Send a <kbd>Ctrl-a</kbd> to the current virtual terminal.</p>
+          </dd>
+
+          <dt id="screen"><kbd class="built-in">Ctrl-a c</kbd> <a href="#screen" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">screen</code></p>
+            <p>Make a new virtual terminal and switch to it.</p>
+            <p>I like to use one virtual terminal per project I'm currently working on.</p>
+          </dd>
+
+          <dt id="title"><kbd class="built-in">Ctrl-a A</kbd> <a href="#title" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">title</code></p>
+            <p>Rename the current virtual terminal.</p>
+          </dd>
+
+          <dt id="kill"><kbd class="built-in">Ctrl-a k</kbd> <a href="#kill" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">kill</code></p>
+            <p>Kill the current virtual terminal.</p>
+          </dd>
+
+          <dt id="windows"><kbd class="built-in">Ctrl-a w</kbd> <a href="#windows" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">windows</code></p>
+            <p>
+              Show a list of virtual terminals and their associated digits.
+              <br />The current one is indicated with a star.
+            </p>
+          </dd>
+
+          <dt id="select"><kbd class="built-in">Ctrl-a <var>digit</var></kbd> <a href="#select" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">select <var>digit</var></code></p>
+            <p>Switch to the virtual terminal with the associated <var>digit</var>.</p>
+          </dd>
+
+          <dt id="next"><kbd class="built-in">Ctrl-a n</kbd>, <kbd class="built-in">Ctrl-a p</kbd> <a href="#next" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">next</code>, <code class="built-in">prev</code></p>
+            <p>Switch to the next or previous virtual terminal, according to digit order.</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+      <section id="rarely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#rarely-used-commands" class="anchor">⚓</a>
+          <a href="#">Screen</a>
+          <span class="separator"> » </span>
+          <a class="here">Rarely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt id="colon"><kbd class="built-in">Ctrl-a :</kbd> <a href="#colon" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">colon</code></p>
+            <p>I only ever use this to invoke the <code>quit</code> command, which kills Screen.</p>
+            <p>(The default keybinding is really hard (or impossible?) to type on my configuration and I haven't yet gotten around to assigning a new keybinding for it, but it's typically just once at the end of the day so...)</p>
+          </dd>
+
+        </dl>
 
     </main>
 
