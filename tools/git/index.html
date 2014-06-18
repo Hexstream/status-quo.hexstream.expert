@@ -65,6 +65,32 @@
         <div class="level-separator"></div>
 
         <nav class="navbox">
+          <h1>
+            <a class="here">
+              git
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="#overview">Overview</a>
+            </li>
+            <li>
+              <a href="#routinely-used-commands">Routinely used</a>
+            </li>
+            <li>
+              <a href="#rarely-used-commands">Rarely used</a>
+            </li>
+            <li>
+              <a href="#almost-never-used-commands">Almost never used</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
           <h1><a href="../">Tools</a></h1>
           <ul>
             <li><a href="../stumpwm/">StumpWM</a></li>
@@ -129,7 +155,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-05-24">24 may 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-06-17">17 june 2014</time><span>.</span></p>
 
     <main>
 
@@ -145,7 +171,182 @@
         </ul>
       </nav>
 
-      <p>Stub.</p>
+      <p>Reminder: In my status quo I document the commands from the perspective of how I use them, which necessarily (and by design) involves (over)simplifications.<br />Please consult the official documentation for full details.</p>
+
+      <section id="overview">
+
+        <h1 class="breadcrumbs">
+          <a href="#overview" class="anchor">⚓</a>
+          <a href="#">git</a>
+          <span class="separator"> » </span>
+          <a class="here">Overview</a>
+        </h1>
+
+        <p>Once again, I'm making quite unsophisticated use of a sophisticated tool.</p>
+
+        <p>My workflows are really simple, owing in large part to the fact that I'm mostly a "lone-wolf" open-source programmer: I pretty much never work on third-party projects (<span lang="fr">j'ai d'autres chats à fouetter!</span>), and I'm typically the only contributor to my projects (which is fine by me!), besides occasional outside feedback (which I could use more of!).</p>
+
+        <p>And I rarely use branches other than the default, <code>master</code>. Juggling the state of 50+ projects is already hard enough without also having multiple branches per project... Besides, even google does everything on the master branch, I hear...</p>
+
+        <p>And since I push regularly, usually just after each commit, even if it's incomplete work, and rebasing publicly shared history is a <em>Very Bad Thing</em>, I never rebase either. My days of hiding my work until everything is "perfect" are over...</p>
+
+        <p>So, no branches, no contributors, no patches, no rebasing, no complexity, no nothing. Simple. Excruciatingly simple.</p>
+
+      </section>
+
+      <section id="routinely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#routinely-used-commands" class="anchor">⚓</a>
+          <a href="#">git</a>
+          <span class="separator"> » </span>
+          <a class="here">Routinely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt><code>git status -s</code></dt>
+          <dd>
+            <p>Show the state of the working tree and staging area relative to the HEAD.</p>
+            <p>I never ever use <code>git status</code>, I just find it harder to read.</p>
+            <p>I haven't yet gotten around to making <code>git status</code> behave like <code>git status -s</code>. I know there's a simple way to configure that globally...</p>
+          </dd>
+
+          <dt><code>git diff [<var>path</var>]</code></dt>
+          <dt><code>git diff --cached [<var>path</var>]</code></dt>
+          <dd>
+            <p>Show the diff between the working tree and the staging area, or between the staging area and the HEAD, respectively.</p>
+            <p>If a <var>path</var> is given, show the diff only for files matching it.</p>
+          </dd>
+
+          <dt><code>git add <var>paths…</var></code></dt>
+          <dd>
+            <p>Add the given files and directories in the working directory to the staging area.</p>
+            <p>
+              Use <code>git add .</code> to add all changes to the staging area.
+              <br /> This also adds files which were previously untracked by git.
+              <br /> (As long as they haven't been <code>.gitignore</code>d.)
+            </p>
+            <p>I usually instead use the <code>-a</code> option of <code>git commit</code> to effectively skip the staging area, but <code>git add</code> is sometimes useful to prepare specific changes for the next commit, and is also required to add new (as opposed to merely modified) files to the next commit.</p>
+          </dd>
+
+          <dt><code>git commit</code></dt>
+          <dd>
+            <p>I usually use the <code>-a</code> option instead of <code>git add</code>ing files individually.</p>
+            <p>I almost always use the <code>-m</code> option to specify the commit message on the command line, since it's usually a one-liner in my case. I always use single-quote escapes to make sure all characters are automatically escaped. For example:</p>
+            <p><code>git commit -am 'This is my commit message. It'\''s really cool!'</code></p>
+            <p>Note the use of <code>'\''</code> to effectively escape the single quote within the single quote escape.</p>
+            <p>By the way, <code>git commit -am "This is my commit message. It's really cool!"</code> wouldn't work as intended (at least with bash) since <code>!</code> is still interpreted as a special command even within double quotes. And forget <code>git commit -am "This is my commit message. It's really cool\!"</code> because it would yield a commit message of "This is my commit message. It's really cool\!". Yeah, shell scripting is screwy like that. So now you see why I ALWAYS use single-quote escapes in this case...</p>
+            <p>I also sometimes use <code>git commit --amend</code>, but only if I screwed up the commit message, else I just go with a manual <code>git reset HEAD^</code>, etc.</p>
+          </dd>
+
+          <dt><code>git push [<var>remote</var> [<var>branch</var>]]</code></dt>
+          <dd>
+            <p>By default, pushes the current branch (HEAD) to the origin.</p>
+            <p>Use the <code>--tags</code> option to also push all local tags.</p>
+            <p>Sometimes, after pushing to one of my websites, I notice a mistake, and since I haven't yet pushed to github, I, hum, "do a little dance" that I'll document elsewhere at some point, and at the end of it all I do <code>git push -f live</code>.</p>
+          </dd>
+
+          <dt><code>git log [paths…]</code></dt>
+          <dd>
+            <p>Show past commits on the current branch. If <var>paths</var> are specified, show only the commits that affected those paths.</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+      <section id="rarely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#rarely-used-commands" class="anchor">⚓</a>
+          <a href="#">git</a>
+          <span class="separator"> » </span>
+          <a class="here">Rarely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt><code>git rm <var>files…</var></code></dt>
+          <dt><code>git rm -r <var>directories…</var></code></dt>
+          <dd>
+            <p>Deletes a file or directory (respectively) from the working tree, and "adds its removal" to the staging area.</p>
+          </dd>
+
+          <dt><code>git checkout <var>branch</var></code></dt>
+          <dd>
+            <p>Switch to the given <var>branch</var>. It's best to have a clean working tree when doing so.</p>
+            <p>With the -b option, create the given <var>branch</var> (pointing at the HEAD commit) and immediately switch to it.</p>
+          </dd>
+
+          <dt><code>git checkout [<var>tree-ish</var>] <var>paths…</var></code></dt>
+          <dd>
+            <p>Revert the files matched by the <var>paths</var> to the version of them from the <var>tree-ish</var>, which is typically a commit but (perhaps surprisingly) defaults to the staging area (I would have expected from the HEAD).</p>
+          </dd>
+
+          <dt><code>git reset <var>paths…</var></code></dt>
+          <dd>
+            <p>Pretty much the opposite of <code>git add <var>paths</var></code>.</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+      <section id="almost-never-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#almost-never-used-commands" class="anchor">⚓</a>
+          <a href="#">git</a>
+          <span class="separator"> » </span>
+          <a class="here">Almost never used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt><code>git init</code></dt>
+          <dd>
+            <p>Initializes a git repository, creating a <code>.git</code> subdirectory.</p>
+            <p>I use the <code>--bare</code> option for website deployment repositories, with a <a href="https://github.com/Hexstream/hexstreamsoft.com/blob/master/scripts/git-hooks/post-receive#L1">post-receive hook that automatically checkouts the code on push</a>.</p>
+          </dd>
+
+          <dt><code>git clone <var>url</var></code></dt>
+          <dd>
+            <p>Do I really need to explain what this does?</p>
+            <p>Anyway, I almost never use this since I have a directory of git repos with all my projects already cloned so I can start working on any of them whenever I like... and as I said, I don't really mingle with third-party projects... so very little cloning for me.</p>
+          </dd>
+
+          <dt><code>git remote add <var>name</var> <var>url</var></code></dt>
+          <dd>
+            <p>
+              I use <code>git remote</code> only to setup website remotes, like this:
+              <br /><code>git remote add live ssh://<var>domain</var>/home/public/.git</code>
+            </p>
+          </dd>
+
+          <dt><code>git branch</code></dt>
+          <dd>
+            <p>As I said, I don't use (non-master) branches often, so not very interesting in my case.</p>
+            <p><code>git branch</code> shows the branches.</p>
+            <p>I use <code>git checkout -b <var>branch-name</var></code> to create new branches (and immediately switch to them).</p>
+            <p><code>git branch -d <var>branch</var></code> when I'm done with a branch, after merging it.</p>
+          </dd>
+
+          <dt><code>git merge <var>branch</var></code></dt>
+          <dd>
+            <p>Rarely using branches and almost never interacting with third-party patches implies that I almost never merge either...</p>
+            <p>Merges the <var>branch</var> into the current branch.</p>
+          </dd>
+
+          <dt><code>git reset --hard <var>commit</var></code></dt>
+          <dd>
+            <p>Set the current branch head (HEAD) to <var>commit</var>, <span class="watch-out">throw away all your changes to the index and working tree and update them to match that <var>commit</var>. Especially if <var>commit</var> is older than the HEAD, as is typically the case, some commits might be no longer referenceable and thus basically lost (reflog aside).</span></p>
+            <p>Useful to quickly obliterate failed experiments. <span class="watch-out">Dangerous command, proceed with caution!</span></p>
+          </dd>
+
+        </dl>
+
+      </section>
 
     </main>
 
