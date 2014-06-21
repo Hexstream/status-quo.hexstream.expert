@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="http://www.hexstreamsoft.com/introduction.html" />
+    <link rel="license" href="http://www.hexstreamsoft.com/UNLICENSE" />
+    <meta name="description" content="Emacs commands accessible from anywhere unless overridden." />
+    <title>Dired | Built-in | Emacs | Tools | Status quo | HexstreamSoft</title>
+    <link href="../../../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../../../tools.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1783234-6', 'hexstreamsoft.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+    <nav id="site-nav">
+
+      <nav class="breadcrumbs-and-extras">
+
+        <nav class="breadcrumbs">
+          <a href="http://www.hexstreamsoft.com/">HexstreamSoft</a>
+          <span class="separator"> » </span>
+          <a href="../../../../">Status quo</a>
+          <span class="separator"> » </span>
+          <a href="../../../">Tools</a>
+          <span class="separator"> » </span>
+          <a href="../../">Emacs</a>
+          <span class="separator"> » </span>
+          <a href="../../">Built-in</a>
+          <span class="separator"> » </span>
+          <a class="here">Dired</a>
+          <div class="float-clear"></div>
+        </nav>
+
+        <nav id="meta-nav">
+          <a href="http://status-quo.hexstreamsoft.com/tools/emacs/built-in/dired/">
+            <abbr title="Canonical">C</abbr>
+          </a>
+          <a href="https://github.com/Hexstream/status-quo.hexstreamsoft.com/blob/master/tools/emacs/built-in/dired/index.html">
+            <abbr title="Source">S</abbr>
+          </a>
+        </nav>
+
+        <nav>
+          <a class="sequential-link prev" href="../../../stumpwm/">←</a>
+          <a href="../../../">
+            Tools
+            <span>2/6</span>
+          </a>
+          <a class="sequential-link next" href="../../../sbcl/">→</a>
+        </nav>
+
+        <div class="float-clear"></div>
+
+      </nav>
+
+      <nav class="ancestors-nav">
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1>
+            <a class="here">
+              Dired
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="#routinely-used-commands">Routinely used</a>
+            </li>
+            <li>
+              <a href="#rarely-used-commands">Rarely used</a>
+            </li>
+            <li>
+              <a href="#almost-never-used-commands">Almost never used</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1>
+            <a href="../../">
+              Emacs
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../../built-in/fundamental-mode/">Fundamental mode</a>
+            </li>
+            <li>
+              <a class="here">
+                Dired
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li>
+              <a href="../../built-in/info/">Info</a>
+            </li>
+            <li>
+              <a href="../../built-in/lisp-mode/">Lisp mode</a>
+            </li>
+          </ul>
+          <ul>
+            <li><a href="../../extensions/slime/">Slime</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1><a href="../../../">Tools</a></h1>
+          <ul>
+            <li><a href="../../../stumpwm/">StumpWM</a></li>
+            <li>
+              <a href="../../">
+                Emacs
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../../../sbcl/">SBCL</a></li>
+            <li><a href="../../../screen/">Screen</a></li>
+            <li><a href="../../../git/">git</a></li>
+            <li><a href="../../../chrome/">Chrome</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="status-quo_navbox">
+          <h1>
+            <a href="../../../../">Status quo</a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../../../">
+                Tools
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../../../../specifications/">Specifications</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1>
+            <a href="http://www.hexstreamsoft.com/">HexstreamSoft</a>
+          </h1>
+          <ul>
+            <li><a href="http://www.hexstreamsoft.com/introduction.html">Introduction</a></li>
+            <li><a href="http://www.hexstreamsoft.com/libraries/">Libraries</a></li>
+            <li><a href="http://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="http://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="http://www.hexstreamsoft.com/resources/">Resources</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://worknotes.hexstreamsoft.com/">Worknotes</a></li>
+            <li>
+              <a href="../../../../">
+                Status quo
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-06-26">26 june 2014</time><span>.</span></p>
+
+    <main>
+
+      <header id="page-header">
+        <h1>Dired</h1>
+        <p class="description">Filesystem browser and editor.</p>
+      </header>
+
+      <section id="routinely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#routinely-used-commands" class="anchor">⚓</a>
+          <a href="#">Dired</a>
+          <span class="separator"> » </span>
+          <a class="here">Routinely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt id="dired-find-file"><kbd class="built-in">RET</kbd> <a href="#dired-find-file" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-find-file</code></p>
+            <p>Visit the currently selected file or directory.</p>
+            <p>If it's a directory, open a new, independent instance of dired. The previous dired instance is left open in the background. (Might be unintuitive to some, it certainly was to me at first...)</p>
+          </dd>
+
+          <dt id="dired-flag-file-deletion"><kbd class="built-in">d</kbd> <a href="#dired-flag-file-deletion" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-flag-file-deletion</code></p>
+            <p>Flag a file or directory for deletion.</p>
+          </dd>
+
+          <dt id="dired-do-flagged-delete"><kbd class="built-in">x</kbd> <a href="#dired-do-flagged-delete" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-do-flagged-delete</code></p>
+            <p>Delete the files and directories currently flagged for deletion.</p>
+          </dd>
+
+          <dt id="revert-buffer"><kbd class="built-in">g</kbd> <a href="#revert-buffer" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">revert-buffer</code></p>
+            <p>Reload the directory from the filesystem, particularly to see changes made outside of emacs.</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+      <section id="rarely-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#rarely-used-commands" class="anchor">⚓</a>
+          <a href="#">Dired</a>
+          <span class="separator"> » </span>
+          <a class="here">Rarely used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt id="dired-unmark-backwards"><kbd class="built-in">DEL</kbd> <a href="#dired-unmark-backwards" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-unmark-backwards</code></p>
+            <p>Select the previous file or directory and unflag it.</p>
+          </dd>
+
+          <dt id="dired-unmark"><kbd class="built-in">u</kbd> <a href="#dired-unmark" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-unmark</code></p>
+            <p>Unflag the current file or directory.</p>
+          </dd>
+
+          <dt id="dired-do-rename"><kbd class="built-in">R</kbd> <a href="#dired-do-rename" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-do-rename</code></p>
+            <p>Rename (and/or move) the currently selected file or directory.</p>
+          </dd>
+
+          <dt id="dired-do-copy"><kbd class="built-in">C</kbd> <a href="#dired-do-copy" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-do-copy</code></p>
+            <p>Copy the currently selected file or directory.</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+      <section id="almost-never-used-commands">
+
+        <h1 class="breadcrumbs">
+          <a href="#almost-never-used-commands" class="anchor">⚓</a>
+          <a href="#">Dired</a>
+          <span class="separator"> » </span>
+          <a class="here">Almost never used commands</a>
+        </h1>
+
+        <dl>
+
+          <dt id="dired-up-directory"><kbd class="built-in">^</kbd> <a href="#dired-up-directory" class="anchor">⚓</a></dt>
+          <dd>
+            <p><code class="built-in">dired-up-directory</code></p>
+            <p>Open a new, independent instance of dired in the parent directory.</p>
+            <p>I often do <a href="../fundamental-mode/#find-alternate-file"><kbd>C-c C-v</kbd></a> and delete the last directory instead...</p>
+          </dd>
+
+        </dl>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Femacs%2Fbuilt-in%2Fdired%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="https://github.com/Hexstream/status-quo.hexstreamsoft.com/blob/master/tools/emacs/built-in/dired/index.html"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Femacs%2Fbuilt-in%2Fdired%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </footer>
+
+  </body>
+</html>
