@@ -53,10 +53,15 @@ sudo aptitude install dconf-editor
 	toggle-fullscreen: ['<Super>4']
 	toggle-maximized: ['<Super>o']
 	close: ['<Super>a']
+        switch-group: (Set to an unused valid keybinding to reclaim Alt+KeyAboveTab)
      org.gnome.desktop.wm.preferences
 	button-layout: (nothing)
      com.canonical.desktop.interface
         scrollbar-mode: normal
+     desktop.ibus.general.hotkey:
+        trigger: []
+        triggers: []
+        (Reclaim Ctrl-Space for emacs)
 
 
 Restore various things from Dropbox into "data" directory.
@@ -72,3 +77,5 @@ ln -s /home/hexstream/data/projects/lisp/hexstream-emacs-init/master/.emacs .ema
 ln -s /home/hexstream/data/projects/lisp/hexstream-screenrc/master/.screenrc .screenrc
 
 Install latest SBCL binary and corresponding source, install quicklisp and (ql:quickload "quicklisp-slime-helper") with raw SBCL command line.
+
+ln -s /home/hexstream/data/projects/lisp/hexstream-stumpwmrc/master/hexstream-stumpwmrc.lisp .stumpwmrc
