@@ -1,0 +1,74 @@
+sudo apt-get install aptitude
+sudo add-apt-repository ppa:xorg-edgers/ppa
+sudo aptitude update
+sudo aptitude full-upgrade
+sudo aptitude install gnome-session-flashback
+Install Google Chrome (using Firefox)
+sudo dpkg-reconfigure tzdata
+sudo aptitude install git
+sudo aptitude install build-essential
+restore ~/.ssh stuff
+
+sudo aptitude install nautilus-dropbox
+nautilus --quit
+Start dropbox from Applications > Internet > Dropbox
+
+xmodmap data/Dropbox/preferences/changes.txt
+
+sudo aptitude install emacs
+sudo aptitude install screen
+sudo aptitude install mplayer
+sudo aptitude install mesa-utils (for glxgears)
+
+Applications > System Tools > Preferences > Main Menu:
+Unselect the following: Other, Science, Universal Access, Ubuntu Software Center
+
+Alt-drag-and-drop the following applications from the Applications menu to the right of the main menu to create quick application launchers (alt-right-click on menu launchers for "Move" and "Remove" options):
+Programming > GNU Emacs 24
+Internet > Google Chrome
+Internet > Firefox Web Browser
+Accessories > Terminal
+Accessories > Calculator
+
+sudo ln -s /lib/modules/3.13.0-34-generic/build/include/generated/uapi/linux/version.h /lib/modules/3.13.0-34-generic/build/include/linux/version.h
+
+Give the 4 workspaces their proper name (right-click, "Preferences")
+
+Clock (Right-click, "Preferences". 12 hour format, Show the date, Show seconds)
+User Menu
+Notification Area
+System Monitor (right-click, "Preferences".)
+       Display all options.
+       Memory: Cached: Black.
+       Network: In: Green. Out: Red. Local: Black
+       Hard disk: Read: Green. Write: Red.
+
+sudo aptitude install pidgin
+sudo aptitude install dconf-editor
+     org.gnome.desktop.wm.keybindings
+	switch-to-workspace-1: ['<Super>1']
+	switch-to-workspace-2: ['<Super>2']
+	switch-to-workspace-3: ['<Super>3']
+	switch-to-workspace-4: ['<Super>4']
+	toggle-fullscreen: ['<Super>4']
+	toggle-maximized: ['<Super>o']
+	close: ['<Super>a']
+     org.gnome.desktop.wm.preferences
+	button-layout: (nothing)
+     com.canonical.desktop.interface
+        scrollbar-mode: normal
+
+
+Restore various things from Dropbox into "data" directory.
+
+Right-click on desktop, "Change Desktop Background".
+Select /home/hexstream/data/projects/lisp/worknotes.hexstreamsoft.com/master/limbo/black-hole.png
+Position: Center
+
+Applications > System Tools > Preferences > Startup Applications
+	     xmodmap /home/hexstream/data/projects/lisp/hexstreamsoft.com/master/resources/hexstream-typematrix-xmodmap-remappings.txt
+
+ln -s /home/hexstream/data/projects/lisp/hexstream-emacs-init/master/.emacs .emacs
+ln -s /home/hexstream/data/projects/lisp/hexstream-screenrc/master/.screenrc .screenrc
+
+Install latest SBCL binary and corresponding source, install quicklisp and (ql:quickload "quicklisp-slime-helper") with raw SBCL command line.
