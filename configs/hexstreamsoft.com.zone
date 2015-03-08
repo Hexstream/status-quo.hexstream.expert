@@ -1,0 +1,65 @@
+$ORIGIN hexstreamsoft.com.
+$TTL 86400
+
+hexstreamsoft.com.              900 IN SOA     ns-541.awsdns-03.net. awsdns-hostmaster.amazon.com. (
+                                               1
+                                               7200
+                                               900
+                                               1209600
+                                               86400 )
+
+hexstreamsoft.com.           172800    NS      ns-1152.awsdns-16.org.
+                             172800    NS      ns-1933.awsdns-49.co.uk.
+                             172800    NS      ns-307.awsdns-38.com.
+                             172800    NS      ns-541.awsdns-03.net.
+
+
+;;; Websites
+
+;; Just for HTTP redirect to www.hexstreamsoft.com
+hexstreamsoft.com.                     A       208.94.116.88
+                                       A       208.94.117.12
+                                       A       208.94.117.43
+                                       TXT     google-site-verification=cxA4rPTYm2Ffvx-3YJklflVvS5uEEOVPlcVWjyt05sk
+
+www.hexstreamsoft.com.	               A       208.94.116.88
+                                       A       208.94.117.12
+                                       A       208.94.117.43
+                                       TXT     google-site-verification=cxA4rPTYm2Ffvx-3YJklflVvS5uEEOVPlcVWjyt05sk
+
+worknotes.hexstreamsoft.com.           A       208.94.116.99
+                                       A       208.94.118.139
+                                       A       208.94.118.153
+                                       TXT     google-site-verification=MP5Gc52ti1bglMtCYx04GfRuZ-cwEyuGK6lM6jjohak
+
+status-quo.hexstreamsoft.com.          A       208.94.117.42
+                                       A       208.94.118.129
+                                       A       208.94.118.153
+                                       TXT     google-site-verification=hUWPJnRKILYsGd9fXpvNSwyArzc63W-Ubu2KsIkRq_Y
+
+
+;;; Infrastructure
+
+;; Some static assets (mostly CSS) shared across my websites.
+global.hexstreamsoft.com.              A       208.94.116.62
+                                       A       208.94.116.157
+                                       A       208.94.117.11
+
+hexstreamsoft.com.                     MX      0 mail.hexstreamsoft.com.
+mail.hexstreamsoft.com.                A       104.131.177.235
+smtp.hexstreamsoft.com.                A       104.131.177.235
+
+;; Quicklisp pulls from this.
+tarballs.hexstreamsoft.com.            CNAME   tarballs.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com.
+
+
+;;; Coming soon...
+
+blog.hexstreamsoft.com.                A       208.94.116.154
+                                       TXT     google-site-verification=v3EgPW1OmpP15UCcyF74OxCN-TINp-WhxQucoi_aJbE
+
+thoughts.hexstreamsoft.com.            A       208.94.116.79
+                                       TXT     google-site-verification=5XFSMZVvPcXzF3tfchqb8unHUV_E5fZ7mr1cxiliY5
+
+quotes.hexstreamsoft.com.              A       208.94.116.87
+                                       TXT     google-site-verification=tnCxeSCD1bX7TPHTmPULwLglWdXmp3TXOoayIujPJho
