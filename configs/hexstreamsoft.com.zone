@@ -1,7 +1,7 @@
 $ORIGIN hexstreamsoft.com.
 $TTL 86400
 
-hexstreamsoft.com.              900 IN SOA     ns-542.awsdns-03.net. awsdns-hostmaster.amazon.com. (
+hexstreamsoft.com.              900 IN SOA     ns-541.awsdns-03.net. awsdns-hostmaster.amazon.com. (
                                                1
                                                7200
                                                900
