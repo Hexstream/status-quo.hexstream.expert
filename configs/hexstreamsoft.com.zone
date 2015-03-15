@@ -1,17 +1,27 @@
 $ORIGIN hexstreamsoft.com.
 $TTL 86400
 
-hexstreamsoft.com.              900 IN SOA     ns-541.awsdns-03.net. awsdns-hostmaster.amazon.com. (
-                                               1
+;;;; This zone is served by Amazon Route 53: http://aws.amazon.com/route53/
+
+;;;; "White label" nameservers procedure (ns1.hexstreamsoft.com instead of ns-307.awsdns-38.com):
+;;;; http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html
+
+hexstreamsoft.com.              900 IN SOA     ns1.hexstreamsoft.com. hexstream.hexstreamsoft.com. (
+                                               2015031501
                                                7200
                                                900
                                                1209600
                                                86400 )
 
-hexstreamsoft.com.           172800    NS      ns-1152.awsdns-16.org.
-                             172800    NS      ns-1933.awsdns-49.co.uk.
-                             172800    NS      ns-307.awsdns-38.com.
-                             172800    NS      ns-541.awsdns-03.net.
+hexstreamsoft.com.            86400    NS      ns1.hexstreamsoft.com. ; ns-307.awsdns-38.com
+                              86400    NS      ns2.hexstreamsoft.com. ; ns-541.awsdns-03.net
+                              86400    NS      ns3.hexstreamsoft.com. ; ns-1152.awsdns-16.org
+                              86400    NS      ns4.hexstreamsoft.com. ; ns-1933.awsdns-49.co.uk
+
+ns1.hexstreamsoft.com                  A       205.251.193.51
+ns2.hexstreamsoft.com                  A       205.251.194.29
+ns3.hexstreamsoft.com                  A       205.251.196.128
+ns4.hexstreamsoft.com                  A       205.251.199.141
 
 
 ;;; Websites
