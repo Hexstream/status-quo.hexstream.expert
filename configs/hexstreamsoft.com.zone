@@ -7,7 +7,7 @@ $TTL 86400
 ;;;; http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html
 
 hexstreamsoft.com.              900 IN SOA     ns1.hexstreamsoft.com. hexstream.hexstreamsoft.com. (
-                                               2015031501
+                                               2015032201
                                                7200
                                                900
                                                1209600
@@ -27,33 +27,23 @@ ns4.hexstreamsoft.com                  A       205.251.199.141
 ;;; Websites
 
 ;; Just for HTTP redirect to www.hexstreamsoft.com
-hexstreamsoft.com.                     A       208.94.116.88
-                                       A       208.94.117.12
-                                       A       208.94.117.43
+hexstreamsoft.com.                     A       208.94.116.149
                                        TXT     google-site-verification=cxA4rPTYm2Ffvx-3YJklflVvS5uEEOVPlcVWjyt05sk
 
-www.hexstreamsoft.com.                 A       208.94.116.88
-                                       A       208.94.117.12
-                                       A       208.94.117.43
+www.hexstreamsoft.com.                 A       208.94.116.149
                                        TXT     google-site-verification=cxA4rPTYm2Ffvx-3YJklflVvS5uEEOVPlcVWjyt05sk
 
-worknotes.hexstreamsoft.com.           A       208.94.116.99
-                                       A       208.94.118.139
-                                       A       208.94.118.153
+worknotes.hexstreamsoft.com.           A       208.94.116.91
                                        TXT     google-site-verification=MP5Gc52ti1bglMtCYx04GfRuZ-cwEyuGK6lM6jjohak
 
-status-quo.hexstreamsoft.com.          A       208.94.117.42
-                                       A       208.94.118.129
-                                       A       208.94.118.153
+status-quo.hexstreamsoft.com.          A       208.94.118.150
                                        TXT     google-site-verification=hUWPJnRKILYsGd9fXpvNSwyArzc63W-Ubu2KsIkRq_Y
 
 
 ;;; Infrastructure
 
 ;; Some static assets (mostly CSS) shared across my websites.
-global.hexstreamsoft.com.              A       208.94.116.62
-                                       A       208.94.116.157
-                                       A       208.94.117.11
+global.hexstreamsoft.com.              A       208.94.117.73
 
 hexstreamsoft.com.                     MX      0 mail.hexstreamsoft.com.
 mail.hexstreamsoft.com.                A       104.131.177.235
