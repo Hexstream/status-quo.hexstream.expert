@@ -39,7 +39,7 @@ status-quo.hexstreamsoft.com.          A       208.94.118.150
 ;;; Infrastructure
 
 ;; Owner verification for *.hexstreamsoft.com for google.
-lby6iyzmzs6g.hexstreamsoft.com         CNAME   gv-ibiqaa3o72bo3q.dv.googlehosted.com.
+lby6iyzmzs6g.hexstreamsoft.com.        CNAME   gv-ibiqaa3o72bo3q.dv.googlehosted.com.
 
 ;; Some static assets (mostly CSS) shared across my websites.
 global.hexstreamsoft.com.              A       208.94.117.73
