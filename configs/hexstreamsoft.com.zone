@@ -7,7 +7,7 @@ $TTL 86400
 ;;;; http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html
 
 hexstreamsoft.com.              900 IN SOA     ns1.hexstreamsoft.com. hexstream.hexstreamsoft.com. (
-                                               2015032201
+                                               2015033001
                                                7200
                                                900
                                                1209600
@@ -28,19 +28,18 @@ ns4.hexstreamsoft.com                  A       205.251.199.141
 
 ;; Just for HTTP redirect to www.hexstreamsoft.com
 hexstreamsoft.com.                     A       208.94.116.149
-                                       TXT     google-site-verification=cxA4rPTYm2Ffvx-3YJklflVvS5uEEOVPlcVWjyt05sk
 
 www.hexstreamsoft.com.                 A       208.94.116.149
-                                       TXT     google-site-verification=cxA4rPTYm2Ffvx-3YJklflVvS5uEEOVPlcVWjyt05sk
 
 worknotes.hexstreamsoft.com.           A       208.94.116.91
-                                       TXT     google-site-verification=MP5Gc52ti1bglMtCYx04GfRuZ-cwEyuGK6lM6jjohak
 
 status-quo.hexstreamsoft.com.          A       208.94.118.150
-                                       TXT     google-site-verification=hUWPJnRKILYsGd9fXpvNSwyArzc63W-Ubu2KsIkRq_Y
 
 
 ;;; Infrastructure
+
+;; Owner verification for *.hexstreamsoft.com for google.
+lby6iyzmzs6g.hexstreamsoft.com         CNAME   gv-ibiqaa3o72bo3q.dv.googlehosted.com.
 
 ;; Some static assets (mostly CSS) shared across my websites.
 global.hexstreamsoft.com.              A       208.94.117.73
@@ -56,10 +55,7 @@ tarballs.hexstreamsoft.com.            CNAME   tarballs.hexstreamsoft.com.s3-web
 ;;; Coming soon...
 
 blog.hexstreamsoft.com.                A       208.94.116.154
-                                       TXT     google-site-verification=v3EgPW1OmpP15UCcyF74OxCN-TINp-WhxQucoi_aJbE
 
 thoughts.hexstreamsoft.com.            A       208.94.116.79
-                                       TXT     google-site-verification=5XFSMZVvPcXzF3tfchqb8unHUV_E5fZ7mr1cxiliY5
 
 quotes.hexstreamsoft.com.              A       208.94.116.87
-                                       TXT     google-site-verification=tnCxeSCD1bX7TPHTmPULwLglWdXmp3TXOoayIujPJho
