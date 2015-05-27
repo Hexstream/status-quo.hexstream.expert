@@ -1,0 +1,39 @@
+! Must activate 106-key mode.
+!mod1 = Alt
+!mod5 = AltGr
+clear shift
+clear control
+clear mod1
+clear mod4
+clear mod5
+
+
+!physical right alt
+keycode 108 = Shift_L Shift_L Shift_L Shift_L
+
+!physical left alt
+keycode 64 = Control_L Control_L Control_L Control_L
+
+!physical right shift
+keycode 62 = F32 F32 F32 F32
+
+!physical left ctrl
+keycode 37 = Control_R Control_R Control_R Control_R
+
+!physical dsktp
+keycode 100 = Alt_L Alt_L Alt_L Alt_L
+
+!physical start
+keycode 133 = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift
+
+!physical shuffle
+keycode 102 = Super_L Super_L Super_L Super_L
+
+!physical \ (key right of dvorak Z)
+keycode 97 = less greater
+
+add shift = Shift_L
+add Control = Control_L Control_R
+add mod1 = Alt_L
+add mod4 = Super_L
+add mod5 = ISO_Level3_Shift
