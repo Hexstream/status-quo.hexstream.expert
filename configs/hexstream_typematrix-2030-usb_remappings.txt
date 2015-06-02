@@ -18,7 +18,7 @@ keycode 64 = Control_L Control_L Control_L Control_L
 keycode 62 = F32 F32 F32 F32
 
 !physical left ctrl
-keycode 37 = Control_R Control_R Control_R Control_R
+keycode 37 = Shift_R Shift_R Shift_R Shift_R
 
 !physical dsktp
 keycode 100 = Alt_L Alt_L Alt_L Alt_L
@@ -32,7 +32,8 @@ keycode 102 = Super_L Super_L Super_L Super_L
 !physical \ (key right of dvorak Z)
 keycode 97 = less greater
 
-add shift = Shift_L
+
+add shift = Shift_L Shift_R
 add Control = Control_L Control_R
 add mod1 = Alt_L
 add mod4 = Super_L
