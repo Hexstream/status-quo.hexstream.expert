@@ -17,8 +17,11 @@ keycode 64 = Control_L Control_L Control_L Control_L
 !physical right shift
 keycode 62 = F32 F32 F32 F32
 
+!physical left shift
+keycode 50 = Shift_R Shift_R Shift_R Shift_R
+
 !physical left ctrl
-keycode 37 = Shift_R Shift_R Shift_R Shift_R
+keycode 37 = Control_R Control_R Control_R Control_R
 
 !physical dsktp
 keycode 100 = Alt_L Alt_L Alt_L Alt_L
