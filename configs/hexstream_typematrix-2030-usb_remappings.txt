@@ -35,6 +35,12 @@ keycode 102 = Super_L Super_L Super_L Super_L
 !physical \ (key right of dvorak Z)
 keycode 97 = less greater
 
+!physical delete
+keycode 119 = Caps_Lock
+
+!physical caps lock
+keycode 66 = Delete
+
 
 add shift = Shift_L Shift_R
 add Control = Control_L Control_R
