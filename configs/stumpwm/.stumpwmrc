@@ -1,0 +1,179 @@
+;;;; -*- Mode: Lisp -*-
+
+;;;; This is the .stumpwmrc file of Jean-Philippe Paradis (Hexstream).
+;;;; I have not yet documented and cleaned this so it's a bit raw.
+
+;;;; StumpWM is an emacs-like X window manager written in Common Lisp.
+;;;; StumpWM homepage: http://www.nongnu.org/stumpwm/
+;;;; (I'm not affiliated with StumpWM, just an enthusiastic user.)
+
+;;;; Unlicense follows:
+
+;;;; This is free and unencumbered software released into the public domain.
+;;;;
+;;;; Anyone is free to copy, modify, publish, use, compile, sell, or
+;;;; distribute this software, either in source code form or as a compiled
+;;;; binary, for any purpose, commercial or non-commercial, and by any
+;;;; means.
+;;;;
+;;;; In jurisdictions that recognize copyright laws, the author or authors
+;;;; of this software dedicate any and all copyright interest in the
+;;;; software to the public domain. We make this dedication for the benefit
+;;;; of the public at large and to the detriment of our heirs and
+;;;; successors. We intend this dedication to be an overt act of
+;;;; relinquishment in perpetuity of all present and future rights to this
+;;;; software under copyright law.
+;;;;
+;;;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;;;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;;;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+;;;; IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+;;;; OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+;;;; ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+;;;; OTHER DEALINGS IN THE SOFTWARE.
+
+
+(in-package #:stumpwm)
+
+(defun hexstream-setup-groups ()
+  (grename "Normal")
+  (let ((normal (current-group))
+	(dev (gnewbg "Dev"))
+	(games (gnewbg "Games"))
+	(chat (gnewbg "Chat"))
+	(desktop (gnewbg ".Desktop")))
+    (define-frame-preference desktop (0 nil nil :title "x-nautilus-desktop"))
+    (defparameter *normal-group* normal)
+    (defparameter *dev-group* dev)
+    (defparameter *games-group* games)
+    (defparameter *chat-group* chat)
+    (defparameter *desktop-group* desktop)))
+
+(defun hexstream-cold-init ()
+  (hexstream-setup-groups))
+
+(defun get-sound-volume ()
+  (let ((string (run-shell-command "amixer sget Master" t)))
+    (parse-integer string :start (1+ (position #\[ string)) :junk-allowed t)))
+
+(defun volcontrol-custom (channel amount &key (messagep t))
+  (let ((previous (get-sound-volume))
+	(percent (parse-integer
+		  (run-shell-command
+		   (concat "amixer sset " channel " " amount
+			   "| tail -1"
+			   "| sed 's/^.*\\[\\([[:digit:]]\\+\\)%\\].*$/\\1/'")
+		   t)))
+	(*timeout-wait* 1))
+    (declare (ignore percent))
+    (when messagep
+      (message (format nil "~A% --> ~A" previous amount)))))
+
+(defun hexstream-init ()
+  (if *initializing*
+      (hexstream-cold-init))
+  (bind "C-t" "other-in-frame")
+  (bind "M-t" "pull-hidden-other")
+  (setf *mouse-focus-policy* :click)
+  (setf *timeout-frame-indicator-wait* 0.2
+        *timeout-wait* 5)
+  (setf *window-border-style* :thick)
+  (define-key *top-map* (kbd "s-1") "gselect 1")
+  (define-key *top-map* (kbd "s-2") "gselect 2")
+  (define-key *top-map* (kbd "s-3") "gselect 3")
+  (define-key *top-map* (kbd "s-4") "gselect 4")
+  (define-key *top-map* (kbd "s-a") "delete")
+  (define-key *top-map* (kbd "s-f") "fullscreen")
+  (define-key *top-map* (kbd "s-e") "exec caja --no-desktop --browser /home/hexstream/")
+  (define-key *top-map* (kbd "s-d") "exec google-chrome http://horairetele.canoe.com")
+  (define-key *top-map* (kbd "s-y") "exec google-chrome http://www.meteomedia.com/weather/caqc0750")
+  (defcommand volume-display () ()
+	      ""
+	      (message (format nil "~A%" (get-sound-volume))))
+  (define-key *top-map* (kbd "s-Hiragana_Katakana") "volume-display")
+  (defun relative-volume (delta)
+    (let ((new (+ (get-sound-volume) delta)))
+      (volcontrol-custom "Master" (format nil "~A%" new)
+                         :messagep nil)
+      (message (format nil "~A%" new))))
+  (defcommand volume-up () ()
+	      ""
+              (relative-volume 1))
+  (define-key *top-map* (kbd "s-SunPageUp") "volume-up")
+  (defcommand volume-down () ()
+	      ""
+              (relative-volume -1))
+  (define-key *top-map* (kbd "s-SunPageDown") "volume-down")
+  (defcommand open-parens () ()
+	      ""
+	      (meta (kbd "("))
+	      (meta (kbd ")"))
+	      (meta (kbd "Left")))
+  (define-key *top-map* (kbd "F32") "open-parens")
+  (defcommand open-double-quotes () ()
+	      ""
+	      (meta (kbd "\""))
+	      (meta (kbd "Left"))
+	      (meta (kbd "Right"))
+	      (meta (kbd "\""))
+	      (meta (kbd "Left")))
+  (define-key *top-map* (kbd "C-F32") "open-double-quotes")
+  (define-key *input-map* (kbd "F32") 'input-insert-parens)
+  (define-key *input-map* (kbd "C-F32") 'input-insert-double-quotes)
+  (defparameter *ror-map*
+    (let ((map (make-sparse-keymap)))
+      (flet ((dk (key command)
+	       (define-key map (kbd key) command)))
+	(dk "e" "emacs")
+	(defcommand mate-terminal () ()
+	  ""
+	  (run-or-raise "mate-terminal" '(:class "Mate-terminal")))
+	(dk "c" "mate-terminal")
+	(defcommand google-chrome () ()
+	  ""
+	  (run-or-raise "google-chrome" '(:class "Chrome")))
+	(dk "b" "google-chrome"))
+      map))
+  (bind "e" '*ror-map*)
+  (defcommand lastmsg-no-timeout () ()
+    ""
+    (let ((*timeout-wait* 3600))
+      (lastmsg)))
+  (bind "M" "lastmsg-no-timeout")
+  (defparameter *ext-map*
+    (let ((map (make-sparse-keymap)))
+      (flet ((dk (key command)
+	       (define-key map (kbd key) command)))
+	(dk "p" "list-window-properties")
+	(dk "l" "loadrc")
+	(defcommand activate-screensaver () ()
+	  ""
+	  (run-shell-command "gnome-screensaver-command -a"))
+	(dk "b" "activate-screensaver")
+	(load-module "amixer")
+	(defcommand amixer-master (percent) ((:string "Set volume: "))
+	  ""
+	  (if percent
+	      (volcontrol-custom "Master" (concatenate 'string
+						       (or (cdr (assoc percent '(("1" . "25")
+										 ("2" . "50")
+										 ("3" . "75")
+										 ("4" . "100"))
+								       :test #'string=))
+							   percent)
+						       "%"))
+	      (throw 'error "Abort.")))
+	(dk "v" "amixer-master")
+	(dk "f" "fullscreen"))
+      map))
+  (bind "x" '*ext-map*))
+
+(defun input-insert-parens (input key)
+  (input-insert-string input "()")
+  (input-backward-char input key))
+
+(defun input-insert-double-quotes (input key)
+  (input-insert-string input "\"\"")
+  (input-backward-char input key))
+
+(hexstream-init)

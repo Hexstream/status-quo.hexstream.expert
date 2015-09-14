@@ -1,0 +1,88 @@
+;;;; -*- Mode: Lisp -*-
+
+;;;; This is the .sbclrc init file of Jean-Philippe Paradis (Hexstream).
+;;;; (SBCL is the Common Lisp implementation I use. See: http://www.sbcl.org/)
+
+;;;; I have not yet documented and cleaned this so it's very raw.
+;;;; There's a lot of old stuff I don't even use and should delete...
+
+
+;;;; Unlicense follows:
+
+;;;; This is free and unencumbered software released into the public domain.
+;;;;
+;;;; Anyone is free to copy, modify, publish, use, compile, sell, or
+;;;; distribute this software, either in source code form or as a compiled
+;;;; binary, for any purpose, commercial or non-commercial, and by any
+;;;; means.
+;;;;
+;;;; In jurisdictions that recognize copyright laws, the author or authors
+;;;; of this software dedicate any and all copyright interest in the
+;;;; software to the public domain. We make this dedication for the benefit
+;;;; of the public at large and to the detriment of our heirs and
+;;;; successors. We intend this dedication to be an overt act of
+;;;; relinquishment in perpetuity of all present and future rights to this
+;;;; software under copyright law.
+;;;;
+;;;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;;;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;;;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+;;;; IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+;;;; OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+;;;; ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+;;;; OTHER DEALINGS IN THE SOFTWARE.
+
+(require :asdf)
+
+(declaim (optimize debug))
+;;; If the fasl was stale, try to recompile and load (once). Since only SBCL
+;;; has a separate condition for bogus fasls we retry on any old error
+;;; on other lisps. Actually, Allegro has a similar condition, but it's
+;;; unexported.  Works nicely for the ACL7 upgrade, though.
+;;; CMUCL has an invalid-fasl condition as of 19c.
+(defmethod asdf:perform :around ((o asdf:load-op) (c asdf:cl-source-file))
+  (handler-case (call-next-method o c)
+    (#+sbcl sb-ext:invalid-fasl
+     #+allegro excl::file-incompatible-fasl-error
+     #+lispworks conditions:fasl-error
+     #+cmu ext:invalid-fasl
+     #-(or sbcl allegro lispworks cmu) error ()
+     (asdf:perform (make-instance 'asdf:compile-op) c)
+     (call-next-method))))
+
+(defun kill-symbols (symbols &optional package)
+  (let* ((package (or package (let ((fsp (symbol-package (car symbols))))
+				(dolist (symbol (cdr symbols) fsp)
+				  (if (not (eq (symbol-package symbol) fsp))
+				      (error "Inconsistent home-package: ~S /= ~S. Please supply package to unexport from explicitly."
+					     (symbol-package symbol) fsp))))))
+	 (grouping-package (let* ((source-name (package-name package))
+				 (underscore-position
+				  (position #\_ source-name :from-end t)))
+			    (if underscore-position
+				(find-package (subseq source-name 0 underscore-position))))))
+    (dolist (symbol symbols)
+      (let ((symbol (intern (string symbol) package)))
+	(unexport symbol package)
+	(unintern symbol package)
+	(if grouping-package
+	    (unexport symbol grouping-package)
+	    (unintern symbol grouping-package))))))
+
+(defun unexport-all (package)
+  (do-external-symbols (symbol package)
+    (unexport symbol package)))
+
+(defun unintern-all (package)
+  (let ((package (find-package package)))
+    (do-symbols (symbol package)
+      (if (eq (symbol-package symbol) package)
+	  (unintern symbol package)))))
+
+(sb-ext:set-sbcl-source-location "/home/hexstream/apps/sbcl-source/")
+
+#-quicklisp
+(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
+                                       (user-homedir-pathname))))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)))
