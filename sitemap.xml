@@ -61,19 +61,37 @@
     <loc>http://status-quo.hexstreamsoft.com/tools/sbcl/</loc>
   </url>
 
-
   <url>
     <loc>http://status-quo.hexstreamsoft.com/tools/screen/</loc>
   </url>
-
 
   <url>
     <loc>http://status-quo.hexstreamsoft.com/tools/git/</loc>
   </url>
 
-
   <url>
     <loc>http://status-quo.hexstreamsoft.com/tools/chrome/</loc>
+  </url>
+
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/configs/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/configs/stumpwm/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/configs/emacs/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/configs/sbcl/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/configs/screen/</loc>
   </url>
 
 
