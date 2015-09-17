@@ -66,45 +66,51 @@
 
       </nav>
 
-      <nav class="navlist">
-
-        <section>
-          <a href="tools/">
-            <h1>Tools</h1>
-            <p>Programs and environments helping users with tasks.</p>
-          </a>
-          <div class="status-indicators">
-            <div>
-              <span class="incomplete">⚠ Incomplete</span>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <a href="specifications/">
-            <h1>Specifications</h1>
-            <p>Standards promoting interoperable implementations.</p>
-          </a>
-          <div class="status-indicators">
-            <div>
-              <span class="stub">✘ Stub <small>(404)</small></span>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <a href="configs/">
-            <h1>Configs</h1>
-            <p>Custom configuration files and other setup information.</p>
-          </a>
-          <div class="status-indicators">
-            <div>
-              <span class="incomplete">⚠ Raw</span>
-            </div>
-          </div>
-        </section>
-
-      </nav>
+      <table class="navtable sparse-table status-indicators" id="navtable">
+        <thead>
+          <tr>
+            <th></th>
+            <th><a>Usage notes</a></th>
+            <th><a>My config</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="category-header"><a>Tools</a></th>
+            <th class="category-header"><a href="tools/">⥥</a></th>
+            <th class="category-header"><a href="configs/">⥥</a></th>
+          </tr>
+          <tr>
+            <th><a href="http://www.nongnu.org/stumpwm/">StumpWM</a></th>
+            <td><a href="tools/stumpwm/" class="ready detailed">✔ Detailed!</a></td>
+            <td><a href="configs/stumpwm/" class="raw">⚠ Raw</a></td>
+          </tr>
+          <tr>
+            <th><a href="http://www.gnu.org/software/emacs/">Emacs</a></th>
+            <td><a href="tools/emacs/" class="incomplete">⚠ Incomplete</a></td>
+            <td><a href="configs/emacs/" class="raw">⚠ Raw</a></td>
+          </tr>
+          <tr>
+            <th><a href="http://sbcl.org/">SBCL</a></th>
+            <td><a href="tools/sbcl/" class="stub">✘ Stub</a></td>
+            <td><a href="configs/sbcl/" class="raw">⚠ Raw</a></td>
+          </tr>
+          <tr>
+            <th><a href="http://www.gnu.org/software/screen/">Screen</a></th>
+            <td><a href="tools/screen/" class="ready">✔ Ready</a></td>
+            <td><a href="configs/screen/" class="trivial">⚠ Trivial</a></td>
+          </tr>
+          <tr>
+            <th><a href="http://git-scm.com/">git</a></th>
+            <td><a href="tools/git/" class="ready">✔ Ready</a></td>
+            <td rowspan="2" class="not-applicable">∅</td>
+          </tr>
+          <tr>
+            <th><a href="https://www.google.com/chrome/browser/">Chrome</a></th>
+            <td><a href="tools/chrome/" class="ready">✔ Ready</a></td>
+          </tr>
+        </tbody>
+      </table>
 
       <nav class="navlist">
 
@@ -119,7 +125,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-09-14">14 september 2015</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-09-16">16 september 2015</time><span>.</span></p>
 
     <section id="news">
       <header>

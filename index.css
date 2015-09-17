@@ -20,3 +20,30 @@
     line-height: 1.2em;
     letter-spacing: 0.025em;
 }
+
+.navtable {
+    border: 0.15em solid black;
+}
+
+.navtable th, .navtable td {
+    padding: 0;
+}
+
+.navtable th a, .navtable td a {
+    display: block;
+    padding: 0.4em 0.6em;
+}
+
+.navtable th a[href]:hover, .navtable td a[href]:hover, .navtable th a[href]:focus, .navtable td a[href]:focus {
+    background: #ECE0A5;
+}
+
+
+#navtable th a {
+    color: inherit;
+}
+
+#navtable th a[href]:hover {
+    background: #E0E0E0;
+    text-decoration: underline;
+}
