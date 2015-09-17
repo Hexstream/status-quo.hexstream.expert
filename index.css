@@ -21,8 +21,11 @@
     letter-spacing: 0.025em;
 }
 
+
+/* TODO: Make global. Since there's only one instance, it's hard to distinguish generalities from specifics. */
 .navtable {
     border: 0.15em solid black;
+    margin-bottom: 1em;
 }
 
 .navtable th, .navtable td {
