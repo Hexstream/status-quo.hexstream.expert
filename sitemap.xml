@@ -40,22 +40,6 @@
     <loc>http://status-quo.hexstreamsoft.com/tools/emacs/extensions/slime/</loc>
   </url>
 
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/tools/emacs/extensions/slime/editor/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/tools/emacs/extensions/slime/repl/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/tools/emacs/extensions/slime/debugger/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/tools/emacs/extensions/slime/inspector/</loc>
-  </url>
-
 
   <url>
     <loc>http://status-quo.hexstreamsoft.com/tools/sbcl/</loc>
@@ -75,23 +59,7 @@
 
 
   <url>
-    <loc>http://status-quo.hexstreamsoft.com/configs/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/configs/stumpwm/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/configs/emacs/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/configs/sbcl/</loc>
-  </url>
-
-  <url>
-    <loc>http://status-quo.hexstreamsoft.com/configs/screen/</loc>
+    <loc>http://status-quo.hexstreamsoft.com/services/</loc>
   </url>
 
 
