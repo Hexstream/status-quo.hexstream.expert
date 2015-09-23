@@ -1,0 +1,45 @@
+table .registration-date {
+    text-align: right;
+}
+
+table .redirect, table .redirect a {
+    color: rgba(0, 0, 0, 0.3333);
+}
+
+
+#my-config_domain-names_navbox {
+    display: table;
+    width: auto;
+    font-size: larger;
+}
+
+#my-config_domain-names_navbox .inlined-nodes li {
+    padding-right: 1.1em;
+}
+
+
+main dl dt {
+    font-size: x-large;
+}
+
+main dl dt .anchor {
+    font-size: large;
+}
+
+main dl dl dt {
+    font-size: large;
+    margin-top: 1em;
+}
+
+main dl dl dt:first-child {
+    margin-top: 0.6em;
+}
+
+main dl dl dd {
+    margin-left: 3.5em;
+    margin-top: 0.25em;
+}
+
+main dl dl dd p {
+    margin-left: 0;
+}
