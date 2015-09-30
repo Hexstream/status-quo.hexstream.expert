@@ -63,6 +63,14 @@ main dl dl dd p {
     color: rgba(0, 0, 0, 0.4);
 }
 
+#my-config_dns_table .category a {
+    color: inherit;
+}
+
+#my-config_dns_table .category a:hover {
+    text-decoration: underline;
+}
+
 #my-config_dns_table .zone {
     text-align: right;
     vertical-align: top;
