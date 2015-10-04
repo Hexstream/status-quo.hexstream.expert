@@ -102,3 +102,30 @@ ul.tabs > li > a.here:hover, ul.tabs > li > a.here:focus, ul.tabs > li > a.not-a
     background: #E0E0E0;
     text-decoration: underline;
 }
+
+
+main dl dt {
+    font-size: x-large;
+}
+
+main dl dt .anchor {
+    font-size: large;
+}
+
+main dl dl dt {
+    font-size: large;
+    margin-top: 1em;
+}
+
+main dl dl dt:first-child {
+    margin-top: 0.6em;
+}
+
+main dl dl dd {
+    margin-left: 3.5em;
+    margin-top: 0.25em;
+}
+
+main dl dl dd p {
+    margin-left: 0;
+}
