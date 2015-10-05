@@ -112,20 +112,52 @@ main dl dt .anchor {
     font-size: large;
 }
 
-main dl dl dt {
+main dl dl dt, main .item-section dl dt {
     font-size: large;
     margin-top: 1em;
 }
 
-main dl dl dt:first-child {
+main dl dl dt:first-child, main .item-section dl dt:first-child {
     margin-top: 0.6em;
 }
 
-main dl dl dd {
+main dl dl dd, main .item-section dl dd {
     margin-left: 3.5em;
     margin-top: 0.25em;
 }
 
-main dl dl dd p {
+main dl dl dd p, main .item-section dl dd p {
     margin-left: 0;
+}
+
+
+section.item-section > h1 {
+    display: table;
+    padding-right: 1.3em;
+    border: dashed thin gray;
+}
+
+section.item-section > h1 .prev, section.item-section > h1 .next {
+    position: absolute;
+    right: 0;
+    border: thin solid transparent;
+    padding: 0 0.1em;
+    margin-left: 0.1em;
+    opacity: 0.25;
+}
+
+section.item-section > h1 .prev:hover, section.item-section > h1 .next:hover {
+    background: #FFCC99;
+    border: thin solid black;
+    opacity: 1;
+}
+
+section.item-section > h1 .prev {
+    top: 0;
+    bottom: 50%
+}
+
+section.item-section > h1 .next {
+    top: 50%;
+    bottom: 0;
 }

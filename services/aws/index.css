@@ -1,0 +1,19 @@
+#my-config_s3_buckets-table .website, #my-config_s3_buckets-table .cdn {
+    text-align: center;
+}
+
+#my-config_cloudfront_summary-table .raw-name {
+    text-align: right;
+}
+
+#my-config_route53_hexstreamsoft\.com_table {
+    margin-left: -6.9em;
+}
+
+table .upcoming, table .redirect {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+h1.breadcrumbs .ellipsis {
+    opacity: 1;
+}

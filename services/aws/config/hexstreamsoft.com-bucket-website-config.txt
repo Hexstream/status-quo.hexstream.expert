@@ -1,0 +1,5 @@
+{
+    "RedirectAllRequestsTo": {
+        "HostName": "www.hexstreamsoft.com"
+    }
+}
