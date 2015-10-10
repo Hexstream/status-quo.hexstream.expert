@@ -129,35 +129,3 @@ main dl dl dd, main .item-section dl dd {
 main dl dl dd p, main .item-section dl dd p {
     margin-left: 0;
 }
-
-
-section.item-section > h1 {
-    display: table;
-    padding-right: 1.3em;
-    border: dashed thin gray;
-}
-
-section.item-section > h1 .prev, section.item-section > h1 .next {
-    position: absolute;
-    right: 0;
-    border: thin solid transparent;
-    padding: 0 0.1em;
-    margin-left: 0.1em;
-    opacity: 0.25;
-}
-
-section.item-section > h1 .prev:hover, section.item-section > h1 .next:hover {
-    background: #FFCC99;
-    border: thin solid black;
-    opacity: 1;
-}
-
-section.item-section > h1 .prev {
-    top: 0;
-    bottom: 50%
-}
-
-section.item-section > h1 .next {
-    top: 50%;
-    bottom: 0;
-}
