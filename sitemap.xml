@@ -63,6 +63,14 @@
   </url>
 
   <url>
+    <loc>http://status-quo.hexstreamsoft.com/services/aws/</loc>
+  </url>
+
+  <url>
+    <loc>http://status-quo.hexstreamsoft.com/services/digitalocean/</loc>
+  </url>
+
+  <url>
     <loc>http://status-quo.hexstreamsoft.com/services/namecheap/</loc>
   </url>
 
