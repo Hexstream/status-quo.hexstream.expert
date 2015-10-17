@@ -138,7 +138,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-10-04">4 october 2015</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-10-27">27 october 2015</time><span>.</span></p>
 
     <main>
 
@@ -184,6 +184,7 @@
             <span class="section-relative-nav">
               <a href="#my-config" class="prev upwards">⬉</a>
               <a href="#my-config_droplets" class="anchor">⚓</a>
+              <a href="#my-config_droplets_spike.hexstream.net" class="next downwards">⬊</a>
             </span>
             <a href="#">DigitalOcean</a>
             <span class="separator"> » </span>
@@ -194,34 +195,108 @@
 
           <p>The lowest-powered droplet is more than sufficient for my meager needs, for now.</p>
 
-          <dl>
+          <div id="droplets-table_div">
 
-            <dt id="my-config_droplets_spike.hexstream.net">
-              spike.hexstream.net
-              <a href="#my-config_droplets_spike.hexstream.net" class="anchor">⚓</a>
-            </dt>
-            <dd>
-              <dl>
-                <dt>Creation date</dt>
-                <dd><time datetime="2015-03-02">2 march 2015</time></dd>
-                <dt>IP address</dt>
-                <dd>104.131.177.235</dd>
-                <dt>RAM size</dt>
-                <dd>512MB</dd>
-                <dt>SSD hard disk size</dt>
-                <dd>20GB</dd>
-                <dt>Operating system</dt>
-                <dd>Ubuntu 14.04 x64</dd>
-                <dt>Region</dt>
-                <dd>New York 3</dd>
-                <dt>Cost</dt>
-                <dd>US $5/month ($0.007/hour)</dd>
-                <dt>Purpose</dt>
-                <dd>I run various services on this. I'll document this in details later...</dd>
-              </dl>
-            </dd>
+            <table id="droplets-table">
+            <thead>
+              <tr>
+                <th class="name">Name</th>
+                <th>Creation date</th>
+                <th>IP address</th>
+                <th>RAM size</th>
+                <th><abbr title="solid state drive">SSD</abbr> size</th>
+                <th>Operating system</th>
+                <th>Region</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="name"><a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a></th>
+                <td><time datetime="2015-03-02">2 march 2015</time></td>
+                <td>104.131.177.235</td>
+                <td>512MB</td>
+                <td>20GB</td>
+                <td>Ubuntu 14.04 x64</td>
+                <td>New York 3</td>
+                <td>US $5/month ($0.007/hour)</td>
+              </tr>
+            </tbody>
+          </table>
 
-          </dl>
+          </div>
+
+          <section id="my-config_droplets_spike.hexstream.net">
+
+            <h1 class="breadcrumbs">
+              <span class="section-relative-nav">
+                <a href="#my-config_droplets" class="prev upwards">⬉</a>
+                <a href="#my-config_droplets_spike.hexstream.net" class="anchor">⚓</a>
+                <a href="#my-config_droplets_spike.hexstream.net_apache" class="next downwards">⬊</a>
+              </span>
+              <a href="#">DigitalOcean</a>
+              <span class="separator"> » </span>
+              <a href="#my-config">My config</a>
+              <span class="separator"> » </span>
+              <a href="#my-config_droplets">Droplets</a>
+              <span class="separator"> » </span>
+              <a class="here">spike.hexstream.net</a>
+            </h1>
+
+            <p>This droplet uses Ubuntu instead of Debian (what I would choose nowadays), for historical reasons.</p>
+
+            <section id="my-config_droplets_spike.hexstream.net_apache">
+
+              <h1 class="breadcrumbs">
+                <span class="section-relative-nav">
+                  <a href="#my-config_droplets_spike.hexstream.net" class="prev upwards">⬉</a>
+                  <a href="#my-config_droplets_spike.hexstream.net_apache" class="anchor">⚓</a>
+                </span>
+                <a href="#">DigitalOcean</a>
+                <span class="separator"> » </span>
+                <a href="#my-config">My config</a>
+                <span class="separator"> » </span>
+                <a href="#my-config_droplets">Droplets</a>
+                <span class="separator"> » </span>
+                <a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a>
+                <span class="separator"> » </span>
+                <a class="here">Apache</a>
+              </h1>
+
+              <p>For installation of Apache, I simply use the <code>apache2</code> Ubuntu package.</p>
+
+              <p>I have this at the end of my <code>/etc/apache2/apache2.conf</code> (because I want to mostly ignore the Ubuntu way of doing things, in this case):</p>
+
+              <p><code class="snippet">Include custom/custom.conf</code></p>
+
+              <p>The <code>custom</code> directory is a copy of the <code>$PRE_DEPLOY_DIR/apache/</code> directory, pulled in by <a href="config/droplets/spike.hexstream.net/apache/deploy.sh">deploy.sh</a>. <code>$PRE_DEPLOY_DIR/apache/</code> is automatically populated with the files in the <code>services/digitalocean/config/droplets/spike.hexstream.net/apache/</code> directory (recursively) in the <code>status-quo.hexstreamsoft.com</code> repo by <a href="config/droplets/spike.hexstream.net/apache/pre-deploy.sh">pre-deploy.sh</a> whenever the master branch is updated, thanks to a git post-receive hook. Whenever one of the apache config files is updated, I manually invoke the <code>deploy.sh</code> (as root), for now.</p>
+
+              <p><code>$PRE_DEPLOY_DIR</code> is defined in <code>/etc/environment</code> and has the value <code>/usr/local/etc/pre-deploy</code>.</p>
+
+              <p>Here's my <a href="config/droplets/spike.hexstream.net/apache/custom.conf">/etc/apache2/custom.conf</a>.</p>
+
+              <p>The aforementioned <code>custom.conf</code> <code>Include</code>s <a href="config/droplets/spike.hexstream.net/apache/site-wide-redirects.conf">site-wide-redirects.conf</a> and <a href="config/droplets/spike.hexstream.net/apache/site-wide-tunnels.conf">site-wide-tunnels.conf</a>. That latter file's <code>$HOME_IP</code> is replaced by my current home IP address using sed during pre-deployment.</p>
+
+              <p id="apache-reload">
+                The <code>deploy.sh</code> script restarts the Apache server with <code>apache2ctl graceful</code>.
+                <br />
+                (<code>graceful</code> is like <code>restart</code> except it will finish serving the current requests instead of abruptly aborting them.)</p>
+
+            </section>
+
+            <nav class="end-of-section-indicator">
+              <a href="#my-config_droplets_spike.hexstream.net">
+                "<span>spike.hexstream.net</span>" end.
+              </a>
+            </nav>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#my-config_droplets">
+              "<span>Droplets</span>" end.
+            </a>
+          </nav>
 
         </section>
 
