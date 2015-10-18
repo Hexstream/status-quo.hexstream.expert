@@ -7,6 +7,29 @@ table .redirect, table .redirect a {
 }
 
 
+main .item-section {
+    display: inline-table;
+    min-width: 20em;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+main .wrap {
+    white-space: normal;
+}
+
+main .item-section p {
+    margin-right: 0;
+}
+
+main .item-section.half-width {
+    width: 45%;
+}
+
+main .item-section h1 {
+    margin-top: 0;
+}
+
 #my-config_domain-names_navbox {
     display: table;
     width: auto;
