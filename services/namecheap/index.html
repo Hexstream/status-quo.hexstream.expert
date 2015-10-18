@@ -767,14 +767,17 @@
             (Too bad they don't yet provide secondary DNS...)
           </p>
 
-          <table class="dns-table" id="my-config_dns_table">
+          <!-- TODO: Adjust position accurately with Javascript. -->
+          <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                 id="my-config_dns_table"
+                 style="margin-left: -9em;">
             <colgroup>
-              <col></col>
+              <col />
             </colgroup>
             <colgroup span="5" class="main"></colgroup>
             <thead>
               <tr>
-                <th class="category">Category</th>
+                <th class="category ghost left">Category</th>
                 <th class="zone">Zone</th>
                 <th class="name">Name</th>
                 <th class="type">Type</th>
@@ -784,7 +787,7 @@
             </thead>
             <tbody>
               <tr id="my-config_dns_stream-lisp.org">
-                <th rowspan="3" class="category">
+                <th rowspan="3" class="category ghost left">
                   <a href="#my-config_domain-names_actively-used">Actively used</a>
                 </th>
                 <th rowspan="3" class="zone"><a href="#my-config_domain-names_stream-lisp.org">stream-lisp.org</a></th>
@@ -807,7 +810,7 @@
             </tbody>
             <tbody>
               <tr id="my-config_dns_bahagontools.com">
-                <th rowspan="7" class="category">
+                <th rowspan="7" class="category ghost left">
                   <a href="#my-config_domain-names_not-actively-used">Not actively used</a>
                 </th>
                 <th rowspan="3" class="zone"><a href="#my-config_domain-names_bahagontools.com">bahagontools.com</a></th>
@@ -860,7 +863,7 @@
             </tbody>
             <tbody>
               <tr id="my-config_dns_hexstreamsoftware.com">
-                <th rowspan="4" class="category">
+                <th rowspan="4" class="category ghost left">
                   <a href="#my-config_domain-names_redirects">Redirects</a>
                 </th>
                 <th rowspan="2" class="zone"><a href="#my-config_domain-names_hexstreamsoftware.com">hexstreamsoftware.com</a></th>
@@ -895,7 +898,7 @@
             </tbody>
             <tbody>
               <tr id="my-config_dns_saintetepourlan2000.com">
-                <th rowspan="3" class="category">
+                <th rowspan="3" class="category ghost left">
                   <a href="#my-config_domain-names_managed-for-others">Managed for others</a>
                 </th>
                 <th rowspan="3" class="zone"><a href="#my-config_domain-names_saintetepourlan2000.com">saintetepourlan2000.com</a></th>

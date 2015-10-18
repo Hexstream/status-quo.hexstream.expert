@@ -1,26 +1,5 @@
-.dns-table {
-    border: none;
-}
-
 .dns-table .main {
     border: 0.15em solid black;
-}
-
-.dns-table .category {
-    text-align: right;
-    vertical-align: top;
-    background: transparent;
-    border: 0.15em solid transparent;
-    border-right: 0.15em solid black;
-    color: rgba(0, 0, 0, 0.4);
-}
-
-.dns-table .category a {
-    color: inherit;
-}
-
-.dns-table .category a:hover {
-    text-decoration: underline;
 }
 
 .dns-table .zone, .dns-table .name, .dns-table .type, .dns-table .value {

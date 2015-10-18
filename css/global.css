@@ -60,43 +60,6 @@ ul.tabs > li > a.here:hover, ul.tabs > li > a.here:focus, ul.tabs > li > a.not-a
     text-decoration: none;
 }
 
-.navtable th.direct-link {
-    background: #E0E0E0;
-    border-left: hidden;
-}
-
-.navtable .direct-link a {
-    opacity: 0.2;
-    padding-left: 0.2em;
-    padding-right: 0.4em;
-}
-
-.navtable .direct-link a:hover {
-    opacity: 1;
-}
-
-.navtable th a[href]:hover, .navtable td a[href]:hover, .navtable th a[href]:focus, .navtable td a[href]:focus {
+.navtable td a[href]:hover, .navtable td a[href]:focus {
     background: #ECE0A5;
-}
-
-.navtable .purpose {
-    text-align: right;
-    background: white;
-    border: 0.15em solid white;
-    border-right: 0.15em solid black;
-    color: rgba(0, 0, 0, 0.4);
-}
-
-.navtable .name {
-    text-align: right;
-}
-
-.navtable .name a {
-    padding-right: 0.2em;
-}
-
-
-#navtable th a[href]:hover {
-    background: #E0E0E0;
-    text-decoration: underline;
 }
