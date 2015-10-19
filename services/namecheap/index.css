@@ -1,11 +1,10 @@
-table .registration-date {
-    text-align: right;
+#domain-names-table {
+    font-size: medium;
 }
 
-table .redirect, table .redirect a {
-    color: rgba(0, 0, 0, 0.3333);
+#domain-names-table caption {
+    margin-bottom: 0.4em;
 }
-
 
 main .item-section {
     display: inline-table;
@@ -38,9 +37,4 @@ main .item-section h1 {
 
 #my-config_domain-names_navbox .inlined-nodes li {
     padding-right: 1.1em;
-}
-
-
-#my-config_dns_table {
-    margin-left: -9em;
 }

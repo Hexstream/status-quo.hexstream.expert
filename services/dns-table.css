@@ -6,7 +6,7 @@
     vertical-align: top;
 }
 
-.dns-table .zone, .dns-table .name {
+.dns-table .zone, .dns-table .name, .dns-table .registration-date {
     text-align: right;
 }
 

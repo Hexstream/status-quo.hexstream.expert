@@ -211,81 +211,110 @@
             <a class="here">Domain names</a>
           </h1>
 
-          <nav class="section-nav">
-
-            <nav class="navbox" id="my-config_domain-names_navbox">
-              <h1>
-                <a class="here">Domain names</a>
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#my-config_domain-names_actively-used" class="inlining-node">Actively used</a>
-                  <ul class="inlined-nodes">
-                    <li>
-                      <a href="#my-config_domain-names_hexstreamsoft.com">hexstreamsoft.com</a>
-                      <a class="direct-link" href="http://www.hexstreamsoft.com/"><span>⬈</span></a>
-                    </li>
-                    <li>
-                      <a href="#my-config_domain-names_stream-lisp.org">stream-lisp.org</a>
-                      <a class="direct-link" href="http://www.stream-lisp.org/"><span>⬈</span></a>
-                    </li>
-                    <li>
-                      <a href="#my-config_domain-names_hexstream.net">hexstream.net</a>
-                      <a class="direct-link" href="http://www.hexstream.net/"><span>⬈</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#my-config_domain-names_not-actively-used" class="inlining-node">Not actively used</a>
-                  <ul class="inlined-nodes">
-                    <li>
-                      <a href="#my-config_domain-names_bahagontools.com">bahagontools.com</a>
-                      <a class="direct-link" href="http://www.bahagontools.com/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                    <li>
-                      <a href="#my-config_domain-names_hexstream.xyz">hexstream.xyz</a>
-                      <a class="direct-link" href="http://www.hexstream.xyz/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                    <li>
-                      <a href="#my-config_domain-names_jpparadis.com"><del>jpparadis.com</del></a>
-                      <a class="direct-link" href="http://www.jpparadis.com/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                    <li>
-                      <a href="#my-config_domain-names_jpparadis.net"><del>jpparadis.net</del></a>
-                      <a class="direct-link" href="http://www.jpparadis.net/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#my-config_domain-names_redirects" class="inlining-node">Redirects</a>
-                  <ul class="inlined-nodes">
-                    <li>
-                      <a href="#my-config_domain-names_hexstreamsoftware.com">hexstreamsoftware.com</a>
-                      <a class="direct-link" href="http://www.hexstreamsoftware.com/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                    <li>
-                      <a href="#my-config_domain-names_streamlisp.org">streamlisp.org</a>
-                      <a class="direct-link" href="http://www.streamlisp.org/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#my-config_domain-names_managed-for-others" class="inlining-node">Managed for others</a>
-                  <ul class="inlined-nodes">
-                    <li>
-                      <a href="#my-config_domain-names_saintetepourlan2000.com">saintetepourlan2000.com</a>
-                      <a class="direct-link" href="http://www.saintetepourlan2000.com/" rel="nofollow, noindex"><span>⬈</span></a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-
-          </nav>
-
           <p>In this section is a complete list of all the domain names I own, as of <time datetime="2015-09-25">25 september 2015</time>.</p>
+
+          <table class="dns-table navtable contains-weightless-colgroups contains-main-colgroup contains-direct-links"
+                 id="domain-names-table"
+                 style="left: -4em;">
+            <caption style="position: relative; left: 4em;">Domain names summary. Details in the sections below.</caption>
+            <colgroup class="weightless">
+              <col />
+            </colgroup>
+            <colgroup span="5" class="main"></colgroup>
+            <thead>
+              <tr>
+                <th class="category ghost left">Category</th>
+                <th colspan="2" class="name">Name</th>
+                <th class="registration-date">Registration date</th>
+                <th>Primary DNS server</th>
+                <th>DNS host</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="3" class="category ghost left">
+                  <a href="#my-config_domain-names_actively-used">Actively used</a>
+                </th>
+                <th class="name"><a href="#my-config_domain-names_hexstreamsoft.com">hexstreamsoft.com</a></th>
+                <th class="direct-link"><a href="http://www.hexstreamsoft.com/">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2008-06-28">28 june 2008</time></a></td>
+                <td><a>ns1.hexstreamsoft.com</a></td>
+                <td><a href="../aws/#my-config_route53_hexstreamsoft.com">AWS</a></td>
+              </tr>
+              <tr>
+                <th class="name"><a href="#my-config_domain-names_stream-lisp.org">stream-lisp.org</a></th>
+                <th class="direct-link" ><a href="http://www.stream-lisp.org/">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2012-10-12">12 october 2012</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_stream-lisp.org">Namecheap</a></td>
+              </tr>
+              <tr>
+                <th class="name"><a href="#my-config_domain-names_hexstream.net">hexstream.net</a></th>
+                <th class="direct-link"><a class="direct-link" href="http://www.hexstream.net/">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2014-11-16">16 november 2014</time></a></td>
+                <td><a>ns1.hexstream.net</a></td>
+                <td><a href="../aws/#my-config_route53_hexstream.net">AWS</a></td>
+              </tr>
+              <tr>
+                <th rowspan="4" class="category ghost left">
+                  <a href="#my-config_domain-names_not-actively-used">Not actively used</a>
+                </th>
+                <th class="name"><a href="#my-config_domain-names_bahagontools.com">bahagontools.com</a></th>
+                <th class="direct-link"><a href="http://www.bahagontools.com/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2008-06-28">28 june 2008</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_bahagontools.com">Namecheap</a></td>
+              </tr>
+              <tr>
+                <th class="name"><a href="#my-config_domain-names_hexstream.xyz">hexstream.xyz</a></th>
+                <th class="direct-link"><a href="http://www.hexstream.xyz/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2015-09-20">20 september 2015</time></a></td>
+                <td><a>ns1.hexstream.net</a></td>
+                <td><a href="../aws/#my-config_route53_hexstream.xyz">AWS</a></td>
+              </tr>
+              <tr>
+                <th class="name"><a href="#my-config_domain-names_jpparadis.com"><del>jpparadis.com</del></a></th>
+                <th class="direct-link"><a href="http://www.jpparadis.com/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2010-09-17">17 september 2010</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_jpparadis.com">Namecheap</a></td>
+              </tr>
+              <tr>
+                <th class="name"><a href="#my-config_domain-names_jpparadis.net"><del>jpparadis.net</del></a></th>
+                <th class="direct-link"><a href="http://www.jpparadis.net/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2015-09-10">10 september 2015</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_jpparadis.net">Namecheap</a></td>
+              </tr>
+              <tr>
+                <th rowspan="2" class="category ghost left">
+                  <a href="#my-config_domain-names_redirects">Redirects</a>
+                </th>
+                <th class="name"><a href="#my-config_domain-names_hexstreamsoftware.com">hexstreamsoftware.com</a></th>
+                <th class="direct-link"><a href="http://www.hexstreamsoftware.com/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2008-07-07">7 july 2008</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_hexstreamsoftware.com">Namecheap</a></td>
+              </tr>
+              <tr>
+                <th class="name"><a href="#my-config_domain-names_streamlisp.org">streamlisp.org</a></th>
+                <th class="direct-link"><a href="http://www.streamlisp.org/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2012-10-12">12 october 2012</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_streamlisp.org">Namecheap</a></td>
+              </tr>
+              <tr>
+                <th rowspan="1" class="category ghost left">
+                  <a href="#my-config_domain-names_managed-for-others">Managed for others</a>
+                </th>
+                <th class="name"><a href="#my-config_domain-names_saintetepourlan2000.com">saintetepourlan2000.com</a></th>
+                <th class="direct-link"><a href="http://www.saintetepourlan2000.com/" rel="nofollow, noindex">⬈</a></th>
+                <td class="registration-date"><a><time datetime="2009-06-07">7 june 2009</time></a></td>
+                <td><a>dns1.registrar-servers.com</a></td>
+                <td><a href="#my-config_dns_saintetepourlan2000.com">Namecheap</a></td>
+              </tr>
+            </tbody>
+          </table>
 
           <section id="my-config_domain-names_actively-used">
 
@@ -326,7 +355,7 @@
                 <dt>Registration date</dt>
                 <dd><time datetime="2008-06-28">28 june 2008</time></dd>
                 <dt>Primary DNS server</dt>
-                <dd>ns1.hexstreamsoft.com (on AWS)</dd>
+                <dd>ns1.hexstreamsoft.com (<a href="../aws/#my-config_route53_hexstreamsoft.com">on AWS</a>)</dd>
                 <dt>Topic</dt>
                 <dd>
                   <p>Programming. Mostly Common Lisp.</p>
@@ -385,7 +414,7 @@
                 <dt>Registration date</dt>
                 <dd><time datetime="2014-11-16">16 november 2014</time></dd>
                 <dt>Primary DNS server</dt>
-                <dd>ns1.hexstream.net (on AWS)</dd>
+                <dd>ns1.hexstream.net (<a href="../aws/#my-config_route53_hexstream.net">on AWS</a>)</dd>
                 <dt>Topic</dt>
                 <dd>
                   <p>Entertainment. Mostly clop, for now. <span class="nowrap">¯\_(ツ)_/¯</span></p>
@@ -483,7 +512,7 @@
                 <dt>Registration date</dt>
                 <dd><time datetime="2015-09-20">20 september 2015</time></dd>
                 <dt>Primary DNS server</dt>
-                <dd>ns1.hexstream.net (on AWS)</dd>
+                <dd>ns1.hexstream.net (<a href="../aws/#my-config_route53_hexstream.xyz">on AWS</a>)</dd>
                 <dt>Transient status</dt>
                 <dd>
                   <p>Undefined.</p>
