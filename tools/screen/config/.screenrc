@@ -33,11 +33,8 @@
 
 startup_message off
 
-chdir
-screen -t home 0
-
 chdir /home/hexstream/data/projects/lisp/worknotes.hexstreamsoft.com/master/
-screen -t worknotes 1
+screen -t worknotes 0
 
 chdir /home/hexstream/data/projects/lisp/
 
