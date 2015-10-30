@@ -138,7 +138,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-10-27">27 october 2015</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-10-29">29 october 2015</time><span>.</span></p>
 
     <main>
 
@@ -251,6 +251,7 @@
                 <span class="section-relative-nav">
                   <a href="#my-config_droplets_spike.hexstream.net" class="prev upwards">⬉</a>
                   <a href="#my-config_droplets_spike.hexstream.net_apache" class="anchor">⚓</a>
+                  <a href="#my-config_droplets_spike.hexstream.net_raw" class="next">⬇</a>
                 </span>
                 <a href="#">DigitalOcean</a>
                 <span class="separator"> » </span>
@@ -281,6 +282,90 @@
                 The <code>deploy.sh</code> script restarts the Apache server with <code>apache2ctl graceful</code>.
                 <br />
                 (<code>graceful</code> is like <code>restart</code> except it will finish serving the current requests instead of abruptly aborting them.)</p>
+
+            </section>
+
+            <section id="my-config_droplets_spike.hexstream.net_raw">
+
+              <h1 class="breadcrumbs">
+                <span class="section-relative-nav">
+                  <a href="#my-config_droplets_spike.hexstream.net" class="prev upwards">⬉</a>
+                  <a href="#my-config_droplets_spike.hexstream.net_apache" class="prev">⬆</a>
+                  <a href="#my-config_droplets_spike.hexstream.net_raw" class="anchor">⚓</a>
+                  <a href="#my-config_droplets_spike.hexstream.net_email" class="next downwards">⬊</a>
+                </span>
+                <a href="#">DigitalOcean</a>
+                <span class="separator"> » </span>
+                <a href="#my-config">My config</a>
+                <span class="separator"> » </span>
+                <a href="#my-config_droplets">Droplets</a>
+                <span class="separator"> » </span>
+                <a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a>
+                <span class="separator"> » </span>
+                <a class="here">Raw</a>
+              </h1>
+
+              <p>Miscellaneous raw stuff. I'll clean this up later, probably. Maybe.</p>
+
+              <p><a href="config/droplets/spike.hexstream.net/raw/website-update-hook.sh">/usr/local/bin/website-update-hook.sh</a></p>
+
+              <section id="my-config_droplets_spike.hexstream.net_raw_email" class="item-section">
+
+                <h1 class="breadcrumbs">
+                  <span class="section-relative-nav">
+                    <span class="of">1/2</span>
+                    <a href="#my-config_droplets_spike.hexstream.net_raw" class="prev upwards">⬉</a>
+                    <a href="#my-config_droplets_spike.hexstream.net_raw_email" class="anchor">⚓</a>
+                    <a href="#my-config_droplets_spike.hexstream.net_raw_bittorrent" class="next">⬇</a>
+                  </span>
+                  <a class="ellipsis">...</a>
+                  <span class="separator"> » </span>
+                  <a class="here">Email</a>
+                </h1>
+
+                <ul>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/postfix/end-of_main.cf"><code>/etc/postfix/main.cf</code> (excerpt, end)</a></li>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/postfix/virtual"><code>/etc/postfix/virtual</code></a></li>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/postfix/controlled_envelope_senders"><code>/etc/postfix/controlled_envelope_senders</code></a></li>
+                  <li>Something to do with <code>dovecot</code>.</li>
+                </ul>
+
+              </section>
+
+              <section id="my-config_droplets_spike.hexstream.net_raw_bittorrent" class="item-section">
+
+                <h1 class="breadcrumbs">
+                  <span class="section-relative-nav">
+                    <span class="of">2/2</span>
+                    <a href="#my-config_droplets_spike.hexstream.net_raw" class="prev upwards">⬉</a>
+                    <a href="#my-config_droplets_spike.hexstream.net_raw_email" class="prev">⬆</a>
+                    <a href="#my-config_droplets_spike.hexstream.net_raw_bittorrent" class="anchor">⚓</a>
+                  </span>
+                  <a class="ellipsis">...</a>
+                  <span class="separator"> » </span>
+                  <a class="here">Bittorrent</a>
+                </h1>
+
+                <p>I run my own private bittorrent tracker. (&quot;private&quot; in the sense that only I can add files.)</p>
+
+                <p>opentracker isn't yet widely available in repos, for stupid licensing reasons.</p>
+
+                <p>(Supposedly you don't need a tracker these days, because of the DHT stuff, but I'm not sure how well that works (if at all) for incredibly obscure torrents, and if that's likely to cause performance or compatibility problems.)</p>
+
+                <ul>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/opentracker/excerpts_opentracker.conf"><code>/usr/local/etc/opentracker/opentracker.conf</code> (excerpts)</a></li>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/opentracker/whitelist.conf"><code>/usr/local/etc/opentracker/whitelist.conf</code></a></li>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/opentracker/opentracker"><code>/etc/init.d/opentracker</code></a> (I made this based on <code>/etc/init.d/skeleton</code>. I'm a newb, so probably has bugs and/or style problems.)</li>
+                  <li><a href="config/droplets/spike.hexstream.net/raw/transmission-daemon/excerpts_settings.json"><code>/etc/transmission-daemon/settings.json</code> (excerpts)</a></li>
+                </ul>
+
+              </section>
+
+              <nav class="end-of-section-indicator">
+                <a href="#my-config_droplets_spike.hexstream.net_raw">
+                  "<span>Raw</span>" end.
+                </a>
+              </nav>
 
             </section>
 

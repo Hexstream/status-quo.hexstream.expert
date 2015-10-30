@@ -1,0 +1,9 @@
+"download-dir": "/var/lib/transmission-daemon/downloads",
+
+"rpc-authentication-required": false,
+"rpc-bind-address": "0.0.0.0",
+"rpc-enabled": true,
+"rpc-port": 9091
+
+"rpc-whitelist": "184.160.146.71, 127.0.0.1",
+"rpc-whitelist-enabled": true
