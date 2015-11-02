@@ -1,3 +1,7 @@
+.dns-table {
+    white-space: nowrap;
+}
+
 .dns-table .main {
     border: 0.15em solid black;
 }

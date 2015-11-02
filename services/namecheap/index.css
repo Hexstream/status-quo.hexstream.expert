@@ -6,27 +6,46 @@
     margin-bottom: 0.4em;
 }
 
-main .item-section {
-    display: inline-table;
-    min-width: 20em;
-    margin-bottom: 0;
+.nowrap {
     white-space: nowrap;
 }
 
-main .wrap {
-    white-space: normal;
+main .items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+main .items .item-section {
+    flex: 1 0 auto;
+    width: auto;
+    margin: 1.5em 0;
+    box-sizing: border-box;
+    min-width: 25em;
+    max-width: 35em;
+}
+
+/* If we have enough space for 2, including sidebar. */
+@media (min-width: 65em) {
+    main .items .item-section {
+        max-width: 50%;
+    }
+}
+
+main .items .item-section.half-width {
+    flex: 0.01 1 auto;
 }
 
 main .item-section p {
     margin-right: 0;
 }
 
-main .item-section.half-width {
-    width: 45%;
-}
-
 main .item-section h1 {
     margin-top: 0;
+}
+
+main .item-section .intend-to-drop {
+    color: red;
 }
 
 #my-config_domain-names_navbox {
