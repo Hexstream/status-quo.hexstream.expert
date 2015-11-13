@@ -3,7 +3,7 @@
 source ~/scripts/website-env.sh
 
 declare -x PUBLIC=/home/${WEBSITE:?}/public/
-CACHE_CONTROL='max-age=43200, s-maxage=86400'
+CACHE_CONTROL='max-age=86400'
 
 cd ~/website.git/
 
