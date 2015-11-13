@@ -73,6 +73,8 @@
   (if *initializing*
       (hexstream-cold-init))
   (bind "C-t" "other-in-frame")
+  (bind "-" "remove-split")
+  (bind "=" "balance-frames")
   (bind "M-t" "pull-hidden-other")
   (setf *mouse-focus-policy* :click)
   (setf *timeout-frame-indicator-wait* 0.2
