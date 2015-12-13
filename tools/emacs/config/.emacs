@@ -153,7 +153,7 @@
 
 
 (autoload 'hexstream-html-doc-mode
-  (expand-file-name "~/data/projects/lisp/hexstream-html-doc-mode/master/hexstream-html-doc-mode.el")
+  (expand-file-name "~/data/projects/lisp/hexstream-html-doc-mode/hexstream-html-doc-mode.el")
   nil t nil)
 
 (push '("\\.html" . hexstream-html-doc-mode) auto-mode-alist)
