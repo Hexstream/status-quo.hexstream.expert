@@ -95,6 +95,7 @@
 (global-font-lock-mode t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 (column-number-mode t)
 (setf inhibit-startup-message t)
 (setf Info-scroll-prefer-subnodes nil)
