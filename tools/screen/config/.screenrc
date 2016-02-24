@@ -33,10 +33,10 @@
 
 startup_message off
 
-chdir /home/hexstream/data/projects/lisp/worknotes.hexstreamsoft.com/
+chdir /home/hexstream/data/projects/websites/worknotes.hexstreamsoft.com/
 screen -t worknotes 0
 
-chdir /home/hexstream/data/projects/lisp/
+chdir /home/hexstream/data/projects/
 
 # To start working on a particular project:
 # "C-a c" to open a new console

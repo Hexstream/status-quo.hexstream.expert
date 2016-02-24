@@ -150,7 +150,7 @@
 	  (lambda ()
             (make-directory "/tmp/slime-fasls/" t)
             (setf slime-compile-file-options '(:fasl-directory "/tmp/slime-fasls/"))
-            (slime-set-default-directory "/home/hexstream/data/projects/lisp/")))
+            (slime-set-default-directory "/home/hexstream/data/projects/")))
 
 
 (autoload 'hexstream-html-doc-mode
