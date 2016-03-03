@@ -46,7 +46,7 @@
 (setf slime-load-failed-fasl 'never)
 
 
-(setf backup-directory-alist '(("." . "/home/hexstream/data/misc/backup/emacs/")))
+(setf make-backup-files nil)
 (setf enable-recursive-minibuffers t)
 
 (setf read-quoted-char-radix 16)
