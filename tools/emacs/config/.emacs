@@ -165,6 +165,8 @@
 ;; dns-mode-soa-increment-serial is broken, at least in Emacs 24.3.1.
 (setf dns-mode-soa-auto-increment-serial nil)
 
+(server-start)
+
 ;custom stuff
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
