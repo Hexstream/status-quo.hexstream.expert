@@ -38,6 +38,7 @@
 
 (setq-default indent-tabs-mode nil)
 (setf indent-tabs-mode nil)
+(setf dired-listing-switches "-alh")
 
 ;; Don't break C-j, one of my favorite commands...
 (setf electric-indent-mode nil)
