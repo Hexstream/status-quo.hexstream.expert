@@ -1,0 +1,65 @@
+#### Start of public config
+
+Host global.hexstreamsoft.com
+HostName spike.hexstream.net
+User global.hexstreamsoft.com
+
+Host www.hexstreamsoft.com
+HostName spike.hexstream.net
+User www.hexstreamsoft.com
+
+Host worknotes.hexstreamsoft.com
+HostName spike.hexstream.net
+User worknotes.hexstreamsoft.com
+
+Host status-quo.hexstreamsoft.com
+HostName spike.hexstream.net
+User status-quo.hexstreamsoft.com
+
+Host private.status-quo.hexstream.xyz
+HostName spike.hexstream.net
+User private.status-quo.hexstream.xyz
+
+Host blog.hexstreamsoft.com
+HostName spike.hexstream.net
+User blog.hexstreamsoft.com
+
+Host www.stream-lisp.org
+HostName spike.hexstream.net
+User www.stream-lisp.org
+
+Host tarballs.hexstreamsoft.com
+HostName spike.hexstream.net
+User tarballs.hexstreamsoft.com
+
+Host www.hexstream.net
+HostName spike.hexstream.net
+User www.hexstream.net
+
+Host ponies.hexstream.net
+HostName spike.hexstream.net
+User ponies.hexstream.net
+
+Host clop.ponies.hexstream.net
+HostName spike.hexstream.net
+User clop.ponies.hexstream.net
+
+Host www.saintetepourlan2000.com
+HostName spike.hexstream.net
+User www.saintetepourlan2000.com
+
+Host spike.hexstream.net
+HostName spike.hexstream.net
+User root
+
+Host dumping-grounds.hexstream.xyz
+HostName spike.hexstream.net
+User dumping-grounds.hexstream.xyz
+
+Host discord.hexstream.xyz
+HostName spike.hexstream.net
+User discord.hexstream.xyz
+
+Host i18n.discord.hexstream.xyz
+HostName spike.hexstream.net
+User i18n.discord.hexstream.xyz

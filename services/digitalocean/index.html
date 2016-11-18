@@ -139,7 +139,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-11-15">15 november 2016</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-11-17">17 november 2016</time><span>.</span></p>
 
     <main>
 
@@ -258,9 +258,9 @@
 
               <p>I have this at the end of my <code>/etc/apache2/apache2.conf</code> (because I want to mostly ignore the Ubuntu way of doing things, in this case):</p>
 
-              <p><code class="snippet">Include custom/custom.conf</code></p>
+              <p><code class="snippet">Include custom/public/custom.conf</code></p>
 
-              <p>The <code>custom</code> directory is a copy of the <code>$PRE_DEPLOY_DIR/apache/</code> directory, pulled in by <a href="config/droplets/spike.hexstream.net/apache/deploy.sh">deploy.sh</a>. <code>$PRE_DEPLOY_DIR/apache/</code> is automatically populated with the files in the <code>services/digitalocean/config/droplets/spike.hexstream.net/apache/</code> directory (recursively) in the <code>status-quo.hexstreamsoft.com</code> repo by <a href="config/droplets/spike.hexstream.net/apache/pre-deploy.sh">pre-deploy.sh</a> whenever the master branch is updated, thanks to a git post-receive hook. Whenever one of the apache config files is updated, I manually invoke the <code>deploy.sh</code> (as root), for now.</p>
+              <p>The <code>custom</code> directory is a copy of the <code>$PRE_DEPLOY_DIR/apache/</code> directory, pulled in by <a href="config/droplets/spike.hexstream.net/apache/deploy.sh">deploy.sh</a>. <code>$PRE_DEPLOY_DIR/apache/public/</code> is populated with the files in the <code>services/digitalocean/config/droplets/spike.hexstream.net/apache/</code> directory (recursively) in the <code>status-quo.hexstreamsoft.com</code> repo, while <code>$PRE_DEPLOY_DIR/apache/private/</code> is populated with the files in the <code>apache/</code> directory (recursively) in the <code>private.status-quo.hexstream.xyz</code> repo. The populating is done by <a href="config/droplets/spike.hexstream.net/apache/pre-deploy.sh">pre-deploy.sh</a>, which I invoke manually when appropriate, for now. Whenever one of the apache config files is updated, I manually invoke the <code>deploy.sh</code> (as root), for now.</p>
 
               <p><code>$PRE_DEPLOY_DIR</code> is defined in <code>/etc/environment</code> and has the value <code>/usr/local/etc/pre-deploy</code>.</p>
 

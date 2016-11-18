@@ -3,3 +3,4 @@ Sitemap: http://status-quo.hexstreamsoft.com/sitemap.xml
 User-agent: *
 Disallow: /tmp/
 Disallow: /error-pages/
+Disallow: /raw/

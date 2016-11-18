@@ -1,1 +1,10 @@
 @import "https://global.hexstreamsoft.com/css/global.css";
+
+main a.private {
+    padding-left: 0.8em;
+    background-image: url("https://global.hexstreamsoft.com/css/images/locked-padlock.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 70%;
+    background-size: auto 90%;
+    color: rgba(0, 0, 0, 0.6);
+}
