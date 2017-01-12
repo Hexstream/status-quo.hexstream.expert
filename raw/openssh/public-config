@@ -1,5 +1,9 @@
 #### Start of public config
 
+Host abc.hexstream.xyz
+HostName spike.hexstream.net
+User abc.hexstream.xyz
+
 Host global.hexstreamsoft.com
 HostName spike.hexstream.net
 User global.hexstreamsoft.com
