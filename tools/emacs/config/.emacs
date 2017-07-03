@@ -168,6 +168,11 @@
 
 (server-start)
 
+;; For transient project-specific stuff, mostly keyboard macros.
+;; For example, using "C-x C-k b" to assign the last keyboard macro to "s-h f" instead of the more awkward "C-x C-k F".
+(define-prefix-command 'hexstream-map)
+(global-set-key (kbd "s-h") 'hexstream-map)
+
 ;custom stuff
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
