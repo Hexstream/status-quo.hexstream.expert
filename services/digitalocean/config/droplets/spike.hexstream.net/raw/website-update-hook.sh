@@ -21,6 +21,6 @@ aws s3 sync $PUBLIC s3://$WEBSITE/ --delete --cache-control "$CACHE_CONTROL"
 
 cd $PUBLIC
 
-for FILE in $(find . -type f ! -name '*.*');
+for FILE in $(find . -type f ! -name '*.*' -o -name '.?*');
 do aws s3 cp s3://$WEBSITE/${FILE:2} s3://$WEBSITE/${FILE:2} --content-type 'text/plain' --cache-control "$CACHE_CONTROL" --metadata-directive REPLACE;
 done
