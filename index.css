@@ -1,0 +1,66 @@
+#tabs-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+#tabs-wrapper .tabs {
+    margin: 0 1em;
+}
+
+#tabs-wrapper .tabs + .tabs {
+    margin-top: 1em;
+}
+
+#tabs-wrapper .tabs ul {
+    margin: initial;
+}
+
+#tabs-wrapper .tabs.additional {
+    opacity: 0.6;
+}
+
+#tabs-wrapper .tabs.additional:hover {
+    opacity: 1;
+}
+
+
+#inlined-sections {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#inlined-sections > section {
+    margin: 1em 2em;
+}
+
+#inlined-sections > section > .header {
+    display: table;
+    margin-left: auto;
+}
+
+#inlined-sections > section > .header > .description {
+    display: table;
+    margin: -1.2em 0 0 2.2em;
+    padding: 0.2em;
+    padding-top: 0.25em;
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+#tools h1 {
+    width: 19.6rem;
+    margin-left: auto;
+}
+
+#services h1 {
+    width: 21.6rem;
+    margin-left: auto;
+}
+
+.navtable {
+    margin-left: initial;
+    margin-right: initial;
+}

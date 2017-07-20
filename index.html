@@ -11,6 +11,7 @@
     <title>Hexstream's status quo</title>
     <link href="css/global.css" rel="stylesheet" type="text/css" />
     <link href="https://global.hexstreamsoft.com/css/homepage.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="scripts/global.js"></script>
   </head>
@@ -44,7 +45,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-07-19">19 july 2017</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-07-20">20 july 2017</time><span>.</span></p>
 
     <main>
 
@@ -54,74 +55,202 @@
           <br />You're welcome to have a look!</p>
       </header>
 
-      <nav class="navlist-group">
+      <div id="tabs-wrapper">
 
-        <nav class="navlist">
-
-          <section>
-            <a href="tools/">
-              <h1>Tools</h1>
-              <p>Programs and environments helping users with tasks.</p>
-            </a>
-          </section>
-
-          <section>
-            <a href="services/">
-              <h1>Services</h1>
-              <p>Third-party services I'm relying on.</p>
-            </a>
-            <div class="status-indicators">
-              <div>
-                <span class="incomplete">⚠ Incomplete</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <a href="specifications/">
-              <h1>Specifications</h1>
-              <p>Standards promoting interoperable implementations.</p>
-            </a>
-            <div class="status-indicators">
-              <div>
-                <span class="stub">✘ Stub <small>(404)</small></span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <a href="hardware/">
-              <h1>Hardware</h1>
-              <p>I'm using boring low-end consumer hardware, mostly.</p>
-            </a>
-            <div class="status-indicators">
-              <div>
-                <span class="stub">✘ Stub <small>(404)</small></span>
-              </div>
-            </div>
-          </section>
-
+        <nav class="tabs main">
+          <ul>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#specifications">Specifications</a></li>
+            <li><a href="#hardware">Hardware</a></li>
+          </ul>
         </nav>
 
-        <nav class="navlist">
-
-          <section>
-            <a href="emerging-changes/">
-              <h1>Emerging changes</h1>
-              <p>A transitory location for changes to my status quo.</p>
-            </a>
-          </section>
-
-          <section>
-            <a href="raw/">
-              <h1>Raw notes</h1>
-              <p>These have yet to be properly integrated into the site.</p>
-            </a>
-          </section>
-
+        <nav class="tabs additional">
+          <ul>
+            <li><a href="emerging-changes/">Emerging changes</a></li>
+            <li><a href="raw/">Raw notes</a></li>
+          </ul>
         </nav>
 
-      </nav>
+      </div>
+
+
+
+      <div id="inlined-sections">
+
+        <section id="tools">
+
+          <div class="header">
+
+            <h1 class="breadcrumbs">
+              <span class="section-relative-nav">
+                <a href="#tools" class="anchor">⚓</a>
+              </span>
+              <a class="here">Tools</a>
+            </h1>
+
+            <p class="description">Programs and environments helping users with tasks.</p>
+
+          </div>
+
+          <table class="navtable status-indicators contains-weightless-colgroups contains-main-colgroup contains-direct-links"
+                 id="navtable">
+            <colgroup class="weightless">
+              <col />
+            </colgroup>
+            <colgroup span="4" class="main"></colgroup>
+            <thead>
+              <tr>
+                <th class="purpose ghost left">Purpose</th>
+                <th class="name" colspan="2">Name</th>
+                <th>Usage notes</th>
+                <th>My config</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="purpose ghost left"><a>Window manager</a></td>
+                <th class="name"><a href="tools/stumpwm/">StumpWM</a></th>
+                <th class="direct-link"><a href="http://www.nongnu.org/stumpwm/">⬈</a></th>
+                <td><a href="tools/stumpwm/#usage-notes" class="ready detailed">✔ Detailed!</a></td>
+                <td><a href="tools/stumpwm/#my-config" class="raw">⚠ Raw</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Text editor and IDE</a></td>
+                <th class="name"><a href="tools/emacs/">Emacs</a></th>
+                <th class="direct-link"><a href="http://www.gnu.org/software/emacs/">⬈</a></th>
+                <td><a href="tools/emacs/#usage-notes" class="incomplete">⚠ Incomplete</a></td>
+                <td><a href="tools/emacs/#my-config" class="raw">⚠ Raw</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Common Lisp implementation</a></td>
+                <th class="name"><a href="tools/sbcl/">SBCL</a></th>
+                <th class="direct-link"><a href="http://sbcl.org/">⬈</a></th>
+                <td><a href="tools/sbcl/#usage-notes" class="stub">✘ Stub</a></td>
+                <td><a href="tools/sbcl/#my-config" class="raw">⚠ Raw</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Terminal multiplexer</a></td>
+                <th class="name"><a href="tools/screen/">Screen</a></th>
+                <th class="direct-link"><a href="http://www.gnu.org/software/screen/">⬈</a></th>
+                <td><a href="tools/screen/#usage-notes" class="ready">✔ Ready</a></td>
+                <td><a href="tools/screen/#my-config" class="trivial">⚠ Trivial</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Distributed version control system</a></td>
+                <th class="name"><a href="tools/git/">git</a></th>
+                <th class="direct-link"><a href="http://git-scm.com/">⬈</a></th>
+                <td><a href="tools/git/#usage-notes" class="outdated">⚠ Outdated</a></td>
+                <td><a href="tools/git/#my-config" class="stub">✘ Stub</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Web browser</a></td>
+                <th class="name"><a href="tools/chrome/">Chrome</a></th>
+                <th class="direct-link"><a href="https://www.google.com/chrome/browser/">⬈</a></th>
+                <td><a href="tools/chrome/#usage-notes" class="ready">✔ Ready</a></td>
+                <td><a href="tools/chrome/#my-config" class="stub">✘ Stub</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+        <section id="services">
+
+          <div class="header">
+
+            <h1 class="breadcrumbs">
+              <span class="section-relative-nav">
+                <a href="#services" class="anchor">⚓</a>
+              </span>
+              <a class="here">Services</a>
+            </h1>
+
+            <p class="description">Third-party services I'm relying on.</p>
+
+          </div>
+
+          <table class="navtable status-indicators contains-weightless-colgroups contains-main-colgroup contains-direct-links"
+                 id="navtable">
+            <colgroup>
+              <col />
+            </colgroup>
+            <colgroup span="4" class="main"></colgroup>
+            <thead>
+              <tr>
+                <th class="purpose ghost left">Purpose</th>
+                <th class="name" colspan="2">Name</th>
+                <th>Usage notes</th>
+                <th>My config</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="purpose ghost left"><a>Infrastructure as a Service</a></td>
+                <th class="name"><a href="services/aws/">AWS</a></th>
+                <th class="direct-link"><a href="https://aws.amazon.com/">⬈</a></th>
+                <td><a href="services/aws/#usage-notes" class="stub">✘ Stub</a></td>
+                <td><a href="services/aws/#my-config" class="incomplete">⚠ Incomplete</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Virtual Private Server provider</a></td>
+                <th class="name"><a href="services/digitalocean/">DigitalOcean</a></th>
+                <th class="direct-link"><a href="https://www.digitalocean.com/">⬈</a></th>
+                <td><a href="services/digitalocean/#usage-notes" class="stub">✘ Stub</a></td>
+                <td><a href="services/digitalocean/#my-config" class="incomplete">⚠ Incomplete</a></td>
+              </tr>
+              <tr>
+                <td class="purpose ghost left"><a>Domain name registrar</a></td>
+                <th class="name"><a href="services/namecheap/">Namecheap</a></th>
+                <th class="direct-link"><a href="https://www.namecheap.com/">⬈</a></th>
+                <td><a href="services/namecheap/#usage-notes" class="stub">✘ Stub</a></td>
+                <td><a href="services/namecheap/#my-config" class="ready">✔ Ready</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+        <section id="specifications">
+
+          <div class="header">
+
+            <h1 class="breadcrumbs">
+              <span class="section-relative-nav">
+                <a href="#specifications" class="anchor">⚓</a>
+              </span>
+              <a class="here">Specifications</a>
+            </h1>
+
+            <p class="description">Standards promoting interoperable implementations.</p>
+
+            <p>Stub.</p>
+
+          </div>
+
+        </section>
+
+        <section id="hardware">
+
+          <div class="header">
+
+            <h1 class="breadcrumbs">
+              <span class="section-relative-nav">
+                <a href="#hardware" class="anchor">⚓</a>
+              </span>
+              <a class="here">Hardware</a>
+            </h1>
+
+            <p class="description">I'm using boring low-end consumer hardware, mostly.</p>
+
+            <p>Stub.</p>
+
+          </div>
+
+        </section>
+
+      </div>
 
       <section id="news">
         <header>
@@ -129,25 +258,13 @@
         </header>
         <ol reversed>
           <li>
-            <article class="news-item" id="20_september_2015">
+            <article class="news-item" id="20_july_2017">
               <h1 class="date">
-                <a href="#20_september_2015"><time datetime="2015-09-20">20 september 2015</time></a>
+                <a href="#20_july_2017"><time datetime="2017-07-20">20 july 2017</time></a>
                 <span class="border-fix"></span>
               </h1>
               <div class="body">
-                <p>I did a pretty big reorganization. Much more content coming up...</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="news-item" id="24_september_2014">
-              <h1 class="date">
-                <a href="#24_september_2014"><time datetime="2014-09-24">24 september 2014</time></a>
-                <span class="border-fix"></span>
-              </h1>
-              <div class="body">
-                <p>I finally decided to publish this, even though it's incomplete.<br />(It's been publicly accessible for months but wasn't linked from my main website.)</p>
-                <p>Follow the menu items with "✔ Ready" or "⚠ Incomplete" status indicators for a hopefully-informative walk.</p>
+                <p>I have conveniently consolidated the top-level navigation, above.</p>
               </div>
             </article>
           </li>
