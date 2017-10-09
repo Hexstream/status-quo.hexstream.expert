@@ -1,3 +1,27 @@
+.navtable {
+    white-space: nowrap;
+    font-size: medium;
+}
+
+.navtable .purpose {
+    white-space: initial;
+}
+
+@media (min-width: 79em) {
+    /* Make sure we don't start wrapping just to awkwardly fit even more sections. */
+    .navtable .purpose {
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 48.125em) and (max-width: 64.5em), (min-width: 93.75em) {
+    /* We have plenty of space for one table, or 2 tables, so increase their font size. */
+    .navtable {
+        font-size: larger;
+    }
+}
+
+
 #tabs-wrapper {
     display: flex;
     flex-flow: column;
@@ -33,31 +57,16 @@
 }
 
 #inlined-sections > section {
+    flex: 1 1;
     margin: 1em 2em;
-}
-
-#inlined-sections > section > .header {
-    display: table;
-    margin-left: auto;
 }
 
 #inlined-sections > section > .header > .description {
     display: table;
-    margin: -1.2em 0 0 2.2em;
+    margin: -1.2em 0 0 calc(2.2em + var(--section-relative-nav-safety-margin)) ;
     padding: 0.2em;
     padding-top: 0.25em;
     opacity: 0.6;
-    white-space: nowrap;
-}
-
-#tools h1 {
-    width: 19.6rem;
-    margin-left: auto;
-}
-
-#services h1 {
-    width: 21.6rem;
-    margin-left: auto;
 }
 
 .navtable {

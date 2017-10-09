@@ -3,10 +3,18 @@
 }
 
 
-kbd {
+kbd.key-sequence {
     padding: 0.1em 0.2em;
     margin: 0 0.2em;
     border: thin dashed #AAAAAA;
+    white-space: nowrap;
+}
+
+kbd.long.key-sequence {
+    white-space: initial;
+}
+
+kbd.key-sequence kbd, kbd.key-sequence var {
     white-space: nowrap;
 }
 
@@ -26,10 +34,6 @@ figure {
     background: linen;
 }
 
-dd figure {
-    margin-left: 1.5em;
-}
-
 dd p:first-child {
     margin-top: 0.5em;
 }
@@ -38,16 +42,4 @@ figcaption {
     text-align: center;
     font-style: italic;
     margin-top: 0.2em;
-}
-
-dl {
-    margin: 1.5em;
-}
-
-dl dt {
-    margin-left: 0em;
-}
-
-dl dd {
-    margin-left: 1em;
 }

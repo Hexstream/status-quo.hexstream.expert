@@ -16,7 +16,7 @@ main dl dt:first-child {
 }
 
 main dl dd {
-    margin-left: 3.5em;
+    --dd-default-margin-left: 2em;
     margin-top: 0.25em;
 }
 

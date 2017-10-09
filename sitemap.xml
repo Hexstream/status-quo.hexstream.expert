@@ -11,31 +11,9 @@
     <loc>https://status-quo.hexstreamsoft.com/tools/stumpwm/</loc>
   </url>
 
-
   <url>
     <loc>https://status-quo.hexstreamsoft.com/tools/emacs/</loc>
   </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/emacs/built-in/fundamental-mode/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/emacs/built-in/dired/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/emacs/built-in/info/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/emacs/built-in/lisp-mode/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/emacs/extensions/slime/</loc>
-  </url>
-
 
   <url>
     <loc>https://status-quo.hexstreamsoft.com/tools/sbcl/</loc>

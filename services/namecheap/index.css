@@ -13,45 +13,26 @@
 main .items {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
+    min-width: min-content;
 }
 
-main .items .item-section {
-    flex: 1 0 auto;
-    width: auto;
+main .items > section {
+    flex: 0 1 auto;
     margin: 1.5em 0;
-    box-sizing: border-box;
-    min-width: 25em;
     max-width: 35em;
 }
 
-/* If we have enough space for 2, including sidebar. */
-@media (min-width: 65em) {
-    main .items .item-section {
-        max-width: 50%;
-    }
-}
-
-main .items .item-section.half-width {
-    flex: 0.01 1 auto;
-}
-
-main .item-section p {
+main .items > section p {
     margin-right: 0;
 }
 
-main .item-section h1 {
+main .items > section h1 {
     margin-top: 0;
 }
 
-main .item-section .intend-to-drop {
+main .items > section .intend-to-drop {
     color: red;
-}
-
-#my-config_domain-names_navbox {
-    display: table;
-    width: auto;
-    font-size: larger;
 }
 
 #my-config_domain-names_navbox .inlined-nodes li {

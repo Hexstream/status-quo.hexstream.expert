@@ -1,0 +1,6 @@
+@media (max-width: 24em) {
+    main dt .anchor {
+        margin-left: 0.4em;
+        border-left: thin dashed transparent
+    }
+}

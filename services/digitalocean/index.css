@@ -1,9 +1,4 @@
-#droplets-table_div {
-    overflow: auto;
-}
-
 #droplets-table {
-    margin: 0;
     white-space: nowrap;
 }
 

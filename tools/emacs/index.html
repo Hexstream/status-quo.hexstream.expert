@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="Hexstream's window manager status quo." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Emacs | Tools | Status quo | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../tools.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../../">Status quo</a>
-          <span class="separator"> » </span>
-          <a href="../">Tools</a>
-          <span class="separator"> » </span>
-          <a class="here">Emacs</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../../">Status quo</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../#tools">Tools</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Emacs</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://status-quo.hexstreamsoft.com/tools/emacs/">
@@ -39,92 +38,44 @@
           </a>
         </nav>
 
-        <nav>
-          <a class="sequential-link prev" href="../stumpwm/">←</a>
-          <a href="../">
-            Tools
-            <span>2/6</span>
-          </a>
-          <a class="sequential-link next" href="../sbcl/">→</a>
-        </nav>
+      </div>
 
-        <div class="float-clear"></div>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-08-05">5 august 2017</time><span>.</span></p>
 
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1><a href="../../#tools">Tools</a></h1>
+        <ul>
+          <li><a href="../stumpwm/">StumpWM</a></li>
+          <li><a class="here">Emacs</a></li>
+          <li><a href="../sbcl/">SBCL</a></li>
+          <li><a href="../screen/">Screen</a></li>
+          <li><a href="../git/">git</a></li>
+          <li><a href="../chrome/">Chrome</a></li>
+        </ul>
       </nav>
 
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a class="here">
-              Emacs
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="../../">Status quo</a></h1>
+        <div>
           <ul>
-            <li><a href="#usage-notes">Usage notes</a></li>
-            <li><a href="#my-config">My config</a></li>
-          </ul>
-          <ul>
-            <li><a href="../../emerging-changes/#emacs">Emerging changes</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://www.gnu.org/software/emacs/">Project's home ⬈</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1><a href="../">Tools</a></h1>
-          <ul>
-            <li><a href="../stumpwm/">StumpWM</a></li>
-            <li>
-              <a class="here">
-                Emacs
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../sbcl/">SBCL</a></li>
-            <li><a href="../screen/">Screen</a></li>
-            <li><a href="../git/">git</a></li>
-            <li><a href="../chrome/">Chrome</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="status-quo_navbox">
-          <h1>
-            <a href="../../">Status quo</a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../">
-                Tools
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../../services/">Services</a></li>
-            <li><a href="../../specifications/">Specifications</a></li>
-            <li><a href="../../hardware/">Hardware</a></li>
+            <li><a href="../../#tools" class="ancestor">Tools</a></li>
+            <li><a href="../../#services">Services</a></li>
+            <li><a href="../../#specifications">Specifications</a></li>
+            <li><a href="../../#hardware">Hardware</a></li>
           </ul>
           <ul>
             <li><a href="../../emerging-changes/">Emerging changes</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
             <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
             <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
@@ -133,21 +84,12 @@
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
-            <li>
-              <a href="https://status-quo.hexstreamsoft.com/">
-                Status quo
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
+            <li><a href="https://status-quo.hexstreamsoft.com/" class="ancestor">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-09-20">20 september 2015</time><span>.</span></p>
 
     <main>
 
@@ -156,135 +98,1091 @@
         <p class="description">Text editor and IDE.</p>
       </header>
 
+      <nav class="tabs">
+        <ul>
+          <li><a href="#usage-notes">Usage notes</a></li>
+          <li><a href="#my-config">My config</a></li>
+        </ul>
+        <ul>
+          <li><a href="../../emerging-changes/#emacs">Emerging changes</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://www.gnu.org/software/emacs/">Project's home ⬈</a></li>
+        </ul>
+      </nav>
+
       <section id="usage-notes">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
-            <a href="#" class="prev upwards">⬉</a>
             <a href="#usage-notes" class="anchor">⚓</a>
-            <a href="#my-config" class="next">⬇</a>
           </span>
-          <a href="#">Emacs</a>
-          <span class="separator"> » </span>
-          <a class="here">Usage notes</a>
+          <div class="breadcrumbs">
+            <a href="#">Emacs</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Usage notes</a></span>
+          </div>
         </h1>
 
-        <p>In this section, I document only the emacs commands that I use <em>interactively</em>.</p>
+        <nav class="tabs">
+          <ul>
+            <li><a href="#usage-notes_built-in">Built-in</a></li>
+            <li><a href="#usage-notes_extensions">Extensions</a></li>
+          </ul>
+        </nav>
 
-        <p>&nbsp;</p>
+        <p>On this page, I document only the emacs commands that I use <em>interactively</em>.</p>
 
-        <nav class="navlist-group">
+        <p><span class="built-in">Green</span> means built-in, <span class="custom">orange</span> means custom.</p>
 
-          <nav class="navlist">
+        <section id="usage-notes_built-in">
 
-            <section>
-              <a href="overview/">
-                <h1>Overview</h1>
-              </a>
-              <div class="status-indicators">
-                <div>
-                  <span class="stub">✘ Stub <small>(404)</small></span>
-                </div>
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#usage-notes_built-in" class="anchor">⚓</a>
+            </span>
+            <div class="breadcrumbs">
+              <a href="#">Emacs</a>
+              <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Built-in</a></span>
+            </div>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li>
+                <a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a>
+              </li>
+              <li>
+                <a href="#usage-notes_built-in_dired">Dired</a>
+              </li>
+              <li>
+                <a href="#usage-notes_built-in_info">Info</a>
+              </li>
+              <li>
+                <a href="#usage-notes_built-in_lisp-mode">Lisp mode</a>
+              </li>
+            </ul>
+          </nav>
+
+          <section id="usage-notes_built-in_fundamental-mode">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#usage-notes_built-in_fundamental-mode" class="anchor">⚓</a>
+              </span>
+              <div class="breadcrumbs">
+                <a href="#">Emacs</a>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Fundamental mode</a></span>
               </div>
+            </h1>
+
+            <p class="description">Commands accessible from anywhere unless overridden.</p>
+
+            <p class="status-indicator incomplete">⚠ Incomplete</p>
+
+            <nav class="tabs">
+              <ul>
+                <li>
+                  <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands">Routinely used commands</a>
+                </li>
+                <li>
+                  <a href="#usage-notes_built-in_fundamental-mode_rarely-used-commands">Rarely used commands</a>
+                </li>
+                <li>
+                  <a href="#usage-notes_built-in_fundamental-mode_almost-never-used-commands">Almost never used commands</a>
+                </li>
+              </ul>
+            </nav>
+
+            <section id="usage-notes_built-in_fundamental-mode_routinely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Routinely used commands</a></span>
+                </div>
+              </h1>
+
+              <nav class="tabs">
+                <ul>
+                  <li>
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_moving-within-buffers">Moving within buffers</a>
+                  </li>
+                  <li>
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_managing-buffers">Managing buffers</a>
+                  </li>
+                  <li>
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_managing-windows">Managing windows</a>
+                  </li>
+                  <li>
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_misc">Misc</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <p>Some possibly less-well-known commands I routinely use are: <a href="#back-to-indentation"><kbd class="built-in">M-m</kbd></a>, <a href="#find-alternate-file"><kbd class="built-in">C-x C-v</kbd></a>, <a href="#newline-and-indent"><kbd class="built-in">C-j</kbd></a>.</p>
+
+              <section id="usage-notes_built-in_fundamental-mode_routinely-used-commands_moving-within-buffers">
+
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_moving-within-buffers" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#">Emacs</a>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands">Routinely used commands</a></span>
+                    <span class="crumb"><span class="s"> » </span><a class="here">Moving within buffers</a></span>
+                  </div>
+                </h1>
+
+                <p>These commands move point (the cursor) and/or scroll to show a different portion of the buffer in the current window, but never modify the buffer.</p>
+
+                <dl>
+
+                  <dt id="isearch-forward"><kbd class="built-in">C-s</kbd>, <kbd class="built-in">C-r</kbd> <a href="#isearch-forward" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">isearch-forward</code>, <code class="built-in">isearch-backward</code>.</p>
+                    <p>My favorite way of moving around in emacs!</p>
+                    <p>Allows you to move directly where you want to, with a minimum of thinking, keystrokes, and time. Useful for all but the shortest distances.</p>
+                    <p>Also, a staple of keyboard macros.</p>
+                  </dd>
+
+                  <dt id="scroll-up"><kbd class="built-in">C-v</kbd>, <kbd class="built-in">M-v</kbd> <a href="#scroll-up" class="anchor">⚓</a></dt>
+                  <dt><kbd class="built-in">PageDown</kbd>, <kbd class="built-in">PageUp</kbd> (casual)</dt>
+                  <dd>
+                    <p><code class="built-in">scroll-up</code>, <code class="built-in">scroll-down</code>.</p>
+                    <p>Scrolls down (respectively up). ("Scrolls the text up (respectively down)", hence the weird "reversed" nomenclature.)</p>
+                    <p>Related <code>.emacs</code> sample: <code>(setf next-screen-context-lines 1)</code> (overrides default: 2.)</p>
+                  </dd>
+
+                  <dt id="beginning-of-buffer"><kbd class="built-in">M-&lt;</kbd>, <kbd class="built-in">M-&gt;</kbd> <a href="#beginning-of-buffer" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">beginning-of-buffer</code>, <code class="built-in">end-of-buffer</code>.</p>
+                    <p>Go to the first or last position in the buffer, respectively.</p>
+                  </dd>
+
+                  <dt id="forward-char"><kbd class="built-in">C-f</kbd>, <kbd class="built-in">C-b</kbd>, <kbd class="built-in">C-n</kbd>, <kbd class="built-in">C-p</kbd> <a href="#forward-char" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">forward-char</code>, <code class="built-in">backward-char</code>, <code class="built-in">next-line</code>, <code class="built-in">previous-line</code>.</p>
+                    <p>Roughly, go one position forward, backward, down or up, respectively.</p>
+                    <p>I <strong>never</strong> use the arrow keys in emacs.</p>
+                    <p>I have <code>(setf line-move-visual nil)</code> in my <code>.emacs</code>, to move by logical lines. The default, <code>t</code>, is perhaps initially appealing, but can really wreak havoc in keyboard macros in particular, and anyway moving about in even extremely long lines is trivial with <a href="#isearch-forward"><kbd class="built-in">C-s</kbd> and <kbd class="built-in">C-r</kbd></a>.</p>
+                  </dd>
+
+                  <dt id="move-beginning-of-line"><kbd class="built-in">C-a</kbd>, <kbd class="built-in">C-e</kbd> <a href="#move-beginning-of-line" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">move-beginning-of-line</code>, <code class="built-in">move-end-of-line</code>.</p>
+                    <p>Move to the beginning or end of the line, respectively.</p>
+                  </dd>
+
+                  <dt id="back-to-indentation"><kbd class="built-in">M-m</kbd> <a href="#back-to-indentation" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">back-to-indentation</code></p>
+                    <p>Like <a href="#move-beginning-of-line"><kbd class="built-in">C-a</kbd></a>, but skips initial whitespace.</p>
+                  </dd>
+
+                </dl>
+
+              </section>
+
+              <section id="usage-notes_built-in_fundamental-mode_routinely-used-commands_managing-buffers">
+
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_managing-buffers" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#">Emacs</a>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands">Routinely used commands</a></span>
+                    <span class="crumb"><span class="s"> » </span><a class="here">Managing buffers</a></span>
+                  </div>
+                </h1>
+
+                <dl>
+
+                  <dt id="find-file"><kbd class="built-in">C-x C-f</kbd> <a href="#find-file" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">find-file</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="find-alternate-file"><kbd class="built-in">C-x C-v</kbd> <a href="#find-alternate-file" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">find-alternate-file</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="save-buffer"><kbd class="built-in">C-x C-s</kbd> <a href="#save-buffer" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">save-buffer</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="switch-to-buffer"><kbd class="built-in">C-x b</kbd> <a href="#switch-to-buffer" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">switch-to-buffer</code></p>
+                    <p>TODO</p>
+                    <p>(Actually iswitchb-buffer in my case.)</p>
+                  </dd>
+
+                  <dt id="kill-buffer"><kbd class="built-in">C-x k</kbd> <a href="#kill-buffer" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">kill-buffer</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                </dl>
+
+              </section>
+
+              <section id="usage-notes_built-in_fundamental-mode_routinely-used-commands_managing-windows">
+
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_managing-windows" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#">Emacs</a>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands">Routinely used commands</a></span>
+                    <span class="crumb"><span class="s"> » </span><a class="here">Managing windows</a></span>
+                  </div>
+                </h1>
+
+                <dl>
+
+                  <dt id="delete-window"><kbd class="built-in">C-x 0</kbd> <a href="#delete-window" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">delete-window</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="delete-other-windows"><kbd class="built-in">C-x 1</kbd> <a href="#delete-other-windows" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">delete-other-windows</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="split-window-vertically"><kbd class="built-in">C-x 2</kbd> <a href="#split-window-vertically" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">split-window-vertically</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="balance-windows"><kbd class="built-in">C-x +</kbd> <a href="#balance-windows" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">balance-windows</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                </dl>
+
+              </section>
+
+              <section id="usage-notes_built-in_fundamental-mode_routinely-used-commands_misc">
+
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands_misc" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#">Emacs</a>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode_routinely-used-commands">Routinely used commands</a></span>
+                    <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+                  </div>
+                </h1>
+
+                <dl>
+
+                  <dt id="kill-line"><kbd class="built-in">C-k</kbd> <a href="#kill-line" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">kill-line</code></p>
+                    <p>Kill from the current position to the end of the line.</p>
+                  </dd>
+
+                  <dt id="set-mark-command"><kbd class="built-in">C-SPC</kbd> <a href="#set-mark-command" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">set-mark-command</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="kill-region"><kbd class="built-in">C-w</kbd> <a href="#kill-region" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">kill-region</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="yank"><kbd class="built-in">C-y</kbd> <a href="#yank" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">yank</code></p>
+                    <p>Paste the last block of consecutively killed text, or the last one that was yanked (pasted), whichever happened most recently.</p>
+                    <p>Normally leaves point at the end of the yanked text, but with a prefix argument, leaves point at the start of the yanked text, which is sometimes useful in keyboard macros in particular.</p>
+                    <p>The mark is usefully left at the opposite end of the yanked text, so you can immediately select the region of just-yanked text with <kbd class="built-in">C-x C-x</kbd> if you need to operate on it.</p>
+                  </dd>
+
+                  <dt id="yank-pop"><kbd class="built-in">M-y</kbd> <a href="#yank-pop" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">yank-pop</code></p>
+                    <p>Successive invocations of this command, which must happen after an initial <a href="#yank"><kbd class="built-in">C-y</kbd></a>, cycle through the kill ring.</p>
+                  </dd>
+
+                  <dt id="copy-to-register"><kbd class="built-in">C-x r s</kbd> <a href="#copy-to-register" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">copy-to-register</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="insert-register"><kbd class="built-in">C-x r i</kbd> <a href="#insert-register" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">insert-register</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                  <dt id="newline-and-indent"><kbd class="built-in">C-j</kbd> <a href="#newline-and-indent" class="anchor">⚓</a></dt>
+                  <dd>
+                    <p><code class="built-in">newline-and-indent</code></p>
+                    <p>TODO</p>
+                  </dd>
+
+                </dl>
+
+              </section>
+
+              <nav class="end-of-section-indicator">
+                <a href="#routinely-used-commands">
+                  "<span>Routinely used commands</span>" end.
+                </a>
+              </nav>
+
             </section>
 
+            <section id="usage-notes_built-in_fundamental-mode_rarely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_fundamental-mode_rarely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Rarely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="kmacro-start-macro"><kbd class="built-in">C-x (</kbd> <a href="#kmacro-start-macro" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">kmacro-start-macro</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="kmacro-end-macro"><kbd class="built-in">C-x )</kbd> <a href="#kmacro-end-macro" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">kmacro-end-macro</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="kmacro-end-and-call-macro"><kbd class="built-in">C-x e</kbd> <a href="#kmacro-end-and-call-macro" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">kmacro-end-and-call-macro</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="name-last-kbd-macro"><kbd class="built-in">M-x name-last-kbd-macro</kbd> <a href="#name-last-kbd-macro" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">name-last-kbd-macro</code></p>
+                  <p>TODO</p>
+                  <p>(Not actually in fundamental mode.)</p>
+                </dd>
+
+                <dt id="number-to-register"><kbd class="built-in">C-x r n</kbd> <a href="#number-to-register" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">number-to-register</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="increment-register"><kbd class="built-in">C-x r +</kbd> <a href="#increment-register" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">increment-register</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="fill-paragraph"><kbd class="built-in">M-q</kbd> <a href="#fill-paragraph" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">fill-paragraph</code></p>
+                  <p>TODO</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <section id="usage-notes_built-in_fundamental-mode_almost-never-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_fundamental-mode_almost-never-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_fundamental-mode">Fundamental mode</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Almost never used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="save-buffers-kill-terminal"><kbd class="built-in">C-x C-c</kbd> <a href="#save-buffers-kill-terminal" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">save-buffers-kill-terminal</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="describe-key"><kbd class="built-in">C-h k</kbd> <a href="#describe-key" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">describe-key</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="where-is"><kbd class="built-in">C-h w</kbd> <a href="#where-is" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">where-is</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="describe-mode"><kbd class="built-in">C-h m</kbd> <a href="#describe-mode" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">describe-mode</code></p>
+                  <p>Give an overview of how to use the current major mode.</p>
+                </dd>
+
+                <dt id="repeat"><kbd class="built-in">C-x z</kbd> <a href="#repeat" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">repeat</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="point-to-register"><kbd class="built-in">C-x r SPC</kbd> <a href="#point-to-register" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">point-to-register</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="jump-to-register"><kbd class="built-in">C-x r j</kbd> <a href="#jump-to-register" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">jump-to-register</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="indent-region"><kbd class="built-in">M-x indent-region</kbd> <a href="#indent-region" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">indent-region</code></p>
+                  <p>TODO</p>
+                  <p>IS in fundamental mode, but the default keybinding is hard or impossible to type in my configuration.</p>
+                </dd>
+
+                <dt id="untabify"><kbd class="built-in">M-x untabify</kbd> <a href="#untabify" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">untabify</code></p>
+                  <p>TODO</p>
+                  <p>(Not actually in fundamental mode.)</p>
+                </dd>
+
+                <dt id="split-window-horizontally"><kbd class="built-in">C-x 3</kbd> <a href="#split-window-horizontally" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">split-window-horizontally</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="exchange-point-and-mark"><kbd class="built-in">C-x C-x</kbd> <a href="#exchange-point-and-mark" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">exchange-point-and-mark</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="make-directory"><kbd class="built-in">M-x make-directory</kbd> <a href="#make-directory" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">make-directory</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="insert-file"><kbd class="built-in">C-x i</kbd> <a href="#insert-file" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">insert-file</code></p>
+                  <p>TODO</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <nav class="end-of-section-indicator">
+              <a href="#usage-notes_built-in_fundamental-mode">
+                "<span>Fundamental mode</span>" end.
+              </a>
+            </nav>
+
+          </section>
+
+          <section id="usage-notes_built-in_dired">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#usage-notes_built-in_dired" class="anchor">⚓</a>
+              </span>
+              <div class="breadcrumbs">
+                <a href="#">Emacs</a>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Dired</a></span>
+              </div>
+            </h1>
+
+            <p class="description">Filesystem browser and editor.</p>
+
+            <p class="status-indicator ready">✔ Ready</p>
+
+            <section id="usage-notes_built-in_dired_routinely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_dired_routinely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_dired">Dired</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Routinely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="dired-find-file"><kbd class="built-in">RET</kbd> <a href="#dired-find-file" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-find-file</code></p>
+                  <p>Visit the currently selected file or directory.</p>
+                  <p>If it's a directory, open a new, independent instance of dired. The previous dired instance is left open in the background. (Might be unintuitive to some, it certainly was to me at first...)</p>
+                </dd>
+
+                <dt id="dired-flag-file-deletion"><kbd class="built-in">d</kbd> <a href="#dired-flag-file-deletion" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-flag-file-deletion</code></p>
+                  <p>Flag a file or directory for deletion.</p>
+                </dd>
+
+                <dt id="dired-do-flagged-delete"><kbd class="built-in">x</kbd> <a href="#dired-do-flagged-delete" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-do-flagged-delete</code></p>
+                  <p>Delete the files and directories currently flagged for deletion.</p>
+                </dd>
+
+                <dt id="revert-buffer"><kbd class="built-in">g</kbd> <a href="#revert-buffer" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">revert-buffer</code></p>
+                  <p>Reload the directory from the filesystem, particularly to see changes made outside of emacs.</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <section id="usage-notes_built-in_dired_rarely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_dired_rarely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_dired">Dired</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Rarely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="dired-unmark-backwards"><kbd class="built-in">DEL</kbd> <a href="#dired-unmark-backwards" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-unmark-backwards</code></p>
+                  <p>Select the previous file or directory and unflag it.</p>
+                </dd>
+
+                <dt id="dired-unmark"><kbd class="built-in">u</kbd> <a href="#dired-unmark" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-unmark</code></p>
+                  <p>Unflag the current file or directory.</p>
+                </dd>
+
+                <dt id="dired-do-rename"><kbd class="built-in">R</kbd> <a href="#dired-do-rename" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-do-rename</code></p>
+                  <p>Rename (and/or move) the currently selected file or directory.</p>
+                </dd>
+
+                <dt id="dired-do-copy"><kbd class="built-in">C</kbd> <a href="#dired-do-copy" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-do-copy</code></p>
+                  <p>Copy the currently selected file or directory.</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <section id="usage-notes_built-in_dired_almost-never-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_dired_almost-never-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_dired">Dired</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Almost never used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="dired-up-directory"><kbd class="built-in">^</kbd> <a href="#dired-up-directory" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">dired-up-directory</code></p>
+                  <p>Open a new, independent instance of dired in the parent directory.</p>
+                  <p>I often do <a href="../fundamental-mode/#find-alternate-file"><kbd>C-x C-v</kbd></a> and delete the last directory instead...</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <nav class="end-of-section-indicator">
+              <a href="#usage-notes_built-in_dired">
+                "<span>Dired</span>" end.
+              </a>
+            </nav>
+
+          </section>
+
+          <section id="usage-notes_built-in_info">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#usage-notes_built-in_info" class="anchor">⚓</a>
+              </span>
+              <div class="breadcrumbs">
+                <a href="#">Emacs</a>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Info</a></span>
+              </div>
+            </h1>
+
+            <p class="description">Documentation browser.</p>
+
+            <p class="status-indicator ready">✔ Ready</p>
+
+            <section id="usage-notes_built-in_info_routinely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_info_routinely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_info">Info</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Routinely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <p>For movement within an Info node, I simply use the <a href="../fundamental-mode/#routinely-used-commands_movement">normal emacs movement commands</a>. I never ever use Info's utterly confusing <kbd class="built-in">SPC</kbd> and <kbd class="built-in">DEL</kbd> to scroll down and up, as they don't respect node boundaries and as a result don't make me feel in control.</p>
+
+                <dt id="Info-follow-nearest-node"><kbd class="built-in">RET</kbd> <a href="#Info-follow-nearest-node" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">Info-follow-nearest-node</code></p>
+                  <p>Follow a link.</p>
+                </dd>
+
+                <dt id="Info-directory"><kbd class="built-in">d</kbd> <a href="#Info-directory" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">Info-directory</code></p>
+                  <p>Go to the topmost Info node, listing all Info manuals.</p>
+                </dd>
+
+                <dt id="Info-up"><kbd class="built-in">u</kbd> <a href="#Info-up" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">Info-up</code></p>
+                  <p>Go up in the hierarchy of Info nodes.</p>
+                </dd>
+
+                <dt id="Info-history-back"><kbd class="built-in">l</kbd> <a href="#Info-history-back" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">Info-history-back</code></p>
+                  <p>Go back to where you were before following the last link (menu item or cross-reference).</p>
+                  <p>Especially useful after visiting a cross-reference to a tangential topic.</p>
+                </dd>
+
+                <dt id="Info-exit"><kbd class="built-in">q</kbd> <a href="#Info-exit" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">Info-exit</code></p>
+                  <p>"Exit Info by selecting some other buffer."</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <section id="usage-notes_built-in_info_rarely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_info_rarely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_info">Info</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Rarely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="Info-menu"><kbd class="built-in">m</kbd> <a href="#Info-menu" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">Info-menu</code></p>
+                  <p>Follow a link by (approximate) name in the current page's menu.</p>
+                  <p>Honestly I usually just navigate to the link manually via other means and press <kbd class="built-in">RET</kbd>...</p>
+                  <p>But this is useful especially in the directory node to access a manual directly. For example, <kbd>d m Emacs RET</kbd>, <kbd>d m elisp RET</kbd>, <kbd>d m sed RET</kbd>, etc.</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <section id="usage-notes_built-in_info_almost-never-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_info_almost-never-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_info">Info</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Almost never used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+              </dl>
+
+            </section>
+
+            <nav class="end-of-section-indicator">
+              <a href="#usage-notes_built-in_info">
+                "<span>Info</span>" end.
+              </a>
+            </nav>
+
+          </section>
+
+          <section id="usage-notes_built-in_lisp-mode">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#usage-notes_built-in_lisp-mode" class="anchor">⚓</a>
+              </span>
+              <div class="breadcrumbs">
+                <a href="#">Emacs</a>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Lisp mode</a></span>
+              </div>
+            </h1>
+
+            <p class="description">A good base to build support for specific lisp dialects.</p>
+
+            <p class="status-indicator stub">✘ Stub+</p>
+
+            <section id="usage-notes_built-in_lisp-mode_routinely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_built-in_lisp-mode_routinely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_lisp-mode">Lisp mode</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Routinely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+                <dt id="forward-sexp"><kbd class="built-in">C-M-f</kbd>, <kbd class="built-in">C-M-b</kbd> <a href="#forward-sexp" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">forward-sexp</code>, <code class="built-in">backward-sexp</code>.</p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="beginning-of-defun"><kbd class="built-in">C-M-a</kbd>, <kbd class="built-in">C-M-e</kbd> <a href="#beginning-of-defun" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">beginning-of-defun</code>, <code class="built-in">end-of-defun</code>.</p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="kill-sexp"><kbd class="built-in">C-M-k</kbd> <a href="#kill-sexp" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">kill-sexp</code></p>
+                  <p>TODO</p>
+                </dd>
+
+                <dt id="indent-sexp"><kbd class="built-in">C-M-q</kbd> <a href="#indent-sexp" class="anchor">⚓</a></dt>
+                <dd>
+                  <p><code class="built-in">indent-sexp</code></p>
+                  <p>TODO</p>
+                </dd>
+
+              </dl>
+
+            </section>
+
+            <section id="rarely-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#rarely-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_lisp-mode">Lisp mode</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Rarely used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+              </dl>
+
+            </section>
+
+            <section id="almost-never-used-commands">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#almost-never-used-commands" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in">Built-in</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_built-in_lisp-mode">Lisp mode</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Almost never used commands</a></span>
+                </div>
+              </h1>
+
+              <dl>
+
+              </dl>
+
+            </section>
+
+            <nav class="end-of-section-indicator">
+              <a href="#usage-notes_built-in_lisp-mode">
+                "<span>Lisp mode</span>" end.
+              </a>
+            </nav>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#usage-notes_built-in">
+              "<span>Built-in</span>" end.
+            </a>
           </nav>
 
-          <nav class="navlist headered">
+        </section>
 
-            <h1><a>Built-in</a></h1>
+        <section id="usage-notes_extensions">
 
-            <div class="body">
-
-              <section>
-                <a href="built-in/fundamental-mode/">
-                  <h1>Fundamental mode</h1>
-                  <p>Commands accessible from anywhere unless overridden.</p>
-                </a>
-                <div class="status-indicators">
-                  <div>
-                    <span class="incomplete">⚠ Incomplete</span>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <a href="built-in/dired/">
-                  <h1>Dired</h1>
-                  <p>Filesystem browser and editor.</p>
-                </a>
-                <div class="status-indicators">
-                  <div>
-                    <span class="ready">✔ Ready</span>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <a href="built-in/info/">
-                  <h1>Info</h1>
-                  <p>Documentation browser.</p>
-                </a>
-                <div class="status-indicators">
-                  <div>
-                    <span class="ready">✔ Ready</span>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <a href="built-in/lisp-mode/">
-                  <h1>Lisp mode</h1>
-                  <p>A good base to build support for specific lisp dialects.</p>
-                </a>
-                <div class="status-indicators">
-                  <div>
-                    <span class="stub">✘ Stub+</span>
-                  </div>
-                </div>
-              </section>
-
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#usage-notes_extensions" class="anchor">⚓</a>
+            </span>
+            <div class="breadcrumbs">
+              <a href="#">Emacs</a>
+              <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Extensions</a></span>
             </div>
+          </h1>
 
-          </nav>
+          <section id="usage-notes_extensions_slime">
 
-          <nav class="navlist headered">
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#usage-notes_extensions_slime" class="anchor">⚓</a>
+              </span>
+              <div class="breadcrumbs">
+                <a href="#">Emacs</a>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions">Extensions</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Slime</a></span>
+              </div>
+            </h1>
 
-            <h1><a>Extensions</a></h1>
+            <p class="description">The most advanced open-source IDE for Common Lisp.</p>
 
-            <div class="body">
+            <section id="usage-notes_extensions_slime_editor">
 
-              <section>
-                <a href="extensions/slime/">
-                  <h1>Slime</h1>
-                  <p>The most advanced open-source IDE for Common Lisp.</p>
-                </a>
-                <div class="status-indicators">
-                  <div>
-                    <span class="stub">✘ Stub+</span>
-                  </div>
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_extensions_slime_editor" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions">Extensions</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions_slime">Slime</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Editor</a></span>
                 </div>
-              </section>
+              </h1>
 
-            </div>
+              <p>Stub.</p>
 
+            </section>
+
+            <section id="usage-notes_extensions_slime_repl">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_extensions_slime_repl" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions">Extensions</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions_slime">Slime</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">REPL</a></span>
+                </div>
+              </h1>
+
+              <p>Stub.</p>
+
+            </section>
+
+            <section id="usage-notes_extensions_slime_debugger">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_extensions_slime_debugger" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions">Extensions</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions_slime">Slime</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Debugger</a></span>
+                </div>
+              </h1>
+
+              <p>Stub.</p>
+
+            </section>
+
+            <section id="usage-notes_extensions_slime_inspector">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#usage-notes_extensions_slime_inspector" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">Emacs</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes">Usage notes</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions">Extensions</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#usage-notes_extensions_slime">Slime</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Inspector</a></span>
+                </div>
+              </h1>
+
+              <p>Stub.</p>
+
+            </section>
+
+            <nav class="end-of-section-indicator">
+              <a href="#usage-notes_extensions_slime">
+                "<span>Slime</span>" end.
+              </a>
+            </nav>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#usage-notes_extensions">
+              "<span>Extensions</span>" end.
+            </a>
           </nav>
 
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#usage-notes">
+            "<span>Usage notes</span>" end.
+          </a>
         </nav>
 
       </section>
 
       <section id="my-config">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
-            <a href="#" class="prev upwards">⬉</a>
-            <a href="#usage-notes" class="prev">⬆</a>
             <a href="#my-config" class="anchor">⚓</a>
           </span>
-          <a href="#">Emacs</a>
-          <span class="separator"> » </span>
-          <a class="here">My config</a>
+          <div class="breadcrumbs">
+            <a href="#">Emacs</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">My config</a></span>
+          </div>
         </h1>
 
         <p>Here's <a href="config/.emacs">my <code>.emacs</code> file</a> (<a href="https://github.com/Hexstream/status-quo.hexstreamsoft.com/blob/master/tools/emacs/config/.emacs">see it on github</a>). It's very raw and messy and undocumented, but it works for me...</p>
@@ -294,11 +1192,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Femacs%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://status-quo.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Femacs%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Femacs%2F">✔ HTML5</a>
+        <a href="https://status-quo.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Ftools%2Femacs%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

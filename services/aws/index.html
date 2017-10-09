@@ -8,6 +8,7 @@
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Amazon Web Services | Services | Hexstream's status quo</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../services.css" rel="stylesheet" type="text/css" />
@@ -19,20 +20,16 @@
 
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../../">Status quo</a>
-          <span class="separator"> » </span>
-          <a href="../">Services</a>
-          <span class="separator"> » </span>
-          <a class="here">AWS</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../../">Status quo</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../#services">Services</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">AWS</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://status-quo.hexstreamsoft.com/services/aws/">
@@ -43,81 +40,41 @@
           </a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-11-15">15 november 2016</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1><a href="../../#services">Services</a></h1>
+        <ul>
+          <li><a class="here">AWS</a></li>
+          <li><a href="../digitalocean/">DigitalOcean</a></li>
+          <li><a href="../namecheap/">Namecheap</a></li>
+        </ul>
       </nav>
 
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a class="here">
-              AWS
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="../../">Status quo</a></h1>
+        <div>
           <ul>
-            <li><a href="#usage-notes">Usage notes</a></li>
-            <li><a href="#my-config">My config</a></li>
-          </ul>
-          <ul>
-            <li><a href="../../emerging-changes/#aws">Emerging changes</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="../">Services</a>
-          </h1>
-          <ul>
-            <li>
-              <a class="here">
-                AWS
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../digitalocean/">DigitalOcean</a></li>
-            <li><a href="../namecheap/">Namecheap</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="../../">Status quo</a>
-          </h1>
-          <ul>
-            <li><a href="../../tools/">Tools</a></li>
-            <li>
-              <a href="../">
-                Services
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../../specifications/">Specifications</a></li>
-            <li><a href="../../hardware/">Hardware</a></li>
+            <li><a href="../../#tools">Tools</a></li>
+            <li><a href="../../#services" class="ancestor">Services</a></li>
+            <li><a href="../../#specifications">Specifications</a></li>
+            <li><a href="../../#hardware">Hardware</a></li>
           </ul>
           <ul>
             <li><a href="../../emerging-changes/">Emerging changes</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/">
-              HexstreamSoft
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
             <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
             <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
@@ -126,125 +83,144 @@
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
-            <li>
-              <a href="https://status-quo.hexstreamsoft.com/">
-                Status quo
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
+            <li><a href="../../" class="ancestor">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-11-15">15 november 2016</time><span>.</span></p>
-
     <main>
 
       <header id="page-header">
-        <h1>Amazon Web Services</h1>
+        <h1>Amazon Web&nbsp;Services</h1>
         <p class="description">Infrastructure as a Service.</p>
       </header>
 
+      <nav class="tabs">
+        <ul>
+          <li><a href="#usage-notes">Usage notes</a></li>
+          <li><a href="#my-config">My config</a></li>
+        </ul>
+        <ul>
+          <li><a href="../../emerging-changes/#aws">Emerging changes</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://aws.amazon.com/">AWS homepage ⬈</a></li>
+        </ul>
+      </nav>
+
       <section id="usage-notes">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#usage-notes" class="anchor">⚓</a>
           </span>
-          <a href="#">AWS</a>
-          <span class="separator"> » </span>
-          <a class="here">Usage notes</a>
+          <div class="breadcrumbs">
+            <a href="#">AWS</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Usage notes</a></span>
+          </div>
         </h1>
 
-        <p>Stub.</p>
+        <p class="status-indicator stub">✘ Stub</p>
 
       </section>
 
       <section id="my-config">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#my-config" class="anchor">⚓</a>
           </span>
-          <a href="#">AWS</a>
-          <span class="separator"> » </span>
-          <a class="here">My config</a>
+          <div class="breadcrumbs">
+            <a href="#">AWS</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">My config</a></span>
+          </div>
         </h1>
 
-        <nav class="section-nav">
-
-          <nav class="navbox">
-            <h1>
-              <a class="here">My config</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li><a href="#my-config_core-services">Core services</a></li>
-              <li><a href="#my-config_additional-services">Additional services</a></li>
-            </ul>
-          </nav>
-
-        </nav>
-
-        <section id="my-config_core-services">
-
-          <h1 class="breadcrumbs">
-            <span class="section-relative-nav">
-              <a href="#my-config_core-services" class="anchor">⚓</a>
-            </span>
-            <a href="#">AWS</a>
-            <span class="separator"> » </span>
-            <a href="#my-config">My config</a>
-            <span class="separator"> » </span>
-            <a class="here">Core services</a>
-          </h1>
-
-          <nav class="section-nav">
-
-            <nav class="navbox">
-              <h1>
-                <a class="here">Core services</a>
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </h1>
+        <nav class="tabs">
+          <ul>
+            <li class="contains-children">
+              <a href="#my-config_core-services">Core services</a>
               <ul>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#my-config_s3">S3</a>
                   <a class="direct-link" href="https://aws.amazon.com/s3/"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#my-config_cloudfront">CloudFront</a>
                   <a class="direct-link" href="https://aws.amazon.com/cloudfront/"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#my-config_route53">Route 53</a>
                   <a class="direct-link" href="https://aws.amazon.com/route53/"><span>⬈</span></a>
                 </li>
               </ul>
-            </nav>
+            </li>
+            <li class="contains-children">
+              <a href="#my-config_additional-services">Additional services</a>
+              <ul>
+                <li class="contains-direct-link">
+                  <a href="#my-config_iam">IAM</a>
+                  <a class="direct-link" href="https://aws.amazon.com/iam/"><span>⬈</span></a>
+                </li>
+                <li class="contains-direct-link">
+                  <a href="#my-config_cloudtrail">CloudTrail</a>
+                  <a class="direct-link" href="https://aws.amazon.com/cloudtrail/"><span>⬈</span></a>
+                </li>
+                <li class="contains-direct-link">
+                  <a href="#my-config_cloudwatch">CloudWatch</a>
+                  <a class="direct-link" href="https://aws.amazon.com/cloudwatch/"><span>⬈</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
 
+        <section id="my-config_core-services">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#my-config_core-services" class="anchor">⚓</a>
+            </span>
+            <div class="breadcrumbs">
+              <a href="#">AWS</a>
+              <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Core services</a></span>
+            </div>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li class="contains-direct-link">
+                <a href="#my-config_s3">S3</a>
+                <a class="direct-link" href="https://aws.amazon.com/s3/"><span>⬈</span></a>
+              </li>
+              <li class="contains-direct-link">
+                <a href="#my-config_cloudfront">CloudFront</a>
+                <a class="direct-link" href="https://aws.amazon.com/cloudfront/"><span>⬈</span></a>
+              </li>
+              <li class="contains-direct-link">
+                <a href="#my-config_route53">Route 53</a>
+                <a class="direct-link" href="https://aws.amazon.com/route53/"><span>⬈</span></a>
+              </li>
+            </ul>
           </nav>
 
           <p>These are the services that are more immediately and obviously useful to me.</p>
 
           <section id="my-config_s3">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#my-config_s3" class="anchor">⚓</a>
               </span>
-              <a href="#">AWS</a>
-              <span class="separator"> » </span>
-              <a href="#my-config">My config</a>
-              <span class="separator"> » </span>
-              <a href="#my-config_core-services">Core services</a>
-              <span class="separator"> » </span>
-              <a class="here">S3</a>
+              <div class="breadcrumbs">
+                <a href="#">AWS</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_core-services">Core services</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">S3</a></span>
+              </div>
             </h1>
 
             <ul>
@@ -253,224 +229,215 @@
               <li><a href="config/global.hexstreamsoft.com-bucket-cors-config.xml">global.hexstreamsoft.com bucket cors config</a> (Notably enables font loading.)</li>
             </ul>
 
-            <table id="my-config_s3_buckets-table">
-              <caption>My buckets</caption>
-              <thead>
-                <tr>
-                  <th class="name">Name</th>
-                  <th class="website">Website?</th>
-                  <th class="cdn">CDN?</th>
-                  <th class="comments">Comments</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th class="name">global.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://global.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://dwzjm7abxhq5h.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments">Shared resources. CSS and images.</td>
-                </tr>
-                <tr>
-                  <th class="name">www.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://www.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://d24boiig9puuut.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments"></td>
-                </tr>
-                <tr class="redirect">
-                  <th class="name">hexstreamsoft.com</th>
-                  <td class="website"><a href="http://hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"></td>
-                  <td class="comments">Redirect.</td>
-                </tr>
-                <tr>
-                  <th class="name">worknotes.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://worknotes.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://d1wrud6wq5y755.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments"></td>
-                </tr>
-                <tr>
-                  <th class="name">status-quo.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://status-quo.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://d1aluiyimksur6.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments"></td>
-                </tr>
-                <tr>
-                  <th class="name">tarballs.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://tarballs.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"></td>
-                  <td class="comments"></td>
-                </tr>
-                <tr class="upcoming">
-                  <th class="name">blog.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://blog.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://d3ecl33t1hfp2e.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments">Up, but not &quot;launched&quot;.</td>
-                </tr>
-                <tr class="upcoming">
-                  <th class="name">thoughts.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://thoughts.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://d125uhd6kd7sd.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments">Upcoming.</td>
-                </tr>
-                <tr class="upcoming">
-                  <th class="name">quotes.hexstreamsoft.com</th>
-                  <td class="website"><a href="http://quotes.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
-                  <td class="cdn"><a href="http://d1wx4tnl715se4.cloudfront.net" rel="nofollow">✔</a></td>
-                  <td class="comments">Upcoming.</td>
-                </tr>
-                <tr>
-                  <th class="name">logs.hexstreamsoft.com</th>
-                  <td class="website"></td>
-                  <td class="cdn"></td>
-                  <td class="comments">Where CloudTrail logs go to die.</td>
-                </tr>
-                <tr>
-                  <th class="name">backups.hexstreamsoft.com</th>
-                  <td class="website"></td>
-                  <td class="cdn"></td>
-                  <td class="comments">Not a big part of my backup strategy.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+
+              <table id="my-config_s3_buckets-table">
+                <caption>My buckets</caption>
+                <thead>
+                  <tr>
+                    <th class="name">Name</th>
+                    <th class="website">Website?</th>
+                    <th class="cdn">CDN?</th>
+                    <th class="comments">Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="name">global.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://global.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://dwzjm7abxhq5h.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments">Shared resources. CSS and images.</td>
+                  </tr>
+                  <tr>
+                    <th class="name">www.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://www.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://d24boiig9puuut.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr class="redirect">
+                    <th class="name">hexstreamsoft.com</th>
+                    <td class="website"><a href="http://hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"></td>
+                    <td class="comments">Redirect.</td>
+                  </tr>
+                  <tr>
+                    <th class="name">worknotes.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://worknotes.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://d1wrud6wq5y755.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <th class="name">status-quo.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://status-quo.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://d1aluiyimksur6.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <th class="name">tarballs.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://tarballs.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"></td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr class="upcoming">
+                    <th class="name">blog.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://blog.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://d3ecl33t1hfp2e.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments">Up, but not &quot;launched&quot;.</td>
+                  </tr>
+                  <tr class="upcoming">
+                    <th class="name">thoughts.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://thoughts.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://d125uhd6kd7sd.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments">Upcoming.</td>
+                  </tr>
+                  <tr class="upcoming">
+                    <th class="name">quotes.hexstreamsoft.com</th>
+                    <td class="website"><a href="http://quotes.hexstreamsoft.com.s3-website-us-east-1.amazonaws.com/" rel="nofollow">✔</a></td>
+                    <td class="cdn"><a href="http://d1wx4tnl715se4.cloudfront.net" rel="nofollow">✔</a></td>
+                    <td class="comments">Upcoming.</td>
+                  </tr>
+                  <tr>
+                    <th class="name">logs.hexstreamsoft.com</th>
+                    <td class="website"></td>
+                    <td class="cdn"></td>
+                    <td class="comments">Where CloudTrail logs go to die.</td>
+                  </tr>
+                  <tr>
+                    <th class="name">backups.hexstreamsoft.com</th>
+                    <td class="website"></td>
+                    <td class="cdn"></td>
+                    <td class="comments">Not a big part of my backup strategy.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
 
           </section>
 
           <section id="my-config_cloudfront">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#my-config_cloudfront" class="anchor">⚓</a>
               </span>
-              <a href="#">AWS</a>
-              <span class="separator"> » </span>
-              <a href="#my-config">My config</a>
-              <span class="separator"> » </span>
-              <a href="#my-config_core-services">Core services</a>
-              <span class="separator"> » </span>
-              <a class="here">CloudFront</a>
+              <div class="breadcrumbs">
+                <a href="#">AWS</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_core-services">Core services</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">CloudFront</a></span>
+              </div>
             </h1>
 
             <p>TODO: More details...</p>
 
-            <table id="my-config_cloudfront_summary-table">
-              <thead>
-                <tr>
-                  <th class="cname">CNAME</th>
-                  <th class="id">ID</th>
-                  <th class="raw-name">Raw name</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th class="cname">global.hexstreamsoft.com</th>
-                  <td class="id">E3D3RFIFLMMHCA</td>
-                  <td class="raw-name">dwzjm7abxhq5h.cloudfront.net</td>
-                </tr>
-                <tr>
-                  <th class="cname">www.hexstreamsoft.com</th>
-                  <td class="id">E1DV49V1B4MYMY</td>
-                  <td class="raw-name">d24boiig9puuut.cloudfront.net</td>
-                </tr>
-                <tr>
-                  <th class="cname">worknotes.hexstreamsoft.com</th>
-                  <td class="id">E3L3O9ZXZ6KPKN</td>
-                  <td class="raw-name">d1wrud6wq5y755.cloudfront.net</td>
-                </tr>
-                <tr>
-                  <th class="cname">status-quo.hexstreamsoft.com</th>
-                  <td class="id">EN3DYNEGUHPMB</td>
-                  <td class="raw-name">d1aluiyimksur6.cloudfront.net</td>
-                </tr>
-                <tr class="upcoming">
-                  <th class="cname">blog.hexstreamsoft.com</th>
-                  <td class="id">EO4F9J23BGBHA</td>
-                  <td class="raw-name">d3ecl33t1hfp2e.cloudfront.net</td>
-                </tr>
-                <tr class="upcoming">
-                  <th class="cname">thoughts.hexstreamsoft.com</th>
-                  <td class="id">E3NOT6XQM98U3Q</td>
-                  <td class="raw-name">d125uhd6kd7sd.cloudfront.net</td>
-                </tr>
-                <tr class="upcoming">
-                  <th class="cname">quotes.hexstreamsoft.com</th>
-                  <td class="id">E2FZ2CW4C5HJW8</td>
-                  <td class="raw-name">d1wx4tnl715se4.cloudfront.net</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+
+              <table id="my-config_cloudfront_summary-table">
+                <thead>
+                  <tr>
+                    <th class="cname">CNAME</th>
+                    <th class="id">ID</th>
+                    <th class="raw-name">Raw name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="cname">global.hexstreamsoft.com</th>
+                    <td class="id">E3D3RFIFLMMHCA</td>
+                    <td class="raw-name">dwzjm7abxhq5h.cloudfront.net</td>
+                  </tr>
+                  <tr>
+                    <th class="cname">www.hexstreamsoft.com</th>
+                    <td class="id">E1DV49V1B4MYMY</td>
+                    <td class="raw-name">d24boiig9puuut.cloudfront.net</td>
+                  </tr>
+                  <tr>
+                    <th class="cname">worknotes.hexstreamsoft.com</th>
+                    <td class="id">E3L3O9ZXZ6KPKN</td>
+                    <td class="raw-name">d1wrud6wq5y755.cloudfront.net</td>
+                  </tr>
+                  <tr>
+                    <th class="cname">status-quo.hexstreamsoft.com</th>
+                    <td class="id">EN3DYNEGUHPMB</td>
+                    <td class="raw-name">d1aluiyimksur6.cloudfront.net</td>
+                  </tr>
+                  <tr class="upcoming">
+                    <th class="cname">blog.hexstreamsoft.com</th>
+                    <td class="id">EO4F9J23BGBHA</td>
+                    <td class="raw-name">d3ecl33t1hfp2e.cloudfront.net</td>
+                  </tr>
+                  <tr class="upcoming">
+                    <th class="cname">thoughts.hexstreamsoft.com</th>
+                    <td class="id">E3NOT6XQM98U3Q</td>
+                    <td class="raw-name">d125uhd6kd7sd.cloudfront.net</td>
+                  </tr>
+                  <tr class="upcoming">
+                    <th class="cname">quotes.hexstreamsoft.com</th>
+                    <td class="id">E2FZ2CW4C5HJW8</td>
+                    <td class="raw-name">d1wx4tnl715se4.cloudfront.net</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
 
           </section>
 
           <section id="my-config_route53">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#my-config_route53" class="anchor">⚓</a>
               </span>
-              <a href="#">AWS</a>
-              <span class="separator"> » </span>
-              <a href="#my-config">My config</a>
-              <span class="separator"> » </span>
-              <a href="#my-config_core-services">Core services</a>
-              <span class="separator"> » </span>
-              <a class="here">Route 53</a>
+              <div class="breadcrumbs">
+                <a href="#">AWS</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_core-services">Core services</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Route 53</a></span>
+              </div>
             </h1>
 
             <section id="my-config_route53_hosted-zones">
 
-              <nav class="section-nav">
-
-                <nav class="navbox">
-                  <h1>
-                    <a class="here">Hosted zones</a>
-                    <span class="here-indicator-left"> </span>
-                    <span class="here-indicator-right"> </span>
-                  </h1>
-                  <ul>
-                    <li><a href="#my-config_route53_hexstreamsoft.com">hexstreamsoft.com</a></li>
-                    <li><a href="#my-config_route53_hexstream.net">hexstream.net</a></li>
-                    <li><a href="#my-config_route53_hexstream.xyz">hexstream.xyz</a></li>
-                  </ul>
-                </nav>
-
-              </nav>
-
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
                   <a href="#my-config_route53_hosted-zones" class="anchor">⚓</a>
                 </span>
-                <a href="#">AWS</a>
-                <span class="separator"> » </span>
-                <a href="#my-config">My config</a>
-                <span class="separator"> » </span>
-                <a href="#my-config_core-services">Core services</a>
-                <span class="separator"> » </span>
-                <a href="#my-config_route53">Route 53</a>
-                <span class="separator"> » </span>
-                <a class="here">Hosted zones</a>
+                <div class="breadcrumbs">
+                  <a href="#">AWS</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#my-config_core-services">Core services</a></span>
+                  <span class="crumb"><span class="s"> » </span><a href="#my-config_route53">Route 53</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Hosted zones</a></span>
+                </div>
               </h1>
 
-              <ul class="tabs">
-                <li><a class="here">Route 53</a></li>
-                <li><a href="../namecheap/#my-config_dns">Namecheap</a></li>
-              </ul>
+              <nav class="tabs">
+                <ul>
+                  <li><a href="#my-config_route53_hexstreamsoft.com">hexstreamsoft.com</a></li>
+                  <li><a href="#my-config_route53_hexstream.net">hexstream.net</a></li>
+                  <li><a href="#my-config_route53_hexstream.xyz">hexstream.xyz</a></li>
+                </ul>
+                <ul>
+                  <li><a class="here">Route 53</a></li>
+                  <li><a href="../namecheap/#my-config_dns">Namecheap</a></li>
+                </ul>
+              </nav>
 
-              <section id="my-config_route53_hexstreamsoft.com" class="item-section">
+              <section id="my-config_route53_hexstreamsoft.com">
 
-                <header>
-                  <h1 class="breadcrumbs">
-                    <span class="section-relative-nav">
-                      <span class="of">1/3</span>
-                      <a href="#my-config_route53_hexstreamsoft.com" class="anchor">⚓</a>
-                    </span>
-                    <a href="#">AWS</a>
-                    <span class="separator"> » </span>
-                    <a class="ellipsis">...</a>
-                    <span class="separator"> » </span>
-                    <a href="#my-config_route53_hosted-zones">Hosted zones:</a>
-                    <a class="here">hexstreamsoft.com</a>
-                  </h1>
-                </header>
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#my-config_route53_hexstreamsoft.com" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#my-config_core-services" class="ellipsis">...<sub>3</sub></a>
+                    <span class="crumb"><span class="s"> » </span><a href="#my-config_route53">Route 53</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#my-config_route53_hosted-zones">Hosted zones</a></span>
+                    <span class="crumb"><span class="s"> » </span> <a class="here">hexstreamsoft.com</a></span>
+                  </div>
+                </h1>
 
                 <dl>
                   <dt>Overall topic</dt>
@@ -478,11 +445,10 @@
                   <dt>Default TTL</dt>
                   <dd>86400 (1 day)</dd>
                   <dt>DNS records</dt>
-                  <dd>
+                  <dd class="scroll">
 
                     <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
-                           id="my-config_route53_hexstreamsoft.com_table"
-                           style="margin-left: -6.9em;">
+                           id="my-config_route53_hexstreamsoft.com_table">
                       <colgroup class="weightless">
                         <col />
                       </colgroup>
@@ -644,22 +610,19 @@
 
               </section>
 
-              <section id="my-config_route53_hexstream.net" class="item-section">
+              <section id="my-config_route53_hexstream.net">
 
-                <header>
-                  <h1 class="breadcrumbs">
-                    <span class="section-relative-nav">
-                      <span class="of">2/3</span>
-                      <a href="#my-config_route53_hexstream.net" class="anchor">⚓</a>
-                    </span>
-                    <a href="#">AWS</a>
-                    <span class="separator"> » </span>
-                    <a class="ellipsis">...</a>
-                    <span class="separator"> » </span>
-                    <a href="#my-config_route53_hosted-zones">Hosted zones:</a>
-                    <a class="here">hexstream.net</a>
-                  </h1>
-                </header>
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#my-config_route53_hexstream.net" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#my-config_core-services" class="ellipsis">...<sub>3</sub></a>
+                    <span class="crumb"><span class="s"> » </span><a href="#my-config_route53">Route 53</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#my-config_route53_hosted-zones">Hosted zones</a></span>
+                    <span class="crumb"><span class="s"> » </span> <a class="here">hexstream.net</a></span>
+                  </div>
+                </h1>
 
                 <dl>
                   <dt>Overall topic</dt>
@@ -667,11 +630,10 @@
                   <dt>Default TTL</dt>
                   <dd>86400 (1 day)</dd>
                   <dt>DNS records</dt>
-                  <dd>
+                  <dd class="scroll">
 
                     <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
-                           id="my-config_route53_hexstream.net_table"
-                           style="margin-left: -6.9em;">
+                           id="my-config_route53_hexstream.net_table">
                       <colgroup class="weightless">
                         <col />
                       </colgroup>
@@ -803,22 +765,19 @@
 
               </section>
 
-              <section id="my-config_route53_hexstream.xyz" class="item-section">
+              <section id="my-config_route53_hexstream.xyz">
 
-                <header>
-                  <h1 class="breadcrumbs">
-                    <span class="section-relative-nav">
-                      <span class="of">3/3</span>
-                      <a href="#my-config_route53_hexstream.xyz" class="anchor">⚓</a>
-                    </span>
-                    <a href="#">AWS</a>
-                    <span class="separator"> » </span>
-                    <a class="ellipsis">...</a>
-                    <span class="separator"> » </span>
-                    <a href="#my-config_route53_hosted-zones">Hosted zones:</a>
-                    <a class="here">hexstream.xyz</a>
-                  </h1>
-                </header>
+                <h1 class="breadcrumbs-bar">
+                  <span class="section-relative-nav">
+                    <a href="#my-config_route53_hexstream.xyz" class="anchor">⚓</a>
+                  </span>
+                  <div class="breadcrumbs">
+                    <a href="#my-config_core-services" class="ellipsis">...<sub>3</sub></a>
+                    <span class="crumb"><span class="s"> » </span><a href="#my-config_route53">Route 53</a></span>
+                    <span class="crumb"><span class="s"> » </span><a href="#my-config_route53_hosted-zones">Hosted zones</a></span>
+                    <span class="crumb"><span class="s"> » </span> <a class="here">hexstream.xyz</a></span>
+                  </div>
+                </h1>
 
                 <dl>
                   <dt>Overall topic</dt>
@@ -859,92 +818,80 @@
 
         <section id="my-config_additional-services">
 
-          <nav class="section-nav">
-
-            <nav class="navbox">
-              <h1>
-                <a class="here">Additional services</a>
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#my-config_iam">IAM</a>
-                  <a class="direct-link" href="https://aws.amazon.com/iam/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#my-config_cloudtrail">CloudTrail</a>
-                  <a class="direct-link" href="https://aws.amazon.com/cloudtrail/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#my-config_cloudwatch">CloudWatch</a>
-                  <a class="direct-link" href="https://aws.amazon.com/cloudwatch/"><span>⬈</span></a>
-                </li>
-              </ul>
-            </nav>
-
-          </nav>
-
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#my-config_additional-services" class="anchor">⚓</a>
             </span>
-            <a href="#">AWS</a>
-            <span class="separator"> » </span>
-            <a href="#my-config">My config</a>
-            <span class="separator"> » </span>
-            <a class="here">Additional services</a>
+            <div class="breadcrumbs">
+              <a href="#">AWS</a>
+              <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Additional services</a></span>
+            </div>
           </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li class="contains-direct-link">
+                <a href="#my-config_iam">IAM</a>
+                <a class="direct-link" href="https://aws.amazon.com/iam/"><span>⬈</span></a>
+              </li>
+              <li class="contains-direct-link">
+                <a href="#my-config_cloudtrail">CloudTrail</a>
+                <a class="direct-link" href="https://aws.amazon.com/cloudtrail/"><span>⬈</span></a>
+              </li>
+              <li class="contains-direct-link">
+                <a href="#my-config_cloudwatch">CloudWatch</a>
+                <a class="direct-link" href="https://aws.amazon.com/cloudwatch/"><span>⬈</span></a>
+              </li>
+            </ul>
+          </nav>
 
           <p>These services basically support the operation of the <a href="#my-config_core-services">core services</a> and are generally less interesting to me.</p>
 
           <section id="my-config_iam">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#my-config_iam" class="anchor">⚓</a>
               </span>
-              <a href="#">AWS</a>
-              <span class="separator"> » </span>
-              <a href="#my-config">My config</a>
-              <span class="separator"> » </span>
-              <a href="#my-config_additional-services">Additional services</a>
-              <span class="separator"> » </span>
-              <a class="here">IAM</a>
+              <div class="breadcrumbs">
+                <a href="#">AWS</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_additional-services">Additional services</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">IAM</a></span>
+              </div>
             </h1>
 
           </section>
 
           <section id="my-config_cloudtrail">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#my-config_cloudtrail" class="anchor">⚓</a>
               </span>
-              <a href="#">AWS</a>
-              <span class="separator"> » </span>
-              <a href="#my-config">My config</a>
-              <span class="separator"> » </span>
-              <a href="#my-config_additional-services">Additional services</a>
-              <span class="separator"> » </span>
-              <a class="here">CloudTrail</a>
+              <div class="breadcrumbs">
+                <a href="#">AWS</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_additional-services">Additional services</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">CloudTrail</a></span>
+              </div>
             </h1>
 
           </section>
 
           <section id="my-config_cloudwatch">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#my-config_cloudwatch" class="anchor">⚓</a>
               </span>
-              <a href="#">AWS</a>
-              <span class="separator"> » </span>
-              <a href="#my-config">My config</a>
-              <span class="separator"> » </span>
-              <a href="#my-config_additional-services">Additional services</a>
-              <span class="separator"> » </span>
-              <a class="here">CloudWatch</a>
+              <div class="breadcrumbs">
+                <a href="#">AWS</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_additional-services">Additional services</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">CloudWatch</a></span>
+              </div>
             </h1>
 
           </section>
@@ -968,11 +915,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Fservices%2Faws%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://status-quo.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Fservices%2Faws%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Fservices%2Faws%2F">✔ HTML5</a>
+        <a href="https://status-quo.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstreamsoft.com%2Fservices%2Faws%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 
