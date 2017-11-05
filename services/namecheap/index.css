@@ -34,7 +34,3 @@ main .items > section h1 {
 main .items > section .intend-to-drop {
     color: red;
 }
-
-#my-config_domain-names_navbox .inlined-nodes li {
-    padding-right: 1.1em;
-}
