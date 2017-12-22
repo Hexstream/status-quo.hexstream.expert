@@ -63,7 +63,7 @@
 
 #inlined-sections > section > .header > .description {
     display: table;
-    margin: -1.2em 0 0 calc(2.2em + var(--section-relative-nav-safety-margin)) ;
+    margin: -1.2em 0 0 2.2em;
     padding: 0.2em;
     padding-top: 0.25em;
     opacity: 0.6;
