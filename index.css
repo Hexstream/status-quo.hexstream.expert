@@ -37,8 +37,9 @@
     margin-top: 1em;
 }
 
-#tabs-wrapper .tabs ul {
-    margin: initial;
+#tabs-wrapper .tabs > ul {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #tabs-wrapper .tabs.additional {
