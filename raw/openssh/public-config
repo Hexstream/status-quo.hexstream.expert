@@ -48,13 +48,17 @@ Host clop.ponies.hexstream.net
 HostName spike.hexstream.net
 User clop.ponies.hexstream.net
 
-Host angele.hexstream.xyz
-HostName spike.hexstream.net
-User angele.hexstream.xyz
-
 Host spike.hexstream.net
 HostName spike.hexstream.net
 User root
+
+Host www.hexstream.xyz
+HostName spike.hexstream.net
+User www.hexstream.xyz
+
+Host workshop.hexstream.xyz
+HostName spike.hexstream.net
+User workshop.hexstream.xyz
 
 Host dumping-grounds.hexstream.xyz
 HostName spike.hexstream.net
@@ -67,3 +71,7 @@ User discord.hexstream.xyz
 Host i18n.discord.hexstream.xyz
 HostName spike.hexstream.net
 User i18n.discord.hexstream.xyz
+
+Host angele.hexstream.xyz
+HostName spike.hexstream.net
+User angele.hexstream.xyz
