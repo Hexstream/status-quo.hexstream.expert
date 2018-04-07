@@ -173,6 +173,12 @@
 (define-prefix-command 'hexstream-map)
 (global-set-key (kbd "s-h") 'hexstream-map)
 
+(add-to-list 'load-path "~/apps/pov-mode")
+(autoload 'pov-mode "pov-mode" "PoVray scene file mode" t)
+(add-to-list 'auto-mode-alist '("\\.pov\\'" . pov-mode))
+(add-to-list 'auto-mode-alist '("\\.inc\\'" . pov-mode))
+(setf pov-indent-level 4)
+
 ;custom stuff
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
