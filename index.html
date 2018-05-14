@@ -41,7 +41,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-02-07">7 february 2018</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-05-14">14 may 2018</time><span>.</span></p>
 
     </nav>
 
@@ -193,13 +193,6 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="purpose ghost left"><a>Infrastructure as a Service</a></td>
-                  <th class="name"><a href="services/aws/">AWS</a></th>
-                  <th class="direct-link"><a href="https://aws.amazon.com/">⬈</a></th>
-                  <td><a href="services/aws/#usage-notes" class="status-indicator stub">✘ Stub</a></td>
-                  <td><a href="services/aws/#my-config" class="status-indicator incomplete">⚠ Incomplete</a></td>
-                </tr>
-                <tr>
                   <td class="purpose ghost left"><a>Virtual Private Server provider</a></td>
                   <th class="name"><a href="services/digitalocean/">DigitalOcean</a></th>
                   <th class="direct-link"><a href="https://www.digitalocean.com/">⬈</a></th>
@@ -207,11 +200,18 @@
                   <td><a href="services/digitalocean/#my-config" class="status-indicator incomplete">⚠ Incomplete</a></td>
                 </tr>
                 <tr>
-                  <td class="purpose ghost left"><a>Domain name registrar</a></td>
-                  <th class="name"><a href="services/namecheap/">Namecheap</a></th>
-                  <th class="direct-link"><a href="https://www.namecheap.com/">⬈</a></th>
-                  <td><a href="services/namecheap/#usage-notes" class="status-indicator stub">✘ Stub</a></td>
-                  <td><a href="services/namecheap/#my-config" class="status-indicator ready">✔ Ready</a></td>
+                  <td class="purpose ghost left"><a>Content Delivery Network</a></td>
+                  <th class="name"><a href="services/cloudflare/">Cloudflare</a></th>
+                  <th class="direct-link"><a href="https://www.cloudflare.com/">⬈</a></th>
+                  <td><a href="services/cloudflare/#usage-notes" class="status-indicator stub">✘ Stub</a></td>
+                  <td><a href="services/cloudflare/#my-config" class="status-indicator incomplete">⚠ Incomplete</a></td>
+                </tr>
+                <tr>
+                  <td class="purpose ghost left"><a>Infrastructure as a Service</a></td>
+                  <th class="name"><a href="services/aws/">AWS</a></th>
+                  <th class="direct-link"><a href="https://aws.amazon.com/">⬈</a></th>
+                  <td><a href="services/aws/#usage-notes" class="status-indicator stub">✘ Stub</a></td>
+                  <td><a href="services/aws/#my-config" class="status-indicator incomplete">⚠ Incomplete</a></td>
                 </tr>
               </tbody>
             </table>
@@ -293,27 +293,17 @@
           <li>
             <article class="news-item" id="12_august_2017">
               <h1 class="date">
-                <a href="#12_august_2017"><time datetime="2017-08-12">12 august 2017</time></a>
+                <a href="#14_may_2018"><time datetime="2018-05-14">14 may 2018</time></a>
                 <span class="border-fix"></span>
               </h1>
               <div class="body">
-                <p>My status quo is now <strong>mobile-friendly</strong>!</p>
-                <p>I'm not doing any "device detection" bullshit, so you can just resize the window narrow to test the resizing if you're on desktop. Or better yet, in Chrome or Firefox press F12 then go in "device mode" or "responsive design mode".</p>
-                <p>Now I just need to spread this awesomeness to all my other sites, the hard part is done, I think!</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="news-item" id="20_july_2017">
-              <h1 class="date">
-                <a href="#20_july_2017"><time datetime="2017-07-20">20 july 2017</time></a>
-                <span class="border-fix"></span>
-              </h1>
-              <div class="body">
-                <p>I have conveniently consolidated the top-level navigation, above.</p>
-                <p><b>edit:</b> Thanks <em>very much</em> to Birk Hirdman for reporting the long-standing "some text files initiate a download instead of displaying directly" issue! This is now <em>finally</em> fixed.</p>
-                <p>Sorry for any inconvenience this has undoubtedly caused.</p>
-                <p>(I thought I had fixed this long ago, but I had only fixed it for text files that <em>don't have an extension</em> (like <code>README</code>) and not for those consisting <em>only</em> of an extension (like <code>.emacs</code>).)</p>
+                <p>I updated the <a href="#services">Services</a> section to reflect various changes to my websites infrastructure.<br />The information there is now fairly accurate.</p>
+                <p><b>Highlights:</b></p>
+                <ul>
+                  <li>Transferred all domains from Namecheap to AWS Route 53 Domains,<br />for infrastructure consolidation purposes.</li>
+                  <li>Now ALL websites are hosted on DigitalOcean, going through Cloudflare.<br />There's almost nothing left on AWS S3. I no longer use AWS CloudFront.</li>
+                  <li>Email is now managed by G Suite (basically, professional Gmail).</li>
+                </ul>
               </div>
             </article>
           </li>

@@ -1,11 +1,11 @@
-#my-config_s3_buckets-table .website, #my-config_s3_buckets-table .cdn {
-    text-align: center;
-}
-
-#my-config_cloudfront_summary-table .raw-name {
-    text-align: right;
-}
-
-table .upcoming, table .redirect {
+table .upcoming, table .redirect, table .upcoming a {
     color: rgba(0, 0, 0, 0.6);
+}
+
+.navtable {
+    font-size: medium;
+}
+
+caption {
+    margin-bottom: 0.4em;
 }

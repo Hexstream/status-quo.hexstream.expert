@@ -41,7 +41,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-11-17">17 november 2016</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-05-14">14 may 2018</time><span>.</span></p>
 
     </nav>
 
@@ -50,9 +50,9 @@
       <nav class="tabs contains-title">
         <h1><a href="../../#services">Services</a></h1>
         <ul>
-          <li><a href="../aws/">AWS</a></li>
           <li><a class="here">DigitalOcean</a></li>
-          <li><a href="../namecheap/">Namecheap</a></li>
+          <li><a href="../cloudflare/">Cloudflare</a></li>
+          <li><a href="../aws/">AWS</a></li>
         </ul>
       </nav>
 
@@ -121,7 +121,7 @@
           </span>
         </h1>
 
-        <p>Stub.</p>
+        <p class="status-indicator stub">✘ Stub</p>
 
       </section>
 
@@ -178,8 +178,8 @@
                   <th class="name"><a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a></th>
                   <td><time datetime="2015-03-02">2 march 2015</time></td>
                   <td>192.34.60.103</td>
-                  <td>512MB</td>
-                  <td>20GB</td>
+                  <td>1GB</td>
+                  <td>25GB</td>
                   <td>Ubuntu 14.04 x64</td>
                   <td>New York 1</td>
                   <td>US $5/month ($0.007/hour)</td>
@@ -265,7 +265,6 @@
 
               <nav class="tabs">
                 <ul>
-                  <li><a href="#my-config_droplets_spike.hexstream.net_raw_email">Email</a></li>
                   <li><a href="#my-config_droplets_spike.hexstream.net_raw_bittorrent">Bittorrent</a></li>
                 </ul>
               </nav>
@@ -273,29 +272,6 @@
               <p>Miscellaneous raw stuff. I'll clean this up later, probably. Maybe.</p>
 
               <p><a href="config/droplets/spike.hexstream.net/raw/website-update-hook.sh">/usr/local/bin/website-update-hook.sh</a></p>
-
-              <section id="my-config_droplets_spike.hexstream.net_raw_email">
-
-                <h1 class="breadcrumbs-bar">
-                  <span class="section-relative-nav">
-                    <a href="#my-config_droplets_spike.hexstream.net_raw_email" class="anchor">⚓</a>
-                  </span>
-                  <span class="breadcrumbs">
-                    <a href="#my-config_droplets" class="ellipsis">...<sub>3</sub></a>
-                    <span class="crumb"><span class="s"> » </span><a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a></span>
-                    <span class="crumb"><span class="s"> » </span><a href="#my-config_droplets_spike.hexstream.net_raw">Raw</a></span>
-                    <span class="crumb"><span class="s"> » </span><a class="here">Email</a></span>
-                  </span>
-                </h1>
-
-                <ul>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/postfix/end-of_main.cf"><code>/etc/postfix/main.cf</code> (excerpt, end)</a></li>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/postfix/virtual"><code>/etc/postfix/virtual</code></a></li>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/postfix/controlled_envelope_senders"><code>/etc/postfix/controlled_envelope_senders</code></a></li>
-                  <li>Something to do with <code>dovecot</code>.</li>
-                </ul>
-
-              </section>
 
               <section id="my-config_droplets_spike.hexstream.net_raw_bittorrent">
 
@@ -312,6 +288,8 @@
                 </h1>
 
                 <p>I run my own private bittorrent tracker. (&quot;private&quot; in the sense that only I can add files.)</p>
+
+                <p>(Actually I don't run my own tracker anymore, it was too much trouble. Hopefully I can fix this sometime.)</p>
 
                 <p>opentracker isn't yet widely available in repos, for stupid licensing reasons.</p>
 

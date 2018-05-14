@@ -1,6 +1,0 @@
-{
-    "RedirectAllRequestsTo": {
-        "HostName": "www.hexstreamsoft.com",
-        "Protocol": "https"
-    }
-}
