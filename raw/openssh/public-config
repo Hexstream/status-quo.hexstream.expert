@@ -12,6 +12,10 @@ Host www.hexstreamsoft.com
 HostName spike.hexstream.net
 User www.hexstreamsoft.com
 
+Host clos-mop.hexstreamsoft.com
+HostName spike.hexstream.net
+User clos-mop.hexstreamsoft.com
+
 Host worknotes.hexstreamsoft.com
 HostName spike.hexstream.net
 User worknotes.hexstreamsoft.com
@@ -28,9 +32,9 @@ Host blog.hexstreamsoft.com
 HostName spike.hexstream.net
 User blog.hexstreamsoft.com
 
-Host www.stream-lisp.org
+Host stream-lisp.hexstreamsoft.com
 HostName spike.hexstream.net
-User www.stream-lisp.org
+User stream-lisp.hexstreamsoft.com
 
 Host tarballs.hexstreamsoft.com
 HostName spike.hexstream.net
