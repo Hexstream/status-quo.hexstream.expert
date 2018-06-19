@@ -41,7 +41,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-05-14">14 may 2018</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-06-19">19 june 2018</time><span>.</span></p>
 
     </nav>
 
@@ -160,11 +160,11 @@
               <tbody>
                 <tr>
                   <th class="name"><a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a></th>
-                  <td><time datetime="2015-03-02">2 march 2015</time></td>
-                  <td>192.34.60.103</td>
+                  <td><time datetime="2018-05-23">23 may 2018</time></td>
+                  <td>206.81.12.114</td>
                   <td>1GB</td>
                   <td>25GB</td>
-                  <td>Ubuntu 14.04 x64</td>
+                  <td>Debian 9.4 x64</td>
                   <td>New York 1</td>
                   <td>US $5/month ($0.007/hour)</td>
                 </tr>
@@ -194,7 +194,10 @@
               </ul>
             </nav>
 
-            <p>This droplet uses Ubuntu instead of Debian (what I would choose nowadays), for historical reasons.</p>
+            <p>
+              After a big refactoring, I was finally able to migrate the server from Ubuntu 14.04 to Debian 9.4, with very little downtime.<br />
+              I unfortunately lost my cute little IP because of some DigitalOcean nonsense. You will be missed, <code>192.34.60.103</code>!
+            </p>
 
             <section id="my-config_droplets_spike.hexstream.net_apache">
 
@@ -211,24 +214,11 @@
                 </span>
               </h1>
 
-              <p>For installation of Apache, I simply use the <code>apache2</code> Ubuntu package.</p>
+              <p>For installation of Apache, I simply use the <code>apache2</code> Debian package.</p>
 
-              <p>I have this at the end of my <code>/etc/apache2/apache2.conf</code> (because I want to mostly ignore the Ubuntu way of doing things, in this case):</p>
+              <p>I used to use a <em>horrible</em> custom apache config style. Now I use a nice standard Debian apache config style.</p>
 
-              <p><code class="snippet">Include custom/public/custom.conf</code></p>
-
-              <p>The <code>custom</code> directory is a copy of the <code>$PRE_DEPLOY_DIR/apache/</code> directory, pulled in by <a href="config/droplets/spike.hexstream.net/apache/deploy.sh">deploy.sh</a>. <code>$PRE_DEPLOY_DIR/apache/public/</code> is populated with the files in the <code>services/digitalocean/config/droplets/spike.hexstream.net/apache/</code> directory (recursively) in the <code>status-quo.hexstreamsoft.com</code> repo, while <code>$PRE_DEPLOY_DIR/apache/private/</code> is populated with the files in the <code>apache/</code> directory (recursively) in the <code>private.status-quo.hexstream.xyz</code> repo. The populating is done by <a href="config/droplets/spike.hexstream.net/apache/pre-deploy.sh">pre-deploy.sh</a>, which I invoke manually when appropriate, for now. Whenever one of the apache config files is updated, I manually invoke the <code>deploy.sh</code> (as root), for now.</p>
-
-              <p><code>$PRE_DEPLOY_DIR</code> is defined in <code>/etc/environment</code> and has the value <code>/usr/local/etc/pre-deploy</code>.</p>
-
-              <p>Here's my <a href="config/droplets/spike.hexstream.net/apache/custom.conf">/etc/apache2/custom/public/custom.conf</a>.</p>
-
-              <p>The aforementioned <code>custom.conf</code> <code>Include</code>s <a href="config/droplets/spike.hexstream.net/apache/site-wide-redirects.conf">site-wide-redirects.conf</a> and <a href="config/droplets/spike.hexstream.net/apache/site-wide-tunnels.conf">site-wide-tunnels.conf</a>. That latter file's <code>$HOME_IP</code> is replaced by my current home IP address using sed during pre-deployment.</p>
-
-              <p id="apache-reload">
-                The <code>deploy.sh</code> script restarts the Apache server with <code>apache2ctl graceful</code>.
-                <br />
-                (<code>graceful</code> is like <code>restart</code> except it will finish serving the current requests instead of abruptly aborting them.)</p>
+              <p>Basically, my <a href="config/droplets/spike.hexstream.net/apache/sites-available/"><code>sites-available</code></a> directory has only 2 kinds of file: "standard" configuration and "standard redirect" configuration.<br /><a href="config/droplets/spike.hexstream.net/apache/sites-available/global.hexstreamsoft.com.conf"><code>global.hexstreamsoft.com</code></a> additionally sets ups CORS for the fonts.</p>
 
             </section>
 
