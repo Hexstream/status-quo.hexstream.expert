@@ -1,4 +1,5 @@
-#### Start of public config
+Include private-config
+
 
 Host abc.hexstream.xyz
 HostName spike.hexstream.net
@@ -16,9 +17,9 @@ Host clos-mop.hexstreamsoft.com
 HostName spike.hexstream.net
 User clos-mop.hexstreamsoft.com
 
-Host worknotes.hexstreamsoft.com
+Host worknotes.hexstream.xyz
 HostName spike.hexstream.net
-User worknotes.hexstreamsoft.com
+User worknotes.hexstream.xyz
 
 Host status-quo.hexstreamsoft.com
 HostName spike.hexstream.net
@@ -28,9 +29,9 @@ Host private.status-quo.hexstream.xyz
 HostName spike.hexstream.net
 User private.status-quo.hexstream.xyz
 
-Host blog.hexstreamsoft.com
+Host blog.hexstream.xyz
 HostName spike.hexstream.net
-User blog.hexstreamsoft.com
+User blog.hexstream.xyz
 
 Host stream-lisp.hexstreamsoft.com
 HostName spike.hexstream.net
@@ -51,6 +52,10 @@ User ponies.hexstream.net
 Host clop.ponies.hexstream.net
 HostName spike.hexstream.net
 User clop.ponies.hexstream.net
+
+Host spike.hexstream.net
+HostName spike.hexstream.net
+User root
 
 Host spike.hexstream.net
 HostName spike.hexstream.net
@@ -79,3 +84,11 @@ User i18n.discord.hexstream.xyz
 Host angele.hexstream.xyz
 HostName spike.hexstream.net
 User angele.hexstream.xyz
+
+Host gameranger.hexstream.xyz
+HostName spike.hexstream.net
+User gameranger.hexstream.xyz
+
+Host ert.hexstream.xyz
+HostName spike.hexstream.net
+User ert.hexstream.xyz

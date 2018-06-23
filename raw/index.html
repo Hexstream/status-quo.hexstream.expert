@@ -38,7 +38,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-11-17">17 november 2016</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-06-23">23 june 2018</time><span>.</span></p>
 
     </nav>
 
@@ -91,8 +91,9 @@
           </span>
         </h1>
 
-        <p>My <code>~/.ssh/config</code> is a concatenation of <a href="openssh/public-config">public-config</a> and <a href="http://private.status-quo.hexstream.xyz/openssh/private-config" class="private">private-config</a>.</p>
+        <p>Normally, my <code>~/.ssh/config</code> would simply be a symlink to my <a href="openssh/public-config">public-config</a>, which <code>Include</code>s my almost empty <a href="http://private.status-quo.hexstream.xyz/openssh/private-config" class="private">private-config</a>.</p>
 
+        <p>Unfortunately, I'm not yet using a version of SSH that supports <code>Include</code>, so my <code>~/.ssh/config</code> is actually a copy of my <a href="openssh/public-config">public-config</a> in which I manually expand the <code>Include</code> line.</p>
 
       </section>
 
