@@ -87,8 +87,7 @@
   (define-key *top-map* (kbd "s-a") "delete")
   (define-key *top-map* (kbd "s-f") "fullscreen")
   (define-key *top-map* (kbd "s-e") "exec caja --no-desktop --browser /home/hexstream/")
-  (define-key *top-map* (kbd "s-d") "exec google-chrome http://horairetele.canoe.com")
-  (define-key *top-map* (kbd "s-y") "exec google-chrome http://www.meteomedia.com/weather/caqc0750")
+  (define-key *top-map* (kbd "s-y") "exec google-chrome https://www.meteomedia.com/ca/meteo/quebec/terrebonne")
   (defcommand volume-display () ()
 	      ""
 	      (message (format nil "~A%" (get-sound-volume))))
