@@ -50,35 +50,6 @@
      (asdf:perform (make-instance 'asdf:compile-op) c)
      (call-next-method))))
 
-(defun kill-symbols (symbols &optional package)
-  (let* ((package (or package (let ((fsp (symbol-package (car symbols))))
-				(dolist (symbol (cdr symbols) fsp)
-				  (if (not (eq (symbol-package symbol) fsp))
-				      (error "Inconsistent home-package: ~S /= ~S. Please supply package to unexport from explicitly."
-					     (symbol-package symbol) fsp))))))
-	 (grouping-package (let* ((source-name (package-name package))
-				 (underscore-position
-				  (position #\_ source-name :from-end t)))
-			    (if underscore-position
-				(find-package (subseq source-name 0 underscore-position))))))
-    (dolist (symbol symbols)
-      (let ((symbol (intern (string symbol) package)))
-	(unexport symbol package)
-	(unintern symbol package)
-	(if grouping-package
-	    (unexport symbol grouping-package)
-	    (unintern symbol grouping-package))))))
-
-(defun unexport-all (package)
-  (do-external-symbols (symbol package)
-    (unexport symbol package)))
-
-(defun unintern-all (package)
-  (let ((package (find-package package)))
-    (do-symbols (symbol package)
-      (if (eq (symbol-package symbol) package)
-	  (unintern symbol package)))))
-
 (sb-ext:set-sbcl-source-location "/home/hexstream/apps/sbcl-source/")
 
 #-quicklisp
