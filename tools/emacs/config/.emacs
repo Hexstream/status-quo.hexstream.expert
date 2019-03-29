@@ -57,7 +57,7 @@
 (setf slime-lisp-implementations
       '((sbcl ("sbcl" "--noinform" "--end-runtime-options")
 	      :coding-system utf-8-unix)
-	(ccl ("ccl")
+	(ccl ("ccl64")
 	     :coding-system utf-8-unix)
 	(clisp ("clisp" "-K" "full")
 	       :coding-system utf-8-unix)
@@ -181,18 +181,46 @@
 
 ;custom stuff
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(erc-server "irc.freenode.net")
- '(safe-local-variable-values (quote ((package . asdf) (Package . DRAKMA) (package . puri) (Package . CL-PPCRE) (Package . CL-USER) (syntax . COMMON-LISP) (Package ITERATE :use "COMMON-LISP" :colon-mode :external) (Package . Xlib) (Log . clx\.log) (lisp-version . "7.0 [Windows] (Dec 28, 2004 17:34)") (cg . "1.54.2.17") (Package . utils-kt) (Syntax . Common-Lisp) (Package . cells) (Package . Demos) (Syntax . Common-lisp) (Package . XLIB) (Lowercase . Yes) (Package . FLEXI-STREAMS) (Syntax . ANSI-Common-Lisp) (Syntax . COMMON-LISP) (Package . HUNCHENTOOT) (Base . 10) (unibyte . t) (Package . COMMON-LISP-USER))))
+ '(safe-local-variable-values
+   (quote
+    ((Package . ccl)
+     (Package . CCL)
+     (package . asdf)
+     (Package . DRAKMA)
+     (package . puri)
+     (Package . CL-PPCRE)
+     (Package . CL-USER)
+     (syntax . COMMON-LISP)
+     (Package ITERATE :use "COMMON-LISP" :colon-mode :external)
+     (Package . Xlib)
+     (Log . clx\.log)
+     (lisp-version . "7.0 [Windows] (Dec 28, 2004 17:34)")
+     (cg . "1.54.2.17")
+     (Package . utils-kt)
+     (Syntax . Common-Lisp)
+     (Package . cells)
+     (Package . Demos)
+     (Syntax . Common-lisp)
+     (Package . XLIB)
+     (Lowercase . Yes)
+     (Package . FLEXI-STREAMS)
+     (Syntax . ANSI-Common-Lisp)
+     (Syntax . COMMON-LISP)
+     (Package . HUNCHENTOOT)
+     (Base . 10)
+     (unibyte . t)
+     (Package . COMMON-LISP-USER))))
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(menu ((((type x-toolkit)) (:weight normal :height 140 :width normal :family "geneva"))))
  '(slime-repl-output-mouseover-face ((t (:inherit slime-repl-inputed-output-face)))))
 
