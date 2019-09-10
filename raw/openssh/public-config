@@ -73,10 +73,6 @@ Host dumping-grounds.hexstream.xyz
 HostName spike.hexstream.net
 User dumping-grounds.hexstream.xyz
 
-Host worknotes.hexstream.xyz
-HostName spike.hexstream.net
-User worknotes.hexstream.xyz
-
 Host i18n.discord.hexstream.xyz
 HostName spike.hexstream.net
 User i18n.discord.hexstream.xyz
