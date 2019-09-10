@@ -42,6 +42,9 @@ keycode 119 = Caps_Lock
 !physical caps lock
 keycode 66 = Delete
 
+!disable misbehaving Home key
+keycode 110 =
+
 
 add shift = Shift_L Shift_R
 add Control = Control_L Control_R

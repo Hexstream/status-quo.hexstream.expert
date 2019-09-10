@@ -179,6 +179,10 @@
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . pov-mode))
 (setf pov-indent-level 4)
 
+(require 'js-comint)
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 ;custom stuff
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
