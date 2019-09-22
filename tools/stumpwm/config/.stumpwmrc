@@ -121,6 +121,14 @@
   (define-key *top-map* (kbd "C-F32") "open-double-quotes")
   (define-key *input-map* (kbd "F32") 'input-insert-parens)
   (define-key *input-map* (kbd "C-F32") 'input-insert-double-quotes)
+  (defvar *truly-fullscreen* nil)
+  (defcommand toggle-truly-fullscreen () ()
+	      ""
+              (setf *truly-fullscreen* (not *truly-fullscreen*))
+              (let ((ignored-pixels (if *truly-fullscreen* 0 26)))
+                (resize-head 0 0 ignored-pixels 1600 (- 900 ignored-pixels))))
+  (toggle-truly-fullscreen)
+  (define-key *top-map* (kbd "F33") "toggle-truly-fullscreen")
   (defparameter *ror-map*
     (let ((map (make-sparse-keymap)))
       (flet ((dk (key command)
