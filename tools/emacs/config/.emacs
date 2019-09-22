@@ -69,6 +69,7 @@
 	       :coding-system utf-8-unix)))
 (setf slime-default-lisp 'sbcl)
 (add-to-list 'load-path "/usr/local/bin/")
+(setf quicklisp-slime-helper-dist "ultralisp")
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
 
