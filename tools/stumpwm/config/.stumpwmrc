@@ -107,9 +107,7 @@
   (define-key *top-map* (kbd "s-SunPageDown") "volume-down")
   (defcommand open-parens () ()
 	      ""
-	      (meta (kbd "("))
-	      (meta (kbd ")"))
-	      (meta (kbd "Left")))
+	      (run-shell-command "xdotool key parenleft parenright Left"))
   (define-key *top-map* (kbd "F32") "open-parens")
   (defcommand open-double-quotes () ()
 	      ""
