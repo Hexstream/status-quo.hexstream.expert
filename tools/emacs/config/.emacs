@@ -28,6 +28,8 @@
 ;;;; ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 ;;;; OTHER DEALINGS IN THE SOFTWARE.
 
+(package-initialize)
+
 (require 'cl)
 
 ;;;; Most of my simple environment setup config files (such as
@@ -180,7 +182,7 @@
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . pov-mode))
 (setf pov-indent-level 4)
 
-(require 'js-comint)
+;(require 'js-comint)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
