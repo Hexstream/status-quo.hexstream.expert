@@ -31,6 +31,10 @@ Host clos-mop.hexstreamsoft.com
 HostName spike.hexstream.net
 User clos-mop.hexstreamsoft.com
 
+Host common-lispers.hexstreamsoft.com
+HostName spike.hexstream.net
+User common-lispers.hexstreamsoft.com
+
 Host status-quo.hexstreamsoft.com
 HostName spike.hexstream.net
 User status-quo.hexstreamsoft.com
