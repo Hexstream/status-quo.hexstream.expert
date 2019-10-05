@@ -162,7 +162,7 @@
 	  ""
 	  (if percent
 	      (volcontrol-custom "Master" (concatenate 'string
-						       (or (cdr (assoc percent '(("1" . "28")
+						       (or (cdr (assoc percent '(("1" . "33")
 										 ("2" . "50")
 										 ("3" . "75")
 										 ("4" . "100"))
