@@ -33,7 +33,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2018-06-19">19 june 2018</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2019-10-10">10 october 2019</time><span>.</span></p>
 
     </nav>
 
@@ -154,7 +154,6 @@
             <nav class="tabs">
               <ul>
                 <li><a href="#my-config_droplets_spike.hexstream.net_apache">Apache</a></li>
-                <li><a href="#my-config_droplets_spike.hexstream.net_raw">Raw</a></li>
               </ul>
             </nav>
 
@@ -183,70 +182,6 @@
               <p>I used to use a <em>horrible</em> custom apache config style. Now I use a nice standard Debian apache config style.</p>
 
               <p>Basically, my <a href="config/droplets/spike.hexstream.net/apache/sites-available/"><code>sites-available</code></a> directory has only 2 kinds of file: "standard" configuration and "standard redirect" configuration.<br /><a href="config/droplets/spike.hexstream.net/apache/sites-available/global.hexstreamsoft.com.conf"><code>global.hexstreamsoft.com</code></a> additionally sets ups CORS for the fonts.</p>
-
-            </section>
-
-            <section id="my-config_droplets_spike.hexstream.net_raw">
-
-              <h1 class="breadcrumbs-bar">
-                <span class="section-relative-nav">
-                  <a href="#my-config_droplets_spike.hexstream.net_raw" class="anchor">⚓</a>
-                </span>
-                <span class="breadcrumbs">
-                  <a href="#">DigitalOcean</a>
-                  <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
-                  <span class="crumb"><span class="s"> » </span><a href="#my-config_droplets">Droplets</a></span>
-                  <span class="crumb"><span class="s"> » </span><a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a></span>
-                  <span class="crumb"><span class="s"> » </span><a class="here">Raw</a></span>
-                </span>
-              </h1>
-
-              <nav class="tabs">
-                <ul>
-                  <li><a href="#my-config_droplets_spike.hexstream.net_raw_bittorrent">Bittorrent</a></li>
-                </ul>
-              </nav>
-
-              <p>Miscellaneous raw stuff. I'll clean this up later, probably. Maybe.</p>
-
-              <p><a href="config/droplets/spike.hexstream.net/raw/website-update-hook.sh">/usr/local/bin/website-update-hook.sh</a></p>
-
-              <section id="my-config_droplets_spike.hexstream.net_raw_bittorrent">
-
-                <h1 class="breadcrumbs-bar">
-                  <span class="section-relative-nav">
-                    <a href="#my-config_droplets_spike.hexstream.net_bittorrent" class="anchor">⚓</a>
-                  </span>
-                  <span class="breadcrumbs">
-                    <a href="#my-config_droplets" class="ellipsis">...<sub>3</sub></a>
-                    <span class="crumb"><span class="s"> » </span><a href="#my-config_droplets_spike.hexstream.net">spike.hexstream.net</a></span>
-                    <span class="crumb"><span class="s"> » </span><a href="#my-config_droplets_spike.hexstream.net_raw">Raw</a></span>
-                    <span class="crumb"><span class="s"> » </span><a class="here">Bittorrent</a></span>
-                  </span>
-                </h1>
-
-                <p>I run my own private bittorrent tracker. (&quot;private&quot; in the sense that only I can add files.)</p>
-
-                <p>(Actually I don't run my own tracker anymore, it was too much trouble. Hopefully I can fix this sometime.)</p>
-
-                <p>opentracker isn't yet widely available in repos, for stupid licensing reasons.</p>
-
-                <p>(Supposedly you don't need a tracker these days, because of the DHT stuff, but I'm not sure how well that works (if at all) for incredibly obscure torrents, and if that's likely to cause performance or compatibility problems.)</p>
-
-                <ul>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/opentracker/excerpts_opentracker.conf"><code>/usr/local/etc/opentracker/opentracker.conf</code> (excerpts)</a></li>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/opentracker/whitelist.conf"><code>/usr/local/etc/opentracker/whitelist.conf</code></a></li>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/opentracker/opentracker"><code>/etc/init.d/opentracker</code></a> (I made this based on <code>/etc/init.d/skeleton</code>. I'm a newb, so probably has bugs and/or style problems.)</li>
-                  <li><a href="config/droplets/spike.hexstream.net/raw/transmission-daemon/excerpts_settings.json"><code>/etc/transmission-daemon/settings.json</code> (excerpts)</a></li>
-                </ul>
-
-              </section>
-
-              <nav class="end-of-section-indicator">
-                <a href="#my-config_droplets_spike.hexstream.net_raw">
-                  "<span>Raw</span>" end.
-                </a>
-              </nav>
 
             </section>
 
