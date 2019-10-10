@@ -93,10 +93,6 @@ Host ert.hexstream.xyz
 HostName spike.hexstream.net
 User ert.hexstream.xyz
 
-Host private.status-quo.hexstream.xyz
-HostName spike.hexstream.net
-User private.status-quo.hexstream.xyz
-
 Host angele.hexstream.xyz
 HostName spike.hexstream.net
 User angele.hexstream.xyz
