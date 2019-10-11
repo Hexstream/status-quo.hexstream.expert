@@ -33,8 +33,9 @@
 
 startup_message off
 
-chdir /home/hexstream/data/projects/websites/worknotes.hexstreamsoft.com/
-screen -t worknotes 0
+screen -t ""
+
+bind c screen -t ""
 
 chdir /home/hexstream/data/projects/
 
