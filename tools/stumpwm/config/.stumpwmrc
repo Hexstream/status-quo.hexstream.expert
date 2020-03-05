@@ -84,6 +84,10 @@
   (define-key *top-map* (kbd "s-2") "gselect 2")
   (define-key *top-map* (kbd "s-3") "gselect 3")
   (define-key *top-map* (kbd "s-4") "gselect 4")
+  (define-key *top-map* (kbd "M-s-1") "select-window-by-number 1")
+  (define-key *top-map* (kbd "M-s-2") "select-window-by-number 2")
+  (define-key *top-map* (kbd "M-s-3") "select-window-by-number 3")
+  (define-key *top-map* (kbd "M-s-4") "select-window-by-number 4")
   (define-key *top-map* (kbd "s-a") "delete")
   (define-key *top-map* (kbd "s-f") "fullscreen")
   (define-key *top-map* (kbd "s-e") "exec caja --no-desktop --browser /home/hexstream/")
@@ -108,7 +112,7 @@
   (defcommand open-parens () ()
 	      ""
 	      (run-shell-command "xdotool key parenleft parenright Left"))
-  (define-key *top-map* (kbd "F32") "open-parens")
+  (define-key *top-map* (kbd "XF86Launch7") "open-parens")
   (defcommand open-double-quotes () ()
 	      ""
 	      (meta (kbd "\""))
@@ -116,9 +120,9 @@
 	      (meta (kbd "Right"))
 	      (meta (kbd "\""))
 	      (meta (kbd "Left")))
-  (define-key *top-map* (kbd "C-F32") "open-double-quotes")
-  (define-key *input-map* (kbd "F32") 'input-insert-parens)
-  (define-key *input-map* (kbd "C-F32") 'input-insert-double-quotes)
+  (define-key *top-map* (kbd "C-XF86Launch7") "open-double-quotes")
+  (define-key *input-map* (kbd "XF86Launch7") 'input-insert-parens)
+  (define-key *input-map* (kbd "C-XF86Launch7") 'input-insert-double-quotes)
   (defvar *truly-fullscreen* nil)
   (defcommand toggle-truly-fullscreen () ()
 	      ""
@@ -126,7 +130,7 @@
               (let ((ignored-pixels (if *truly-fullscreen* 0 26)))
                 (resize-head 0 0 ignored-pixels 1600 (- 900 ignored-pixels))))
   (toggle-truly-fullscreen)
-  (define-key *top-map* (kbd "F33") "toggle-truly-fullscreen")
+  (define-key *top-map* (kbd "XF86Launch6") "toggle-truly-fullscreen")
   (defparameter *ror-map*
     (let ((map (make-sparse-keymap)))
       (flet ((dk (key command)
@@ -173,7 +177,8 @@
 	(dk "v" "amixer-master")
 	(dk "f" "fullscreen"))
       map))
-  (bind "x" '*ext-map*))
+  (bind "x" '*ext-map*)
+  (setf *window-number-map* "123456789"))
 
 (defun input-insert-parens (input key)
   (input-insert-string input "()")
