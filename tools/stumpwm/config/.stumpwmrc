@@ -76,10 +76,12 @@
   (bind "-" "remove-split")
   (bind "=" "balance-frames")
   (bind "M-t" "pull-hidden-other")
+  (bind "M-g" "vgroups")
   (setf *mouse-focus-policy* :click)
   (setf *timeout-frame-indicator-wait* 0.2
         *timeout-wait* 5)
   (setf *window-border-style* :thick)
+  (define-key *top-map* (kbd "F6") "vgroups")
   (define-key *top-map* (kbd "s-1") "gselect 1")
   (define-key *top-map* (kbd "s-2") "gselect 2")
   (define-key *top-map* (kbd "s-3") "gselect 3")
@@ -109,6 +111,11 @@
 	      ""
               (relative-volume -1))
   (define-key *top-map* (kbd "s-SunPageDown") "volume-down")
+  (define-key *top-map* (kbd "C-s-0") "amixer-master 0")
+  (define-key *top-map* (kbd "C-s-1") "amixer-master 1")
+  (define-key *top-map* (kbd "C-s-2") "amixer-master 2")
+  (define-key *top-map* (kbd "C-s-3") "amixer-master 3")
+  (define-key *top-map* (kbd "C-s-4") "amixer-master 4")
   (defcommand open-parens () ()
 	      ""
 	      (run-shell-command "xdotool key parenleft parenright Left"))
