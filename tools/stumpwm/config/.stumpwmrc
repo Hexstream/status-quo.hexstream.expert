@@ -38,10 +38,10 @@
 (defun hexstream-setup-groups ()
   (grename "Normal")
   (let ((normal (current-group))
-	(dev (gnewbg "Dev"))
-	(games (gnewbg "Games"))
-	(chat (gnewbg "Chat"))
-	(desktop (gnewbg ".Desktop")))
+        (dev (gnewbg "Dev"))
+        (games (gnewbg "Games"))
+        (chat (gnewbg "Chat"))
+        (desktop (gnewbg ".Desktop")))
     (define-frame-preference desktop (0 nil nil :title "x-nautilus-desktop"))
     (defparameter *normal-group* normal)
     (defparameter *dev-group* dev)
@@ -58,13 +58,13 @@
 
 (defun volcontrol-custom (channel amount &key (messagep t))
   (let ((previous (get-sound-volume))
-	(percent (parse-integer
-		  (run-shell-command
-		   (concat "amixer sset " channel " " amount
-			   "| tail -1"
-			   "| sed 's/^.*\\[\\([[:digit:]]\\+\\)%\\].*$/\\1/'")
-		   t)))
-	(*timeout-wait* 1))
+        (percent (parse-integer
+                  (run-shell-command
+                   (concat "amixer sset " channel " " amount
+                           "| tail -1"
+                           "| sed 's/^.*\\[\\([[:digit:]]\\+\\)%\\].*$/\\1/'")
+                   t)))
+        (*timeout-wait* 1))
     (declare (ignore percent))
     (when messagep
       (message (format nil "~A% --> ~A" previous amount)))))
@@ -95,8 +95,8 @@
   (define-key *top-map* (kbd "s-e") "exec caja --no-desktop --browser /home/hexstream/")
   (define-key *top-map* (kbd "s-y") "exec google-chrome https://www.meteomedia.com/ca/meteo/quebec/terrebonne")
   (defcommand volume-display () ()
-	      ""
-	      (message (format nil "~A%" (get-sound-volume))))
+              ""
+              (message (format nil "~A%" (get-sound-volume))))
   (define-key *top-map* (kbd "s-Hiragana_Katakana") "volume-display")
   (defun relative-volume (delta)
     (let ((new (+ (get-sound-volume) delta)))
@@ -104,7 +104,7 @@
                          :messagep nil)
       (message (format nil "~A%" new))))
   (defcommand volume-up () ()
-	      ""
+              ""
               (relative-volume 1))
   (define-key *top-map* (kbd "s-SunPageUp") "volume-up")
   (defun get-mouse-location ()
@@ -118,7 +118,7 @@
               ""
               (message (multiple-value-call #'format nil "~A ~A" (get-mouse-location))))
   (defcommand volume-down () ()
-	      ""
+              ""
               (relative-volume -1))
   (defcommand warp-mouse-to-quadrant (quadrant) ((:number "Warp to quadrant: "))
               (check-type quadrant (integer 1 9))
@@ -150,22 +150,22 @@
   (define-key *top-map* (kbd "M-s-h") "warp-mouse-to-quadrant 8")
   (define-key *top-map* (kbd "M-s-i") "warp-mouse-to-quadrant 9")
   (defcommand open-parens () ()
-	      ""
-	      (run-shell-command "xdotool key parenleft parenright Left"))
+              ""
+              (run-shell-command "xdotool key parenleft parenright Left"))
   (define-key *top-map* (kbd "XF86Launch7") "open-parens")
   (defcommand open-double-quotes () ()
-	      ""
-	      (meta (kbd "\""))
-	      (meta (kbd "Left"))
-	      (meta (kbd "Right"))
-	      (meta (kbd "\""))
-	      (meta (kbd "Left")))
+              ""
+              (meta (kbd "\""))
+              (meta (kbd "Left"))
+              (meta (kbd "Right"))
+              (meta (kbd "\""))
+              (meta (kbd "Left")))
   (define-key *top-map* (kbd "C-XF86Launch7") "open-double-quotes")
   (define-key *input-map* (kbd "XF86Launch7") 'input-insert-parens)
   (define-key *input-map* (kbd "C-XF86Launch7") 'input-insert-double-quotes)
   (defvar *truly-fullscreen* nil)
   (defcommand toggle-truly-fullscreen () ()
-	      ""
+              ""
               (setf *truly-fullscreen* (not *truly-fullscreen*))
               (let ((ignored-pixels (if *truly-fullscreen* 0 26)))
                 (resize-head 0 0 ignored-pixels 1600 (- 900 ignored-pixels))))
@@ -174,16 +174,16 @@
   (defparameter *ror-map*
     (let ((map (make-sparse-keymap)))
       (flet ((dk (key command)
-	       (define-key map (kbd key) command)))
-	(dk "e" "emacs")
-	(defcommand mate-terminal () ()
-	  ""
-	  (run-or-raise "mate-terminal" '(:class "Mate-terminal")))
-	(dk "c" "mate-terminal")
-	(defcommand google-chrome () ()
-	  ""
-	  (run-or-raise "google-chrome" '(:class "Chrome")))
-	(dk "b" "google-chrome"))
+               (define-key map (kbd key) command)))
+        (dk "e" "emacs")
+        (defcommand mate-terminal () ()
+          ""
+          (run-or-raise "mate-terminal" '(:class "Mate-terminal")))
+        (dk "c" "mate-terminal")
+        (defcommand google-chrome () ()
+          ""
+          (run-or-raise "google-chrome" '(:class "Chrome")))
+        (dk "b" "google-chrome"))
       map))
   (bind "e" '*ror-map*)
   (defcommand lastmsg-no-timeout () ()
@@ -194,28 +194,28 @@
   (defparameter *ext-map*
     (let ((map (make-sparse-keymap)))
       (flet ((dk (key command)
-	       (define-key map (kbd key) command)))
-	(dk "p" "list-window-properties")
-	(dk "l" "loadrc")
-	(defcommand activate-screensaver () ()
-	  ""
-	  (run-shell-command "gnome-screensaver-command -a"))
-	(dk "b" "activate-screensaver")
-	(load-module "amixer")
-	(defcommand amixer-master (percent) ((:string "Set volume: "))
-	  ""
-	  (if percent
-	      (volcontrol-custom "Master" (concatenate 'string
-						       (or (cdr (assoc percent '(("1" . "33")
-										 ("2" . "50")
-										 ("3" . "75")
-										 ("4" . "100"))
-								       :test #'string=))
-							   percent)
-						       "%"))
-	      (throw 'error "Abort.")))
-	(dk "v" "amixer-master")
-	(dk "f" "fullscreen"))
+               (define-key map (kbd key) command)))
+        (dk "p" "list-window-properties")
+        (dk "l" "loadrc")
+        (defcommand activate-screensaver () ()
+          ""
+          (run-shell-command "gnome-screensaver-command -a"))
+        (dk "b" "activate-screensaver")
+        (load-module "amixer")
+        (defcommand amixer-master (percent) ((:string "Set volume: "))
+          ""
+          (if percent
+              (volcontrol-custom "Master" (concatenate 'string
+                                                       (or (cdr (assoc percent '(("1" . "33")
+                                                                                 ("2" . "50")
+                                                                                 ("3" . "75")
+                                                                                 ("4" . "100"))
+                                                                       :test #'string=))
+                                                           percent)
+                                                       "%"))
+              (throw 'error "Abort.")))
+        (dk "v" "amixer-master")
+        (dk "f" "fullscreen"))
       map))
   (bind "x" '*ext-map*)
   (setf *window-number-map* "123456789"))
