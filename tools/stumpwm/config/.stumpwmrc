@@ -161,7 +161,7 @@
   (stumpwm:run-or-raise "google-chrome" '(:class "Chrome")))
 
 (defcommand lastmsg-no-timeout () ()
-  (let ((*timeout-wait* 3600))
+  (let ((stumpwm:*timeout-wait* 3600))
     (stumpwm:lastmsg)))
 
 (defcommand activate-screensaver () ()
@@ -262,6 +262,6 @@
         (dk "f" "fullscreen"))
       map))
   (bind "x" '*ext-map*)
-  (setf *window-number-map* "123456789"))
+  (setf stumpwm::*window-number-map* "123456789"))
 
 (hexstream-init)
