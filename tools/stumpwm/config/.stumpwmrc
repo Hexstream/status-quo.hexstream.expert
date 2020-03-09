@@ -87,17 +87,52 @@
       (values (parse "x:") (parse "y:")))))
 
 (defcommand show-mouse-location () ()
-  (message (multiple-value-call #'format nil "~A ~A" (get-mouse-location))))
+  (stumpwm:message (multiple-value-call #'format nil "~A ~A" (get-mouse-location))))
+
+
+(defun centroid (coords &key (key #'identity))
+  (let ((length (length coords)))
+    (case length
+      (0 (error "Cannot determine centroid."))
+      (1 (funcall key (first coords)))
+      (t (/ (reduce #'+ coords :key key) length)))))
+
+(defparameter *warp-combo* nil)
+
+(defparameter *combo-threshold* 50)
+
+(declaim (inline complex-parts))
+(defun complex-parts (complex)
+  (values (realpart complex) (imagpart complex)))
+
+(defun floor-complex (complex)
+  (complex (floor (realpart complex))
+           (floor (imagpart complex))))
+
+;; What is the actual name of this math operation?
+(defun scale-complexes (unscaled scaling-factor)
+  (complex (* (realpart unscaled) (realpart scaling-factor))
+           (* (imagpart unscaled) (imagpart scaling-factor))))
 
 (defcommand warp-mouse-to-quadrant (quadrant) ((:number "Warp to quadrant: "))
   (check-type quadrant (integer 1 9))
-  (let ((screen-width 1600)
-        (screen-height 900))
-    (let ((quadrant-width (/ screen-width 3))
-          (quadrant-height (/ screen-height 3)))
-      (multiple-value-bind (row column) (floor (1- quadrant) 3)
-        (stumpwm:ratwarp (floor (+ (* quadrant-width column) (/ quadrant-width 2)))
-                         (floor (+ (* quadrant-height row) (/ quadrant-height 2))))))))
+  (let* ((new-point (multiple-value-bind (row column) (ffloor (1- quadrant) 3)
+                      (complex column row)))
+         (new-combo (let ((now (get-internal-real-time)))
+                      (cons (cons now new-point)
+                            (remove-if (lambda (when)
+                                         (> (- now when) *combo-threshold*))
+                                       *warp-combo* :key #'car)))))
+    (setf *warp-combo* new-combo)
+    (let ((unscaled-point (centroid new-combo :key #'cdr))
+          (quadrant-size (/ (let ((screen (stumpwm:current-screen)))
+                              (complex (stumpwm:screen-width screen)
+                                       (stumpwm:screen-height screen)))
+                            3)))
+      (multiple-value-call #'stumpwm:ratwarp
+        (complex-parts (floor-complex (+ (scale-complexes unscaled-point quadrant-size)
+                                         (/ quadrant-size 2))))))))
+
 
 (defcommand open-parens () ()
   (stumpwm:run-shell-command "xdotool key parenleft parenright Left"))
@@ -113,8 +148,11 @@
 
 (defcommand toggle-truly-fullscreen () ()
   (setf *truly-fullscreen* (not *truly-fullscreen*))
-  (let ((ignored-pixels (if *truly-fullscreen* 0 26)))
-    (stumpwm::resize-head 0 0 ignored-pixels 1600 (- 900 ignored-pixels))))
+  (let ((ignored-pixels (if *truly-fullscreen* 0 26))
+        (screen (stumpwm:current-screen)))
+    (stumpwm::resize-head 0 0 ignored-pixels
+                          (stumpwm:screen-width screen)
+                          (- (stumpwm:screen-height screen) ignored-pixels))))
 
 (defcommand mate-terminal () ()
   (stumpwm:run-or-raise "mate-terminal" '(:class "Mate-terminal")))
