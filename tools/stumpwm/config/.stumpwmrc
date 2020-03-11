@@ -32,11 +32,11 @@
 ;;;; ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 ;;;; OTHER DEALINGS IN THE SOFTWARE.
 
-(defpackage #:stumpwm-user
+(defpackage #:stumpwm-hexstream
   (:use #:cl)
   (:import-from #:stumpwm #:bind #:define-key #:kbd #:defcommand))
 
-(in-package #:stumpwm-user)
+(in-package #:stumpwm-hexstream)
 
 (defun hexstream-setup-groups ()
   (stumpwm:grename "Normal")
@@ -153,17 +153,6 @@
       (multiple-value-call #'stumpwm:ratwarp
         (complex-parts (floor-complex (scale-complexes unscaled-point quadrant-size)))))))
 
-
-(defcommand open-parens () ()
-  (stumpwm:run-shell-command "xdotool key parenleft parenright Left"))
-
-(defcommand open-double-quotes () ()
-  (meta (kbd "\""))
-  (meta (kbd "Left"))
-  (meta (kbd "Right"))
-  (meta (kbd "\""))
-  (meta (kbd "Left")))
-
 (defvar *truly-fullscreen* nil)
 
 (defcommand toggle-truly-fullscreen () ()
@@ -266,8 +255,6 @@
     (dk "M-s-G" "warp-mouse-to-quadrant 7 y")
     (dk "M-s-H" "warp-mouse-to-quadrant 8 y")
     (dk "M-s-I" "warp-mouse-to-quadrant 9 y")
-    (dk "XF86Launch7" "open-parens")
-    (dk "C-XF86Launch7" "open-double-quotes")
     (dk "XF86Launch6" "toggle-truly-fullscreen"))
   (define-key stumpwm:*input-map* (kbd "XF86Launch7") 'input-insert-parens)
   (define-key stumpwm:*input-map* (kbd "C-XF86Launch7") 'input-insert-double-quotes)
