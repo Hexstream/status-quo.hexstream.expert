@@ -18,9 +18,9 @@ Host global.hexstreamsoft.com
 HostName spike.hexstream.net
 User global.hexstreamsoft.com
 
-Host non-free.hexstream.xyz
+Host non-free.hexstream.dev
 HostName spike.hexstream.net
-User non-free.hexstream.xyz
+User non-free.hexstream.dev
 
 
 Host www.hexstreamsoft.com

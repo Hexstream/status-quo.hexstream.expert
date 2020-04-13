@@ -63,9 +63,9 @@
   (let ((previous (get-sound-volume))
         (percent (parse-integer
                   (stumpwm:run-shell-command
-                   (concat "amixer sset " channel " " amount
-                           "| tail -1"
-                           "| sed 's/^.*\\[\\([[:digit:]]\\+\\)%\\].*$/\\1/'")
+                   (format nil "amixer sset ~A ~A | tail -1 | ~
+                                sed 's/^.*\\[\\([[:digit:]]\\+\\)%\\].*$/\\1/'"
+                           channel amount)
                    t)))
         (stumpwm:*timeout-wait* 1))
     (declare (ignore percent))
