@@ -14,9 +14,9 @@ Host status.abc.hexstream.xyz
 HostName spike.hexstream.net
 User status.abc.hexstream.xyz
 
-Host global.hexstreamsoft.com
+Host global.hexstream.dev
 HostName spike.hexstream.net
-User global.hexstreamsoft.com
+User global.hexstream.dev
 
 Host non-free.hexstream.dev
 HostName spike.hexstream.net
