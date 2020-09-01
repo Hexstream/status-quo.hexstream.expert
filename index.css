@@ -22,31 +22,15 @@
 }
 
 
-#tabs-wrapper {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-bottom: 1em;
+.tabs + .tabs {
+    margin-top: -0.5em;
 }
 
-#tabs-wrapper .tabs {
-    margin: 0 1em;
-}
-
-#tabs-wrapper .tabs + .tabs {
-    margin-top: 1em;
-}
-
-#tabs-wrapper .tabs > ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#tabs-wrapper .tabs.additional {
+.tabs.additional {
     opacity: 0.6;
 }
 
-#tabs-wrapper .tabs.additional:hover {
+.tabs.additional:hover {
     opacity: 1;
 }
 
