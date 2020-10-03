@@ -26,14 +26,6 @@
     margin-top: -0.5em;
 }
 
-.tabs.additional {
-    opacity: 0.6;
-}
-
-.tabs.additional:hover {
-    opacity: 1;
-}
-
 
 #inlined-sections {
     display: flex;
