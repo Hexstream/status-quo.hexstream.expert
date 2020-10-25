@@ -1,4 +1,4 @@
-Sitemap: https://status-quo.hexstreamsoft.com/sitemap.xml
+Sitemap: https://status-quo.hexstream.expert/sitemap.xml
 
 User-agent: *
 Disallow: /tmp/

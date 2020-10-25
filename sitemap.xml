@@ -3,54 +3,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/</loc>
+    <loc>https://status-quo.hexstream.expert/</loc>
   </url>
 
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/stumpwm/</loc>
+    <loc>https://status-quo.hexstream.expert/tools/stumpwm/</loc>
   </url>
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/emacs/</loc>
+    <loc>https://status-quo.hexstream.expert/tools/emacs/</loc>
   </url>
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/sbcl/</loc>
+    <loc>https://status-quo.hexstream.expert/tools/sbcl/</loc>
   </url>
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/screen/</loc>
+    <loc>https://status-quo.hexstream.expert/tools/screen/</loc>
   </url>
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/git/</loc>
+    <loc>https://status-quo.hexstream.expert/tools/git/</loc>
   </url>
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/tools/chrome/</loc>
-  </url>
-
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/services/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/services/aws/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/services/digitalocean/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstreamsoft.com/services/cloudflare/</loc>
+    <loc>https://status-quo.hexstream.expert/tools/chrome/</loc>
   </url>
 
 
   <url>
-    <loc>https://status-quo.hexstreamsoft.com/emerging-changes/</loc>
+    <loc>https://status-quo.hexstream.expert/services/</loc>
+  </url>
+
+  <url>
+    <loc>https://status-quo.hexstream.expert/services/aws/</loc>
+  </url>
+
+  <url>
+    <loc>https://status-quo.hexstream.expert/services/digitalocean/</loc>
+  </url>
+
+  <url>
+    <loc>https://status-quo.hexstream.expert/services/cloudflare/</loc>
+  </url>
+
+
+  <url>
+    <loc>https://status-quo.hexstream.expert/emerging-changes/</loc>
   </url>
 
 </urlset>
