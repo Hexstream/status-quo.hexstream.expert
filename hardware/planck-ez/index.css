@@ -1,0 +1,404 @@
+#my-config {
+    display: block;
+}
+
+.labelled-control input.replaced + label {
+    display: inline-block;
+    padding-right: 0;
+}
+
+.labelled-control input,
+.labelled-control label {
+    position: relative;
+    top: -0.4em;
+}
+
+#layers {
+    flex-flow: row-reverse wrap;
+}
+
+#layers ul {
+    flex-flow: row-reverse wrap;
+}
+
+#layers ul li:not(.layer-selector_base) a:not(:hover) {
+    opacity: 0.5;
+}
+
+#layers, #features {
+    margin-left: 0;
+    font-size: large;
+}
+
+#layers ul:last-child, #features ul:first-child {
+    margin-left: 0;
+}
+
+#features {
+    margin-bottom: -1.5em;
+}
+
+#features #features_close {
+    display: none;
+}
+
+#features #features_close > li {
+    display: none;
+}
+
+.scroll {
+    position: relative;
+}
+
+.layer {
+    table-layout: fixed;
+    width: 62.6em;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: none;
+}
+
+.layer .original,
+.layer .original > span:first-child,
+.layer .original > span:last-child {
+    display: none;
+}
+
+#highlight-custom + label {
+    margin-left: 0.75em;
+}
+
+#custom-labels:checked ~ #highlight-custom:checked ~ #keyboard .layer .contains-custom {
+    background-color: rgb(255, 191, 163);
+}
+
+#custom-labels:not(:checked) ~ #highlight-custom + label,
+#custom-labels:not(:checked) ~ #highlight-custom + label + label {
+    visibility: hidden;
+}
+
+#custom-labels:not(:checked) ~ #keyboard .layer .custom {
+    display: none;
+}
+
+#custom-labels:not(:checked) ~ #keyboard .layer .original {
+    display: inline;
+}
+
+.layer caption {
+    font-size: x-large;
+}
+
+.layer tr {
+    height: 5em;
+}
+
+.layer td {
+    padding: 0;
+    border: solid 0.2em lightgray;
+    font-size: larger;
+    overflow: hidden;
+}
+
+.layer td.spacebar {
+    width: initial;
+    height: initial;
+}
+
+#base-layer {
+    position: initial;
+    display: table;
+}
+
+#lower-layer, #raise-layer, #adjust-layer {
+    z-index: 20;
+}
+
+#nav-layer {
+    z-index: 40;
+}
+
+#warp-layer {
+    z-index: 50;
+}
+
+#crawl-layer {
+    z-index: 60;
+}
+
+#numpad-layer {
+    z-index: 70;
+}
+
+.layer a {
+    text-decoration: none;
+}
+
+.layer .modifier {
+    color: green;
+}
+
+.layer .held {
+    background-color: gray;
+    color: white;
+}
+
+.select-layer {
+    position: relative;
+    top: 1.1em;
+}
+
+
+/* Selected layer */
+
+.select-layer_lower:target ~ #keyboard #lower-layer,
+.select-layer_raise:target ~ #keyboard #raise-layer,
+.select-layer_adjust:target ~ #keyboard #adjust-layer,
+.select-layer_nav:target ~ #keyboard #nav-layer,
+.select-layer_warp:target ~ #keyboard #warp-layer,
+.select-layer_crawl:target ~ #keyboard #crawl-layer,
+.select-layer_numpad:target ~ #keyboard #numpad-layer {
+    display: table;
+}
+
+/* Layer is selected directly, so make link appear not clickable. */
+#lower:target ~ * .layer-selector_lower a,
+#raise:target ~ * .layer-selector_raise a,
+#adjust:target ~ * .layer-selector_adjust a,
+#nav:target ~ * .layer-selector_nav a,
+#warp:target ~ * .layer-selector_warp a,
+#crawl:target ~ * .layer-selector_crawl a,
+#numpad:target ~ * .layer-selector_numpad a {
+    color: inherit;
+}
+
+/* Layer is selected directly or indirectly, so underline. */
+.select-layer_lower:target ~ * .layer-selector_lower a,
+.select-layer_raise:target ~ * .layer-selector_raise a,
+.select-layer_adjust:target ~ * .layer-selector_adjust a,
+.select-layer_nav:target ~ * .layer-selector_nav a,
+.select-layer_warp:target ~ * .layer-selector_warp a,
+.select-layer_crawl:target ~ * .layer-selector_crawl a,
+.select-layer_numpad:target ~ * .layer-selector_numpad a {
+    text-decoration: underline;
+    opacity: 1 !important;
+}
+
+.select-layer_nav:target ~ * .layer-selector_nav ~ .layer-selector a,
+.select-layer_warp:target ~ * .layer-selector_warp ~ .layer-selector a,
+.select-layer_crawl:target ~ * .layer-selector_crawl ~ .layer-selector a,
+.select-layer_numpad:target ~ * .layer-selector_numpad ~ .layer-selector a {
+    opacity: 1 !important;
+}
+
+#layers .layer-selector_base a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.select-layer:target ~ #base ~ * .layer-selector_base a {
+    text-decoration: none;
+    color: revert;
+}
+
+.pair-macros:target ~ #keyboard .layer .pair-macros_highlight,
+.emacs-nav:target ~ #keyboard .layer .emacs-nav_highlight,
+#mouse-control:target ~ #keyboard .layer .mouse-control_highlight,
+#mouse-warping:target ~ #keyboard .layer .mouse-warping_highlight {
+    background-color: yellow !important;
+}
+
+/* Subsequent layers */
+
+.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer:not(.leaf),
+.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer:not(.leaf),
+.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer:not(.leaf),
+.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer:not(.leaf),
+.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer:not(.leaf),
+.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer:not(.leaf),
+.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer:not(.leaf) {
+    display: table;
+}
+
+.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer td,
+.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer td,
+.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer td,
+.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer td,
+.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer td,
+.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer td,
+.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer td {
+    color: rgba(0, 0, 0, 0.25);
+    box-shadow: none;
+}
+
+.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer .modifier,
+.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer .modifier,
+.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer .modifier,
+.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer .modifier,
+.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer .modifier,
+.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer .modifier,
+.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer .modifier {
+    color: rgba(0, 128, 0, 0.25);
+}
+
+.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer .held,
+.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer .held,
+.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer .held,
+.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer .held,
+.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer .held,
+.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer .held,
+.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer .held {
+    background-color: #ECECEC;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer caption,
+.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer caption,
+.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer caption,
+.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer caption,
+.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer caption,
+.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer caption,
+.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer caption {
+    opacity: 0;
+}
+
+.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer .layer-key a,
+.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer .layer-key a,
+.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer .layer-key a,
+.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer .layer-key a,
+.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer .layer-key a,
+.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer .layer-key a,
+.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer .layer-key a {
+    color: inherit;
+}
+
+
+.feature:target ~ #feature-descriptions {
+    margin-bottom: 15vh;
+}
+
+.feature:target ~ #feature-descriptions .card {
+    display: none;
+}
+
+.pair-macros:target ~ #feature-descriptions #pair-macros_description,
+.emacs-nav:target ~ #feature-descriptions #emacs-nav_description,
+#mouse-control:target ~ #feature-descriptions #mouse-control_description,
+#mouse-warping:target ~ #feature-descriptions #mouse-warping_description {
+    display: block;
+}
+
+.pair-macros:target ~ #feature-descriptions #pair-macros_description h1 > a,
+.emacs-nav:target ~ #feature-descriptions #emacs-nav_description h1 > a,
+#mouse-control:target ~ #feature-descriptions #mouse-control_description h1 > a,
+#mouse-warping:target ~ #feature-descriptions #mouse-warping_description h1 > a {
+    color: inherit;
+}
+
+.pair-macros:target ~ #feature-descriptions #pair-macros_description h1 .tabs,
+.emacs-nav:target ~ #feature-descriptions #emacs-nav_description h1 .tabs {
+    display: flex;
+}
+
+
+.pair-macros:target ~ #features a[href="#pair-macros"],
+.emacs-nav:target ~ #features a[href="#emacs-nav"],
+#mouse-control:target ~ #features a[href="#mouse-control"],
+#mouse-warping:target ~ #features a[href="#mouse-warping"],
+#pair-macros:target ~ #feature-descriptions #pair-macros_description h1 .tabs a[href="#pair-macros"],
+#pair-macros_lower:target ~ #feature-descriptions #pair-macros_description h1 .tabs a[href="#pair-macros_lower"],
+#emacs-nav:target ~ #feature-descriptions #emacs-nav_description h1 .tabs a[href="#emacs-nav"],
+#emacs-nav_lower:target ~ #feature-descriptions #emacs-nav_description h1 .tabs a[href="#emacs-nav_lower"] {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.feature:target ~ #features #features_close {
+    display: flex;
+}
+
+#pair-macros:target ~ #features #raise_close,
+#pair-macros_lower:target ~ #features #lower_close,
+#emacs-nav:target ~ #features #raise_close,
+#emacs-nav_lower:target ~ #features #lower_close,
+#mouse-control:target ~ #features #nav_close,
+#mouse-warping:target ~ #features #warp_close {
+    display: flex;
+}
+
+
+.layer .miser {
+    font-size: initial;
+}
+
+.layer .danger {
+    box-shadow: inset 0 0 0.2em 0.1em #FF0000;
+}
+
+.layer .yay,
+.layer .num {
+    box-shadow: inset 0 0 0.2em 0.1em #00FF00;
+}
+
+.layer .nav {
+    box-shadow: inset 0 0 0.2em 0.1em #0000FF;
+}
+
+.layer .function {
+    box-shadow: inset 0 0 0.2em 0.1em rgb(255, 184, 0);
+}
+
+.layer .special {
+    box-shadow: inset 0 0 0.2em 0.1em rgb(135, 142, 255);
+}
+
+.layer .control {
+    box-shadow: inset 0 0 0.2em 0.1em rgb(157, 41, 156);
+}
+
+.layer .system {
+    box-shadow: inset 0 0 0.2em 0.1em white;
+}
+
+.layer .void {
+    opacity: 0;
+}
+
+
+#feature-descriptions .card {
+    margin-top: 1em;
+}
+
+#feature-descriptions .card h1 {
+    display: flex;
+    flex-flow: row;
+}
+
+#feature-descriptions .card h1 .tabs {
+    display: none;
+    font-size: medium;
+    font-weight: normal;
+    margin: 0 0 0 1em;
+    position: relative;
+    top: 0.2em;
+}
+
+#feature-descriptions .card h1 .tabs ul {
+    margin: 0;
+}
+
+#feature-descriptions table {
+    margin-left: 0;
+    font-size: larger;
+}
+
+#feature-descriptions table:last-child {
+    margin-bottom: 0.5em;
+}
+
+#pair-macros_description .output {
+    text-align: center;
+}

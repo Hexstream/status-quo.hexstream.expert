@@ -1,0 +1,83 @@
+Introduction
+------------
+
+Hello, I'm **Jean-Philippe Paradis (Hexstream)** and I've been doing **Common Lisp Open Source** work for *nearly a decade!*
+
+In 2008, I found out about the TypeMatrix 2030 and then proceeded to use it exclusively for the next 12 years. In 2020, I found out about the **Planck EZ**, and *within 2 days* of using it I said that it was *at least 10x better* than the TypeMatrix 2030, but I now know that in fact **it's at least 20x better**!
+
+I'm very excited to finally show you my real keyboard configuration, which is now possible thanks to the custom key labels and related features.
+
+
+Macro key in Raise layer
+------------------------
+
+**Pair Macros**
+
+Inserts a pair of characters, then presses *Left* to put the cursor inside. The type of pair inserted depends on modifiers.
+
+- **Raise:** () *Parentheses*
+- **Raise-Alt:** "" *Double quotes*
+- **Raise-Shift:** ** *"Earmuffs"*
+- **Raise-Ctrl:** [] *Square brackets.*
+- **Raise-Ctrl-Alt:** \`\` *Backquotes*
+
+
+- **Lower:** {} *Curly braces*
+- **Lower-Alt:** '' *Single quotes*
+- **Lower-Shift:** <> *HTML/XML tags*
+
+
+Down key in Raise layer
+-----------------------
+
+***Emacs-like navigation keys everywhere!!!***
+
+*Raise-f*, *Raise-b*, *Raise-n* and *Raise-p* behave just like their Emacs counterparts *Ctrl-f*, *Ctrl-b*, *Ctrl-n* and *Ctrl-p*, that is to say, they move **F**orward (*Right*), **B**ackward (*Left*), to the **N**ext line (*Down*) and to the **P**revious line (*Up*).
+
+**Since this uses the arrow keys, this is automatically compatible with nearly 100% of applications!**
+
+(Note that "*Raise-n*" is moved one position down to avoid conflicting with "9".)
+
+We also have *End*, *Home*, *PgDn*, *PgUp* in the corresponding locations on the Lower layer.
+
+
+Mouse down key in Nav layer
+---------------------------
+
+Perfectly control the mouse using only the keyboard thanks to the **Nav layer**! You can even scroll the mouse wheel left or right! *I didn't even know this was possible!* (I didn't know about Button 4 and Button 5 either...)
+
+Note how you can easily move the mouse while holding *Ctrl-Alt-Shift* in any combination, as well as Left click *xor* Right click.
+
+Use the **Crawl (6)** sublayer (*strategically located to the left of "Acceleration 0"*) to accurately move the mouse by single pixels.
+
+
+Center key in Warp layer
+------------------------
+
+The blue keys instantly warp the mouse to the center of each of 9 "quadrants", considering the screen as a 3x3 grid of rectangular regions.
+
+If *Shift* is held down or the **bold** version of an arrow is pressed, then warp to the far side or corner of the corresponding quadrant instead of to its center.
+
+Importantly, if we press *multiple locations at once* then the mouse warps to the barycenter of the designated points! So if we press 2 locations at once, then the mouse warps to the midpoint between those points. This allows for very precise movement!
+
+
+Toggle layer colors key in Base layer
+-------------------------------------
+
+Press this single easily accessible key to toggle layer colors.
+
+--------------------
+
+When I was first designing and learning my custom layout, I liked to have the layer colors on at all times, *except* when I'm watching videos in the dark, in which case I would temporarily disable the layer colors. It's obviously important to be able to easily find and press the one key in the dark.
+
+Now that I have memorized my layout, I pretty much always have layer colors off, though.
+
+
+Conclusion
+----------
+
+This concludes our quick tour! I hope you're now as excited about the **Planck EZ** as I am! This is a truly outstanding keyboard with endless possibilities!
+
+This very user-friendly configurator (Oryx) already provides incredible functionality, and this last update featuring custom key labels is truly outstanding! You can go even further by customizing your keyboard firmware with QMK.
+
+*I'd like to eventually make my own Common Lisp based firmware for the Planck EZ*, but need to build infrastructure first.
