@@ -7,10 +7,9 @@
     padding-right: 0;
 }
 
-.labelled-control input,
 .labelled-control label {
-    position: relative;
-    top: -0.4em;
+    display: inline-block;
+    transform: translateY(-0.4em);
 }
 
 #layers {
