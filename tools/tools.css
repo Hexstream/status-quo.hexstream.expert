@@ -21,20 +21,6 @@ kbd.key-sequence kbd, kbd.key-sequence var {
     color: orange;
 }
 
-figure {
-    display: table;
-    padding: 0.7em;
-    padding-bottom: 0.5em;
-    border: thin solid lightgray;
-    background: linen;
-}
-
 dd p:first-child {
     margin-top: 0.5em;
-}
-
-figcaption {
-    text-align: center;
-    font-style: italic;
-    margin-top: 0.2em;
 }
