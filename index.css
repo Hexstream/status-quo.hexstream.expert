@@ -50,3 +50,7 @@
     margin-left: initial;
     margin-right: initial;
 }
+
+#articles.tabs.contains-title h1 a {
+    color: inherit;
+}

@@ -6,3 +6,4 @@ ErrorDocument 400 /special/error-pages/400.html
 RedirectPermanent /tools/index.html https://status-quo.hexstream.expert/#tools
 RedirectPermanent /services/index.html https://status-quo.hexstream.expert/#services
 RedirectPermanent /infrastructure/index.html https://status-quo.hexstream.expert/#infrastructure
+RedirectPermanent /articles/index.html https://status-quo.hexstream.expert/#articles

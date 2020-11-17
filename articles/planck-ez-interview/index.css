@@ -1,0 +1,12 @@
+#page-header .description {
+    margin-top: 0.25em;
+}
+
+@media (min-width: 50em) {
+    .float {
+        float: right;
+        clear: right;
+        margin-left: 2em;
+        margin-bottom: 0.5em;
+    }
+}
