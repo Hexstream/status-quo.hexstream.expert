@@ -2,6 +2,10 @@
     margin-top: 0.25em;
 }
 
+.float img {
+    border: thin solid gray;
+}
+
 @media (min-width: 50em) {
     .float {
         float: right;
