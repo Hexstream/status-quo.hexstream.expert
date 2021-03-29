@@ -33,7 +33,7 @@ main dl dd figure {
 
 @media (max-width: 34em) {
     main dl dt {
-        line-height: 1.6em;
+        line-height: 1.6;
     }
     main dl dd figure {
         margin-left: 0;
