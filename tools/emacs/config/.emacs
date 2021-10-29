@@ -147,6 +147,7 @@
 (define-key hexstream-map "i" 'slime-reindent-defun)
 (define-key hexstream-map "y" 'clipboard-yank)
 (define-key hexstream-map "s" 'replace-string)
+(define-key hexstream-map "b" 'browse-url-of-file)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
