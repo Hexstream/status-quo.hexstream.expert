@@ -32,7 +32,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2019-10-11">11 october 2019</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2021-11-28">28 november 2021</time><span>.</span></p>
 
     </nav>
 
@@ -92,59 +92,73 @@
 
           <p>I'm quite mouse-oriented while using web browsers, so I use very few of their keyboard shortcuts.</p>
 
-          <dl>
+          <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-            <dt id="new-tab"><kbd>Ctrl-t</kbd> <a href="#new-tab" class="anchor">⚓</a></dt>
-            <dd>
-              <p>Open a new tab.</p>
-            </dd>
+            <article class="card empty" id="new-tab">
+              <h1><a href="#new-tab">New tab</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-t</kbd></p>
+              <p></p>
+            </article>
 
-            <dt id="open-in-new-tab"><kbd>Ctrl-click</kbd> <a href="#open-in-new-tab" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="open-in-new-tab">
+              <h1><a href="#open-in-new-tab">Open in new tab</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-click</kbd></p>
               <p>Open link in new tab.</p>
               <p>I use this quite extensively.</p>
               <p>Websites that break this feature with their stupid javascript nonsense make me want to <span class="watch-out">KILL KILL KILL</span>!</p>
-            </dd>
+            </article>
 
-            <dt id="open-most-recently-closed-tab"><kbd>Ctrl-Shift-t</kbd> <a href="#open-most-recently-closed-tab" class="anchor">⚓</a></dt>
-            <dd>
-              <p>Open most recently closed tab.</p>
-            </dd>
+            <article class="card empty" id="open-most-recently-closed-tab">
+              <h1><a href="#open-most-recently-closed-tab">Open most recently closed tab</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-Shift-t</kbd></p>
+              <p></p>
+            </article>
 
-            <dt id="focus-omnibox"><kbd>Ctrl-l</kbd> <a href="#focus-omnibox" class="anchor">⚓</a></dt>
-            <dd>
-              <p>Focus the omnibox.</p>
-            </dd>
+            <article class="card" id="focus-omnibox">
+              <h1><a href="#focus-omnibox">Focus omnibox</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-l</kbd></p>
+              <p></p>
+            </article>
 
-            <dt id="find"><kbd>Ctrl-f</kbd> <a href="#find" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="find">
+              <h1><a href="#find">Find</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-f</kbd></p>
               <p>Find and highlight occurrences of a particular text string on the page.</p>
-              <p>One nice feature is that unicode equivalences (not sure if it's the right technical term) are respected, so for example if you search for "1", you'll also find "①" on the page! This goes well beyond the merely diacritics-insensitive matching one might expect.</p>
-            </dd>
+              <p>
+                One nice feature is that unicode equivalences (not sure if it's the right technical term) are respected,
+                <br/>
+                so for example if you search for "1", you'll also find "①" on the page!
+                <br/>
+                This goes well beyond the merely diacritics-insensitive matching one might expect.
+              </p>
+            </article>
 
-            <dt id="reload-page"><kbd>Ctrl-r</kbd> <a href="#reload-page" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="reload-page">
+              <h1><a href="#reload-page">Reload page</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-r</kbd></p>
               <p>Reload the page.</p>
               <p>(But usually I just click the reload button.)</p>
-            </dd>
+            </article>
 
-            <dt id="zoom"><kbd>Ctrl-+</kbd>, <kbd>Ctrl--</kbd>, <kbd>Ctrl-0</kbd> <a href="#zoom" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="zoom">
+              <h1><a href="#zoom">Zoom</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-+</kbd>, <kbd>Ctrl--</kbd>, <kbd>Ctrl-0</kbd></p>
               <p>Zoom in, zoom out, reset zoom to default, respectively.</p>
-            </dd>
+            </article>
 
-            <dt id="toggle-developer-tools"><kbd>F12</kbd> <a href="#toggle-developer-tools" class="anchor">⚓</a></dt>
-            <dd>
-              <p>Toggle developer tools.</p>
+            <article class="card" id="toggle-developer-tools">
+              <h1><a href="#toggle-developer-tools">Toggle developer tools</a></h1>
+              <p class="hoisted binding"><kbd>F12</kbd></p>
               <p>While the developer tools are open, press <kbd>ESC</kbd> to toggle the "drawer".</p>
-            </dd>
+            </article>
 
-            <dt id="clear-browsing-data"><kbd>Ctrl-Shift-Delete</kbd> <a href="#clear-browsing-data" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="clear-browsing-data">
+              <h1><a href="#clear-browsing-data">Clear browsing data</a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-Shift-Delete</kbd></p>
               <p>Show the dialog for clearing browsing data.</p>
-            </dd>
+            </article>
 
-          </dl>
+          </div>
 
         </section>
 
@@ -160,35 +174,53 @@
             </span>
           </h1>
 
-          <dl>
+          <div class="cards cards-contain-hoisted">
 
             <!-- Having an element with ID of "adblock" seems to conflict with adblock... -->
-            <dt id="adblock-extension"><a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom">Adblock</a> <a href="#adblock-extension" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="adblock-extension">
+              <h1><a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom" target="_blank">Adblock</a></h1>
+              <p class="hoisted self-link"><a href="#adblock-extension">⚓</a></p>
               <p>It's impossible to browse the web without this.</p>
               <p>Blocks most ads on the web, <em>including</em> in-video ads!</p>
-              <p>I'm always very surprised when someone complains about ads on the web while failing to use this, especially if they know it exists...</p>
-              <p>Using adblock does have one drawback:<br />One might link to a page filled to the brim with ads without realizing it.<br />Sorry if I ever did that!</p>
-            </dd>
+              <p>
+                I'm always very surprised when someone complains about ads on the web
+                <br/>
+                while failing to use this, especially if they know it exists...
+              </p>
+              <p>
+                Using adblock does have one drawback:
+                <br/>
+                One might link to a page filled to the brim with ads without realizing it.
+                <br/>
+                Sorry if I ever did that!
+              </p>
+            </article>
 
-            <dt id="empty-new-tab-page"><a href="https://chrome.google.com/webstore/detail/empty-new-tab-page/dpjamkmjmigaoobjbekmfgabipmfilij">Empty New Tab Page</a> <a href="#empty-new-tab-page" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="empty-new-tab-page">
+              <h1><a href="https://chrome.google.com/webstore/detail/empty-new-tab-page/dpjamkmjmigaoobjbekmfgabipmfilij" target="_blank">Empty New Tab Page</a></h1>
+              <p class="hoisted self-link"><a href="#empty-new-tab-page">⚓</a></p>
               <p>Gives you a zen New Tab opening experience.</p>
               <p>Opening a new tab shouldn't blast you with "information" you don't need.</p>
               <p>It also shouldn't expose your browsing history to anyone who happens to be looking over your shoulder.</p>
-            </dd>
+            </article>
 
-            <dt id="full-page-screen-capture"><a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl">Full Page Screen Capture</a> <a href="#full-page-screen-capture" class="anchor">⚓</a></dt>
-            <dd>
-              <p>Very no-nonsense full page screen capture. Very simple to use, effective, reliable, does not need any special permissions.</p>
-            </dd>
+            <article class="card" id="full-page-screen-capture">
+              <h1><a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl" target="_blank">Full Page Screen Capture</a></h1>
+              <p class="hoisted self-link"><a href="#full-page-screen-capture">⚓</a></p>
+              <p>
+                Very no-nonsense full page screen capture.
+                <br/>
+                Very simple to use, effective, reliable, does not need any special permissions.
+              </p>
+            </article>
 
-            <dt id="keepassxc-browser"><a href="https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk">KeePassXC-Browser</a> <a href="#keepassxc-browser" class="anchor">⚓</a></dt>
-            <dd>
+            <article class="card" id="keepassxc-browser">
+              <h1><a href="https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk" target="_blank">KeePassXC-Browser</a></h1>
+              <p class="hoisted self-link"><a href="#keepassxc-browser">⚓</a></p>
               <p>Simple official browser integration for <a href="https://keepassxc.org/" target="_blank">my password manager</a>.</p>
-            </dd>
+            </article>
 
-          </dl>
+          </div>
 
         </section>
 

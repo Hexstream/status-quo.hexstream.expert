@@ -32,7 +32,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2019-10-11">11 october 2019</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2021-11-28">28 november 2021</time><span>.</span></p>
 
     </nav>
 
@@ -97,12 +97,14 @@
 
           <p>I have one permanent virtual terminal, declared in <a href="https://github.com/Hexstream/hexstream-screenrc/blob/master/.screenrc">my .screenrc</a>:</p>
 
-          <dl>
+          <div class="cards">
 
-            <dt><i>Unnamed</i></dt>
-            <dd>In my home directory. I rarely use this, instead preferring to open a new (temporary) terminal, do what I need to do and then close it.</dd>
+            <article class="card">
+              <h1><i>Unnamed</i></h1>
+              <p>In my home directory. I rarely use this, instead preferring to open a new (temporary) terminal, do what I need to do and then close it.</p>
+            </article>
 
-          </dl>
+          </div>
 
           <p>If I want to work on a particular project, I simply <a href="#screen">open a new virtual terminal</a>, <a href="#title">rename it</a> and <code>cd</code> it to the right git repo.</p>
 
@@ -121,55 +123,56 @@
             </span>
           </h1>
 
-          <dl>
+          <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-            <dt id="meta"><kbd class="built-in">Ctrl-a a</kbd> <a href="#meta" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">meta</code></p>
+            <article class="card" id="meta">
+              <h1><a href="#meta"><code>meta</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a a</kbd></p>
               <p>Send a <kbd>Ctrl-a</kbd> to the current virtual terminal.</p>
-            </dd>
+            </article>
 
-            <dt id="screen"><kbd class="built-in">Ctrl-a c</kbd> <a href="#screen" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">screen</code></p>
+            <article class="card" id="screen">
+              <h1><a href="#screen"><code>screen</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a c</kbd></p>
               <p>Make a new virtual terminal and switch to it.</p>
               <p>I like to use one virtual terminal per project I'm currently working on.</p>
-            </dd>
+            </article>
 
-            <dt id="title"><kbd class="built-in">Ctrl-a A</kbd> <a href="#title" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">title</code></p>
+            <article class="card" id="title">
+              <h1><a href="#title"><code>title</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a A</kbd></p>
               <p>Rename the current virtual terminal.</p>
-            </dd>
+            </article>
 
-            <dt id="kill"><kbd class="built-in">Ctrl-a k</kbd> <a href="#kill" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">kill</code></p>
+            <article class="card" id="kill">
+              <h1><a href="#kill"><code>kill</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a k</kbd></p>
               <p>Kill the current virtual terminal.</p>
-            </dd>
+            </article>
 
-            <dt id="windows"><kbd class="built-in">Ctrl-a w</kbd> <a href="#windows" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">windows</code></p>
+            <article class="card" id="windows">
+              <h1><a href="#windows"><code>windows</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a w</kbd></p>
               <p>
                 Show a list of virtual terminals and their associated digits.
-                <br />The current one is indicated with a star.
+                <br />
+                The current one is indicated with a star.
               </p>
-            </dd>
+            </article>
 
-            <dt id="select"><kbd class="built-in">Ctrl-a <var>digit</var></kbd> <a href="#select" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">select <var>digit</var></code></p>
+            <article class="card" id="select">
+              <h1><a href="#select"><code>select <var>digit</var></code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a <var>digit</var></kbd></p>
               <p>Switch to the virtual terminal with the associated <var>digit</var>.</p>
-            </dd>
+            </article>
 
-            <dt id="next"><kbd class="built-in">Ctrl-a n</kbd>, <kbd class="built-in">Ctrl-a p</kbd> <a href="#next" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">next</code>, <code class="built-in">prev</code></p>
+            <article class="card" id="next">
+              <h1><a href="#next"><code>next</code>, <code>prev</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a n</kbd>, <kbd>Ctrl-a p</kbd></p>
               <p>Switch to the next or previous virtual terminal, according to digit order.</p>
-            </dd>
+            </article>
 
-          </dl>
+          </div>
 
         </section>
 
@@ -186,16 +189,22 @@
             </span>
           </h1>
 
-          <dl>
+          <div class="cards cards-link-to-themselves">
 
-            <dt id="colon"><kbd class="built-in">Ctrl-a :</kbd> <a href="#colon" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">colon</code></p>
+            <article class="card" id="colon">
+              <h1><a href="#colon"><code>colon</code></a></h1>
+              <p class="hoisted binding"><kbd>Ctrl-a :</kbd></p>
               <p>I only ever use this to invoke the <code>quit</code> command, which kills Screen.</p>
-              <p>(The default keybinding is really hard (or impossible?) to type on my configuration and I haven't yet gotten around to assigning a new keybinding for it, but it's typically just once at the end of the day so...)</p>
-            </dd>
+              <p>
+                (The default keybinding is really hard (or impossible?) to type on my configuration
+                <br/>
+                and I haven't yet gotten around to assigning a new keybinding for it,
+                <br/>
+                but it's typically just once at the end of the day so...)
+              </p>
+            </article>
 
-          </dl>
+          </div>
 
         </section>
 

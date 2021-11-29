@@ -32,7 +32,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-08-05">5 august 2017</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2021-11-28">28 november 2021</time><span>.</span></p>
 
     </nav>
 
@@ -193,51 +193,60 @@
 
                 <p>These commands move point (the cursor) and/or scroll to show a different portion of the buffer in the current window, but never modify the buffer.</p>
 
-                <dl>
+                <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                  <dt id="isearch-forward"><kbd class="built-in">C-s</kbd>, <kbd class="built-in">C-r</kbd> <a href="#isearch-forward" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">isearch-forward</code>, <code class="built-in">isearch-backward</code>.</p>
+                  <article class="card" id="isearch-forward">
+                    <h1><a href="#isearch-forward"><code class="built-in">isearch-forward</code>, <code class="built-in">isearch-backward</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-s</kbd>, <kbd class="built-in">C-r</kbd></p>
                     <p>My favorite way of moving around in emacs!</p>
-                    <p>Allows you to move directly where you want to, with a minimum of thinking, keystrokes, and time. Useful for all but the shortest distances.</p>
+                    <p>
+                      Allows you to move directly where you want to, with a minimum of thinking, keystrokes, and time.
+                      <br/>
+                      Useful for all but the shortest distances.
+                    </p>
                     <p>Also, a staple of keyboard macros.</p>
-                  </dd>
+                  </article>
 
-                  <dt id="scroll-up"><kbd class="built-in">C-v</kbd>, <kbd class="built-in">M-v</kbd> <a href="#scroll-up" class="anchor">⚓</a></dt>
-                  <dt><kbd class="built-in">PageDown</kbd>, <kbd class="built-in">PageUp</kbd> (casual)</dt>
-                  <dd>
-                    <p><code class="built-in">scroll-up</code>, <code class="built-in">scroll-down</code>.</p>
+                  <article class="card" id="scroll-up">
+                    <h1><a href="#scroll-up"><code class="built-in">scroll-up</code>, <code class="built-in">scroll-down</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-v</kbd>, <kbd class="built-in">M-v</kbd> (or <kbd class="built-in">PageDown</kbd>, <kbd class="built-in">PageUp</kbd>)</p>
                     <p>Scrolls down (respectively up). ("Scrolls the text up (respectively down)", hence the weird "reversed" nomenclature.)</p>
                     <p>Related <code>.emacs</code> sample: <code>(setf next-screen-context-lines 1)</code> (overrides default: 2.)</p>
-                  </dd>
+                  </article>
 
-                  <dt id="beginning-of-buffer"><kbd class="built-in">M-&lt;</kbd>, <kbd class="built-in">M-&gt;</kbd> <a href="#beginning-of-buffer" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">beginning-of-buffer</code>, <code class="built-in">end-of-buffer</code>.</p>
+                  <article class="card" id="beginning-of-buffer">
+                    <h1><a href="#beginning-of-buffer"><code class="built-in">beginning-of-buffer</code>, <code class="built-in">end-of-buffer</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">M-&lt;</kbd>, <kbd class="built-in">M-&gt;</kbd></p>
                     <p>Go to the first or last position in the buffer, respectively.</p>
-                  </dd>
+                  </article>
 
-                  <dt id="forward-char"><kbd class="built-in">C-f</kbd>, <kbd class="built-in">C-b</kbd>, <kbd class="built-in">C-n</kbd>, <kbd class="built-in">C-p</kbd> <a href="#forward-char" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">forward-char</code>, <code class="built-in">backward-char</code>, <code class="built-in">next-line</code>, <code class="built-in">previous-line</code>.</p>
+                  <article class="card" id="forward-char">
+                    <h1><a href="#forward-char"><code class="built-in">forward-char</code>, <code class="built-in">backward-char</code>, <code class="built-in">next-line</code>, <code class="built-in">previous-line</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-f</kbd>, <kbd class="built-in">C-b</kbd>, <kbd class="built-in">C-n</kbd>, <kbd class="built-in">C-p</kbd></p>
                     <p>Roughly, go one position forward, backward, down or up, respectively.</p>
                     <p>I <strong>never</strong> use the arrow keys in emacs.</p>
-                    <p>I have <code>(setf line-move-visual nil)</code> in my <code>.emacs</code>, to move by logical lines. The default, <code>t</code>, is perhaps initially appealing, but can really wreak havoc in keyboard macros in particular, and anyway moving about in even extremely long lines is trivial with <a href="#isearch-forward"><kbd class="built-in">C-s</kbd> and <kbd class="built-in">C-r</kbd></a>.</p>
-                  </dd>
+                    <p>
+                      I have <code>(setf line-move-visual nil)</code> in my <code>.emacs</code>, to move by logical lines.
+                      <br/>
+                      The default, <code>t</code>, is perhaps initially appealing, but can really wreak havoc in keyboard macros in particular,
+                      <br/>
+                      and anyway moving about in even extremely long lines is trivial with <a href="#isearch-forward"><kbd class="built-in">C-s</kbd> and <kbd class="built-in">C-r</kbd></a>.
+                    </p>
+                  </article>
 
-                  <dt id="move-beginning-of-line"><kbd class="built-in">C-a</kbd>, <kbd class="built-in">C-e</kbd> <a href="#move-beginning-of-line" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">move-beginning-of-line</code>, <code class="built-in">move-end-of-line</code>.</p>
+                  <article class="card" id="move-beginning-of-line">
+                    <h1><a href="#move-beginning-of-line"><code class="built-in">move-beginning-of-line</code>, <code class="built-in">move-end-of-line</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-a</kbd>, <kbd class="built-in">C-e</kbd></p>
                     <p>Move to the beginning or end of the line, respectively.</p>
-                  </dd>
+                  </article>
 
-                  <dt id="back-to-indentation"><kbd class="built-in">M-m</kbd> <a href="#back-to-indentation" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">back-to-indentation</code></p>
+                  <article class="card" id="back-to-indentation">
+                    <h1><a href="#back-to-indentation"><code class="built-in">back-to-indentation</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">M-m</kbd></p>
                     <p>Like <a href="#move-beginning-of-line"><kbd class="built-in">C-a</kbd></a>, but skips initial whitespace.</p>
-                  </dd>
+                  </article>
 
-                </dl>
+                </div>
 
               </section>
 
@@ -257,40 +266,39 @@
                   </span>
                 </h1>
 
-                <dl>
+                <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                  <dt id="find-file"><kbd class="built-in">C-x C-f</kbd> <a href="#find-file" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">find-file</code></p>
+                  <article class="card" id="find-file">
+                    <h1><a href="#find-file"><code class="built-in">find-file</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x C-f</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="find-alternate-file"><kbd class="built-in">C-x C-v</kbd> <a href="#find-alternate-file" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">find-alternate-file</code></p>
+                  <article class="card" id="find-alternate-file">
+                    <h1><a href="#find-alternate-file"><code class="built-in">find-alternate-file</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x C-v</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="save-buffer"><kbd class="built-in">C-x C-s</kbd> <a href="#save-buffer" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">save-buffer</code></p>
+                  <article class="card" id="save-buffer">
+                    <h1><a href="#save-buffer"><code class="built-in">save-buffer</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x C-s</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="switch-to-buffer"><kbd class="built-in">C-x b</kbd> <a href="#switch-to-buffer" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">switch-to-buffer</code></p>
+                  <article class="card" id="switch-to-buffer">
+                    <h1><a href="#switch-to-buffer"><code class="built-in">switch-to-buffer</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x b</kbd></p>
                     <p>TODO</p>
-                    <p>(Actually iswitchb-buffer in my case.)</p>
-                  </dd>
+                  </article>
 
-                  <dt id="kill-buffer"><kbd class="built-in">C-x k</kbd> <a href="#kill-buffer" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">kill-buffer</code></p>
+                  <article class="card" id="kill-buffer">
+                    <h1><a href="#kill-buffer"><code class="built-in">kill-buffer</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x k</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                </dl>
+                </div>
 
               </section>
 
@@ -310,33 +318,33 @@
                   </span>
                 </h1>
 
-                <dl>
+                <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                  <dt id="delete-window"><kbd class="built-in">C-x 0</kbd> <a href="#delete-window" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">delete-window</code></p>
+                  <article class="card" id="delete-window">
+                    <h1><a href="#delete-window"><code class="built-in">delete-window</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x 0</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="delete-other-windows"><kbd class="built-in">C-x 1</kbd> <a href="#delete-other-windows" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">delete-other-windows</code></p>
+                  <article class="card" id="delete-other-windows">
+                    <h1><a href="#delete-other-windows"><code class="built-in">delete-other-windows</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x 1</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="split-window-vertically"><kbd class="built-in">C-x 2</kbd> <a href="#split-window-vertically" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">split-window-vertically</code></p>
+                  <article class="card" id="split-window-vertically">
+                    <h1><a href="#split-window-vertically"><code class="built-in">split-window-vertically</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x 2</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="balance-windows"><kbd class="built-in">C-x +</kbd> <a href="#balance-windows" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">balance-windows</code></p>
+                  <article class="card" id="balance-windows">
+                    <h1><a href="#balance-windows"><code class="built-in">balance-windows</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x +</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                </dl>
+                </div>
 
               </section>
 
@@ -356,59 +364,67 @@
                   </span>
                 </h1>
 
-                <dl>
+                <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                  <dt id="kill-line"><kbd class="built-in">C-k</kbd> <a href="#kill-line" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">kill-line</code></p>
+                  <article class="card" id="kill-line">
+                    <h1><a href="#kill-line"><code class="built-in">kill-line</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-k</kbd></p>
                     <p>Kill from the current position to the end of the line.</p>
-                  </dd>
+                  </article>
 
-                  <dt id="set-mark-command"><kbd class="built-in">C-SPC</kbd> <a href="#set-mark-command" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">set-mark-command</code></p>
+                  <article class="card" id="set-mark-command">
+                    <h1><a href="#set-mark-command"><code class="built-in">set-mark-command</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-SPC</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="kill-region"><kbd class="built-in">C-w</kbd> <a href="#kill-region" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">kill-region</code></p>
+                  <article class="card" id="kill-region">
+                    <h1><a href="#kill-region"><code class="built-in">kill-region</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-w</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="yank"><kbd class="built-in">C-y</kbd> <a href="#yank" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">yank</code></p>
+                  <article class="card" id="yank">
+                    <h1><a href="#yank"><code class="built-in">yank</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-y</kbd></p>
                     <p>Paste the last block of consecutively killed text, or the last one that was yanked (pasted), whichever happened most recently.</p>
-                    <p>Normally leaves point at the end of the yanked text, but with a prefix argument, leaves point at the start of the yanked text, which is sometimes useful in keyboard macros in particular.</p>
-                    <p>The mark is usefully left at the opposite end of the yanked text, so you can immediately select the region of just-yanked text with <kbd class="built-in">C-x C-x</kbd> if you need to operate on it.</p>
-                  </dd>
+                    <p>
+                      Normally leaves point at the end of the yanked text, but with a prefix argument, leaves point at the start of the yanked text,
+                      <br/>
+                      which is sometimes useful in keyboard macros in particular.
+                    </p>
+                    <p>
+                      The mark is usefully left at the opposite end of the yanked text,
+                      <br/>
+                      so you can immediately select the region of just-yanked text with <kbd class="built-in">C-x C-x</kbd> if you need to operate on it.
+                    </p>
+                  </article>
 
-                  <dt id="yank-pop"><kbd class="built-in">M-y</kbd> <a href="#yank-pop" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">yank-pop</code></p>
+                  <article class="card" id="yank-pop">
+                    <h1><a href="#yank-pop"><code class="built-in">yank-pop</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">M-y</kbd></p>
                     <p>Successive invocations of this command, which must happen after an initial <a href="#yank"><kbd class="built-in">C-y</kbd></a>, cycle through the kill ring.</p>
-                  </dd>
+                  </article>
 
-                  <dt id="copy-to-register"><kbd class="built-in">C-x r s</kbd> <a href="#copy-to-register" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">copy-to-register</code></p>
+                  <article class="card" id="copy-to-register">
+                    <h1><a href="#copy-to-register"><code class="built-in">copy-to-register</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x r s</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="insert-register"><kbd class="built-in">C-x r i</kbd> <a href="#insert-register" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">insert-register</code></p>
+                  <article class="card" id="insert-register">
+                    <h1><a href="#insert-register"><code class="built-in">insert-register</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-x r i</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                  <dt id="newline-and-indent"><kbd class="built-in">C-j</kbd> <a href="#newline-and-indent" class="anchor">⚓</a></dt>
-                  <dd>
-                    <p><code class="built-in">newline-and-indent</code></p>
+                  <article class="card" id="newline-and-indent">
+                    <h1><a href="#newline-and-indent"><code class="built-in">newline-and-indent</code></a></h1>
+                    <p class="hoisted binding"><kbd class="built-in">C-j</kbd></p>
                     <p>TODO</p>
-                  </dd>
+                  </article>
 
-                </dl>
+                </div>
 
               </section>
 
@@ -435,52 +451,52 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="kmacro-start-macro"><kbd class="built-in">C-x (</kbd> <a href="#kmacro-start-macro" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">kmacro-start-macro</code></p>
+                <article class="card" id="kmacro-start-macro">
+                  <h1><a href="#kmacro-start-macro"><code class="built-in">kmacro-start-macro</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x (</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="kmacro-end-macro"><kbd class="built-in">C-x )</kbd> <a href="#kmacro-end-macro" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">kmacro-end-macro</code></p>
+                <article class="card" id="kmacro-end-macro">
+                  <h1><a href="#kmacro-end-macro"><code class="built-in">kmacro-end-macro</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x )</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="kmacro-end-and-call-macro"><kbd class="built-in">C-x e</kbd> <a href="#kmacro-end-and-call-macro" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">kmacro-end-and-call-macro</code></p>
+                <article class="card" id="kmacro-end-and-call-macro">
+                  <h1><a href="#kmacro-end-and-call-macro"><code class="built-in">kmacro-end-and-call-macro</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x e</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="name-last-kbd-macro"><kbd class="built-in">M-x name-last-kbd-macro</kbd> <a href="#name-last-kbd-macro" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">name-last-kbd-macro</code></p>
+                <article class="card" id="name-last-kbd-macro">
+                  <h1><a href="#name-last-kbd-macro"><code class="built-in">name-last-kbd-macro</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">M-x name-last-kbd-macro</kbd></p>
                   <p>TODO</p>
                   <p>(Not actually in fundamental mode.)</p>
-                </dd>
+                </article>
 
-                <dt id="number-to-register"><kbd class="built-in">C-x r n</kbd> <a href="#number-to-register" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">number-to-register</code></p>
+                <article class="card" id="number-to-register">
+                  <h1><a href="#number-to-register"><code class="built-in">number-to-register</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x r n</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="increment-register"><kbd class="built-in">C-x r +</kbd> <a href="#increment-register" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">increment-register</code></p>
+                <article class="card" id="increment-register">
+                  <h1><a href="#increment-register"><code class="built-in">increment-register</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x r +</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="fill-paragraph"><kbd class="built-in">M-q</kbd> <a href="#fill-paragraph" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">fill-paragraph</code></p>
+                <article class="card" id="fill-paragraph">
+                  <h1><a href="#fill-paragraph"><code class="built-in">fill-paragraph</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">M-q</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -499,89 +515,89 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="save-buffers-kill-terminal"><kbd class="built-in">C-x C-c</kbd> <a href="#save-buffers-kill-terminal" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">save-buffers-kill-terminal</code></p>
+                <article class="card" id="save-buffers-kill-terminal">
+                  <h1><a href="#save-buffers-kill-terminal"><code class="built-in">save-buffers-kill-terminal</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x C-c</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="describe-key"><kbd class="built-in">C-h k</kbd> <a href="#describe-key" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">describe-key</code></p>
+                <article class="card" id="describe-key">
+                  <h1><a href="#describe-key"><code class="built-in">describe-key</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-h k</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="where-is"><kbd class="built-in">C-h w</kbd> <a href="#where-is" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">where-is</code></p>
+                <article class="card" id="where-is">
+                  <h1><a href="#where-is"><code class="built-in">where-is</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-h w</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="describe-mode"><kbd class="built-in">C-h m</kbd> <a href="#describe-mode" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">describe-mode</code></p>
+                <article class="card" id="describe-mode">
+                  <h1><a href="#describe-mode"><code class="built-in">describe-mode</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-h m</kbd></p>
                   <p>Give an overview of how to use the current major mode.</p>
-                </dd>
+                </article>
 
-                <dt id="repeat"><kbd class="built-in">C-x z</kbd> <a href="#repeat" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">repeat</code></p>
+                <article class="card" id="repeat">
+                  <h1><a href="#repeat"><code class="built-in">repeat</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x z</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="point-to-register"><kbd class="built-in">C-x r SPC</kbd> <a href="#point-to-register" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">point-to-register</code></p>
+                <article class="card" id="point-to-register">
+                  <h1><a href="#point-to-register"><code class="built-in">point-to-register</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x r SPC</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="jump-to-register"><kbd class="built-in">C-x r j</kbd> <a href="#jump-to-register" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">jump-to-register</code></p>
+                <article class="card" id="jump-to-register">
+                  <h1><a href="#jump-to-register"><code class="built-in">jump-to-register</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x r j</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="indent-region"><kbd class="built-in">M-x indent-region</kbd> <a href="#indent-region" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">indent-region</code></p>
+                <article class="card" id="indent-region">
+                  <h1><a href="#indent-region"><code class="built-in">indent-region</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">M-x indent-region</kbd></p>
                   <p>TODO</p>
                   <p>IS in fundamental mode, but the default keybinding is hard or impossible to type in my configuration.</p>
-                </dd>
+                </article>
 
-                <dt id="untabify"><kbd class="built-in">M-x untabify</kbd> <a href="#untabify" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">untabify</code></p>
+                <article class="card" id="untabify">
+                  <h1><a href="#untabify"><code class="built-in">untabify</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">M-x untabify</kbd></p>
                   <p>TODO</p>
                   <p>(Not actually in fundamental mode.)</p>
-                </dd>
+                </article>
 
-                <dt id="split-window-horizontally"><kbd class="built-in">C-x 3</kbd> <a href="#split-window-horizontally" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">split-window-horizontally</code></p>
+                <article class="card" id="split-window-horizontally">
+                  <h1><a href="#split-window-horizontally"><code class="built-in">split-window-horizontally</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x 3</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="exchange-point-and-mark"><kbd class="built-in">C-x C-x</kbd> <a href="#exchange-point-and-mark" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">exchange-point-and-mark</code></p>
+                <article class="card" id="exchange-point-and-mark">
+                  <h1><a href="#exchange-point-and-mark"><code class="built-in">exchange-point-and-mark</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x C-x</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="make-directory"><kbd class="built-in">M-x make-directory</kbd> <a href="#make-directory" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">make-directory</code></p>
+                <article class="card" id="make-directory">
+                  <h1><a href="#make-directory"><code class="built-in">make-directory</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">M-x make-directory</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="insert-file"><kbd class="built-in">C-x i</kbd> <a href="#insert-file" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">insert-file</code></p>
+                <article class="card" id="insert-file">
+                  <h1><a href="#insert-file"><code class="built-in">insert-file</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-x i</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -626,34 +642,38 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="dired-find-file"><kbd class="built-in">RET</kbd> <a href="#dired-find-file" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-find-file</code></p>
+                <article class="card" id="dired-find-file">
+                  <h1><a href="#dired-find-file"><code class="built-in">dired-find-file</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">RET</kbd></p>
                   <p>Visit the currently selected file or directory.</p>
-                  <p>If it's a directory, open a new, independent instance of dired. The previous dired instance is left open in the background. (Might be unintuitive to some, it certainly was to me at first...)</p>
-                </dd>
+                  <p>
+                    If it's a directory, open a new, independent instance of dired. The previous dired instance is left open in the background.
+                    <br/>
+                    (Might be unintuitive to some, it certainly was to me at first...)
+                  </p>
+                </article>
 
-                <dt id="dired-flag-file-deletion"><kbd class="built-in">d</kbd> <a href="#dired-flag-file-deletion" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-flag-file-deletion</code></p>
+                <article class="card" id="dired-flag-file-deletion">
+                  <h1><a href="#dired-flag-file-deletion"><code class="built-in">dired-flag-file-deletion</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">d</kbd></p>
                   <p>Flag a file or directory for deletion.</p>
-                </dd>
+                </article>
 
-                <dt id="dired-do-flagged-delete"><kbd class="built-in">x</kbd> <a href="#dired-do-flagged-delete" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-do-flagged-delete</code></p>
+                <article class="card" id="dired-do-flagged-delete">
+                  <h1><a href="#dired-do-flagged-delete"><code class="built-in">dired-do-flagged-delete</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">x</kbd></p>
                   <p>Delete the files and directories currently flagged for deletion.</p>
-                </dd>
+                </article>
 
-                <dt id="revert-buffer"><kbd class="built-in">g</kbd> <a href="#revert-buffer" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">revert-buffer</code></p>
+                <article class="card" id="revert-buffer">
+                  <h1><a href="#revert-buffer"><code class="built-in">revert-buffer</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">g</kbd></p>
                   <p>Reload the directory from the filesystem, particularly to see changes made outside of emacs.</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -672,33 +692,33 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="dired-unmark-backwards"><kbd class="built-in">DEL</kbd> <a href="#dired-unmark-backwards" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-unmark-backwards</code></p>
+                <article class="card" id="dired-unmark-backwards">
+                  <h1><a href="#dired-unmark-backwards"><code class="built-in">dired-unmark-backwards</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">DEL</kbd></p>
                   <p>Select the previous file or directory and unflag it.</p>
-                </dd>
+                </article>
 
-                <dt id="dired-unmark"><kbd class="built-in">u</kbd> <a href="#dired-unmark" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-unmark</code></p>
+                <article class="card" id="dired-unmark">
+                  <h1><a href="#dired-unmark"><code class="built-in">dired-unmark</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">u</kbd></p>
                   <p>Unflag the current file or directory.</p>
-                </dd>
+                </article>
 
-                <dt id="dired-do-rename"><kbd class="built-in">R</kbd> <a href="#dired-do-rename" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-do-rename</code></p>
+                <article class="card" id="dired-do-rename">
+                  <h1><a href="#dired-do-rename"><code class="built-in">dired-do-rename</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">R</kbd></p>
                   <p>Rename (and/or move) the currently selected file or directory.</p>
-                </dd>
+                </article>
 
-                <dt id="dired-do-copy"><kbd class="built-in">C</kbd> <a href="#dired-do-copy" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-do-copy</code></p>
+                <article class="card" id="dired-do-copy">
+                  <h1><a href="#dired-do-copy"><code class="built-in">dired-do-copy</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C</kbd></p>
                   <p>Copy the currently selected file or directory.</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -717,16 +737,16 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="dired-up-directory"><kbd class="built-in">^</kbd> <a href="#dired-up-directory" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">dired-up-directory</code></p>
+                <article class="card" id="dired-up-directory">
+                  <h1><a href="#dired-up-directory"><code class="built-in">dired-up-directory</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">^</kbd></p>
                   <p>Open a new, independent instance of dired in the parent directory.</p>
                   <p>I often do <a href="../fundamental-mode/#find-alternate-file"><kbd>C-x C-v</kbd></a> and delete the last directory instead...</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -771,42 +791,42 @@
                 </span>
               </h1>
 
-              <dl>
+              <p>For movement within an Info node, I simply use the <a href="../fundamental-mode/#routinely-used-commands_movement">normal emacs movement commands</a>. I never ever use Info's utterly confusing <kbd class="built-in">SPC</kbd> and <kbd class="built-in">DEL</kbd> to scroll down and up, as they don't respect node boundaries and as a result don't make me feel in control.</p>
 
-                <p>For movement within an Info node, I simply use the <a href="../fundamental-mode/#routinely-used-commands_movement">normal emacs movement commands</a>. I never ever use Info's utterly confusing <kbd class="built-in">SPC</kbd> and <kbd class="built-in">DEL</kbd> to scroll down and up, as they don't respect node boundaries and as a result don't make me feel in control.</p>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="Info-follow-nearest-node"><kbd class="built-in">RET</kbd> <a href="#Info-follow-nearest-node" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">Info-follow-nearest-node</code></p>
+                <article class="card" id="Info-follow-nearest-node">
+                  <h1><a href="#Info-follow-nearest-node"><code class="built-in">Info-follow-nearest-node</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">RET</kbd></p>
                   <p>Follow a link.</p>
-                </dd>
+                </article>
 
-                <dt id="Info-directory"><kbd class="built-in">d</kbd> <a href="#Info-directory" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">Info-directory</code></p>
+                <article class="card" id="Info-directory">
+                  <h1><a href="#Info-directory"><code class="built-in">Info-directory</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">d</kbd></p>
                   <p>Go to the topmost Info node, listing all Info manuals.</p>
-                </dd>
+                </article>
 
-                <dt id="Info-up"><kbd class="built-in">u</kbd> <a href="#Info-up" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">Info-up</code></p>
+                <article class="card" id="Info-up">
+                  <h1><a href="#Info-up"><code class="built-in">Info-up</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">u</kbd></p>
                   <p>Go up in the hierarchy of Info nodes.</p>
-                </dd>
+                </article>
 
-                <dt id="Info-history-back"><kbd class="built-in">l</kbd> <a href="#Info-history-back" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">Info-history-back</code></p>
+                <article class="card" id="Info-history-back">
+                  <h1><a href="#Info-history-back"><code class="built-in">Info-history-back</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">l</kbd></p>
                   <p>Go back to where you were before following the last link (menu item or cross-reference).</p>
                   <p>Especially useful after visiting a cross-reference to a tangential topic.</p>
-                </dd>
+                </article>
 
-                <dt id="Info-exit"><kbd class="built-in">q</kbd> <a href="#Info-exit" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">Info-exit</code></p>
+                <article class="card" id="Info-exit">
+                  <h1><a href="#Info-exit"><code class="built-in">Info-exit</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">q</kbd></p>
                   <p>"Exit Info by selecting some other buffer."</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -825,17 +845,21 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="Info-menu"><kbd class="built-in">m</kbd> <a href="#Info-menu" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">Info-menu</code></p>
+                <article class="card" id="Info-menu">
+                  <h1><a href="#Info-menu"><code class="built-in">Info-menu</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">m</kbd></p>
                   <p>Follow a link by (approximate) name in the current page's menu.</p>
                   <p>Honestly I usually just navigate to the link manually via other means and press <kbd class="built-in">RET</kbd>...</p>
-                  <p>But this is useful especially in the directory node to access a manual directly. For example, <kbd>d m Emacs RET</kbd>, <kbd>d m elisp RET</kbd>, <kbd>d m sed RET</kbd>, etc.</p>
-                </dd>
+                  <p>
+                    But this is useful especially in the directory node to access a manual directly.
+                    <br/>
+                    For example, <kbd>d m Emacs RET</kbd>, <kbd>d m elisp RET</kbd>, <kbd>d m sed RET</kbd>, etc.
+                  </p>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -853,10 +877,6 @@
                   <span class="crumb"><span class="s"> » </span><a class="here">Almost never used commands</a></span>
                 </span>
               </h1>
-
-              <dl>
-
-              </dl>
 
             </section>
 
@@ -901,33 +921,33 @@
                 </span>
               </h1>
 
-              <dl>
+              <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-                <dt id="forward-sexp"><kbd class="built-in">C-M-f</kbd>, <kbd class="built-in">C-M-b</kbd> <a href="#forward-sexp" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">forward-sexp</code>, <code class="built-in">backward-sexp</code>.</p>
+                <article class="card" id="forward-sexp">
+                  <h1><a href="#forward-sexp"><code class="built-in">forward-sexp</code>, <code class="built-in">backward-sexp</code>.</a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-M-f</kbd>, <kbd class="built-in">C-M-b</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="beginning-of-defun"><kbd class="built-in">C-M-a</kbd>, <kbd class="built-in">C-M-e</kbd> <a href="#beginning-of-defun" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">beginning-of-defun</code>, <code class="built-in">end-of-defun</code>.</p>
+                <article class="card" id="beginning-of-defun">
+                  <h1><a href="#beginning-of-defun"><code class="built-in">beginning-of-defun</code>, <code class="built-in">end-of-defun</code>.</a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-M-a</kbd>, <kbd class="built-in">C-M-e</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="kill-sexp"><kbd class="built-in">C-M-k</kbd> <a href="#kill-sexp" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">kill-sexp</code></p>
+                <article class="card" id="kill-sexp">
+                  <h1><a href="#kill-sexp"><code class="built-in">kill-sexp</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-M-k</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-                <dt id="indent-sexp"><kbd class="built-in">C-M-q</kbd> <a href="#indent-sexp" class="anchor">⚓</a></dt>
-                <dd>
-                  <p><code class="built-in">indent-sexp</code></p>
+                <article class="card" id="indent-sexp">
+                  <h1><a href="#indent-sexp"><code class="built-in">indent-sexp</code></a></h1>
+                  <p class="hoisted binding"><kbd class="built-in">C-M-q</kbd></p>
                   <p>TODO</p>
-                </dd>
+                </article>
 
-              </dl>
+              </div>
 
             </section>
 
@@ -946,10 +966,6 @@
                 </span>
               </h1>
 
-              <dl>
-
-              </dl>
-
             </section>
 
             <section id="almost-never-used-commands">
@@ -966,10 +982,6 @@
                   <span class="crumb"><span class="s"> » </span><a class="here">Almost never used commands</a></span>
                 </span>
               </h1>
-
-              <dl>
-
-              </dl>
 
             </section>
 

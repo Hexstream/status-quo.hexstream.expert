@@ -1,3 +1,5 @@
+@import "https://global.hexstream.dev/css/cards.css";
+
 kbd.key-sequence {
     padding: 0.1em 0.2em;
     margin: 0 0.2em;
@@ -14,13 +16,15 @@ kbd.key-sequence kbd, kbd.key-sequence var {
 }
 
 .built-in {
-    color: green;
+    color: green !important;
 }
 
 .custom {
-    color: orange;
+    color: orange !important;
 }
 
-dd p:first-child {
-    margin-top: 0.5em;
+
+.cards .card .hoisted {
+    font-size: large;
+    opacity: 1;
 }

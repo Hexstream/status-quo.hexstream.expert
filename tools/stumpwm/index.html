@@ -33,7 +33,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-08-04">4 august 2017</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2021-11-28">28 november 2021</time><span>.</span></p>
 
     </nav>
 
@@ -148,53 +148,66 @@
 
             <p>So I just have 4 permanent workspaces (imported from my pre-StumpWM days) that are set up in <a href="https://github.com/Hexstream/hexstream-stumpwmrc/blob/master/hexstream-stumpwmrc.lisp">my <code>.stumpwmrc</code> file</a>:</p>
 
-            <dl>
+            <div class="cards cards-link-to-themselves">
 
-              <dt class="custom" id="overview_workspaces_normal">① Normal <a href="#overview_workspaces_normal" class="anchor">⚓</a></dt>
-              <dd>
+              <article class="card" id="overview_workspaces_normal">
+                <h1><a href="#overview_workspaces_normal" class="custom">① Normal</a></h1>
                 <p>Despite the name I normally don't use this one, calling it "Misc" would be more accurate.</p>
-                <p>One particular recurring use for it is when I'm in the middle of something and the Ubuntu update thing (whatever it's called) pops up, the window doesn't even have time to render and I can immediately shoot it out of the way to this workspace with <kbd class="key-sequence"><kbd>Ctrl-t</kbd> g m <var>1</var></kbd>, pretty much by muscle memory alone. <small>(I know there's a feature to automatically assign particular types of windows to particular workspaces, but it could be easier to setup and anyway I don't really care.)</small></p>
-              </dd>
+              </article>
 
-              <dt class="custom" id="overview_workspaces_dev">② Dev <a href="#overview_workspaces_dev" class="anchor">⚓</a></dt>
-              <dd>
+              <article class="card" id="overview_workspaces_dev">
+                <h1><a href="#overview_workspaces_dev" class="custom">② Dev</a></h1>
                 <p>Most of the real action happens in this workspace.</p>
                 <p>What's more, most everything happens in 3 windows:</p>
-
-                <dl>
-
-                  <td>① Emacs</td>
-                  <dd>
+                <div class="cards">
+                  <article class="card">
+                    <h1>① Emacs</h1>
                     <p>For all programming and other text editing needs.</p>
-                  </dd>
+                  </article>
+                  <article class="card">
+                    <h1>② Browser (Google Chrome)</h1>
+                    <p>
+                      For all web browsing needs.
+                      <br/>
+                      (Except very occasional firefox testing.)
+                    </p>
+                  </article>
+                  <article class="card">
+                    <h1>③ Terminal (gnome-terminal)</h1>
+                    <p>
+                      Runs <code>screen</code> to accomodate an unlimited number of terminalsin the one window,
+                      <br/>
+                      though I usually have no more than 3 or 4 at once.
+                    </p>
+                    <p>
+                      <small>
+                        (I frequently find myself opening more terminal windows to do something quick and then forget to close them
+                        <br/>
+                        so I sometimes have up to 3 additional nonsense terminal windows open that I then have to close... Bad habits die hard.)
+                      </small>
+                    </p>
+                  </article>
+                </div>
+              </article>
 
-                  <td>② Browser (Google Chrome)</td>
-                  <dd><p>For all web browsing needs. (Except occasional firefox testing.)</p></dd>
-
-                  <td>③ Terminal (gnome-terminal)</td>
-                  <dd>
-                    <p>Runs <code>screen</code> to accomodate an unlimited number of terminals in the one window, though I usually have no more than 3 or 4 at once.</p>
-                    <p><small>(I frequently find myself opening more terminal windows to do something quick and then forget to close them so I sometimes have up to 3 additional nonsense terminal windows open that I then have to close... Bad habits die hard.)</small></p>
-                  </dd>
-
-                </dl>
-
-              </dd>
-
-              <dt class="custom" id="overview_workspaces_games">③ Games <a href="#overview_workspaces_games" class="anchor">⚓</a></dt>
-              <dd>
+              <article class="card" id="overview_workspaces_games">
+                <h1><a href="#overview_workspaces_games" class="custom">③ Games</a></h1>
                 <p>For when I want to waste some time in one way or another.</p>
-                <p>I also use it if I want some background music.<br /><small>(<code>mplayer <var>sound-file</var> -loop 0</code>)</small></p>
+                <p>
+                  I also use it if I want some background music.
+                  <br />
+                  <small>(<code>mplayer <var>sound-file</var> -loop 0</code>)</small>
+                </p>
                 <p>And sometimes if I just want to do something trivial (but potentially involving more than one window) real quick.</p>
-              </dd>
+              </article>
 
-              <dt class="custom" id="overview_workspaces_chat">④ Chat <a href="#overview_workspaces_chat" class="anchor">⚓</a></dt>
-              <dd>
-                <p>For rare IRC-ing occasions.</p>
+              <article class="card" id="overview_workspaces_chat">
+                <h1><a href="#overview_workspaces_chat" class="custom">④ Chat</a></h1>
+                <p>For very rare chatting occasions.</p>
                 <p>I also sometimes use it for other purposes if the <code class="custom">Normal</code> workspace is cluttered up with other stuff.</p>
-              </dd>
+              </article>
 
-            </dl>
+            </div>
 
           </section>
 
@@ -247,11 +260,11 @@
               </span>
             </h1>
 
-            <dl>
+            <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-              <dt id="vgroups"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> G</kbd> <a href="#vgroups" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">vgroups</code></p>
+              <article class="card" id="vgroups">
+                <h1><a href="#vgroups"><code class="built-in">vgroups</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> G</kbd></p>
                 <figure>
                   <a href="vgroups.png" target="_blank"><img src="vgroups.png" alt="[Example vgroups output]"/></a>
                   <figcaption>Example vgroups output.<br /><small>(By default, shown on the top right of the screen.)</small></figcaption>
@@ -260,57 +273,72 @@
                   <br />along with all of their window numbers and titles.</p>
                 <p>The selected workspace and selected window in each workspace are indicated with a star.</p>
                 <p>This shows so much information at once that I never use <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> w</kbd> (<code class="built-in">windows</code>).</p>
-                <p>(Auto-hides at the next window manager command or after a timeout.
-                  <br />I almost always hide it immediately with <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-g</kbd></kbd>.)</p>
-              </dd>
+                <p>
+                  (Auto-hides at the next window manager command or after a timeout.
+                  <br />
+                  I almost always hide it immediately with <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-g</kbd></kbd>.)
+                </p>
+              </article>
 
-              <dt id="gselect"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g 1</kbd>, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g 2</kbd>, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g 3</kbd>, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g 4</kbd> <a href="#gselect" class="anchor">⚓</a></dt>
-              <dt><kbd class="key-sequence custom"><kbd>Super-1</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-2</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-3</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-4</kbd></kbd></dt>
-              <dd>
-                <p><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code>, <code class="built-in">gselect 4</code>.</p>
-                <p>Switch to one of my <a href="#overview_workspaces">4 workspaces</a>. If I already have both hands on the keyboard, I usually use the built-in bindings. Otherwise, I use my custom one-keystroke bindings.</p>
-              </dd>
+              <article class="card" id="gselect">
+                <h1><a href="#gselect"><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code>, <code class="built-in">gselect 4</code></a></h1>
+                <p class="hoisted binding">
+                  <kbd class="key-sequence custom"><kbd>Super-1</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-2</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-3</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-4</kbd></kbd>
+                </p>
+                <p>Switch to one of my <a href="#overview_workspaces">4 workspaces</a>.</p>
+              </article>
 
-              <dt id="other-in-frame"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-t</kbd></kbd> <a href="#other-in-frame" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">other-in-frame</code></p>
+              <article class="card" id="other-in-frame">
+                <h1><a href="#other-in-frame"><code class="built-in">other-in-frame</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-t</kbd></kbd></p>
                 <p>Display the current frame's most recently selected window.</p>
-                <p>This lets one quickly switch back and forth between two windows, which I tend to do way more than splitting the screen into multiple frames.</p>
-              </dd>
+                <p>
+                  This lets one quickly switch back and forth between two windows,
+                  <br/>
+                  which I tend to do way more than splitting the screen into multiple frames.
+                </p>
+              </article>
 
-              <dt id="select-window-by-number"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <var>digit</var></kbd> <a href="#select-window-by-number" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">select-window-by-number</code></p>
-                <p>Select the window with the corresponding <var>digit</var> in the current workspace, switching to the frame it's associated with in the process.</p>
-              </dd>
+              <article class="card" id="select-window-by-number">
+                <h1><a href="#select-window-by-number"><code class="built-in">select-window-by-number</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <var>digit</var></kbd></p>
+                <p>
+                  Select the window with the corresponding <var>digit</var> in the current workspace,
+                  <br/>
+                  switching to the frame it's associated with in the process.
+                </p>
+              </article>
 
-              <dt id="pull-hidden-next"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> n</kbd>, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> p</kbd> <a href="#pull-hidden-next" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">pull-hidden-next</code>, <code class="built-in">pull-hidden-previous</code>.</p>
+              <article class="card" id="pull-hidden-next">
+                <h1><a href="#pull-hidden-next"><code class="built-in">pull-hidden-next</code>, <code class="built-in">pull-hidden-previous</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> n</kbd>, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> p</kbd></p>
                 <p>Select the next or previous window in the current frame.</p>
-              </dd>
+              </article>
 
-              <dt id="delete"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-k</kbd></kbd> <a href="#delete" class="anchor">⚓</a></dt>
-              <dt><kbd class="key-sequence custom"><kbd>Super-a</kbd></kbd></dt>
-              <dd>
-                <p><code class="built-in">delete</code></p>
-                <p>Close current window normally.</p>
-              </dd>
+              <article class="card" id="delete">
+                <h1><a href="#delete"><code class="built-in">delete</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-k</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-a</kbd></kbd></p>
+                <p>Close the current window normally.</p>
+              </article>
 
-              <dt id="kill"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-K</kbd></kbd> <a href="#kill" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">kill</code></p>
+              <article class="card" id="kill">
+                <h1><a href="#kill"><code class="built-in">kill</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-K</kbd></kbd></p>
                 <p>Close current window forcibly, killing the underlying application.</p>
-              </dd>
+              </article>
 
-              <dt id="gmove"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g m</kbd> <a href="#gmove" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code>gmove</code></p>
+              <article class="card" id="gmove">
+                <h1><a href="#gmove"><code class="built-in">gmove</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g m</kbd></p>
                 <p>Move the current window to another workspace.</p>
-                <p>Particularly useful if, for instance, a chat window pops up while I'm in the <code class="custom">Dev</code> workspace because someone messages me. Then I send it to the <code class="custom">Chat</code> workspace with <kbd class="key-sequence"><kbd>Ctrl-t</kbd> g m 4 RET</kbd>.</p>
-              </dd>
+                <p>
+                  Particularly useful if, for instance, a chat window pops up while I'm in the <code class="custom">Dev</code> workspace because someone messages me.
+                  <br/>
+                  Then I send it to the <code class="custom">Chat</code> workspace with <kbd class="key-sequence"><kbd>Ctrl-t</kbd> g m 4 RET</kbd>.
+                </p>
+              </article>
 
-            </dl>
+            </div>
 
             <footer>
 
@@ -334,36 +362,44 @@
               </span>
             </h1>
 
-            <dl>
+            <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-              <dt id="emacs"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e e</kbd> (mnemonic: "Execute Emacs") <a href="#emacs" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">emacs</code></p>
+              <article class="card" id="emacs">
+                <h1><a href="#emacs"><code class="built-in">emacs</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e e</kbd> (mnemonic: "Execute Emacs")</p>
                 <p>Start an emacs instance, or switch to it if there's already one.</p>
-                <p>(Switching to it as in going to the correct workspace and selecting its window, pulling it in the current frame first if necessary. I'm not sure what happens if there are multiple emacs windows (emacs frames), I almost always use only one.)</p>
-              </dd>
+                <p>
+                  (Switching to it as in going to the correct workspace and selecting its window, pulling it in the current frame first if necessary.
+                  <br/>
+                  I'm not sure what happens if there are multiple emacs windows (emacs frames), I almost always use only one.)
+                </p>
+              </article>
 
-              <dt id="google-chrome"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e b</kbd> (mnemonic: "Execute Browser") <a href="#google-chrome" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">google-chrome</code></p>
+              <article class="card" id="google-chrome">
+                <h1><a href="#google-chrome"><code class="custom">google-chrome</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e b</kbd> (mnemonic: "Execute Browser")</p>
                 <p>Make a new browser window, regardless of if there's already one or not.</p>
-              </dd>
+              </article>
 
-              <dt id="gnome-terminal"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e c</kbd> (mnemonic: "Execute Console") <a href="#gnome-terminal" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">gnome-terminal</code></p>
+              <article class="card" id="gnome-terminal">
+                <h1><a href="#gnome-terminal"><code class="custom">gnome-terminal</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e c</kbd> (mnemonic: "Execute Console")</p>
                 <p>Start a terminal instance, or switch to it if there's already one.</p>
-                <p>(I almost always use a single terminal window, with <code>screen</code>. I sometimes open another terminal window to try something real quick and then immediately close it.)</p>
-              </dd>
+                <p>
+                  (I almost always use a single terminal window, with <code>screen</code>.
+                  <br/>
+                  I sometimes open another terminal window to try something real quick and then immediately close it.)
+                </p>
+              </article>
 
-              <dt id="nautilus"><kbd class="key-sequence custom"><kbd>Super-e</kbd></kbd> <a href="#nautilus" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">exec nautilus</code></p>
+              <article class="card" id="nautilus">
+                <h1><a href="#nautilus"><code class="custom">exec nautilus</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Super-e</kbd></kbd></p>
                 <p>Open file browser in home directory.</p>
                 <p>(Keybinding inspired by Windows' <kbd class="key-sequence"><kbd>Win-E</kbd></kbd>.)</p>
-              </dd>
+              </article>
 
-            </dl>
+            </div>
 
           </section>
 
@@ -381,43 +417,42 @@
               </span>
             </h1>
 
-            <dl>
+            <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-              <dt id="send-escape"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> t</kbd> <a href="#send-escape" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code>send-escape</code></p>
+              <article class="card" id="send-escape">
+                <h1><a href="#send-escape"><code class="built-in">send-escape</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> t</kbd></p>
                 <p>Send a <kbd class="key-sequence"><kbd>Ctrl-t</kbd></kbd> to the current application.</p>
-              </dd>
+              </article>
 
-              <dt id="banish"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> b</kbd> <a href="#banish" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code>banish</code></p>
+              <article class="card" id="banish">
+                <h1><a href="#banish"><code class="built-in">banish</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> b</kbd></p>
                 <p>Put the cursor out of the way at the bottom right corner of the screen.</p>
-              </dd>
+              </article>
 
-              <dt id="amixer-master"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x v</kbd> <a href="#amixer-master" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">amixer-master</code></p>
+              <article class="card" id="amixer-master">
+                <h1><a href="#amixer-master"><code class="custom">amixer-master</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x v</kbd></p>
                 <p>Change the global sound level. Asks for a percentage.</p>
-                <p><code>1</code>, <code>2</code>, <code>3</code> and <code>4</code> are shortcuts for 25%, 50%, 75% and 100%, respectively.
-                  <br />Enter <code>01</code> for 1%. (Sometimes useful with headphones, surprisingly.)</p>
-              </dd>
+                <p><code>1</code>, <code>2</code>, <code>3</code> and <code>4</code> are shortcuts for 33%, 50%, 75% and 100%, respectively.</p>
+              </article>
 
-              <dt id="open-parens"><kbd class="key-sequence custom"><kbd>F32</kbd></kbd> <small>(my physical Right Shift is mapped to F32)</small> <a href="#open-parens" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">open-parens</code></p>
+              <article class="card" id="open-parens">
+                <h1><a href="#open-parens"><code class="custom">open-parens</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>F32</kbd></kbd> <small>(my physical Right Shift is mapped to F32)</small></p>
                 <p>Send "(" and ")" to the current application, then "left" to put the cursor inside the parentheses.</p>
                 <p>Works with almost all applications, but not <code>gnome-terminal</code>, for some reason.</p>
-              </dd>
+              </article>
 
-              <dt id="open-double-quotes"><kbd class="key-sequence custom"><kbd>Ctrl-F32</kbd></kbd> <a href="#open-double-quotes" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">open-double-quotes</code></p>
+              <article class="card" id="open-double-quotes">
+                <h1><a href="#open-double-quotes"><code class="custom">open-double-quotes</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-F32</kbd></kbd></p>
                 <p>Send two double quotes to the current application, then "left" to put the cursor inside them.</p>
                 <p>Works with almost all applications, but not <code>gnome-terminal</code>, for some reason.</p>
-              </dd>
+              </article>
 
-            </dl>
+            </div>
 
           </section>
 
@@ -442,23 +477,15 @@
             </span>
           </h1>
 
-          <dl>
+          <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-            <dt id="fullscreen"><kbd class="key-sequence custom"><kbd>Super-f</kbd></kbd> <a href="#fullscreen" class="anchor">⚓</a></dt>
-            <dd>
-              <p><code class="built-in">fullscreen</code></p>
+            <article class="card" id="fullscreen">
+              <h1><a href="#fullscreen"><code class="built-in">fullscreen</code></a></h1>
+              <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Super-f</kbd></kbd></p>
               <p>Make the current window fullscreen.</p>
-            </dd>
+            </article>
 
-            <dt id="super-bookmarks"><kbd class="key-sequence custom"><kbd>Super-d</kbd></kbd> (qwerty: <kbd class="key-sequence"><kbd>Super-h</kbd></kbd>) (mnemonic: "Horaire" ("schedule")) <a href="#super-bookmarks" class="anchor">⚓</a></dt>
-            <dt><kbd class="key-sequence custom"><kbd>Super-y</kbd></kbd> (qwerty: <kbd class="key-sequence"><kbd>Super-t</kbd></kbd>) (mnemonic: "Terrebonne" (my city))</dt>
-            <dd>
-              <p><code class="custom">exec google-chrome http://horairetele.canoe.com</code><br /><code class="custom">exec google-chrome http://www.meteomedia.com/weather/caqc0750</code></p>
-
-              <p>TV schedule, weather. Think of them as "super bookmarks".</p>
-            </dd>
-
-          </dl>
+          </div>
 
         </section>
 
@@ -503,35 +530,46 @@
               </span>
             </h1>
 
-            <dl>
+            <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-              <dt id="where-is"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h w</kbd> <a href="#where-is" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">where-is</code></p>
+              <article class="card" id="where-is">
+                <h1><a href="#where-is"><code class="built-in">where-is</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h w</kbd></p>
                 <p>Show what key sequence(s) will invoke the given <var>command</var>.</p>
-                <p>If the command is not bound to any key sequence, you can still invoke it by name with <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> ;</kbd> (<code class="built-in">colon</code>).</p>
-              </dd>
+                <p>
+                  If the command is not bound to any key sequence,
+                  <br/>
+                  you can still invoke it by name with <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> ;</kbd> (<code class="built-in">colon</code>).
+                </p>
+              </article>
 
-              <dt id="describe-key"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h k</kbd> <a href="#describe-key" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">describe-key</code></p>
+              <article class="card" id="describe-key">
+                <h1><a href="#describe-key"><code class="built-in">describe-key</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h k</kbd></p>
                 <p>Show what command, if any, is bound to the given <var>key sequence</var>.</p>
-              </dd>
+              </article>
 
-              <dt id="describe-command"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h c</kbd> <a href="#describe-command" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">describe-command</code></p>
+              <article class="card" id="describe-command">
+                <h1><a href="#describe-command"><code class="built-in">describe-command</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h c</kbd></p>
                 <p>Show a small description for a command.</p>
-              </dd>
+              </article>
 
-              <dt id="partial-key-sequence-help"><kbd class="long key-sequence built-in"><var>partial-key-sequence</var> <kbd>Ctrl-h</kbd></kbd> <a href="#partial-key-sequence-help" class="anchor">⚓</a></dt>
-              <dd>
+              <article class="card" id="partial-key-sequence-help">
+                <h1><a href="#partial-key-sequence-help">Partial key sequence help</a></h1>
+                <p class="hoisted binding"><kbd class="long key-sequence built-in"><var>partial-key-sequence</var> <kbd>Ctrl-h</kbd></kbd></p>
                 <p>Lists all keybindings reachable from the <var>partial-key-sequence</var>.</p>
                 <p>For instance, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h <kbd>Ctrl-h</kbd></kbd> usefully lists all interactive help commands!</p>
-                <p>(I almost never use those anymore, but they're of particular importance to newbies or those actively trying to learn more keybindings and commands. Or people documenting their StumpWM status quo!)</p>
-              </dd>
+                <p>
+                  (I almost never use those anymore, but they're of particular importance to newbies
+                  <br/>
+                  or those actively trying to learn more keybindings and commands.
+                  <br/>
+                  Or people documenting their StumpWM status quo!)
+                </p>
+              </article>
 
-            </dl>
+            </div>
 
             <p>There's also <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h f</kbd> (<code class="built-in">describe-function</code>) and <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h v</kbd> (<code class="built-in">describe-variable</code>) but I never use them.</p>
 
@@ -552,54 +590,58 @@
             </h1>
 
             <p>StumpWM's ability to imitate emacs' windowing system is one of its most touted features, and yet I almost never use it. I usually have a single frame (and therefore a single window) visible in each workspace.</p>
-            <p>I think I'm simply not using enough windows at once to make it worthwhile, besides rare special cases where I do need to see 2 or more windows at the same time. Also, with my 2003 vintage hardware I only have one screen at 1024x768, which is a pretty small resolution these days (I guess? I'm so out of the loop for these things), at least in the desktop category.</p>
+            <p>I think I'm simply not using enough windows at once to make it worthwhile, besides rare special cases where I do need to see 2 or more windows at the same time.</p>
 
-            <dl>
+            <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-              <dt id="vsplit"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> s</kbd> <a href="#vsplit" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">vsplit</code></p>
+              <article class="card" id="vsplit">
+                <h1><a href="#vsplit"><code class="built-in">vsplit</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> s</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> 2</kbd> (<code>split-window-vertically</code>).</p>
                 <p>Useful if I need to see 2 windows at the same time.</p>
-              </dd>
+              </article>
 
-              <dt id="hsplit"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> S</kbd> <a href="#hsplit" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">hsplit</code></p>
+              <article class="card" id="hsplit">
+                <h1><a href="#hsplit"><code class="built-in">hsplit</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> S</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> 3</kbd> (<code>split-window-horizontally</code>).</p>
                 <p>Useful in very special situations where I want to do a side-by-side comparison.</p>
-              </dd>
+              </article>
 
-              <dt id="only"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> Q</kbd> <a href="#only" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">only</code></p>
+              <article class="card" id="only">
+                <h1><a href="#only"><code class="built-in">only</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> Q</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> 1</kbd> (<code>delete-other-windows</code>).</p>
                 <p>Effectively returns the current workspace to the usual mode of operation, in my case.</p>
-              </dd>
+              </article>
 
-              <dt id="fnext"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> o</kbd> <a href="#fnext" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">fnext</code></p>
+              <article class="card" id="fnext">
+                <h1><a href="#fnext"><code class="built-in">fnext</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> o</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> o</kbd> (<code>other-window</code>).</p>
-              </dd>
+              </article>
 
-              <dt id="balance-frames"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> +</kbd> <a href="#balance-frames" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">balance-frames</code></p>
+              <article class="card" id="balance-frames">
+                <h1><a href="#balance-frames"><code class="built-in">balance-frames</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> +</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> +</kbd> (<code>balance-windows</code>).</p>
-                <p>I almost always invoke this right after splitting twice in the same orientation, to have a 1/3:1/3:1/3 split instead of 1/2:1/4:1/4.</p>
-              </dd>
+                <p>
+                  I almost always invoke this right after splitting twice in the same orientation,
+                  <br/>
+                  to have a 1/3:1/3:1/3 split instead of 1/2:1/4:1/4.
+                </p>
+              </article>
 
-              <dt id="iresize"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> r</kbd> <a href="#iresize" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">iresize</code></p>
+              <article class="card" id="iresize">
+                <h1><a href="#iresize"><code class="built-in">iresize</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> r</kbd></p>
                 <p>Useful in very special situations where I need very specific frame sizes.</p>
                 <p>Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to expand or shrink the frame vertically.</p>
                 <p>Use <kbd>C-f</kbd> and <kbd>C-b</kbd> to expand or shrink the frame horizontally.</p>
                 <p>Use <kbd>RET</kbd> to exit <code>iresize</code> mode.</p>
-              </dd>
+              </article>
 
-            </dl>
+            </div>
 
           </section>
 
@@ -617,56 +659,68 @@
               </span>
             </h1>
 
-            <dl>
+            <div class="cards cards-link-to-themselves cards-contain-hoisted">
 
-              <dt id="loadrc"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x l</kbd> <a href="#loadrc" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">loadrc</code></p>
+              <article class="card" id="loadrc">
+                <h1><a href="#loadrc"><code class="built-in">loadrc</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x l</kbd></p>
                 <p>Reload <code>.stumpwmrc</code> config file.</p>
                 <p>Not quite like having a real <abbr title="Read-Eval-Print-Loop">REPL</abbr>, but usually good enough for simple casual configuration editing and testing.</p>
-              </dd>
+              </article>
 
-              <dt id="lastmsg"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> m</kbd> <a href="#lastmsg" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">lastmsg</code></p>
+              <article class="card" id="lastmsg">
+                <h1><a href="#lastmsg"><code class="built-in">lastmsg</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> m</kbd></p>
                 <p>Display the last StumpWM message again, in case you missed it.</p>
                 <p>Use it multiple times in a row to display previous messages.</p>
-              </dd>
+              </article>
 
-              <dt id="lastmsg-no-timeout"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> M</kbd> <a href="#lastmsg-no-timeout" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">lastmsg-no-timeout</code></p>
-                <p>Display the last message StumpWM displayed again, "indefinitely" until another message comes up or until explicitly dismissed with <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-g</kbd></kbd>. Sometimes useful for longer messages.</p>
-              </dd>
+              <article class="card" id="lastmsg-no-timeout">
+                <h1><a href="#lastmsg-no-timeout"><code class="custom">lastmsg-no-timeout</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> M</kbd></p>
+                <p>
+                  Display the last message StumpWM displayed again, "indefinitely" until another message comes up
+                  <br/>
+                  or until explicitly dismissed with <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-g</kbd></kbd>. Sometimes useful for longer messages.
+                </p>
+              </article>
 
-              <dt id="list-window-properties"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x p</kbd> <a href="#list-window-properties" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">list-window-properties</code></p>
-                <p>Display the X window properties of the current window. Potentially useful notably to know what arguments to give to <code>run-or-raise</code> or to use the feature allowing to assign particular application windows that pop up to particular workspaces, which I just do manually...</p>
-              </dd>
+              <article class="card" id="list-window-properties">
+                <h1><a href="#list-window-properties"><code class="built-in">list-window-properties</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x p</kbd></p>
+                <p>
+                  Display the X window properties of the current window. Potentially useful notably to know what arguments to give to <code>run-or-raise</code>
+                  <br/>
+                  or to use the feature allowing to assign particular application windows that pop up to particular workspaces, which I just do manually...
+                </p>
+              </article>
 
-              <dt id="activate-screensaver"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x b</kbd> (mnemonic: "Blank screen") <a href="#activate-screensaver" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="custom">activate-screensaver</code></p>
+              <article class="card" id="activate-screensaver">
+                <h1><a href="#activate-screensaver"><code class="custom">activate-screensaver</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x b</kbd> (mnemonic: "Blank screen")</p>
                 <p>Activate the screensaver, lock the screen.<br />But usually I just let the screensaver auto-activate with its timeout...</p>
-              </dd>
+              </article>
 
-              <dt id="colon"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> ;</kbd> <a href="#colon" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">colon</code></p>
+              <article class="card" id="colon">
+                <h1><a href="#colon"><code class="built-in">colon</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> ;</kbd></p>
                 <p>Invoke a StumpWM command by name. Similar to emacs' <kbd class="key-sequence"><kbd>M-x</kbd></kbd> (<code>execute-extended-command</code>).</p>
                 <p>Allows one to invoke a command that doesn't (yet) have an assigned keybinding.</p>
                 <p>I use this when I need to invoke <code class="built-in">gfloat-new</code> or <code class="built-in">renumber</code>, which is almost never.</p>
-              </dd>
+              </article>
 
-              <dt id="eval"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> :</kbd> <a href="#eval" class="anchor">⚓</a></dt>
-              <dd>
-                <p><code class="built-in">eval</code></p>
-                <p>Make the underlying Common Lisp implementation evaluate an expression and print any values it returns. Similar to emacs' <kbd class="key-sequence"><kbd>M-:</kbd></kbd> (<code>eval-expression</code>).</p>
+              <article class="card" id="eval">
+                <h1><a href="#eval"><code class="built-in">eval</code></a></h1>
+                <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> :</kbd></p>
+                <p>
+                  Make the underlying Common Lisp implementation evaluate an expression and print any values it returns.
+                  <br/>
+                  Similar to emacs' <kbd class="key-sequence"><kbd>M-:</kbd></kbd> (<code>eval-expression</code>).
+                </p>
                 <p>You can think of it as a one-shot <abbr title="Read-Eval-Print-Loop">REPL</abbr>.</p>
-              </dd>
+              </article>
 
-            </dl>
+            </div>
 
           </section>
 
