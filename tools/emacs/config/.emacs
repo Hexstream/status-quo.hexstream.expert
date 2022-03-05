@@ -236,7 +236,8 @@
 
 (put 'set-goal-column 'disabled nil)
 
-(add-to-list 'auto-mode-alist '("\\.asd" . lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.asd\\'" . lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.mjs\\'" . js2-mode))
 
 (ielm)
 (put 'narrow-to-region 'disabled nil)
