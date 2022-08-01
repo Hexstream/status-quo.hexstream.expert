@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://status-quo.hexstream.expert/services/cloudflare/" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
+    <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Cloudflare | Services | Hexstream's status quo</title>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../services.css" rel="stylesheet" type="text/css" />
+    <link href="../dns-table.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="https://global.hexstream.dev/scripts/arrows-madness.mjs" type="module"></script>
+  </head>
+
+  <body>
+
+    <nav id="top-nav">
+
+      <div class="main">
+
+        <div class="breadcrumbs">
+          <a href="https://www.hexstream.expert/">Jean-Philippe Paradis (Hexstream)</a>
+          <span class="crumb"><span class="s"> » </span><a href="../../">Status quo</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../#services">Services</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Cloudflare</a></span>
+        </div>
+
+      </div>
+
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2022-08-01">1 august 2022</time><span>.</span></p>
+
+    </nav>
+
+    <main>
+
+      <header id="page-header">
+        <h1>Cloudflare</h1>
+        <p class="description"><em>The next AWS!!</em> Faster and cheaper!</p>
+      </header>
+
+      <nav class="tabs">
+        <ul>
+          <li><a href="#usage-notes">Usage notes</a></li>
+          <li><a href="#my-config">My config</a></li>
+        </ul>
+        <ul>
+          <li><a href="../../emerging-changes/#cloudflare">Emerging changes</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.cloudflare.com/" target="_blank">Cloudflare homepage ⬈</a></li>
+        </ul>
+      </nav>
+
+      <section id="usage-notes">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#usage-notes" class="anchor">⚓</a>
+          </span>
+          <span class="breadcrumbs">
+            <a href="#">Cloudflare</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Usage notes</a></span>
+          </span>
+        </h1>
+
+        <p>
+          <strong>As of 1 august 2022, I have migrated ~100% of my web infrastructure to Cloudflare <a href="https://pages.cloudflare.com/" target="_blank">Pages</a>, <a href="https://workers.cloudflare.com/" target="_blank">Workers</a>, <a href="https://www.cloudflare.com/products/r2/" target="_blank">R2</a> and <a href="https://www.cloudflare.com/products/registrar/" target="_blank">Registrar</a>. <em>Highly recommended!</em></strong>
+          <br />
+          (These products are coming out of beta later in 2022.)
+        </p>
+
+        <p>I use <a href="https://github.com/cloudflare/wrangler2" target="_blank">Wrangler</a> for development and deployment, and <a href="https://rclone.org/" target="_blank">rclone</a> to manage R2.</p>
+
+      </section>
+
+      <section id="my-config">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#my-config" class="anchor">⚓</a>
+          </span>
+          <span class="breadcrumbs">
+            <a href="#">Cloudflare</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">My config</a></span>
+          </span>
+        </h1>
+
+        <nav class="tabs">
+          <ul>
+            <li><a href="#my-config_domain-names">Domain names</a></li>
+            <li><a href="#my-config_dns">DNS</a></li>
+          </ul>
+        </nav>
+
+        <section id="my-config_domain-names">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#my-config_domain-names" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#">Cloudflare</a>
+              <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Domain names</a></span>
+            </span>
+          </h1>
+
+          <p>
+            All my domain names are on <a href="https://www.cloudflare.com/products/registrar/" target="_blank">Cloudflare Registrar</a>, except <code>hexstream.dev</code> and <code>hexstream.link</code>
+            <br />
+            which remain on Namecheap until Cloudflare Registrar <a href="https://www.cloudflare.com/tld-policies/" target="_blank">adds support</a> for <code>.dev</code> and <code>.link</code>.
+          </p>
+
+          <p>All these domain names are set to auto-renew one month before expiration.</p>
+
+          <p>See a <a href="https://abc.hexstream.xyz/websites/" target="_blank">slightly more user-friendly list of my websites</a>.</p>
+
+          <div class="scroll">
+
+            <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                   id="my-config_dns_hexstream.dev_table">
+              <colgroup class="weightless">
+                <col />
+              </colgroup>
+              <colgroup span="3" class="main"></colgroup>
+              <thead>
+                <tr>
+                  <th class="category ghost left">Category</th>
+                  <th class="name">Name</th>
+                  <th class="creation-date">Creation date</th>
+                  <th class="comments">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="my-config_domain-names_main-websites">
+                  <th rowspan="4" class="category ghost left">
+                    <a href="#my-config_domain-names_main-websites">Main websites</a>
+                  </th>
+                  <td class="name">hexstreamsoft.com</td>
+                  <td class="creation-date">2006-07-19T22:10:39Z</td>
+                  <td class="comments">My most important realm. My programming stuff.</td>
+                </tr>
+                <tr>
+                  <td class="name">hexstream.expert</td>
+                  <td class="creation-date">2020-05-21T03:14:25Z</td>
+                  <td class="comments">My professional profile.</td>
+                </tr>
+                <tr>
+                  <td class="name">hexstream.net</td>
+                  <td class="creation-date">2014-11-16T16:37:40Z</td>
+                  <td class="comments">Basically, ponies is my religion now.</td>
+                </tr>
+                <tr>
+                  <td class="name">hexstream.xyz</td>
+                  <td class="creation-date">2015-09-21T00:10:53Z</td>
+                  <td class="comments">Various stuff.</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr id="my-config_domain-names_redirects">
+                  <th rowspan="5" class="category ghost left">
+                    <a href="#my-config_domain-names_redirects">Redirects</a>
+                  </th>
+                  <td class="name">phoe.exposed</td>
+                  <td class="creation-date">2020-11-24T18:41:44Z</td>
+                  <td class="comments">Henceforth known as <dfn>Scambird</dfn>.</td>
+                </tr>
+                <tr>
+                  <td class="name">xach.exposed</td>
+                  <td class="creation-date">2020-04-29T23:48:17Z</td>
+                  <td class="comments">I can't remove this old shit, for ethical reasons.</td>
+                </tr>
+                <tr>
+                  <td class="name">hexstream.exposed</td>
+                  <td class="creation-date">2020-12-12T07:09:40Z</td>
+                  <td class="comments">Redirects to whoami.hexstream.xyz.</td>
+                </tr>
+                <tr>
+                  <td class="name">arkentosh.com</td>
+                  <td class="creation-date">2021-03-27T18:52:25Z</td>
+                  <td class="comments">Redirects to pokehidden.archive.hexstream.net, mostly.</td>
+                </tr>
+                <tr>
+                  <td class="name">pokehidden.com</td>
+                  <td class="creation-date">2012-06-05T00:30:26Z</td>
+                  <td class="comments">Redirects to pokehidden.archive.hexstream.net.</td>
+                </tr>
+              </tbody>
+              <tbody class="upcoming">
+                <tr id="my-config_domain-names_future-considerations">
+                  <th rowspan="2" class="category ghost left">
+                    <a href="#my-config_domain-names_future-considerations">Future considerations</a>
+                  </th>
+                  <td class="name">hexstream.org</td>
+                  <td class="creation-date">2017-03-07T20:19:42Z</td>
+                  <td class="comments">Learning stuff, and apps.</td>
+                </tr>
+                <tr>
+                  <td class="name">hexstream.tv</td>
+                  <td class="creation-date">2021-12-10T07:10:57Z</td>
+                  <td class="comments">Streaming stuff.</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+        </section>
+
+        <section id="my-config_dns">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#my-config_dns" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#">Cloudflare</a>
+              <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">DNS</a></span>
+            </span>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li><a href="#my-config_dns_hexstream.dev">hexstream.dev</a></li>
+              <li><a href="#my-config_dns_hexstreamsoft.com">hexstreamsoft.com</a></li>
+              <li><a href="#my-config_dns_hexstream.expert">hexstream.expert</a></li>
+              <li><a href="#my-config_dns_hexstream.net">hexstream.net</a></li>
+              <li><a href="#my-config_dns_hexstream.xyz">hexstream.xyz</a></li>
+            </ul>
+          </nav>
+
+          <section id="my-config_dns_hexstream.dev">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#my-config_dns_hexstreamsoft.com" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#">Cloudflare</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_dns">DNS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">hexstream.dev</a></span>
+              </span>
+            </h1>
+
+            <p>See a <a href="https://abc.hexstream.xyz/websites/#infrastructure" target="_blank">slightly more user-friendly list of infrastructure websites</a>.</p>
+
+            <div class="scroll">
+
+              <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                     id="my-config_dns_hexstream.dev_table">
+                <colgroup class="weightless">
+                  <col />
+                </colgroup>
+                <colgroup span="4" class="main"></colgroup>
+                <thead>
+                  <tr>
+                    <th class="category ghost left">Category</th>
+                    <th class="name">Name</th>
+                    <th class="type">Type</th>
+                    <th class="value">Value</th>
+                    <th class="comments">Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.dev_nameservers">
+                    <th rowspan="3" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.dev_nameservers">Nameservers</a>
+                    </th>
+                    <td class="name">hexstream.dev</td>
+                    <td class="type">SOA</td>
+                    <td class="value">becky.ns.cloudflare.com.<br class="space"/>dns.cloudflare.com.<br class="space"/>2284657791 10000 2400 604800 3600</td>
+                    <td class="comments">Managed by Cloudflare.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="name">hexstreamsoft.com</td>
+                    <td rowspan="2" class="type">NS</td>
+                    <td class="value">becky.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <td class="value">jerome.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.dev_infrastructure">
+                    <th rowspan="4" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.dev_infrastructure">Infrastructure</a>
+                    </th>
+                    <td class="name">global.hexstream.dev</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">global-hexstream-dev.pages.dev</td>
+                    <td class="comments">Some global assets that I reuse across my websites.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">non-free.hexstream.dev</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">non-free-hexstream-dev.pages.dev</td>
+                    <td class="comments">Isolating copyrighted stuff to avoid risk.</td>
+                  </tr>
+                  <tr>
+                    <td class="name" rowspan="2">hexstream.dev</td>
+                    <td class="type" rowspan="2">TXT</td>
+                    <td class="value">Best Pony: Twilight Sparkle</td>
+                    <td class="comments">¯\_(ツ)_/¯</td>
+                  </tr>
+                  <tr class="ownership-verification">
+                    <td class="value">google-site-verification=<var>[see source]</var></td>
+                    <!-- 3jKE1GBbCmsIze7u9BHcwVNijxbJR3YW95FmYpUMBos -->
+                    <td class="comments">Google website ownership verification</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </section>
+
+          <section id="my-config_dns_hexstreamsoft.com">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#my-config_dns_hexstreamsoft.com" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#">Cloudflare</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_dns">DNS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">hexstreamsoft.com</a></span>
+              </span>
+            </h1>
+
+            <p>See a <a href="https://abc.hexstream.xyz/websites/#HexstreamSoft" target="_blank">slightly more user-friendly list of HexstreamSoft websites</a>.</p>
+
+            <div class="scroll">
+
+              <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                     id="my-config_dns_hexstreamsoft.com_table">
+                <colgroup class="weightless">
+                  <col />
+                </colgroup>
+                <colgroup span="4" class="main"></colgroup>
+                <thead>
+                  <tr>
+                    <th class="category ghost left">Category</th>
+                    <th class="name">Name</th>
+                    <th class="type">Type</th>
+                    <th class="value">Value</th>
+                    <th class="comments">Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="my-config_dns_hexstreamsoft.com_nameservers">
+                    <th rowspan="3" class="category ghost left">
+                      <a href="#my-config_dns_hexstreamsoft.com_nameservers">Nameservers</a>
+                    </th>
+                    <td class="name">hexstreamsoft.com</td>
+                    <td class="type">SOA</td>
+                    <td class="value">becky.ns.cloudflare.com.<br class="space"/>dns.cloudflare.com.<br class="space"/>2284689054 10000 2400 604800 3600</td>
+                    <td class="comments">Managed by Cloudflare.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="name">hexstreamsoft.com</td>
+                    <td rowspan="2" class="type">NS</td>
+                    <td class="value">becky.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <td class="value">jerome.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstreamsoft.com_websites" class="redirect">
+                    <th rowspan="8" class="category ghost left">
+                      <a href="#my-config_dns_hexstreamsoft.com_websites">Websites</a>
+                    </th>
+                    <td class="name">hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Redirect.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">www.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">www-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Public Domain Common Lisp R&amp;D</td>
+                  </tr>
+                  <tr>
+                    <td class="name">clos-mop.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">clos-mop-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Modern public domain CLOS MOP spec!</td>
+                  </tr>
+                  <tr>
+                    <td class="name">notes-and-tips.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">notes-and-tips-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Informal yet helpful information on the standard symbols.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">common-lispers.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">common-lispers-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Discover Common Lisp Open Source contributors!</td>
+                  </tr>
+                  <tr>
+                    <td class="name">chat.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">chat-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Please join us for fun <em>on-topic</em> conversations about <abbr title="Common Lisp">CL</abbr>!</td>
+                  </tr>
+                  <tr>
+                    <td class="name">roadmap.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">roadmap-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Please <em>sponsor me</em> to speed up development of these features!</td>
+                  </tr>
+                  <tr>
+                    <td class="name">sponsors.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">sponsors-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Please <em>sponsor me</em> to speed up development of <abbr title="Common Lisp Open Source">CL OSS</abbr>!</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstreamsoft.com_infrastructure">
+                    <th rowspan="11" class="category ghost left">
+                      <a href="#my-config_dns_hexstreamsoft.com_infrastructure">Infrastructure</a>
+                    </th>
+                    <td class="name">tarballs.hexstreamsoft.com</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">tarballs-hexstreamsoft-com.pages.dev</td>
+                    <td class="comments">Quicklisp pulls from this.</td>
+                  </tr>
+                  <tr>
+                    <td class="name" rowspan="5">hexstreamsoft.com</td>
+                    <td class="type" rowspan="5">MX</td>
+                    <td class="value">1 aspmx.l.google.com</td>
+                    <td class="comments" rowspan="5">
+                      <p>Email is now handled by G Suite.<br />Well worth the price.</p>
+                      <p>Seriously, handling email is HELL.<br />Life is too short...</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="value">5 alt1.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="value">5 alt2.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="value">10 alt3.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="value">10 alt4.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="name" rowspan="2">hexstreamsoft.com</td>
+                    <td class="type" rowspan="4">TXT</td>
+                    <td class="value">Best Pony: Twilight Sparkle</td>
+                    <td class="comments">¯\_(ツ)_/¯</td>
+                  </tr>
+                  <tr>
+                    <td class="value">v=spf1 include:_spf.google.com ~all</td>
+                    <td class="comments">Email SPF policy.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">_dmarc.hexstreamsoft.com</td>
+                    <td class="value">v=DMARC1; p=none; <var>[see source]</var></td>
+                    <!-- rua=mailto:hexstream@hexstreamsoft.com -->
+                    <td class="comments">Email DMARC Policy</td>
+                  </tr>
+                  <tr>
+                    <td class="name">google._domainkey.hexstreamsoft.com</td>
+                    <td class="value">v=DKIM1; k=rsa; <var>[see source]</var></td>
+                    <!-- p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApwq2SRUVxPFNW+fCFfiFzIK+mp7lixZLsnynMvePe9yYN130s9RmkFFI8zXiYUuAjp+o7b6zfC5fFrZ4oR6ByQJxh5UJOxq2rEDcGl+9udmO" "/nrHaZ1P2Vs4UMHrK+ym3qD4WlspntaRNxfkkZxneuVJAggKG+4em2gP5GbAz3kk8FDCjcnN2NJY92QKXkOqUshzIaj1qYQSGO5sD6YLI77K93wjKbZKympP2ocDANFcRHY5GlYD1ayc/WaT0uM1W1Py6+Z+SYGfAnpP4tZ9azbF7P6A0MIDiDPRr8/sBEI88K7jpPUrPEXLsvF1aahAzghFZJ5F6gyvtEZGCeh0PwIDAQAB -->
+                    <td class="comments">Email DKIM public key.</td>
+                  </tr>
+                  <tr class="ownership-verification">
+                    <td class="name">lby6iyzmzs6g.hexstreamsoft.com</td>
+                    <td class="type">CNAME</td>
+                    <td class="value">gv-ibiqaa3o72bo3q.dv.googlehosted.com</td>
+                    <td class="comments">Google website ownership verification</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </section>
+
+          <section id="my-config_dns_hexstream.expert">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#my-config_dns_hexstream.expert" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#">Cloudflare</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_dns">DNS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">hexstream.expert</a></span>
+              </span>
+            </h1>
+
+            <p>See a <a href="https://abc.hexstream.xyz/websites/#Jean-Philippe-Paradis_Hexstream" target="_blank">slightly more user-friendly list of hexstream.expert websites</a>.</p>
+
+            <div class="scroll">
+
+              <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                     id="my-config_dns_hexstream.expert_table">
+                <colgroup class="weightless">
+                  <col />
+                </colgroup>
+                <colgroup span="4" class="main"></colgroup>
+                <thead>
+                  <tr>
+                    <th class="category ghost left">Category</th>
+                    <th class="name">Name</th>
+                    <th class="type">Type</th>
+                    <th class="value">Value</th>
+                    <th class="comments">Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.expert_nameservers">
+                    <th rowspan="3" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.expert_nameservers">Nameservers</a>
+                    </th>
+                    <td class="name">hexstream.dev</td>
+                    <td class="type">SOA</td>
+                    <td class="value">becky.ns.cloudflare.com.<br class="space"/>dns.cloudflare.com.<br class="space"/>2284658521 10000 2400 604800 3600</td>
+                    <td class="comments">Managed by Cloudflare.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="name">hexstream.dev</td>
+                    <td rowspan="2" class="type">NS</td>
+                    <td class="value">becky.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <td class="value">jerome.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.expert_websites" class="redirect">
+                    <th rowspan="4" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.expert_websites">Websites</a>
+                    </th>
+                    <td class="name">hexstreamsoft.expert</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">hexstreamsoft-expert.pages.dev</td>
+                    <td class="comments">Redirect.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">www.hexstream.expert</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">www-hexstream-expert.pages.dev</td>
+                    <td class="comments">Welcome to my professional profile!</td>
+                  </tr>
+                  <tr>
+                    <td class="name">cv.hexstream.expert</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">cv-hexstream-expert.pages.dev</td>
+                    <td class="comments">
+                      15+ years of Common Lisp related work,
+                      <br />
+                      including 10+ years of Open Source.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="name">status-quo.hexstream.expert</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">status-quo-hexstream-expert.pages.dev</td>
+                    <td class="comments">
+                      Helping myself reason about
+                      <br />
+                      my infrastructure, tools and processes.
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.expert_infrastructure">
+                    <th rowspan="2" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.expert_infrastructure">Infrastructure</a>
+                    </th>
+                    <td class="name" rowspan="2">hexstream.dev</td>
+                    <td class="type" rowspan="2">TXT</td>
+                    <td class="value">Best Pony: Twilight Sparkle</td>
+                    <td class="comments">¯\_(ツ)_/¯</td>
+                  </tr>
+                  <tr class="ownership-verification">
+                    <td class="value">google-site-verification=<var>[see source]</var></td>
+                    <!-- uhpYPzz6K28TkkzzUbiWCZzo1GmYGCoWhGAACppZq2U -->
+                    <td class="comments">Google website ownership verification</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </section>
+
+          <section id="my-config_dns_hexstream.net">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#my-config_dns_hexstream.net" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#">Cloudflare</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_dns">DNS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">hexstream.net</a></span>
+              </span>
+            </h1>
+
+            <p>See a <a href="https://abc.hexstream.xyz/websites/#Hexstream-Entertainment" target="_blank">slightly more user-friendly list of Hexstream Entertainment websites</a>.</p>
+
+            <div class="scroll">
+
+              <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                     id="my-config_dns_hexstream.net_table">
+                <colgroup class="weightless">
+                  <col />
+                </colgroup>
+                <colgroup span="4" class="main"></colgroup>
+                <thead>
+                  <tr>
+                    <th class="category ghost left">Category</th>
+                    <th class="name">Name</th>
+                    <th class="type">Type</th>
+                    <th class="value">Value</th>
+                    <th class="comments">Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.net_nameservers">
+                    <th rowspan="3" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.net_nameservers">Nameservers</a>
+                    </th>
+                    <td class="name">hexstream.net</td>
+                    <td class="type">SOA</td>
+                    <td class="value">becky.ns.cloudflare.com.<br class="space"/>dns.cloudflare.com.<br class="space"/>2284674157 10000 2400 604800 3600</td>
+                    <td class="comments">Managed by Cloudflare.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="name">hexstream.net</td>
+                    <td rowspan="2" class="type">NS</td>
+                    <td class="value">becky.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <td class="value">jerome.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.net_websites" class="redirect">
+                    <th rowspan="7" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.net_websites">Websites</a>
+                    </th>
+                    <td class="name">hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">hexstream-net.pages.dev</td>
+                    <td class="comments">Redirect.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">www.hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">www-hexstream-net.pages.dev</td>
+                    <td class="comments">Trivial portal.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">ponies.hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">ponies-hexstream-net.pages.dev</td>
+                    <td class="comments">Pony stuff.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">clop.ponies.hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">clop-ponies-hexstream-net.pages.dev</td>
+                    <td class="comments">Pony porn! ¯\_(ツ)_/¯</td>
+                  </tr>
+                  <tr class="redirect">
+                    <td class="name">archive.hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">archive-hexstream-net.pages.dev</td>
+                    <td class="comments">Redirect.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">pokehidden.archive.hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">pokehidden-archive-hexstream-net.pages.dev</td>
+                    <td class="comments">Best archive of Pokéhidden's 2015 site.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">modern.pokehidden.archive.hexstream.net</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">modern-pokehidden-archive-hexstream-net.pages.dev</td>
+                    <td class="comments">A complement to the Pokéhidden Archive.</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.net_infrastructure">
+                    <th rowspan="9" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.net_infrastructure">Infrastructure</a>
+                    </th>
+                    <td class="name" rowspan="3">hexstream.net</td>
+                    <td class="type" rowspan="3">MX</td>
+                    <td class="value">33 isaac.mx.cloudflare.net</td>
+                    <td class="comments" rowspan="3">Just aliases to <code>hexstreamsoft.com</code>.</td>
+                  </tr>
+                  <tr>
+                    <td class="value">90 amir.mx.cloudflare.net</td>
+                  </tr>
+                  <tr>
+                    <td class="value">94 linda.mx.cloudflare.net</td>
+                  </tr>
+                  <tr>
+                    <td class="name" rowspan="2">hexstream.net</td>
+                    <td class="type" rowspan="4">TXT</td>
+                    <td class="value">Best Pony: Twilight Sparkle</td>
+                    <td class="comments">¯\_(ツ)_/¯</td>
+                  </tr>
+                  <tr>
+                    <td class="value">
+                      v=spf1 include:_spf.mx.cloudflare.net
+                      <br class="space"/>
+                      include:_spf.google.com ~all
+                    </td>
+                    <td class="comments">Email SPF policy.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">_dmarc.hexstreamsoft.com</td>
+                    <td class="value">v=DMARC1; p=none; <var>[see source]</var></td>
+                    <!-- rua=mailto:hexstream@hexstreamsoft.com -->
+                    <td class="comments">Email DMARC Policy</td>
+                  </tr>
+                  <tr>
+                    <td class="name">google._domainkey.hexstream.net</td>
+                    <td class="value">v=DKIM1; k=rsa; <var>[see source]</var></td>
+                    <!-- p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxo5ZJo3yxJNhhHbL7HkHhS5c8fwTfllMrlLcqb9pCZGS+b/u7a3+G0dKtBVJqFPUtgPA/eYNp3P+PWfZYBTBLwkel32IaJaeQluEw9hhtd9T0dxNtOprj2vFUlNhrT0rEmseupctPotnjhWG5kqfRe6avOUkUvq0Ny1PAfLXvNs/pkAVrviRF5WL2R4go8TvGjJj5v0y+P0uGuueA8yFGSgknWvQ9smPIMcEQmwDPXvpqB53Ixb/RmGTt6iBwyoFJrSbmiqfky2MmsQXSMF4QuadvJKQRWgiI4HIBZyfyjWB4bNIaBsxMY8ukH9EhsMlseKM+3vGbOlIi0NrrmJbBwIDAQAB -->
+                    <td class="comments">Email DKIM public key.</td>
+                  </tr>
+                  <tr class="ownership-verification">
+                    <td class="name">rgt5cnj54i75.hexstream.net</td>
+                    <td class="type">CNAME</td>
+                    <td class="value">gv-3cbkt65nwtjvke.dv.googlehosted.com</td>
+                    <td class="comments">Google website ownership verification</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </section>
+
+          <section id="my-config_dns_hexstream.xyz">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#my-config_dns_hexstream.xyz" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#">Cloudflare</a>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config">My config</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#my-config_dns">DNS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">hexstream.xyz</a></span>
+              </span>
+            </h1>
+
+            <p>See a <a href="https://abc.hexstream.xyz/websites/#Hexstream-Misc" target="_blank">slightly more user-friendly list of Hexstream Misc websites</a>.</p>
+
+            <div class="scroll">
+
+              <table class="dns-table contains-weightless-colgroups contains-main-colgroup"
+                     id="my-config_dns_hexstream.xyz_table">
+                <colgroup class="weightless">
+                  <col />
+                </colgroup>
+                <colgroup span="4" class="main"></colgroup>
+                <thead>
+                  <tr>
+                    <th class="category ghost left">Category</th>
+                    <th class="name">Name</th>
+                    <th class="type">Type</th>
+                    <th class="value">Value</th>
+                    <th class="comments">Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.xyz_nameservers">
+                    <th rowspan="3" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.xyz_nameservers">Nameservers</a>
+                    </th>
+                    <td class="name">hexstream.xyz</td>
+                    <td class="type">SOA</td>
+                    <td class="value">becky.ns.cloudflare.com.<br class="space"/>dns.cloudflare.com.<br class="space"/>2027767126 10000 2400 604800 3600</td>
+                    <td class="comments">Managed by Cloudflare.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="name">hexstream.xyz</td>
+                    <td rowspan="2" class="type">NS</td>
+                    <td class="value">becky.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                  <tr>
+                    <td class="value">jerome.ns.cloudflare.com</td>
+                    <td class="comments"></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.xyz_websites">
+                    <th rowspan="13" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.xyz_websites">Websites</a>
+                    </th>
+                    <td class="name">abc.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">abc-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Main portal leading to my main sites.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">whoami.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">whoami-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Too Much Information™ about me. LOL?</td>
+                  </tr>
+                  <tr>
+                    <td class="name">status.abc.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">status-abc-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Uptime status for all my websites.</td>
+                  </tr>
+                  <tr class="redirect">
+                    <td class="name">hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">hexstream-xyz.pages.dev</td>
+                    <td class="comments">Redirect.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">www.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">www-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Trivial portal.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">workshop.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">workshop-hexstream-xyz</td>
+                    <td class="comments">Hand-written SVG remakes.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">blog.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">blog-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Old incomplete unmaintained shit.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">dumping-grounds.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">dumping-grounds-hexstream-xyz</td>
+                    <td class="comments">Just my boring trash.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">hilarity.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">hilarity-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Reality is stronger than fiction.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">angele.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">angele-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Mother's book. I do <em>not</em> endorse this.</td>
+                  </tr>
+                  <tr class="redirect">
+                    <td class="name">discord.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">discord-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Redirect to dumping grounds.</td>
+                  </tr>
+                  <tr class="redirect">
+                    <td class="name">i18n.discord.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">i18n-discord-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Redirect to dumping grounds.</td>
+                  </tr>
+                  <tr class="redirect">
+                    <td class="name">ert.hexstream.xyz</td>
+                    <td class="type">CNAME PROXIED</td>
+                    <td class="value">ert-hexstream-xyz.pages.dev</td>
+                    <td class="comments">Redirect to dumping grounds.</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr id="my-config_dns_hexstream.xyz_infrastructure">
+                    <th rowspan="10" class="category ghost left">
+                      <a href="#my-config_dns_hexstream.xyz_infrastructure">Infrastructure</a>
+                    </th>
+                    <td class="name" rowspan="5">hexstream.xyz</td>
+                    <td class="type" rowspan="5">MX</td>
+                    <td class="value">1 aspmx.l.google.com</td>
+                    <td class="comments" rowspan="5">Just aliases to <code>hexstreamsoft.com</code>.</td>
+                  </tr>
+                  <tr>
+                    <td class="value">5 alt1.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="value">5 alt2.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="value">10 alt3.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="value">10 alt4.aspmx.l.google.com</td>
+                  </tr>
+                  <tr>
+                    <td class="name" rowspan="2">hexstream.xyz</td>
+                    <td class="type" rowspan="4">TXT</td>
+                    <td class="value">Best Pony: Twilight Sparkle</td>
+                    <td class="comments">¯\_(ツ)_/¯</td>
+                  </tr>
+                  <tr>
+                    <td class="value">v=spf1 include:_spf.google.com ~all</td>
+                    <td class="comments">Email SPF policy.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">_dmarc.hexstreamsoft.com</td>
+                    <td class="value">v=DMARC1; p=none; <var>[see source]</var></td>
+                    <!-- rua=mailto:hexstream@hexstreamsoft.com -->
+                    <td class="comments">Email DMARC Policy</td>
+                  </tr>
+                  <tr>
+                    <td class="name">google._domainkey.hexstream.xyz</td>
+                    <td class="value">v=DKIM1; k=rsa; <var>[see source]</var></td>
+                    <!-- p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhMQHJqLHyefU908Xx8j4UW2s9/wivYi+0XpbSn8740CkHFz3Jww3+4llLfmqTo/0g0yjOicMABNeMpKH159xrzFV8F3s5AgQ8uyfP2lIKDWJ/MW4dC/wd5Ky1mJAzSl9qt8PZs+DjrIiyzCOEcWkqpbu627ZkFL3XHkSP2bCvKxbtfRl5JEKhUFdk/CO2yv0IhpxjJaMoh4fm4mzImU5ZjAwD/SwZT0StFbca2E/jqq5fsQqrKxXlMe4NJ99f42OvYIA+VWlO2wPdLFkCMrb8LkMWCboa9DbCfrJzwbNZUF6fliCTQoGBKuDNucZXge1s/BpMGA+paCN2gZKcu4ydwIDAQAB -->
+                    <td class="comments">Email DKIM public key.</td>
+                  </tr>
+                  <tr class="ownership-verification">
+                    <td class="name">juvl3hwa5dtv.hexstream.xyz</td>
+                    <td class="type">CNAME</td>
+                    <td class="value">gv-zkdsnzzqscm6fd.dv.googlehosted.com</td>
+                    <td class="comments">Google website ownership verification</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#my-config_dns">
+              "<span>DNS</span>" end.
+            </a>
+          </nav>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#my-config">
+            "<span>My config</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstatus-quo.hexstream.expert%2Fservices%2Fcloudflare%2F">✔ HTML5</a>
+        <a href="https://status-quo.hexstream.expert/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstatus-quo.hexstream.expert%2Fservices%2Fcloudflare%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
