@@ -297,8 +297,8 @@
     color: inherit;
 }
 
-.pair-macros:target ~ #feature-descriptions #pair-macros_description h1 .tabs,
-.emacs-nav:target ~ #feature-descriptions #emacs-nav_description h1 .tabs {
+.pair-macros:target ~ #feature-descriptions #pair-macros_description .tabs,
+.emacs-nav:target ~ #feature-descriptions #emacs-nav_description .tabs {
     display: flex;
 }
 
@@ -307,10 +307,10 @@
 .emacs-nav:target ~ #features a[href="#emacs-nav"],
 #mouse-control:target ~ #features a[href="#mouse-control"],
 #mouse-warping:target ~ #features a[href="#mouse-warping"],
-#pair-macros:target ~ #feature-descriptions #pair-macros_description h1 .tabs a[href="#pair-macros"],
-#pair-macros_lower:target ~ #feature-descriptions #pair-macros_description h1 .tabs a[href="#pair-macros_lower"],
-#emacs-nav:target ~ #feature-descriptions #emacs-nav_description h1 .tabs a[href="#emacs-nav"],
-#emacs-nav_lower:target ~ #feature-descriptions #emacs-nav_description h1 .tabs a[href="#emacs-nav_lower"] {
+#pair-macros:target ~ #feature-descriptions #pair-macros_description .tabs a[href="#pair-macros"],
+#pair-macros_lower:target ~ #feature-descriptions #pair-macros_description .tabs a[href="#pair-macros_lower"],
+#emacs-nav:target ~ #feature-descriptions #emacs-nav_description .tabs a[href="#emacs-nav"],
+#emacs-nav_lower:target ~ #feature-descriptions #emacs-nav_description .tabs a[href="#emacs-nav_lower"] {
     color: inherit;
     text-decoration: underline;
 }
@@ -371,21 +371,19 @@
     margin-top: 1em;
 }
 
-#feature-descriptions .card h1 {
+#feature-descriptions .card .title-and-tabs {
     display: flex;
     flex-flow: row;
 }
 
-#feature-descriptions .card h1 .tabs {
+#feature-descriptions .card .tabs {
     display: none;
-    font-size: medium;
-    font-weight: normal;
     margin: 0 0 0 1em;
     position: relative;
     top: 0.2em;
 }
 
-#feature-descriptions .card h1 .tabs ul {
+#feature-descriptions .card .tabs ul {
     margin: 0;
 }
 
