@@ -1,0 +1,20 @@
+/*.sh
+  Content-Type: text/plain; charset=utf-8
+
+/*.desktop
+  Content-Type: text/plain; charset=utf-8
+
+/*.session
+  Content-Type: text/plain; charset=utf-8
+
+/tools/stumpwm/config/.stumpwmrc
+  Content-Type: text/plain; charset=utf-8
+
+/tools/emacs/config/.emacs
+  Content-Type: text/plain; charset=utf-8
+
+/tools/sbcl/config/.sbclrc
+  Content-Type: text/plain; charset=utf-8
+
+/tools/screen/config/.screenrc
+  Content-Type: text/plain; charset=utf-8
