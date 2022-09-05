@@ -211,7 +211,6 @@
   (setf stumpwm:*window-border-style* :thick)
   (flet ((dk (key command)
            (define-key stumpwm:*top-map* (kbd key) command)))
-    (dk "F6" "vgroups")
     (dk "s-b" "banish")
     (dk "s-1" "gselect 1")
     (dk "s-2" "gselect 2")
