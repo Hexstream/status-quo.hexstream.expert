@@ -59,24 +59,28 @@
   (let ((string (stumpwm:run-shell-command "amixer sget Master" t)))
     (parse-integer string :start (1+ (position #\[ string)) :junk-allowed t)))
 
-(defun volcontrol-custom (channel amount &key (messagep t))
-  (let ((previous (get-sound-volume))
-        (percent (parse-integer
-                  (stumpwm:run-shell-command
-                   (format nil "amixer sset ~A ~A | tail -1 | ~
-                                sed 's/^.*\\[\\([[:digit:]]\\+\\)%\\].*$/\\1/'"
-                           channel amount)
-                   t)))
-        (stumpwm:*timeout-wait* 1))
-    (declare (ignore percent))
+(defun format-volume (adjust-mode amount)
+  (format nil "~A%~A" amount (ecase adjust-mode
+                               (:+ "+")
+                               (:- "-")
+                               (:= ""))))
+
+(defun volcontrol-custom (channel adjust-mode amount &key (messagep t))
+  (let ((previous (get-sound-volume)))
+    (stumpwm:run-shell-command (format nil "amixer set ~A ~A"
+                                       channel (format-volume adjust-mode amount))
+     t)
     (when messagep
-      (stumpwm:message (format nil "~A% --> ~A" previous amount)))))
+      (let ((stumpwm:*timeout-wait* 1))
+        (stumpwm:message (format nil "~A% --> ~A%" previous (get-sound-volume)))))))
 
 (defcommand adjust-volume (delta) ((:number "Adjust volume by delta: "))
-  (let ((new (+ (get-sound-volume) delta)))
-    (volcontrol-custom "Master" (format nil "~A%" new)
-                       :messagep nil)
-    (stumpwm:message (format nil "~A%" new))))
+  (multiple-value-bind (adjust-mode delta)
+      (if (>= delta 0)
+          (values :+ delta)
+          (values :- (- delta)))
+    (volcontrol-custom "Master" adjust-mode delta :messagep nil))
+  (stumpwm:message (format nil "~A%" (get-sound-volume))))
 
 (defun get-mouse-location ()
   (let ((output (stumpwm:run-shell-command "xdotool getmouselocation" t)))
@@ -178,14 +182,12 @@
 
 (defcommand amixer-master (percent) ((:string "Set volume: "))
   (if percent
-      (volcontrol-custom "Master" (concatenate 'string
-                                               (or (cdr (assoc percent '(("1" . "33")
-                                                                         ("2" . "50")
-                                                                         ("3" . "75")
-                                                                         ("4" . "100"))
-                                                               :test #'string=))
-                                                   percent)
-                                               "%"))
+      (volcontrol-custom "Master" := (or (cdr (assoc percent '(("1" . "33")
+                                                               ("2" . "50")
+                                                               ("3" . "75")
+                                                               ("4" . "100"))
+                                                     :test #'string=))
+                                         percent))
       (throw 'error "Abort.")))
 
 (defun input-insert-parens (input key)
