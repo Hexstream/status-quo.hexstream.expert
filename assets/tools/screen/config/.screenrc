@@ -1,22 +1,94 @@
-# This is the trivial .screenrc init file of Jean-Philippe Paradis (Hexstream).
-# "screen" is the terminal multiplexer I use.
-# See: https://www.gnu.org/software/screen/
-
-# This is not really documented but it's so trivial that it shouldn't matter.
+# https://status-quo.hexstream.expert/tools/screen/
 
 startup_message off
-
-screen -t ""
-
-bind c screen -t ""
-
-chdir /home/hexstream/data/projects/
-
-# To start working on a particular project:
-# "C-a c" to open a new console
-# "C-a A" to rename new console
-# cd to relevant directory.
-
-# TODO: Document the few other commands I use somewhere.
-
 vbell off
+
+bind c eval "screen -t ''" "title"
+
+screen -t "" "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/blank.sh" ✔
+
+chdir "/home/hexstream/data/projects/"
+
+# Overrides lockscreen binding, which I never use anyway.
+bind x command -c hexstream
+
+# C-a x a (broadcast command to all windows)
+register 0 "^A:at \\# stuff \"\^M\"^B^B^B"
+bind -c hexstream a process 0
+
+# C-a x q (quit)
+bind -c hexstream q colon "quit^M"
+
+# C-a x c (collapse)
+bind -c hexstream c collapse
+
+
+# C-a x x (enter copy mode, with emacs-style bindings)
+bind -c hexstream x copy
+markkeys "h=^B:l=^F:$=^E:^B=j:^F=k"
+
+# C-a x r (use registers)
+bind -c hexstream r command -c hexstream-registers
+
+# C-a x r s (save paste buffer into register)
+bind -c hexstream-registers s readreg
+
+# C-a x r i (insert register)
+bind -c hexstream-registers i paste
+
+# C-a y (yank paste buffer)
+bind y paste .
+
+
+# C-a x o (open windows)
+bind -c hexstream o command -c hexstream-open
+
+
+# Public libraries (https://abc.hexstream.xyz/repositories/#public_libraries)
+
+# C-a x o l (open public library windows)
+bind -c hexstream-open l command -c hexstream-open-libraries
+
+# C-a x o l r (open ready-to-use library windows)
+bind -c hexstream-open-libraries r source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/libraries/ready-to-use.conf"
+
+# C-a x o l n (open not-yet-ready library windows)
+bind -c hexstream-open-libraries n source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/libraries/not-yet-ready.conf"
+
+# C-a x o l s (open not-yet-scavenged library windows)
+bind -c hexstream-open-libraries s source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/libraries/not-yet-scavenged.conf"
+
+# C-a x o l a (open all library windows)
+register 1 "^Axolr^Axoln^Axols^A1"
+bind -c hexstream-open-libraries a process 1
+
+
+# Public/Published websites
+# (https://abc.hexstream.xyz/repositories/#public_websites)
+# (https://abc.hexstream.xyz/repositories/#private_published)
+
+# C-a x o w (open public/published websites)
+bind -c hexstream-open w source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/websites.conf"
+
+
+# Misc public projects (https://abc.hexstream.xyz/repositories/#public_misc)
+
+# C-a x o m (open public misc projects)
+bind -c hexstream-open m source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/misc.conf"
+
+
+# Internal private repos (https://abc.hexstream.xyz/repositories/#private_internal)
+
+# C-a x o i (open private internal repos)
+bind -c hexstream-open i source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/internal.conf"
+
+
+# Secret repos (https://abc.hexstream.xyz/repositories/#secret)
+
+# C-a x o s (open secret repos)
+bind -c hexstream-open s source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/secret.conf"
+
+
+# C-a x o a (open all repos)
+register 2 "^Axola^Axow^Axom^Axoi^Axos^A1"
+bind -c hexstream-open a process 2
