@@ -16,11 +16,25 @@ bind x command -c hexstream
 register 0 "^A:at \\# stuff \"\^M\"^B^B^B"
 bind -c hexstream a process 0
 
-# C-a x q (quit)
-bind -c hexstream q colon "quit^M"
-
 # C-a x c (collapse)
 bind -c hexstream c collapse
+
+
+# C-a k (kill current window and switch to previous one)
+bind k eval "prev" "next" "kill" "echo ''"
+
+# C-a d (kill current window and switch to next one)
+# Useful for sequentially "filtering" windows, keeping some (C-a n) and killing (C-a d) others.
+bind d eval "next" "prev" "kill" "echo ''"
+
+# c-a x d (detach)
+bind -c hexstream d detach
+
+# C-a x k (kill current window and switch to last one)
+bind -c hexstream k eval "kill" "echo ''"
+
+# C-a x q (quit without confirmation)
+bind -c hexstream q eval "quit" "stuff y"
 
 
 # C-a x x (enter copy mode, with emacs-style bindings)
@@ -92,3 +106,8 @@ bind -c hexstream-open s source "/home/hexstream/data/projects/websites/all/stat
 # C-a x o a (open all repos)
 register 2 "^Axola^Axow^Axom^Axoi^Axos^A1"
 bind -c hexstream-open a process 2
+
+
+digraph "vv" U+2714
+digraph "xx" U+2718
+digraph "tm" U+2122
