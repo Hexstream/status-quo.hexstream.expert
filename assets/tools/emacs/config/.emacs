@@ -33,7 +33,7 @@
 (setf slime-lisp-implementations
       '((sbcl ("sbcl" "--noinform" "--end-runtime-options")
 	      :coding-system utf-8-unix)
-	(ccl ("ccl64")
+	(ccl ("ccl")
 	     :coding-system utf-8-unix)
 	(clisp ("clisp" "-K" "full")
 	       :coding-system utf-8-unix)
