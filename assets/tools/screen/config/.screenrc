@@ -54,60 +54,9 @@ bind -c hexstream-registers i paste
 bind y paste .
 
 
-# C-a x o (open windows)
-bind -c hexstream o command -c hexstream-open
-
-
-# Public libraries (https://abc.hexstream.xyz/repositories/#public_libraries)
-
-# C-a x o l (open public library windows)
-bind -c hexstream-open l command -c hexstream-open-libraries
-
-# C-a x o l r (open ready-to-use library windows)
-bind -c hexstream-open-libraries r source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/libraries/ready-to-use.conf"
-
-# C-a x o l n (open not-yet-ready library windows)
-bind -c hexstream-open-libraries n source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/libraries/not-yet-ready.conf"
-
-# C-a x o l s (open not-yet-scavenged library windows)
-bind -c hexstream-open-libraries s source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/libraries/not-yet-scavenged.conf"
-
-# C-a x o l a (open all library windows)
-register 1 "^Axolr^Axoln^Axols^A1"
-bind -c hexstream-open-libraries a process 1
-
-
-# Public/Published websites
-# (https://abc.hexstream.xyz/repositories/#public_websites)
-# (https://abc.hexstream.xyz/repositories/#private_published)
-
-# C-a x o w (open public/published websites)
-bind -c hexstream-open w source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/websites.conf"
-
-
-# Misc public projects (https://abc.hexstream.xyz/repositories/#public_misc)
-
-# C-a x o m (open public misc projects)
-bind -c hexstream-open m source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/misc.conf"
-
-
-# Internal private repos (https://abc.hexstream.xyz/repositories/#private_internal)
-
-# C-a x o i (open private internal repos)
-bind -c hexstream-open i source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/internal.conf"
-
-
-# Secret repos (https://abc.hexstream.xyz/repositories/#secret)
-
-# C-a x o s (open secret repos)
-bind -c hexstream-open s source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/secret/secret.conf"
-
-
-# C-a x o a (open all repos)
-register 2 "^Axola^Axow^Axom^Axoi^Axos^A1"
-bind -c hexstream-open a process 2
-
-
 digraph "vv" U+2714
 digraph "xx" U+2718
 digraph "tm" U+2122
+
+# Quickly open projects.
+source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/open.conf"
