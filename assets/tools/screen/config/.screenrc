@@ -100,7 +100,7 @@ bind -c hexstream-open i source "/home/hexstream/data/projects/websites/all/stat
 # Secret repos (https://abc.hexstream.xyz/repositories/#secret)
 
 # C-a x o s (open secret repos)
-bind -c hexstream-open s source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/assets/tools/screen/config/open/secret.conf"
+bind -c hexstream-open s source "/home/hexstream/data/projects/websites/all/status-quo.hexstream.expert/secret/secret.conf"
 
 
 # C-a x o a (open all repos)
