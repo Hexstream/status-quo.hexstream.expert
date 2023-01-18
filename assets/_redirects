@@ -6,3 +6,5 @@
 /infrastructure /#infrastructure 301
 /articles/ /#articles 301
 /articles /#articles 301
+/tools/screen/ /tools/tmux/ 301
+/tools/screen /tools/tmux/ 301
