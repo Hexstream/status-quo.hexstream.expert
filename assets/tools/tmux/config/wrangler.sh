@@ -14,5 +14,7 @@ else
     tmux set-option -wF                           '@parent-window-id' "$window_id"
     tmux set-option -wF                 '@wrangler-sibling-window-id' "$window_id"
     tmux set-option -wF -t "$window_id" '@wrangler-sibling-window-id' "$wrangler_window_id"
-    tmux send C-l 'wrangler pages dev public' Enter
+    next_port=`tmux show -sv '@wrangler-next-port'`
+    tmux set -s '@wrangler-next-port' $(($next_port + 1))
+    tmux send C-l "wrangler pages dev public --port $next_port" Enter
 fi
