@@ -6,6 +6,11 @@ if [ -n "$wrangler_sibling_window_id" ]; then
     tmux switch-client -t `tmux display -p -t "$wrangler_sibling_window_id" '#{window_id}'`
     tmux select-window -t "$wrangler_sibling_window_id"
 else
+    wrangler_port=`tmux display -p '#{@wrangler-port}'`
+    if [ -z "$wrangler_port" ]; then
+        tmux switch-client -t "wrangler"
+        exit 0
+    fi
     window_id=`tmux display -p '#{window_id}'`
     window_name=`tmux display -p '#{window_name}'`
     window_pwd=`tmux display -p '#{pane_current_path}'`
@@ -14,7 +19,5 @@ else
     tmux set-option -wF                           '@parent-window-id' "$window_id"
     tmux set-option -wF                 '@wrangler-sibling-window-id' "$window_id"
     tmux set-option -wF -t "$window_id" '@wrangler-sibling-window-id' "$wrangler_window_id"
-    next_port=`tmux show -sv '@wrangler-next-port'`
-    tmux set -s '@wrangler-next-port' $(($next_port + 1))
-    tmux send C-l "wrangler pages dev public --port $next_port" Enter
+    tmux send C-l "wrangler pages dev public --port $wrangler_port" Enter
 fi
