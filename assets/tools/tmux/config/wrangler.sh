@@ -19,5 +19,5 @@ else
     tmux set-option -wF                           '@parent-window-id' "$window_id"
     tmux set-option -wF                 '@wrangler-sibling-window-id' "$window_id"
     tmux set-option -wF -t "$window_id" '@wrangler-sibling-window-id' "$wrangler_window_id"
-    tmux send C-l "wrangler pages dev public --port $wrangler_port" Enter
+    tmux send C-l "wrangler pages dev public --local-protocol https --port $wrangler_port" Enter
 fi
