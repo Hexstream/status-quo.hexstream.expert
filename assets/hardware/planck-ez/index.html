@@ -21,6 +21,7 @@
     <link rel="preload" as="font" type="font/woff2" href="https://global.hexstream.dev/fonts/kaushan-script/KaushanScript-Regular.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="https://global.hexstream.dev/fonts/liberation/LiberationSerif-Regular.woff2" crossorigin />
     <script src="https://global.hexstream.dev/scripts/arrows-madness.mjs" type="module"></script>
+    <script src="https://global.hexstream.dev/scripts/history.mjs" type="module"></script>
   </head>
 
   <body>
@@ -116,21 +117,21 @@
         <label for="highlight-custom">&nbsp;</label>
         <label for="highlight-custom">Highlight custom labels</label>
 
-        <span id="pair-macros" class="feature pair-macros select-layer select-layer_raise"></span>
-        <span id="pair-macros_lower" class="feature pair-macros select-layer select-layer_lower"></span>
-        <span id="emacs-nav" class="feature emacs-nav select-layer select-layer_raise"></span>
-        <span id="emacs-nav_lower" class="feature emacs-nav select-layer select-layer_lower"></span>
-        <span id="mouse-control" class="feature select-layer select-layer_nav"></span>
-        <span id="mouse-warping" class="feature select-layer select-layer_warp"></span>
+        <span id="pair-macros" class="feature pair-macros select-layer select-layer_raise skip-history"></span>
+        <span id="pair-macros_lower" class="feature pair-macros select-layer select-layer_lower skip-history"></span>
+        <span id="emacs-nav" class="feature emacs-nav select-layer select-layer_raise skip-history"></span>
+        <span id="emacs-nav_lower" class="feature emacs-nav select-layer select-layer_lower skip-history"></span>
+        <span id="mouse-control" class="feature select-layer select-layer_nav skip-history"></span>
+        <span id="mouse-warping" class="feature select-layer select-layer_warp skip-history"></span>
 
-        <span id="numpad" class="layer-target select-layer select-layer_numpad"></span>
-        <span id="crawl" class="layer-target select-layer select-layer_crawl"></span>
-        <span id="warp" class="layer-target select-layer select-layer_warp"></span>
-        <span id="nav" class="layer-target select-layer select-layer_nav"></span>
-        <span id="adjust" class="layer-target select-layer select-layer_adjust"></span>
-        <span id="raise" class="layer-target select-layer select-layer_raise"></span>
-        <span id="lower" class="layer-target select-layer select-layer_lower"></span>
-        <span id="base" class="layer-target select-layer select-layer_base"></span>
+        <span id="numpad" class="layer-target select-layer select-layer_numpad skip-history"></span>
+        <span id="crawl" class="layer-target select-layer select-layer_crawl skip-history"></span>
+        <span id="warp" class="layer-target select-layer select-layer_warp skip-history"></span>
+        <span id="nav" class="layer-target select-layer select-layer_nav skip-history"></span>
+        <span id="adjust" class="layer-target select-layer select-layer_adjust skip-history"></span>
+        <span id="raise" class="layer-target select-layer select-layer_raise skip-history"></span>
+        <span id="lower" class="layer-target select-layer select-layer_lower skip-history"></span>
+        <span id="base" class="layer-target select-layer select-layer_base skip-history"></span>
 
         <nav class="tabs" id="layers">
           <ul>
