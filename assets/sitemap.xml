@@ -37,16 +37,9 @@
   </url>
 
   <url>
-    <loc>https://status-quo.hexstream.expert/services/aws/</loc>
-  </url>
-
-  <url>
-    <loc>https://status-quo.hexstream.expert/services/digitalocean/</loc>
-  </url>
-
-  <url>
     <loc>https://status-quo.hexstream.expert/services/cloudflare/</loc>
   </url>
+
 
   <url>
     <loc>https://status-quo.hexstream.expert/hardware/planck-ez/</loc>
