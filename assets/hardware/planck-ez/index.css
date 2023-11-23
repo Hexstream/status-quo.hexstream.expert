@@ -60,8 +60,7 @@
     background-color: rgb(255, 191, 163);
 }
 
-#custom-labels:not(:checked) ~ #highlight-custom + label,
-#custom-labels:not(:checked) ~ #highlight-custom + label + label {
+#custom-labels:not(:checked) ~ #highlight-custom + .labelled-control {
     visibility: hidden;
 }
 
