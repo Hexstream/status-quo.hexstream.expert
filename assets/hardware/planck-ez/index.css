@@ -52,10 +52,6 @@
     display: none;
 }
 
-#highlight-custom + label {
-    margin-left: 0.75em;
-}
-
 #custom-labels:checked ~ #highlight-custom:checked ~ #keyboard .layer .contains-custom {
     background-color: rgb(255, 191, 163);
 }
@@ -383,4 +379,24 @@
 
 #pair-macros_description .output {
     text-align: center;
+}
+
+
+.normal-key {
+    position: relative;
+}
+
+.normal-key .label {
+    position: absolute;
+    margin: 0.3em 0.5em;
+}
+
+.normal-key .label.normal {
+    bottom: 0;
+    left: 0;
+}
+
+.normal-key .label.shift {
+    top: 0;
+    left: 0;
 }
