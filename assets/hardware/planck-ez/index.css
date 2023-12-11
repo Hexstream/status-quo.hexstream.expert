@@ -1,9 +1,9 @@
 #layers {
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
 }
 
 #layers ul {
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
 }
 
 #layers ul li:not(.layer-selector_base) a:not(:hover) {
@@ -15,7 +15,7 @@
     font-size: large;
 }
 
-#layers ul:last-child, #features ul:first-child {
+#layers ul:first-child, #features ul:first-child {
     margin-left: 0;
 }
 
@@ -93,26 +93,6 @@
     display: table;
 }
 
-#lower-layer, #raise-layer, #adjust-layer {
-    z-index: 20;
-}
-
-#nav-layer {
-    z-index: 40;
-}
-
-#warp-layer {
-    z-index: 50;
-}
-
-#crawl-layer {
-    z-index: 60;
-}
-
-#numpad-layer {
-    z-index: 70;
-}
-
 .layer a {
     text-decoration: none;
 }
@@ -134,43 +114,50 @@
 
 /* Selected layer */
 
-.select-layer_lower:target ~ #keyboard #lower-layer,
-.select-layer_raise:target ~ #keyboard #raise-layer,
+.select-layer_raise:target  ~ #keyboard #raise-layer,
+.select-layer_lower:target  ~ #keyboard #lower-layer,
+.select-layer_higher:target ~ #keyboard #higher-layer,
 .select-layer_adjust:target ~ #keyboard #adjust-layer,
-.select-layer_nav:target ~ #keyboard #nav-layer,
-.select-layer_warp:target ~ #keyboard #warp-layer,
-.select-layer_crawl:target ~ #keyboard #crawl-layer,
+.select-layer_nav:target    ~ #keyboard #nav-layer,
+.select-layer_warp:target   ~ #keyboard #warp-layer,
+.select-layer_crawl:target  ~ #keyboard #crawl-layer,
 .select-layer_numpad:target ~ #keyboard #numpad-layer {
     display: table;
 }
 
 /* Layer is selected directly, so make link appear not clickable. */
-#lower:target ~ * .layer-selector_lower a,
-#raise:target ~ * .layer-selector_raise a,
+#raise:target  ~ * .layer-selector_raise a,
+#lower:target  ~ * .layer-selector_lower a,
+#higher:target ~ * .layer-selector_higher a,
 #adjust:target ~ * .layer-selector_adjust a,
-#nav:target ~ * .layer-selector_nav a,
-#warp:target ~ * .layer-selector_warp a,
-#crawl:target ~ * .layer-selector_crawl a,
+#nav:target    ~ * .layer-selector_nav a,
+#warp:target   ~ * .layer-selector_warp a,
+#crawl:target  ~ * .layer-selector_crawl a,
 #numpad:target ~ * .layer-selector_numpad a {
     color: inherit;
 }
 
 /* Layer is selected directly or indirectly, so underline. */
-.select-layer_lower:target ~ * .layer-selector_lower a,
-.select-layer_raise:target ~ * .layer-selector_raise a,
+.select-layer_raise:target  ~ * .layer-selector_raise a,
+.select-layer_lower:target  ~ * .layer-selector_lower a,
+.select-layer_higher:target ~ * .layer-selector_higher a,
 .select-layer_adjust:target ~ * .layer-selector_adjust a,
-.select-layer_nav:target ~ * .layer-selector_nav a,
-.select-layer_warp:target ~ * .layer-selector_warp a,
-.select-layer_crawl:target ~ * .layer-selector_crawl a,
+.select-layer_nav:target    ~ * .layer-selector_nav a,
+.select-layer_warp:target   ~ * .layer-selector_warp a,
+.select-layer_crawl:target  ~ * .layer-selector_crawl a,
 .select-layer_numpad:target ~ * .layer-selector_numpad a {
     text-decoration: underline;
     opacity: 1 !important;
 }
 
-.select-layer_nav:target ~ * .layer-selector_nav ~ .layer-selector a,
-.select-layer_warp:target ~ * .layer-selector_warp ~ .layer-selector a,
-.select-layer_crawl:target ~ * .layer-selector_crawl ~ .layer-selector a,
-.select-layer_numpad:target ~ * .layer-selector_numpad ~ .layer-selector a {
+.select-layer_raise:target  ~ * .layer-selector_under_raise a,
+.select-layer_lower:target  ~ * .layer-selector_under_lower a,
+.select-layer_higher:target ~ * .layer-selector_under_higher a,
+.select-layer_adjust:target ~ * .layer-selector_under_adjust a,
+.select-layer_nav:target    ~ * .layer-selector_under_nav a,
+.select-layer_warp:target   ~ * .layer-selector_under_warp a,
+.select-layer_crawl:target  ~ * .layer-selector_under_crawl a,
+.select-layer_numpad:target ~ * .layer-selector_under_numpad a {
     opacity: 1 !important;
 }
 
@@ -179,119 +166,129 @@
     color: inherit;
 }
 
-.select-layer:target ~ #base ~ * .layer-selector_base a {
+.select-layer:not(.select-layer_base):target ~ #layers .layer-selector_base a {
     text-decoration: none;
     color: revert;
 }
 
-.pair-macros:target ~ #keyboard .layer .pair-macros_highlight,
-.emacs-nav:target ~ #keyboard .layer .emacs-nav_highlight,
-#mouse-control:target ~ #keyboard .layer .mouse-control_highlight,
-#mouse-warping:target ~ #keyboard .layer .mouse-warping_highlight {
+.pair-macros:target         ~ #keyboard .layer       .pair-macros_highlight,
+.emacs-nav:target           ~ #keyboard .layer       .emacs-nav_highlight,
+#mouse-control:target       ~ #keyboard #nav-layer   .mouse-control_highlight,
+#mouse-control_crawl:target ~ #keyboard #crawl-layer .mouse-control_highlight,
+#mouse-warping:target       ~ #keyboard .layer       .mouse-warping_highlight {
     background-color: yellow !important;
 }
 
 /* Subsequent layers */
 
-.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer:not(.leaf),
-.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer:not(.leaf),
-.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer:not(.leaf),
-.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer:not(.leaf),
-.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer:not(.leaf),
-.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer:not(.leaf),
-.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer:not(.leaf) {
+.select-layer_raise:target  ~ #keyboard .under_raise-layer,
+.select-layer_lower:target  ~ #keyboard .under_lower-layer,
+.select-layer_higher:target ~ #keyboard .under_higher-layer,
+.select-layer_adjust:target ~ #keyboard .under_adjust-layer,
+.select-layer_nav:target    ~ #keyboard .under_nav-layer,
+.select-layer_warp:target   ~ #keyboard .under_warp-layer,
+.select-layer_crawl:target  ~ #keyboard .under_crawl-layer,
+.select-layer_numpad:target ~ #keyboard .under_numpad-layer {
     display: table;
 }
 
-.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer td,
-.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer td,
-.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer td,
-.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer td,
-.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer td,
-.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer td,
-.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer td {
+.select-layer_raise:target  ~ #keyboard .under_raise-layer  td,
+.select-layer_lower:target  ~ #keyboard .under_lower-layer  td,
+.select-layer_higher:target ~ #keyboard .under_higher-layer td,
+.select-layer_adjust:target ~ #keyboard .under_adjust-layer td,
+.select-layer_nav:target    ~ #keyboard .under_nav-layer    td,
+.select-layer_warp:target   ~ #keyboard .under_warp-layer   td,
+.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  td,
+.select-layer_numpad:target ~ #keyboard .under_numpad-layer td {
     color: rgba(0, 0, 0, 0.25);
     box-shadow: none;
 }
 
-.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer .modifier,
-.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer .modifier,
-.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer .modifier,
-.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer .modifier,
-.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer .modifier,
-.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer .modifier,
-.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer .modifier {
+.select-layer_raise:target  ~ #keyboard .under_raise-layer  .modifier,
+.select-layer_lower:target  ~ #keyboard .under_lower-layer  .modifier,
+.select-layer_higher:target ~ #keyboard .under_higher-layer .modifier,
+.select-layer_adjust:target ~ #keyboard .under_adjust-layer .modifier,
+.select-layer_nav:target    ~ #keyboard .under_nav-layer    .modifier,
+.select-layer_warp:target   ~ #keyboard .under_warp-layer   .modifier,
+.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  .modifier,
+.select-layer_numpad:target ~ #keyboard .under_numpad-layer .modifier {
     color: rgba(0, 128, 0, 0.25);
 }
 
-.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer .held,
-.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer .held,
-.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer .held,
-.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer .held,
-.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer .held,
-.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer .held,
-.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer .held {
+.select-layer_raise:target  ~ #keyboard .under_raise-layer  .held,
+.select-layer_lower:target  ~ #keyboard .under_lower-layer  .held,
+.select-layer_higher:target ~ #keyboard .under_higher-layer .held,
+.select-layer_adjust:target ~ #keyboard .under_adjust-layer .held,
+.select-layer_nav:target    ~ #keyboard .under_nav-layer    .held,
+.select-layer_warp:target   ~ #keyboard .under_warp-layer   .held,
+.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  .held,
+.select-layer_numpad:target ~ #keyboard .under_numpad-layer .held {
     background-color: #ECECEC;
     color: rgba(0, 0, 0, 0.25);
 }
 
-.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer caption,
-.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer caption,
-.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer caption,
-.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer caption,
-.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer caption,
-.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer caption,
-.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer caption {
+.select-layer_raise:target  ~ #keyboard .under_raise-layer  caption,
+.select-layer_lower:target  ~ #keyboard .under_lower-layer  caption,
+.select-layer_higher:target ~ #keyboard .under_higher-layer caption,
+.select-layer_adjust:target ~ #keyboard .under_adjust-layer caption,
+.select-layer_nav:target    ~ #keyboard .under_nav-layer    caption,
+.select-layer_warp:target   ~ #keyboard .under_warp-layer   caption,
+.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  caption,
+.select-layer_numpad:target ~ #keyboard .under_numpad-layer caption {
     opacity: 0;
 }
 
-.select-layer_lower:target ~ #keyboard #lower-layer ~ .layer .layer-key a,
-.select-layer_raise:target ~ #keyboard #raise-layer ~ .layer .layer-key a,
-.select-layer_adjust:target ~ #keyboard #adjust-layer ~ .layer .layer-key a,
-.select-layer_nav:target ~ #keyboard #nav-layer ~ .layer .layer-key a,
-.select-layer_warp:target ~ #keyboard #warp-layer ~ .layer .layer-key a,
-.select-layer_crawl:target ~ #keyboard #crawl-layer ~ .layer .layer-key a,
-.select-layer_numpad:target ~ #keyboard #numpad-layer ~ .layer .layer-key a {
+.select-layer_raise:target  ~ #keyboard .under_raise-layer  .layer-key a,
+.select-layer_lower:target  ~ #keyboard .under_lower-layer  .layer-key a,
+.select-layer_higher:target ~ #keyboard .under_higher-layer .layer-key a,
+.select-layer_adjust:target ~ #keyboard .under_adjust-layer .layer-key a,
+.select-layer_nav:target    ~ #keyboard .under_nav-layer    .layer-key a,
+.select-layer_warp:target   ~ #keyboard .under_warp-layer   .layer-key a,
+.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  .layer-key a,
+.select-layer_numpad:target ~ #keyboard .under_numpad-layer .layer-key a {
     color: inherit;
 }
 
 
 .feature:target ~ #feature-descriptions {
-    margin-bottom: 15vh;
+    margin-bottom: 23vh;
 }
 
 .feature:target ~ #feature-descriptions .card {
     display: none;
 }
 
-.pair-macros:target ~ #feature-descriptions #pair-macros_description,
-.emacs-nav:target ~ #feature-descriptions #emacs-nav_description,
-#mouse-control:target ~ #feature-descriptions #mouse-control_description,
+.pair-macros:target   ~ #feature-descriptions #pair-macros_description,
+.emacs-nav:target     ~ #feature-descriptions #emacs-nav_description,
+.mouse-control:target ~ #feature-descriptions #mouse-control_description,
 #mouse-warping:target ~ #feature-descriptions #mouse-warping_description {
     display: block;
 }
 
-.pair-macros:target ~ #feature-descriptions #pair-macros_description h1 > a,
-.emacs-nav:target ~ #feature-descriptions #emacs-nav_description h1 > a,
-#mouse-control:target ~ #feature-descriptions #mouse-control_description h1 > a,
+.pair-macros:target   ~ #feature-descriptions #pair-macros_description   h1 > a,
+.emacs-nav:target     ~ #feature-descriptions #emacs-nav_description     h1 > a,
+.mouse-control:target ~ #feature-descriptions #mouse-control_description h1 > a,
 #mouse-warping:target ~ #feature-descriptions #mouse-warping_description h1 > a {
     color: inherit;
 }
 
-.pair-macros:target ~ #feature-descriptions #pair-macros_description .tabs,
-.emacs-nav:target ~ #feature-descriptions #emacs-nav_description .tabs {
+.pair-macros:target   ~ #feature-descriptions #pair-macros_description   .tabs,
+.emacs-nav:target     ~ #feature-descriptions #emacs-nav_description     .tabs,
+.mouse-control:target ~ #feature-descriptions #mouse-control_description .tabs {
     display: flex;
 }
 
 
-.pair-macros:target ~ #features a[href="#pair-macros"],
-.emacs-nav:target ~ #features a[href="#emacs-nav"],
-#mouse-control:target ~ #features a[href="#mouse-control"],
-#mouse-warping:target ~ #features a[href="#mouse-warping"],
-#pair-macros:target ~ #feature-descriptions #pair-macros_description .tabs a[href="#pair-macros"],
-#pair-macros_lower:target ~ #feature-descriptions #pair-macros_description .tabs a[href="#pair-macros_lower"],
-#emacs-nav:target ~ #feature-descriptions #emacs-nav_description .tabs a[href="#emacs-nav"],
-#emacs-nav_lower:target ~ #feature-descriptions #emacs-nav_description .tabs a[href="#emacs-nav_lower"] {
+.pair-macros:target         ~ #features a[href="#pair-macros"],
+.emacs-nav:target           ~ #features a[href="#emacs-nav"],
+.mouse-control:target       ~ #features a[href="#mouse-control"],
+#mouse-warping:target       ~ #features a[href="#mouse-warping"],
+#pair-macros:target         ~ #feature-descriptions #pair-macros_description .tabs a[href="#pair-macros"],
+#pair-macros_higher:target  ~ #feature-descriptions #pair-macros_description .tabs a[href="#pair-macros_higher"],
+#emacs-nav:target           ~ #feature-descriptions #emacs-nav_description   .tabs a[href="#emacs-nav"],
+#emacs-nav_lower:target     ~ #feature-descriptions #emacs-nav_description   .tabs a[href="#emacs-nav_lower"],
+#mouse-control:target       ~ #feature-descriptions #mouse-control_description .tabs a[href="#mouse-control"],
+#mouse-control_crawl:target ~ #feature-descriptions #mouse-control_description .tabs a[href="#mouse-control_crawl"] {
     color: inherit;
     text-decoration: underline;
 }
@@ -300,12 +297,13 @@
     display: flex;
 }
 
-#pair-macros:target ~ #features #raise_close,
-#pair-macros_lower:target ~ #features #lower_close,
-#emacs-nav:target ~ #features #raise_close,
-#emacs-nav_lower:target ~ #features #lower_close,
-#mouse-control:target ~ #features #nav_close,
-#mouse-warping:target ~ #features #warp_close {
+#pair-macros:target         ~ #features #lower_close,
+#pair-macros_higher:target  ~ #features #higher_close,
+#emacs-nav:target           ~ #features #raise_close,
+#emacs-nav_lower:target     ~ #features #lower_close,
+#mouse-control:target       ~ #features #nav_close,
+#mouse-control_crawl:target ~ #features #crawl_close,
+#mouse-warping:target       ~ #features #warp_close {
     display: flex;
 }
 
@@ -375,10 +373,6 @@
 
 #feature-descriptions table:last-child {
     margin-bottom: 0.5em;
-}
-
-#pair-macros_description .output {
-    text-align: center;
 }
 
 
