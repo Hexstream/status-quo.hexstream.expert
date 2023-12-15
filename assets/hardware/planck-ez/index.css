@@ -394,3 +394,13 @@
     top: 0;
     left: 0;
 }
+
+.normal-key .label.altgr {
+    bottom: 0;
+    right: 0;
+}
+
+.normal-key .label.shift-altgr {
+    top: 0;
+    right: 0;
+}
