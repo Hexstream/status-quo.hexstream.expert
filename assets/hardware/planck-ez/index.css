@@ -35,21 +35,60 @@
     position: relative;
 }
 
+#keyboard {
+    font-size: larger;
+}
+
 .layer {
+    display: none;
     table-layout: fixed;
-    width: 62.6em;
+    width: 48em;
     text-align: center;
+    border-width: 0.2rem;
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
-    display: none;
+
 }
 
 .layer .original,
 .layer .original > span:first-child,
 .layer .original > span:last-child {
     display: none;
+}
+
+#fit-width-shrink + .labelled-control {
+    display: none;
+    margin-left: 0;
+}
+
+#fit-width-shrink_left {
+    margin-left: -0.4em;
+}
+
+#fit-width-enlarge:checked ~ #keyboard {
+    font-size: 1.9vw;
+}
+
+@media (max-width: 59.5em) {
+
+    #fit-width-enlarge:checked ~ #keyboard {
+        font-size: inherit;
+    }
+
+    #fit-width-shrink:checked ~ #keyboard {
+        font-size: 1.9vw;
+    }
+
+    #fit-width-shrink + .labelled-control {
+        display: inline-flex;
+    }
+
+    #fit-width-enlarge + .labelled-control {
+        display: none;
+    }
+
 }
 
 #custom-labels:checked ~ #highlight-custom:checked ~ #keyboard .layer .contains-custom {
@@ -68,18 +107,13 @@
     display: inline;
 }
 
-.layer caption {
-    font-size: x-large;
-}
-
 .layer tr {
-    height: 5em;
+    height: 4em;
 }
 
 .layer td {
     padding: 0;
-    border: solid 0.2em lightgray;
-    font-size: larger;
+    border: solid 0.2rem lightgray;
     overflow: hidden;
 }
 
@@ -309,7 +343,7 @@
 
 
 .layer .miser {
-    font-size: initial;
+    font-size: 0.75em;
 }
 
 .layer .danger {
