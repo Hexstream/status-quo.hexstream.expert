@@ -39,7 +39,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2023-12-22">22 december 2023</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2023-12-27">27 december 2023</time><span>.</span></p>
 
     </nav>
 
@@ -133,15 +133,19 @@
           <label for="highlight-custom">Highlight custom labels</label>
         </div>
 
-        <span id="base"   class="layer-target select-layer select-layer_base   skip-history"></span>
-        <span id="raise"  class="layer-target select-layer select-layer_raise  skip-history"></span>
-        <span id="lower"  class="layer-target select-layer select-layer_lower  skip-history"></span>
-        <span id="higher" class="layer-target select-layer select-layer_higher skip-history"></span>
-        <span id="adjust" class="layer-target select-layer select-layer_adjust skip-history"></span>
-        <span id="nav"    class="layer-target select-layer select-layer_nav    skip-history"></span>
-        <span id="warp"   class="layer-target select-layer select-layer_warp   skip-history"></span>
-        <span id="crawl"  class="layer-target select-layer select-layer_crawl  skip-history"></span>
-        <span id="numpad" class="layer-target select-layer select-layer_numpad skip-history"></span>
+        <span id="base"     class="layer-target select-layer select-layer_base     skip-history fallback-toggle"></span>
+        <span id="fallback" class="layer-target select-layer select-layer_fallback skip-history fallback-toggle fallback"></span>
+        <span id="raise"    class="layer-target select-layer select-layer_raise    skip-history fallback-toggle"></span>
+        <span id="lower"    class="layer-target select-layer select-layer_lower    skip-history fallback-toggle"></span>
+        <span id="higher"   class="layer-target select-layer select-layer_higher   skip-history fallback-toggle"></span>
+        <span id="adjust"   class="layer-target select-layer select-layer_adjust   skip-history"></span>
+        <span id="nav"      class="layer-target select-layer select-layer_nav      skip-history"></span>
+        <span id="warp"     class="layer-target select-layer select-layer_warp     skip-history"></span>
+        <span id="crawl"    class="layer-target select-layer select-layer_crawl    skip-history"></span>
+        <span id="numpad"   class="layer-target select-layer select-layer_numpad   skip-history"></span>
+        <span id="f-raise"  class="layer-target select-layer select-layer_f-raise  skip-history fallback-toggle fallback"></span>
+        <span id="f-lower"  class="layer-target select-layer select-layer_f-lower  skip-history fallback-toggle fallback"></span>
+        <span id="f-higher" class="layer-target select-layer select-layer_f-higher skip-history fallback-toggle fallback"></span>
 
         <span id="pair-macros"         class="feature pair-macros   select-layer select-layer_lower  skip-history"></span>
         <span id="pair-macros_higher"  class="feature pair-macros   select-layer select-layer_higher skip-history"></span>
@@ -152,26 +156,42 @@
         <span id="mouse-warping"       class="feature               select-layer select-layer_warp   skip-history"></span>
 
         <nav class="tabs" id="layers">
-          <ul>
-            <li class="layer-selector layer-selector_base layer-selector_under_raise layer-selector_under_lower layer-selector_under_higher layer-selector_under_adjust layer-selector_under_nav layer-selector_under_warp layer-selector_under_crawl layer-selector_under_numpad"><a href="#base">Base</a></li>
+          <ul class="group fallback">
+            <li class="layer-selector layer-selector_base layer-selector_under_fallback layer-selector_under_raise layer-selector_under_lower layer-selector_under_higher layer-selector_under_adjust layer-selector_under_nav layer-selector_under_warp layer-selector_under_crawl layer-selector_under_numpad layer-selector_under_f-raise layer-selector_under_f-lower layer-selector_under_f-higher"><a href="#base">Base</a></li>
+            <li class="layer-selector layer-selector_fallback layer-selector_under_f-raise layer-selector_under_f-lower layer-selector_under_f-higher fallback"><a href="#fallback">Fallback</a></li>
           </ul>
-          <ul>
+          <ul class="group">
             <li class="layer-selector layer-selector_raise"><a href="#raise">Raise</a></li>
             <li class="layer-selector layer-selector_lower layer-selector_under_higher"><a href="#lower">Lower</a></li>
             <li class="layer-selector layer-selector_higher"><a href="#higher">Higher</a></li>
             <li class="layer-selector layer-selector_adjust"><a href="#adjust">Adjust</a></li>
           </ul>
-          <ul>
+          <ul class="group">
             <li class="layer-selector layer-selector_nav layer-selector_under_warp layer-selector_under_crawl layer-selector_under_numpad"><a href="#nav">Nav</a></li>
             <li class="layer-selector layer-selector_warp"><a href="#warp">Warp</a></li>
             <li class="layer-selector layer-selector_crawl"><a href="#crawl">Crawl</a></li>
             <li class="layer-selector layer-selector_numpad"><a href="#numpad">Numpad</a></li>
           </ul>
+          <ul class="group fallback" id="layers_fallback">
+            <li class="layer-selector layer-selector_f-raise  fallback"><a href="#f-raise">Raise</a></li>
+            <li class="layer-selector layer-selector_f-lower  fallback layer-selector_under_f-higher"><a href="#f-lower">Lower</a></li>
+            <li class="layer-selector layer-selector_f-higher fallback"><a href="#f-higher">Higher</a></li>
+          </ul>
+          <ul id="fallback-toggles">
+            <li id="fallback-toggle_base"><a href="#base">⇄</a></li>
+            <li id="fallback-toggle_fallback"><a href="#fallback">⇄</a></li>
+            <li id="fallback-toggle_raise"><a href="#raise">⇄</a></li>
+            <li id="fallback-toggle_f-raise"><a href="#f-raise">⇄</a></li>
+            <li id="fallback-toggle_lower"><a href="#lower">⇄</a></li>
+            <li id="fallback-toggle_f-lower"><a href="#f-lower">⇄</a></li>
+            <li id="fallback-toggle_higher"><a href="#higher">⇄</a></li>
+            <li id="fallback-toggle_f-higher"><a href="#f-higher">⇄</a></li>
+          </ul>
         </nav>
 
         <div class="scroll" id="keyboard">
 
-          <table id="base-layer" class="layer under_raise-layer under_lower-layer under_higher-layer under_adjust-layer under_nav-layer under_warp-layer under_crawl-layer under_numpad-layer">
+          <table id="base-layer" class="layer under_fallback-layer under_raise-layer under_lower-layer under_higher-layer under_adjust-layer under_nav-layer under_warp-layer under_crawl-layer under_numpad-layer under_f-raise-layer under_f-lower-layer under_f-higher-layer">
             <tr>
               <td>⇥</td>
               <td class="normal-key contains-custom">
@@ -567,13 +587,167 @@
               <td class="modifier">Super</td>
               <td class="layer-key"><a href="#lower">↺Lower</a></td>
               <td class="layer-key"><a href="#raise">↺Raise</a></td>
-              <td class="modifier yay">Left Ctrl</td>
+              <td class="modifier yay">Ctrl</td>
               <td class="spacebar" colspan="2">Space</td>
               <td class="modifier yay">⎇</td>
               <td class="modifier">⇧</td>
               <td class="modifier">AltGr</td>
-              <td class="normal-key">Menu</td>
+              <td class="multiple-key">
+                <div class="held">Menu</div>
+                <a href="#fallback" class="double-tapped">To Flbk</a>
+              </td>
               <td class="layer-key"><a href="#nav">TT Nav</a></td>
+            </tr>
+          </table>
+
+          <table id="fallback-layer" class="layer under_f-raise-layer under_f-lower-layer under_f-higher-layer">
+            <tr>
+              <td class="void"></td>
+              <td class="normal-key">
+                <span class="label normal">/</span>
+                <span class="label shift">?</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">,</span>
+                <span class="label shift">&lt;</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">.</span>
+                <span class="label shift">&gt;</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">p</span>
+                <span class="label shift">P</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">y</span>
+                <span class="label shift">Y</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">f</span>
+                <span class="label shift">F</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">g</span>
+                <span class="label shift">G</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">c</span>
+                <span class="label shift">C</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">r</span>
+                <span class="label shift">R</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">l</span>
+                <span class="label shift">L</span>
+              </td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="void"></td>
+              <td class="normal-key">
+                <span class="label normal">a</span>
+                <span class="label shift">A</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">o</span>
+                <span class="label shift">O</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">e</span>
+                <span class="label shift">E</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">u</span>
+                <span class="label shift">U</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">i</span>
+                <span class="label shift">I</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">d</span>
+                <span class="label shift">D</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">h</span>
+                <span class="label shift">H</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">t</span>
+                <span class="label shift">T</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">n</span>
+                <span class="label shift">N</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">s</span>
+                <span class="label shift">S</span>
+              </td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="void"></td>
+              <td class="normal-key">
+                <span class="label normal">;</span>
+                <span class="label shift">:</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">q</span>
+                <span class="label shift">Q</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">j</span>
+                <span class="label shift">J</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">k</span>
+                <span class="label shift">K</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">x</span>
+                <span class="label shift">X</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">b</span>
+                <span class="label shift">B</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">m</span>
+                <span class="label shift">M</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">w</span>
+                <span class="label shift">W</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">v</span>
+                <span class="label shift">V</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">z</span>
+                <span class="label shift">Z</span>
+              </td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="layer-key"><a href="#f-lower">↺Lower</a></td>
+              <td class="layer-key"><a href="#f-raise">↺Raise</a></td>
+              <td class="void"></td>
+              <td class="spacebar void" colspan="2"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="multiple-key">
+                <div class="held">Menu</div>
+                <a href="#base" class="double-tapped">To Base</a>
+              </td>
+              <td class="void"></td>
             </tr>
           </table>
 
@@ -769,7 +943,10 @@
                   <span class="custom">›</span>
                 </span>
               </td>
-              <td class="function">num<br />⏎</td>
+              <td class="contains-custom modifier">
+                <span class="custom miser">Compose</span>
+                <span class="original"><span>(</span>Right Super<span>)</span></span>
+              </td>
             </tr>
             <tr>
               <td class="special">Pause</td>
@@ -784,8 +961,105 @@
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
+              <td class="modifier">Right ⇧</td>
+              <td class="modifier">Right Ctrl</td>
+            </tr>
+          </table>
+
+          <table id="f-raise-layer" class="layer">
+            <tr>
+              <td class="danger">Esc</td>
+              <td class="function">F1</td>
+              <td class="function">F2</td>
+              <td class="function">F3</td>
+              <td class="nav emacs-nav_highlight">▲</td>
+              <td class="function">F5</td>
+              <td class="nav emacs-nav_highlight">▶</td>
+              <td class="function">F7</td>
+              <td class="function">F8</td>
+              <td class="function">F9</td>
+              <td class="function">F10</td>
+              <td class="normal-key">
+                <span class="label normal">-</span>
+                <span class="label shift">_</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="special">Caps<br />lock</td>
+              <td class="normal-key num">
+                <span class="label normal">1</span>
+                <span class="label shift">!</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">2</span>
+                <span class="label shift">@</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">3</span>
+                <span class="label shift">#</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">4</span>
+                <span class="label shift">$</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">5</span>
+                <span class="label shift">%</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">6</span>
+                <span class="label shift">^</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">7</span>
+                <span class="label shift">&amp;</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">8</span>
+                <span class="label shift">*</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">9</span>
+                <span class="label shift">(</span>
+              </td>
+              <td class="normal-key num">
+                <span class="label normal">0</span>
+                <span class="label shift">)</span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">[</span>
+                <span class="label shift">{</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="special">Scroll<br />lock</td>
               <td class="void"></td>
               <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="function">F4</td>
+              <td class="nav emacs-nav_highlight">◀</td>
+              <td class="function">F6</td>
+              <td class="void"></td>
+              <td class="nav emacs-nav_highlight">▼</td>
+              <td class="normal-key">
+                <span class="label normal">#</span>
+                <span class="label shift">~</span>
+              </td>
+              <td class="modifier">Right Super</td>
+            </tr>
+            <tr>
+              <td class="special">Pause</td>
+              <td class="void"></td>
+              <td class="layer-key convenience"><a href="#f-lower">↺Lower</a></td>
+              <td class="layer-key held"><a href="#fallback">↺Raise</a></td>
+              <td class="void"></td>
+              <td class="spacebar void" colspan="2"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="modifier">Right ⇧</td>
+              <td class="modifier">Right Ctrl</td>
             </tr>
           </table>
 
@@ -919,7 +1193,7 @@
                   <span class="custom">🤦</span>
                 </span>
               </td>
-              <td class="void"></td>
+              <td class="function">num<br />⏎</td>
             </tr>
             <tr>
               <td class="contains-custom control">
@@ -937,8 +1211,99 @@
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
+              <td class="modifier">Right ⇧</td>
+              <td class="modifier">Right Ctrl</td>
+            </tr>
+          </table>
+
+          <table id="f-lower-layer" class="layer under_f-higher-layer">
+            <tr>
+              <td class="system">SysRq</td>
+              <td class="function">F11</td>
+              <td class="function">F12</td>
+              <td class="function">F13</td>
+              <td class="nav emacs-nav_highlight">PgUp</td>
+              <td class="function">F15</td>
+              <td class="nav emacs-nav_highlight">End</td>
+              <td class="function">F17</td>
+              <td class="function">F18</td>
+              <td class="function">F19</td>
+              <td class="function">F20</td>
+              <td class="normal-key">
+                <span class="label normal">=</span>
+                <span class="label shift">+</span>
+              </td>
+            </tr>
+            <tr>
+              <td>File browser</td>
+              <td class="contains-custom pair-macros_highlight danger">
+                <span class="custom">{}</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="contains-custom pair-macros_highlight">
+                <span class="custom">&lt;&gt;</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="contains-custom pair-macros_highlight">
+                <span class="custom">[]</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="contains-custom pair-macros_highlight yay">
+                <span class="custom">()</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
               <td class="void"></td>
               <td class="void"></td>
+              <td class="contains-custom pair-macros_highlight">
+                <span class="custom">""</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="contains-custom pair-macros_highlight">
+                <span class="custom">''</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="contains-custom pair-macros_highlight">
+                <span class="custom">**</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="contains-custom pair-macros_highlight">
+                <span class="custom">``</span>
+                <span class="original"><span>(</span>[Macro]<span>)</span></span>
+              </td>
+              <td class="normal-key">
+                <span class="label normal">]</span>
+                <span class="label shift">}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="control">Mute</td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="function">F14</td>
+              <td class="nav emacs-nav_highlight">Home</td>
+              <td class="function">F16</td>
+              <td class="void"></td>
+              <td class="nav emacs-nav_highlight">PgDn</td>
+              <td class="normal-key">
+                <span class="label normal">\</span>
+                <span class="label shift">|</span>
+              </td>
+              <td class="function">num<br />⏎</td>
+            </tr>
+            <tr>
+              <td class="control">Sound-</td>
+              <td class="control">Sound+</td>
+              <td class="layer-key held"><a href="#fallback">↺Lower</a></td>
+              <td class="layer-key convenience"><a href="#f-raise">↺Raise</a></td>
+              <td class="void"></td>
+              <td class="layer-key spacebar" colspan="2"><a href="#f-higher">↺Higher</a></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="modifier">Right ⇧</td>
+              <td class="modifier">Right Ctrl</td>
             </tr>
           </table>
 
@@ -1042,6 +1407,98 @@
               <td class="void"></td>
               <td class="void"></td>
               <td class="layer-key held spacebar" colspan="2"><a href="#lower">↺Higher</a></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+            </tr>
+          </table>
+
+          <table id="f-higher-layer" class="layer">
+            <tr>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="void"></td>
+              <td class="normal-key alias-key contains-custom pair-macros_highlight danger">
+                <span class="label normal">
+                  <span class="custom">{</span>
+                </span>
+                <span class="original"><span>(</span>Shift-[<span>)</span></span>
+              </td>
+              <td class="normal-key alias-key contains-custom pair-macros_highlight">
+                <span class="label normal">
+                  <span class="custom">&lt;</span>
+                </span>
+                <span class="original"><span>(</span>Shift-,<span>)</span></span>
+              </td>
+              <td class="normal-key pair-macros_highlight">
+                <span class="label normal">[</span>
+              </td>
+              <td class="normal-key alias-key contains-custom pair-macros_highlight yay">
+                <span class="label normal">
+                  <span class="custom">(</span>
+                </span>
+                <span class="original"><span>(</span>Shift-9<span>)</span></span>
+              </td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="normal-key alias-key contains-custom pair-macros_highlight yay">
+                <span class="label normal">
+                  <span class="custom">)</span>
+                </span>
+                <span class="original"><span>(</span>Shift-0<span>)</span></span>
+              </td>
+              <td class="normal-key pair-macros_highlight">
+                <span class="label normal">]</span>
+              </td>
+              <td class="normal-key alias-key contains-custom pair-macros_highlight">
+                <span class="label normal">
+                  <span class="custom">&gt;</span>
+                </span>
+                <span class="original"><span>(</span>Shift-.<span>)</span></span>
+              </td>
+              <td class="normal-key alias-key contains-custom pair-macros_highlight danger">
+                <span class="label normal">
+                  <span class="custom">}</span>
+                </span>
+                <span class="original"><span>(</span>Shift-]<span>)</span></span>
+              </td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="layer-key held"><a href="#f-lower">↺Lower</a></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="layer-key held spacebar" colspan="2"><a href="#f-lower">↺Higher</a></td>
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
@@ -1164,7 +1621,7 @@
               <td class="layer-key function mouse-control_highlight"><a href="#warp">↺Warp</a></td>
               <td class="yay mouse-control_highlight">Left<br />click</td>
               <td class="spacebar layer-key" colspan="2"><a href="#base">To Base</a></td>
-              <td class="modifier yay mouse-control_highlight">Left Ctrl</td>
+              <td class="modifier yay mouse-control_highlight">Ctrl</td>
               <td class="nav">◀</td>
               <td class="nav">▼</td>
               <td class="nav">▶</td>
@@ -1399,7 +1856,7 @@
               <td class="void"></td>
               <td class="modifier">⎇</td>
               <td class="modifier">⇧</td>
-              <td class="modifier">Left Ctrl</td>
+              <td class="modifier">Ctrl</td>
               <td class="spacebar" colspan="2"><a href="#base">To Base</a></td>
               <td class="nav">0</td>
               <td>num .</td>

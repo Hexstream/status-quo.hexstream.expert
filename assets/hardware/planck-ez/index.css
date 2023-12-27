@@ -1,12 +1,17 @@
 #layers {
     flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 #layers ul {
     flex-flow: row wrap;
 }
 
-#layers ul li:not(.layer-selector_base) a:not(:hover) {
+#layers .layer-selector.fallback {
+    font-style: italic;
+}
+
+#layers .group li:not(.layer-selector_base) a:not(:hover) {
     opacity: 0.5;
 }
 
@@ -15,8 +20,33 @@
     font-size: large;
 }
 
-#layers ul:first-child, #features ul:first-child {
+#features ul:first-child {
     margin-left: 0;
+}
+
+#layers #fallback-toggles {
+    order: -1;
+    margin-left: 0;
+}
+
+.select-layer:not(.fallback-toggle):target ~ #layers #fallback-toggles:not(:hover) {
+    opacity: 0.5;
+}
+
+#layers #fallback-toggles > li:not(#fallback-toggle_fallback),
+.select-layer.fallback-toggle:not(.select-layer_base):target ~ #layers #fallback-toggles #fallback-toggle_fallback {
+    display: none;
+}
+
+.select-layer_base:target ~ #layers #fallback-toggles #fallback-toggle_fallback,
+.select-layer_fallback:target ~ #layers #fallback-toggles #fallback-toggle_base,
+.select-layer_raise:target ~ #layers #fallback-toggles #fallback-toggle_f-raise,
+.select-layer_f-raise:target ~ #layers #fallback-toggles #fallback-toggle_raise,
+.select-layer_lower:target ~ #layers #fallback-toggles #fallback-toggle_f-lower,
+.select-layer_f-lower:target ~ #layers #fallback-toggles #fallback-toggle_lower,
+.select-layer_higher:target ~ #layers #fallback-toggles #fallback-toggle_f-higher,
+.select-layer_f-higher:target ~ #layers #fallback-toggles #fallback-toggle_higher {
+    display: block;
 }
 
 #features {
@@ -30,6 +60,7 @@
 #features #features_close > li {
     display: none;
 }
+
 
 .scroll {
     position: relative;
@@ -135,9 +166,22 @@
     color: green;
 }
 
-.layer .held {
+.layer .layer-key.held {
     background-color: gray;
     color: white;
+}
+
+.layer .multiple-key .double-tapped {
+    display: inline-flex;
+    flex-flow: column;
+    margin-top: 0.15em;
+}
+
+.layer .multiple-key .double-tapped:after {
+    content: "2x";
+    border-top: thin solid black;
+    font-size: 0.7em;
+    opacity: 0.5;
 }
 
 .select-layer {
@@ -148,50 +192,81 @@
 
 /* Selected layer */
 
-.select-layer_raise:target  ~ #keyboard #raise-layer,
-.select-layer_lower:target  ~ #keyboard #lower-layer,
-.select-layer_higher:target ~ #keyboard #higher-layer,
-.select-layer_adjust:target ~ #keyboard #adjust-layer,
-.select-layer_nav:target    ~ #keyboard #nav-layer,
-.select-layer_warp:target   ~ #keyboard #warp-layer,
-.select-layer_crawl:target  ~ #keyboard #crawl-layer,
-.select-layer_numpad:target ~ #keyboard #numpad-layer {
+.select-layer_fallback:target ~ #keyboard #fallback-layer,
+.select-layer_f-raise:target  ~ #keyboard #f-raise-layer,
+.select-layer_f-lower:target  ~ #keyboard #f-lower-layer,
+.select-layer_f-higher:target ~ #keyboard #f-higher-layer,
+.select-layer_raise:target    ~ #keyboard #raise-layer,
+.select-layer_lower:target    ~ #keyboard #lower-layer,
+.select-layer_higher:target   ~ #keyboard #higher-layer,
+.select-layer_adjust:target   ~ #keyboard #adjust-layer,
+.select-layer_nav:target      ~ #keyboard #nav-layer,
+.select-layer_warp:target     ~ #keyboard #warp-layer,
+.select-layer_crawl:target    ~ #keyboard #crawl-layer,
+.select-layer_numpad:target   ~ #keyboard #numpad-layer {
     display: table;
 }
 
+
+/* A fallback layer is selected, so hide non-fallback layer groups. */
+.select-layer.fallback:target ~ #layers .group:not(.fallback) {
+    display: none;
+}
+
+#layers #layers_fallback {
+    display: none;
+}
+
+.select-layer.fallback:target ~ #layers #layers_fallback {
+    display: flex;
+}
+
+
 /* Layer is selected directly, so make link appear not clickable. */
-#raise:target  ~ * .layer-selector_raise a,
-#lower:target  ~ * .layer-selector_lower a,
-#higher:target ~ * .layer-selector_higher a,
-#adjust:target ~ * .layer-selector_adjust a,
-#nav:target    ~ * .layer-selector_nav a,
-#warp:target   ~ * .layer-selector_warp a,
-#crawl:target  ~ * .layer-selector_crawl a,
-#numpad:target ~ * .layer-selector_numpad a {
+#fallback:target ~ * .layer-selector_fallback a,
+#f-raise:target  ~ * .layer-selector_f-raise  a,
+#f-lower:target  ~ * .layer-selector_f-lower  a,
+#f-higher:target ~ * .layer-selector_f-higher a,
+#raise:target    ~ * .layer-selector_raise    a,
+#lower:target    ~ * .layer-selector_lower    a,
+#higher:target   ~ * .layer-selector_higher   a,
+#adjust:target   ~ * .layer-selector_adjust   a,
+#nav:target      ~ * .layer-selector_nav      a,
+#warp:target     ~ * .layer-selector_warp     a,
+#crawl:target    ~ * .layer-selector_crawl    a,
+#numpad:target   ~ * .layer-selector_numpad   a {
     color: inherit;
 }
 
 /* Layer is selected directly or indirectly, so underline. */
-.select-layer_raise:target  ~ * .layer-selector_raise a,
-.select-layer_lower:target  ~ * .layer-selector_lower a,
-.select-layer_higher:target ~ * .layer-selector_higher a,
-.select-layer_adjust:target ~ * .layer-selector_adjust a,
-.select-layer_nav:target    ~ * .layer-selector_nav a,
-.select-layer_warp:target   ~ * .layer-selector_warp a,
-.select-layer_crawl:target  ~ * .layer-selector_crawl a,
-.select-layer_numpad:target ~ * .layer-selector_numpad a {
+.select-layer_fallback:target ~ * .layer-selector_fallback a,
+.select-layer_f-raise:target  ~ * .layer-selector_f-raise  a,
+.select-layer_f-lower:target  ~ * .layer-selector_f-lower  a,
+.select-layer_f-higher:target ~ * .layer-selector_f-higher a,
+.select-layer_raise:target    ~ * .layer-selector_raise    a,
+.select-layer_lower:target    ~ * .layer-selector_lower    a,
+.select-layer_higher:target   ~ * .layer-selector_higher   a,
+.select-layer_adjust:target   ~ * .layer-selector_adjust   a,
+.select-layer_nav:target      ~ * .layer-selector_nav      a,
+.select-layer_warp:target     ~ * .layer-selector_warp     a,
+.select-layer_crawl:target    ~ * .layer-selector_crawl    a,
+.select-layer_numpad:target   ~ * .layer-selector_numpad   a {
     text-decoration: underline;
     opacity: 1 !important;
 }
 
-.select-layer_raise:target  ~ * .layer-selector_under_raise a,
-.select-layer_lower:target  ~ * .layer-selector_under_lower a,
-.select-layer_higher:target ~ * .layer-selector_under_higher a,
-.select-layer_adjust:target ~ * .layer-selector_under_adjust a,
-.select-layer_nav:target    ~ * .layer-selector_under_nav a,
-.select-layer_warp:target   ~ * .layer-selector_under_warp a,
-.select-layer_crawl:target  ~ * .layer-selector_under_crawl a,
-.select-layer_numpad:target ~ * .layer-selector_under_numpad a {
+.select-layer_fallback:target ~ * .layer-selector_under_fallback a,
+.select-layer_f-raise:target  ~ * .layer-selector_under_f-raise  a,
+.select-layer_f-lower:target  ~ * .layer-selector_under_f-lower  a,
+.select-layer_f-higher:target ~ * .layer-selector_under_f-higher a,
+.select-layer_raise:target    ~ * .layer-selector_under_raise    a,
+.select-layer_lower:target    ~ * .layer-selector_under_lower    a,
+.select-layer_higher:target   ~ * .layer-selector_under_higher   a,
+.select-layer_adjust:target   ~ * .layer-selector_under_adjust   a,
+.select-layer_nav:target      ~ * .layer-selector_under_nav      a,
+.select-layer_warp:target     ~ * .layer-selector_under_warp     a,
+.select-layer_crawl:target    ~ * .layer-selector_under_crawl    a,
+.select-layer_numpad:target   ~ * .layer-selector_under_numpad   a {
     opacity: 1 !important;
 }
 
@@ -215,71 +290,95 @@
 
 /* Subsequent layers */
 
-.select-layer_raise:target  ~ #keyboard .under_raise-layer,
-.select-layer_lower:target  ~ #keyboard .under_lower-layer,
-.select-layer_higher:target ~ #keyboard .under_higher-layer,
-.select-layer_adjust:target ~ #keyboard .under_adjust-layer,
-.select-layer_nav:target    ~ #keyboard .under_nav-layer,
-.select-layer_warp:target   ~ #keyboard .under_warp-layer,
-.select-layer_crawl:target  ~ #keyboard .under_crawl-layer,
-.select-layer_numpad:target ~ #keyboard .under_numpad-layer {
+.select-layer_fallback:target ~ #keyboard .under_fallback-layer,
+.select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer,
+.select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer,
+.select-layer_f-higher:target ~ #keyboard .under_f-higher-layer,
+.select-layer_raise:target    ~ #keyboard .under_raise-layer,
+.select-layer_lower:target    ~ #keyboard .under_lower-layer,
+.select-layer_higher:target   ~ #keyboard .under_higher-layer,
+.select-layer_adjust:target   ~ #keyboard .under_adjust-layer,
+.select-layer_nav:target      ~ #keyboard .under_nav-layer,
+.select-layer_warp:target     ~ #keyboard .under_warp-layer,
+.select-layer_crawl:target    ~ #keyboard .under_crawl-layer,
+.select-layer_numpad:target   ~ #keyboard .under_numpad-layer {
     display: table;
 }
 
-.select-layer_raise:target  ~ #keyboard .under_raise-layer  td,
-.select-layer_lower:target  ~ #keyboard .under_lower-layer  td,
-.select-layer_higher:target ~ #keyboard .under_higher-layer td,
-.select-layer_adjust:target ~ #keyboard .under_adjust-layer td,
-.select-layer_nav:target    ~ #keyboard .under_nav-layer    td,
-.select-layer_warp:target   ~ #keyboard .under_warp-layer   td,
-.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  td,
-.select-layer_numpad:target ~ #keyboard .under_numpad-layer td {
+.select-layer_fallback:target ~ #keyboard .under_fallback-layer td,
+.select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  td,
+.select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  td,
+.select-layer_f-higher:target ~ #keyboard .under_f-higher-layer td,
+.select-layer_raise:target    ~ #keyboard .under_raise-layer    td,
+.select-layer_lower:target    ~ #keyboard .under_lower-layer    td,
+.select-layer_higher:target   ~ #keyboard .under_higher-layer   td,
+.select-layer_adjust:target   ~ #keyboard .under_adjust-layer   td,
+.select-layer_nav:target      ~ #keyboard .under_nav-layer      td,
+.select-layer_warp:target     ~ #keyboard .under_warp-layer     td,
+.select-layer_crawl:target    ~ #keyboard .under_crawl-layer    td,
+.select-layer_numpad:target   ~ #keyboard .under_numpad-layer   td {
     color: rgba(0, 0, 0, 0.25);
     box-shadow: none;
 }
 
-.select-layer_raise:target  ~ #keyboard .under_raise-layer  .modifier,
-.select-layer_lower:target  ~ #keyboard .under_lower-layer  .modifier,
-.select-layer_higher:target ~ #keyboard .under_higher-layer .modifier,
-.select-layer_adjust:target ~ #keyboard .under_adjust-layer .modifier,
-.select-layer_nav:target    ~ #keyboard .under_nav-layer    .modifier,
-.select-layer_warp:target   ~ #keyboard .under_warp-layer   .modifier,
-.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  .modifier,
-.select-layer_numpad:target ~ #keyboard .under_numpad-layer .modifier {
+.select-layer_fallback:target ~ #keyboard .under_fallback-layer .modifier,
+.select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  .modifier,
+.select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  .modifier,
+.select-layer_f-higher:target ~ #keyboard .under_f-higher-layer .modifier,
+.select-layer_raise:target    ~ #keyboard .under_raise-layer    .modifier,
+.select-layer_lower:target    ~ #keyboard .under_lower-layer    .modifier,
+.select-layer_higher:target   ~ #keyboard .under_higher-layer   .modifier,
+.select-layer_adjust:target   ~ #keyboard .under_adjust-layer   .modifier,
+.select-layer_nav:target      ~ #keyboard .under_nav-layer      .modifier,
+.select-layer_warp:target     ~ #keyboard .under_warp-layer     .modifier,
+.select-layer_crawl:target    ~ #keyboard .under_crawl-layer    .modifier,
+.select-layer_numpad:target   ~ #keyboard .under_numpad-layer   .modifier {
     color: rgba(0, 128, 0, 0.25);
 }
 
-.select-layer_raise:target  ~ #keyboard .under_raise-layer  .held,
-.select-layer_lower:target  ~ #keyboard .under_lower-layer  .held,
-.select-layer_higher:target ~ #keyboard .under_higher-layer .held,
-.select-layer_adjust:target ~ #keyboard .under_adjust-layer .held,
-.select-layer_nav:target    ~ #keyboard .under_nav-layer    .held,
-.select-layer_warp:target   ~ #keyboard .under_warp-layer   .held,
-.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  .held,
-.select-layer_numpad:target ~ #keyboard .under_numpad-layer .held {
+.select-layer_fallback:target ~ #keyboard .under_fallback-layer .held,
+.select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  .held,
+.select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  .held,
+.select-layer_f-higher:target ~ #keyboard .under_f-higher-layer .held,
+.select-layer_raise:target    ~ #keyboard .under_raise-layer    .held,
+.select-layer_lower:target    ~ #keyboard .under_lower-layer    .held,
+.select-layer_higher:target   ~ #keyboard .under_higher-layer   .held,
+.select-layer_adjust:target   ~ #keyboard .under_adjust-layer   .held,
+.select-layer_nav:target      ~ #keyboard .under_nav-layer      .held,
+.select-layer_warp:target     ~ #keyboard .under_warp-layer     .held,
+.select-layer_crawl:target    ~ #keyboard .under_crawl-layer    .held,
+.select-layer_numpad:target   ~ #keyboard .under_numpad-layer   .held {
     background-color: #ECECEC;
     color: rgba(0, 0, 0, 0.25);
 }
 
-.select-layer_raise:target  ~ #keyboard .under_raise-layer  caption,
-.select-layer_lower:target  ~ #keyboard .under_lower-layer  caption,
-.select-layer_higher:target ~ #keyboard .under_higher-layer caption,
-.select-layer_adjust:target ~ #keyboard .under_adjust-layer caption,
-.select-layer_nav:target    ~ #keyboard .under_nav-layer    caption,
-.select-layer_warp:target   ~ #keyboard .under_warp-layer   caption,
-.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  caption,
-.select-layer_numpad:target ~ #keyboard .under_numpad-layer caption {
+.select-layer_fallback:target ~ #keyboard .under_fallback-layer caption,
+.select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  caption,
+.select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  caption,
+.select-layer_f-higher:target ~ #keyboard .under_f-higher-layer caption,
+.select-layer_raise:target    ~ #keyboard .under_raise-layer    caption,
+.select-layer_lower:target    ~ #keyboard .under_lower-layer    caption,
+.select-layer_higher:target   ~ #keyboard .under_higher-layer   caption,
+.select-layer_adjust:target   ~ #keyboard .under_adjust-layer   caption,
+.select-layer_nav:target      ~ #keyboard .under_nav-layer      caption,
+.select-layer_warp:target     ~ #keyboard .under_warp-layer     caption,
+.select-layer_crawl:target    ~ #keyboard .under_crawl-layer    caption,
+.select-layer_numpad:target   ~ #keyboard .under_numpad-layer   caption {
     opacity: 0;
 }
 
-.select-layer_raise:target  ~ #keyboard .under_raise-layer  .layer-key a,
-.select-layer_lower:target  ~ #keyboard .under_lower-layer  .layer-key a,
-.select-layer_higher:target ~ #keyboard .under_higher-layer .layer-key a,
-.select-layer_adjust:target ~ #keyboard .under_adjust-layer .layer-key a,
-.select-layer_nav:target    ~ #keyboard .under_nav-layer    .layer-key a,
-.select-layer_warp:target   ~ #keyboard .under_warp-layer   .layer-key a,
-.select-layer_crawl:target  ~ #keyboard .under_crawl-layer  .layer-key a,
-.select-layer_numpad:target ~ #keyboard .under_numpad-layer .layer-key a {
+.select-layer_fallback:target ~ #keyboard .under_fallback-layer .layer-key a,
+.select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  .layer-key a,
+.select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  .layer-key a,
+.select-layer_f-higher:target ~ #keyboard .under_f-higher-layer .layer-key a,
+.select-layer_raise:target    ~ #keyboard .under_raise-layer    .layer-key a,
+.select-layer_lower:target    ~ #keyboard .under_lower-layer    .layer-key a,
+.select-layer_higher:target   ~ #keyboard .under_higher-layer   .layer-key a,
+.select-layer_adjust:target   ~ #keyboard .under_adjust-layer   .layer-key a,
+.select-layer_nav:target      ~ #keyboard .under_nav-layer      .layer-key a,
+.select-layer_warp:target     ~ #keyboard .under_warp-layer     .layer-key a,
+.select-layer_crawl:target    ~ #keyboard .under_crawl-layer    .layer-key a,
+.select-layer_numpad:target   ~ #keyboard .under_numpad-layer   .layer-key a {
     color: inherit;
 }
 
