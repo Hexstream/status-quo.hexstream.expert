@@ -103,16 +103,6 @@
   (find-file "/home/hexstream/.sbclrc")
   (lisp-mode))
 
-(fset 'parens "()\C-b")
-(fset 'brackets "[]\C-b")
-(fset 'curlys "{}\C-b")
-(fset 'angles "<>\C-b")
-(fset 'quotes "\"\"\C-b")
-(global-set-key [f32] 'parens)
-(global-set-key [S-f32] 'brackets)
-(global-set-key [C-S-f32] 'curlys)
-(global-set-key [C-f32] 'quotes)
-
 (setf hexstream-map (make-sparse-keymap))
 (global-set-key "\M-p" 'backward-paragraph)
 (global-set-key "\M-n" 'forward-paragraph)

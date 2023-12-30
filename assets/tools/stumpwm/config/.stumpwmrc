@@ -165,14 +165,6 @@
                                          percent))
       (throw 'error "Abort.")))
 
-(defun input-insert-parens (input key)
-  (stumpwm:input-insert-string input "()")
-  (stumpwm::input-backward-char input key))
-
-(defun input-insert-double-quotes (input key)
-  (stumpwm:input-insert-string input "\"\"")
-  (stumpwm::input-backward-char input key))
-
 (defun hexstream-init ()
   (when stumpwm:*initializing*
     (hexstream-cold-init)
@@ -232,8 +224,6 @@
     (dk "M-s-H" "warp-mouse-to-quadrant 8 y")
     (dk "M-s-I" "warp-mouse-to-quadrant 9 y")
     (dk "XF86Launch6" "toggle-truly-fullscreen"))
-  (define-key stumpwm:*input-map* (kbd "XF86Launch7") 'input-insert-parens)
-  (define-key stumpwm:*input-map* (kbd "C-XF86Launch7") 'input-insert-double-quotes)
   (defparameter *ror-map*
     (let ((map (stumpwm:make-sparse-keymap)))
       (flet ((dk (key command)
