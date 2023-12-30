@@ -90,7 +90,7 @@
 
 
 ;;;my custom commands
-(global-set-key "\M-\#" 'slime-selector)
+(global-set-key "\M-/" 'slime-selector)
 (fset 'wrap "(\206)\202\C-f \C-b")
 
 
