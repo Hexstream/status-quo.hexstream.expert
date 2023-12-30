@@ -32,17 +32,17 @@
 ;(setf inferior-lisp-program "sbcl --noinform --end-runtime-options")
 (setf slime-lisp-implementations
       '((sbcl ("sbcl" "--noinform" "--end-runtime-options")
-	      :coding-system utf-8-unix)
-	(ccl ("ccl")
-	     :coding-system utf-8-unix)
-	(clisp ("clisp" "-K" "full")
-	       :coding-system utf-8-unix)
-	(abcl ("TODO") :coding-system utf-8-unix)
-	(ecl ("ecl"))
-	(lw ("lispworks")
-	    :coding-system utf-8-unix)
-	(alisp ("alisp")
-	       :coding-system utf-8-unix)))
+              :coding-system utf-8-unix)
+        (ccl ("ccl")
+             :coding-system utf-8-unix)
+        (clisp ("clisp" "-K" "full")
+               :coding-system utf-8-unix)
+        (abcl ("TODO") :coding-system utf-8-unix)
+        (ecl ("ecl"))
+        (lw ("lispworks")
+            :coding-system utf-8-unix)
+        (alisp ("alisp")
+               :coding-system utf-8-unix)))
 (setf slime-default-lisp 'sbcl)
 (add-to-list 'load-path "/usr/local/bin/")
 (setf quicklisp-slime-helper-dist "ultralisp")
@@ -55,19 +55,19 @@
 
 
 (add-hook 'slime-connected-hook
-	  (lambda ()
-	     (setf tramp-default-method "ssh")
-	     (make-directory "/tmp/slime-fasls/" t)
-	     (setf slime-compile-file-options '(:fasl-directory "/tmp/slime-fasls/"))))
+          (lambda ()
+            (setf tramp-default-method "ssh")
+            (make-directory "/tmp/slime-fasls/" t)
+            (setf slime-compile-file-options '(:fasl-directory "/tmp/slime-fasls/"))))
 (add-hook 'lisp-mode-hook
-	  '(lambda ()
-	     (set (make-local-variable 'require-final-newline) 'ask-when-saving)
-	     (setf indicate-buffer-boundaries '((bottom . left)))))
+          '(lambda ()
+             (set (make-local-variable 'require-final-newline) 'ask-when-saving)
+             (setf indicate-buffer-boundaries '((bottom . left)))))
 (require 'slime)
 
 (slime-setup '(slime-fancy slime-asdf))
 (set-variable 'slime-sbcl-manual-root
-	      "/home/hexstream/apps/sbcl/share/doc/sbcl/html/sbcl/index.html")
+              "/home/hexstream/apps/sbcl/share/doc/sbcl/html/sbcl/index.html")
 
 ;;;misc
 (global-font-lock-mode t)
@@ -126,7 +126,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (add-hook 'slime-connected-hook
-	  (lambda ()
+          (lambda ()
             (make-directory "/tmp/slime-fasls/" t)
             (setf slime-compile-file-options '(:fasl-directory "/tmp/slime-fasls/"))
             (slime-set-default-directory "/home/hexstream/data/projects/")))
