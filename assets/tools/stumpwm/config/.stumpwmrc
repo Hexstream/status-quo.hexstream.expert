@@ -173,7 +173,6 @@
   (bind "-" "remove-split")
   (bind "=" "balance-frames")
   (bind "M-t" "pull-hidden-other")
-  (bind "M-g" "vgroups")
   (setf stumpwm:*mouse-focus-policy* :click)
   (setf stumpwm:*timeout-frame-indicator-wait* 0.2
         stumpwm:*timeout-wait* 5)
@@ -181,6 +180,8 @@
   (flet ((dk (key command)
            (define-key stumpwm:*top-map* (kbd key) command)))
     (dk "s-b" "banish")
+    (dk "F4" "vgroups")
+    (dk "F6" "abort")
     (dk "s-1" "gselect 1")
     (dk "s-2" "gselect 2")
     (dk "s-3" "gselect 3")
