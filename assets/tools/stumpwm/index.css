@@ -1,3 +1,7 @@
+#overview_workspaces_dev .cards {
+    flex-flow: column;
+}
+
 #overview_workspaces_dev .cards .card {
     margin-top: 0;
 }

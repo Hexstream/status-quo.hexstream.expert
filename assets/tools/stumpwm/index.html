@@ -38,7 +38,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2021-11-28">28 november 2021</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2024-01-24">24 january 2024</time><span>.</span></p>
 
     </nav>
 
@@ -148,13 +148,13 @@
 
             <p><small>(I figure that if I created and deleted workspaces for specific tasks as I need them, in the general case I would either have to check their numbers before switching to them, or else assign them names so I can switch to them that way. But naming things is hard and I hate stupid names. So this approach <em>seems</em> just plain slow and prohibitively taxing on my precious cognitive resources... Though I haven't actually tried it, so what do I know.)</small></p>
 
-            <p>So I just have 4 permanent workspaces (imported from my pre-StumpWM days) that are set up in <a href="https://github.com/Hexstream/hexstream-stumpwmrc/blob/master/hexstream-stumpwmrc.lisp">my <code>.stumpwmrc</code> file</a>:</p>
+            <p>So I just have 3 permanent workspaces that are set up in <a href="https://github.com/Hexstream/status-quo.hexstream.expert/blob/master/assets/tools/stumpwm/config/.stumpwmrc" target="_blank">my <code>.stumpwmrc</code> file</a>:</p>
 
             <div class="cards cards-link-to-themselves">
 
-              <article class="card" id="overview_workspaces_normal">
-                <h1><a href="#overview_workspaces_normal" class="custom">① Normal</a></h1>
-                <p>Despite the name I normally don't use this one, calling it "Misc" would be more accurate.</p>
+              <article class="card" id="overview_workspaces_misc">
+                <h1><a href="#overview_workspaces_misc" class="custom">① Misc</a></h1>
+                <p>For whenever I need a workspace beyond the other two.</p>
               </article>
 
               <article class="card" id="overview_workspaces_dev">
@@ -168,25 +168,12 @@
                   </article>
                   <article class="card">
                     <h1>② Browser (Google Chrome)</h1>
-                    <p>
-                      For all web browsing needs.
-                      <br/>
-                      (Except very occasional firefox testing.)
-                    </p>
+                    <p>For all web browsing needs. (Except occasional Firefox testing.)</p>
                   </article>
                   <article class="card">
                     <h1>③ Terminal (gnome-terminal)</h1>
                     <p>
-                      Runs <code>screen</code> to accomodate an unlimited number of terminalsin the one window,
-                      <br/>
-                      though I usually have no more than 3 or 4 at once.
-                    </p>
-                    <p>
-                      <small>
-                        (I frequently find myself opening more terminal windows to do something quick and then forget to close them
-                        <br/>
-                        so I sometimes have up to 3 additional nonsense terminal windows open that I then have to close... Bad habits die hard.)
-                      </small>
+                      Runs <a href="../tmux/" target="_blank">tmux</a> to accomodate infinite terminals in the one window.
                     </p>
                   </article>
                 </div>
@@ -194,19 +181,7 @@
 
               <article class="card" id="overview_workspaces_games">
                 <h1><a href="#overview_workspaces_games" class="custom">③ Games</a></h1>
-                <p>For when I want to waste some time in one way or another.</p>
-                <p>
-                  I also use it if I want some background music.
-                  <br />
-                  <small>(<code>mplayer <var>sound-file</var> -loop 0</code>)</small>
-                </p>
-                <p>And sometimes if I just want to do something trivial (but potentially involving more than one window) real quick.</p>
-              </article>
-
-              <article class="card" id="overview_workspaces_chat">
-                <h1><a href="#overview_workspaces_chat" class="custom">④ Chat</a></h1>
-                <p>For very rare chatting occasions.</p>
-                <p>I also sometimes use it for other purposes if the <code class="custom">Normal</code> workspace is cluttered up with other stuff.</p>
+                <p>For entertainment, or to do something trivial real quick.</p>
               </article>
 
             </div>
@@ -266,7 +241,7 @@
                 <h1><a href="#vgroups"><code class="built-in">vgroups</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> G</kbd></p>
                 <figure>
-                  <a href="vgroups.png" target="_blank"><img src="vgroups.png" width="506" height="137" alt="[Example vgroups output]" /></a>
+                  <a href="vgroups.png" target="_blank"><img src="vgroups.png" width="507" height="92" alt="[Example vgroups output]" /></a>
                   <figcaption>Example vgroups output.<br /><small>(By default, shown on the top right of the screen.)</small></figcaption>
                 </figure>
                 <p>Show all (non-hidden) workspace numbers and names,
@@ -281,11 +256,11 @@
               </article>
 
               <article class="card" id="gselect">
-                <h1><a href="#gselect"><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code>, <code class="built-in">gselect 4</code></a></h1>
+                <h1><a href="#gselect"><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code></a></h1>
                 <p class="hoisted binding">
-                  <kbd class="key-sequence custom"><kbd>Super-1</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-2</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-3</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-4</kbd></kbd>
+                  <kbd class="key-sequence custom"><kbd>Super-1</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-2</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-3</kbd></kbd></kbd>
                 </p>
-                <p>Switch to one of my <a href="#overview_workspaces">4 workspaces</a>.</p>
+                <p>Switch to one of my <a href="#overview_workspaces">3 workspaces</a>.</p>
               </article>
 
               <article class="card" id="other-in-frame">
@@ -331,11 +306,6 @@
                 <h1><a href="#gmove"><code class="built-in">gmove</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g m</kbd></p>
                 <p>Move the current window to another workspace.</p>
-                <p>
-                  Particularly useful if, for instance, a chat window pops up while I'm in the <code class="custom">Dev</code> workspace because someone messages me.
-                  <br/>
-                  Then I send it to the <code class="custom">Chat</code> workspace with <kbd class="key-sequence"><kbd>Ctrl-t</kbd> g m 4 RET</kbd>.
-                </p>
               </article>
 
             </div>
@@ -434,20 +404,6 @@
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x v</kbd></p>
                 <p>Change the global sound level. Asks for a percentage.</p>
                 <p><code>1</code>, <code>2</code>, <code>3</code> and <code>4</code> are shortcuts for 33%, 50%, 75% and 100%, respectively.</p>
-              </article>
-
-              <article class="card" id="open-parens">
-                <h1><a href="#open-parens"><code class="custom">open-parens</code></a></h1>
-                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>F32</kbd></kbd> <small>(my physical Right Shift is mapped to F32)</small></p>
-                <p>Send "(" and ")" to the current application, then "left" to put the cursor inside the parentheses.</p>
-                <p>Works with almost all applications, but not <code>gnome-terminal</code>, for some reason.</p>
-              </article>
-
-              <article class="card" id="open-double-quotes">
-                <h1><a href="#open-double-quotes"><code class="custom">open-double-quotes</code></a></h1>
-                <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-F32</kbd></kbd></p>
-                <p>Send two double quotes to the current application, then "left" to put the cursor inside them.</p>
-                <p>Works with almost all applications, but not <code>gnome-terminal</code>, for some reason.</p>
               </article>
 
             </div>
