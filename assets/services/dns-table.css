@@ -6,11 +6,11 @@
     border: 0.15em solid black;
 }
 
-.dns-table .zone, .dns-table .name, .dns-table .type, .dns-table .value {
+.dns-table :is(.zone, .name, .type, .value) {
     vertical-align: top;
 }
 
-.dns-table .zone, .dns-table .name, .dns-table .registration-date {
+.dns-table :is(.zone, .name, .registration-date) {
     text-align: right;
 }
 

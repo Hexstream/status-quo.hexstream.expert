@@ -84,8 +84,7 @@
 }
 
 .layer .original,
-.layer .original > span:first-child,
-.layer .original > span:last-child {
+.layer .original > span:is(:first-child, :last-child) {
     display: none;
 }
 
@@ -449,8 +448,7 @@
     box-shadow: inset 0 0 0.2em 0.1em #FF0000;
 }
 
-.layer .yay,
-.layer .num {
+.layer :is(.yay, .num) {
     box-shadow: inset 0 0 0.2em 0.1em #00FF00;
 }
 

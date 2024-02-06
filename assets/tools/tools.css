@@ -9,7 +9,7 @@ kbd.long.key-sequence {
     white-space: initial;
 }
 
-kbd.key-sequence kbd, kbd.key-sequence var {
+kbd.key-sequence :is(kbd, var) {
     white-space: nowrap;
 }
 
