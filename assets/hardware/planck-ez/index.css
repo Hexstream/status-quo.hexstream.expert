@@ -176,7 +176,7 @@
     margin-top: 0.15em;
 }
 
-.layer .multiple-key .double-tapped:after {
+.layer .multiple-key .double-tapped::after {
     content: "2x";
     border-top: thin solid black;
     font-size: 0.7em;

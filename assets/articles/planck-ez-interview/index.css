@@ -23,7 +23,7 @@ p.subsection {
     overflow-x: initial;
 }
 
-.subsection:target:before {
+.subsection:target::before {
     content: "";
     position: absolute;
     top: 0;
