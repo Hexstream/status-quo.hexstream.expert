@@ -20,7 +20,7 @@
 }
 
 p.subsection {
-    overflow-x: initial;
+    overflow-x: revert;
 }
 
 .subsection:target::before {

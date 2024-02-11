@@ -148,12 +148,12 @@
 }
 
 .layer td.spacebar {
-    width: initial;
-    height: initial;
+    width: revert;
+    height: revert;
 }
 
 #base-layer {
-    position: initial;
+    position: revert;
     display: table;
 }
 
@@ -250,8 +250,8 @@
 .select-layer_warp:target     ~ * .layer-selector_warp     a,
 .select-layer_crawl:target    ~ * .layer-selector_crawl    a,
 .select-layer_numpad:target   ~ * .layer-selector_numpad   a {
-    text-decoration: underline;
-    opacity: 1 !important;
+    text-decoration: revert;
+    opacity: revert !important;
 }
 
 .select-layer_fallback:target ~ * .layer-selector_under_fallback a,
@@ -266,17 +266,17 @@
 .select-layer_warp:target     ~ * .layer-selector_under_warp     a,
 .select-layer_crawl:target    ~ * .layer-selector_under_crawl    a,
 .select-layer_numpad:target   ~ * .layer-selector_under_numpad   a {
-    opacity: 1 !important;
+    opacity: revert !important;
 }
 
 #layers .layer-selector_base a {
-    text-decoration: underline;
+    text-decoration: revert;
     color: inherit;
 }
 
 .select-layer:not(.select-layer_base):target ~ #layers .layer-selector_base a {
     text-decoration: none;
-    color: revert;
+    color: inherit;
 }
 
 .pair-macros:target         ~ #keyboard .layer       .pair-macros_highlight,
@@ -422,7 +422,7 @@
 #mouse-control:target       ~ #feature-descriptions #mouse-control_description .tabs a[href="#mouse-control"],
 #mouse-control_crawl:target ~ #feature-descriptions #mouse-control_description .tabs a[href="#mouse-control_crawl"] {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: revert;
 }
 
 .feature:target ~ #features #features_close {

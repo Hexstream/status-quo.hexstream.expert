@@ -4,7 +4,7 @@
 }
 
 .navtable .purpose {
-    white-space: initial;
+    white-space: revert;
 }
 
 @media (min-width: 79em) {
@@ -47,8 +47,8 @@
 }
 
 .navtable {
-    margin-left: initial;
-    margin-right: initial;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 :is(#articles, #radar).tabs.contains-title h1 a {
@@ -64,5 +64,5 @@
 }
 
 #radar:target {
-    opacity: 1;
+    opacity: revert;
 }
