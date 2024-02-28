@@ -4,7 +4,7 @@
 }
 
 .navtable .purpose {
-    white-space: revert;
+    white-space: initial;
 }
 
 @media (min-width: 79em) {

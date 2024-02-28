@@ -6,7 +6,7 @@ kbd.key-sequence {
 }
 
 kbd.long.key-sequence {
-    white-space: revert;
+    white-space: initial;
 }
 
 kbd.key-sequence :is(kbd, var) {
