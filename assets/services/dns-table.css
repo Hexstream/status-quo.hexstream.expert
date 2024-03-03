@@ -11,7 +11,7 @@
 }
 
 .dns-table :is(.zone, .name, .registration-date) {
-    text-align: right;
+    text-align: end;
 }
 
 .dns-table .type {
