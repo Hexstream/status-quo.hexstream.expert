@@ -1,0 +1,47 @@
+// This is added to /usr/share/X11/xkb/symbols/ca on my system.
+
+partial
+xkb_symbols "hexstream-latin" {
+
+    include "ca(fr-dvorak)"
+
+    name[Group1] = "Hexstream Latin";
+
+    key <TLDE>  { [ slash, bar, backslash, brokenbar ] };
+    key <AE01>  { [ 1, exclam, exclamdown, braceleft ] };
+    key <AE02>  { [ 2, at, U1F631, less ] };
+    key <AE03>  { [ 3, numbersign, degree, bracketleft ] };
+    key <AE04>  { [ 4, dollar, cent, parenleft ] };
+    key <AE05>  { [ 5, percent, permille, guillemotleft ] };
+    key <AE06>  { [ 6, question, questiondown, guillemotright ] };
+    key <AE07>  { [ 7, ampersand, U1F914, parenright ] };
+    key <AE08>  { [ 8, asterisk, infinity, bracketright ] };
+    key <AE09>  { [ 9, U1F4AA, U1F44F, greater ] };
+    key <AE10>	{ [ 0, U1F605, U1F62D, braceright ] };
+    key <AE11>  { [ dead_grave, dead_circumflex, VoidSymbol ] };
+    key <AE12>  { [ U1F44D, U2764, U1F389, U1F680 ] };
+
+    key <AD01>  { [ dead_tilde, dead_cedilla ] };
+    key <AD03>  { [ period, quotedbl, ellipsis, periodcentered] };
+    key <AD04>  { [ p, P, uparrow, paragraph ] };
+    key <AD05>  { [ y, Y, yen ] };
+    key <AD06>  { [ f, F, rightarrow ] };
+    key <AD08>  { [ c, C, copyright ] };
+    key <AD09>  { [ r, R, registered, squareroot ] };
+    key <AD11>  { [ dead_acute, dead_diaeresis, dead_macron, dead_breve ] };
+    key <AD12>  { [ plus, equal, multiply, division ] };
+
+    key <AC02>  { [ o, O, emptyset ] };
+    key <AC03>  { [ e, E, EuroSign ] };
+    key <AC08>  { [ t, T, trademark ] };
+    key <AC10>  { [ s, S, ssharp, U1E9E ] };
+    key <AC11>  { [ minus, underscore, U2011, emdash ]  };
+    key <BKSL>  { [ less, greater, U2039, U203A ] };
+
+    key <LSGT>  { [ U1F602, U1F923, U1F937, U1F926 ] };
+    key <AB05>  { [ x, X, VoidSymbol, U2718 ] };
+    key <AB06>  { [ b, B, leftarrow ] };
+    key <AB09>  { [ v, V, downarrow, U2714 ] };
+    key <AB10>  { [ z, Z, VoidSymbol, section ] };
+
+};
