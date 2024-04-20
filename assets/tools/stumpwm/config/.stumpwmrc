@@ -163,6 +163,31 @@
                                          percent))
       (throw 'error "Abort.")))
 
+
+;;; Multiclick
+
+(defvar *recorded-clicks* nil)
+(defvar *recorded-clicks-armed* nil)
+
+(defcommand multiclick-reset () ()
+  (setf *recorded-clicks* nil
+        *recorded-clicks-armed* nil))
+
+(defcommand multiclick-append () ()
+  (when *recorded-clicks-armed*
+    (multiclick-reset))
+  (push (multiple-value-call #'cons (get-mouse-location))
+        *recorded-clicks*))
+
+(defcommand multiclick-apply () ()
+  (unless *recorded-clicks-armed*
+    (setf *recorded-clicks* (nreverse *recorded-clicks*)
+          *recorded-clicks-armed* t))
+  (dolist (click *recorded-clicks*)
+    (stumpwm:ratwarp (car click) (cdr click))
+    (stumpwm:ratclick)))
+
+
 (defun hexstream-init ()
   (when stumpwm:*initializing*
     (hexstream-cold-init)
@@ -175,6 +200,9 @@
   (setf stumpwm:*timeout-frame-indicator-wait* 0.2
         stumpwm:*timeout-wait* 5)
   (setf stumpwm:*window-border-style* :thick)
+  (bind "DEL" "multiclick-reset")
+  (bind "SPC" "multiclick-append")
+  (bind "RET" "multiclick-apply")
   (flet ((dk (key command)
            (define-key stumpwm:*top-map* (kbd key) command)))
     (dk "s-b" "banish")
