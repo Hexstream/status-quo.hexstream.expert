@@ -29,5 +29,8 @@ https://status-quo.hexstream.expert/*
 /tools/sbcl/config/.sbclrc
   Content-Type: text/plain; charset=utf-8
 
+/tools/git/config/.gitconfig
+  Content-Type: text/plain; charset=utf-8
+
 /raw/openssh/public-config
   Content-Type: text/plain; charset=utf-8

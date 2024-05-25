@@ -1,0 +1,18 @@
+[user]
+	name = Jean-Philippe Paradis
+	email = hexstream@hexstreamsoft.com
+	signingkey = B6DFE5B1CF70D947623EDF2EF7CDDE72B9C27F5C
+[alias]
+        s = status -s
+        b = branch -av
+        sb = !git status -s && git branch -av
+        d = diff
+        dc = diff --cached
+[core]
+	editor = emacsclient
+[commit]
+	gpgsign = true
+[diff]
+	renamelimit = 2000
+[init]
+	defaultBranch = master

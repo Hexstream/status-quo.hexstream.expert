@@ -26,3 +26,12 @@ kbd.key-sequence :is(kbd, var) {
     font-size: large;
     opacity: revert;
 }
+
+details {
+    padding: 0.5em;
+    border: thin solid gray;
+}
+
+details :last-child {
+    margin-bottom: 0;
+}
