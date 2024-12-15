@@ -134,7 +134,7 @@
 
 (defcommand toggle-truly-fullscreen () ()
   (setf *truly-fullscreen* (not *truly-fullscreen*))
-  (let ((ignored-pixels (if *truly-fullscreen* 0 26))
+  (let ((ignored-pixels (if *truly-fullscreen* 0 33))
         (screen (stumpwm:current-screen)))
     (stumpwm::resize-head 0 0 ignored-pixels
                           (stumpwm:screen-width screen)
@@ -192,6 +192,7 @@
   (when stumpwm:*initializing*
     (hexstream-cold-init)
     (toggle-truly-fullscreen))
+  (stumpwm:set-font "-*-fixed-*-*-*-*-20-*-*-*-*-*-*-*")
   (bind "C-t" "other-in-frame")
   (bind "-" "remove-split")
   (bind "=" "balance-frames")

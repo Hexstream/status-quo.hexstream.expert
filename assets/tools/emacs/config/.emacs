@@ -159,8 +159,7 @@
  ;; If there is more than one, they won't work right.
  '(erc-server "irc.freenode.net")
  '(safe-local-variable-values
-   (quote
-    ((Package . ccl)
+   '((Package . ccl)
      (Package . CCL)
      (package . asdf)
      (Package . DRAKMA)
@@ -186,13 +185,14 @@
      (Package . HUNCHENTOOT)
      (Base . 10)
      (unibyte . t)
-     (Package . COMMON-LISP-USER))))
- '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
+     (Package . COMMON-LISP-USER)))
+ '(uniquify-buffer-name-style 'forward nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#3b3b3e" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width normal :foundry "Bits" :family "Bitstream Vera Sans Mono"))))
  '(menu ((((type x-toolkit)) (:weight normal :height 140 :width normal :family "geneva"))))
  '(slime-repl-output-mouseover-face ((t (:inherit slime-repl-inputed-output-face)))))
 
