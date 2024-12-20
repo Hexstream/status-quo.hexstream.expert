@@ -283,7 +283,7 @@
 
 .select-layer:not(.select-layer_base):target ~ #layers .layer-selector_base a {
     text-decoration: none;
-    color: inherit;
+    color: revert;
 }
 
 .pair-macros:target         ~ #keyboard .layer       .pair-macros_highlight,
