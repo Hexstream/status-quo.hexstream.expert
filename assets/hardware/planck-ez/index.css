@@ -194,7 +194,7 @@
 
 /* Selected layer */
 
-.select-layer_wheel:target    ~ #keyboard #wheel-layer,
+.select-layer_mouse:target    ~ #keyboard #mouse-layer,
 .select-layer_fallback:target ~ #keyboard #fallback-layer,
 .select-layer_f-raise:target  ~ #keyboard #f-raise-layer,
 .select-layer_f-lower:target  ~ #keyboard #f-lower-layer,
@@ -226,7 +226,7 @@
 
 
 /* Layer is selected directly, so make link appear not clickable. */
-#wheel:target    ~ * .layer-selector_wheel a,
+#mouse:target    ~ * .layer-selector_mouse    a,
 #fallback:target ~ * .layer-selector_fallback a,
 #f-raise:target  ~ * .layer-selector_f-raise  a,
 #f-lower:target  ~ * .layer-selector_f-lower  a,
@@ -243,7 +243,7 @@
 }
 
 /* Layer is selected directly or indirectly, so underline. */
-.select-layer_wheel:target    ~ * .layer-selector_wheel    a,
+.select-layer_mouse:target    ~ * .layer-selector_mouse    a,
 .select-layer_fallback:target ~ * .layer-selector_fallback a,
 .select-layer_f-raise:target  ~ * .layer-selector_f-raise  a,
 .select-layer_f-lower:target  ~ * .layer-selector_f-lower  a,
@@ -260,7 +260,7 @@
     opacity: revert !important;
 }
 
-.select-layer_wheel:target    ~ * .layer-selector_under_wheel    a,
+.select-layer_mouse:target    ~ * .layer-selector_under_mouse    a,
 .select-layer_fallback:target ~ * .layer-selector_under_fallback a,
 .select-layer_f-raise:target  ~ * .layer-selector_under_f-raise  a,
 .select-layer_f-lower:target  ~ * .layer-selector_under_f-lower  a,
@@ -296,7 +296,7 @@
 
 /* Subsequent layers */
 
-.select-layer_wheel:target    ~ #keyboard .under_wheel-layer,
+.select-layer_mouse:target    ~ #keyboard .under_mouse-layer,
 .select-layer_fallback:target ~ #keyboard .under_fallback-layer,
 .select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer,
 .select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer,
@@ -312,7 +312,7 @@
     display: table;
 }
 
-.select-layer_wheel:target    ~ #keyboard .under_wheel-layer    td,
+.select-layer_mouse:target    ~ #keyboard .under_mouse-layer    td,
 .select-layer_fallback:target ~ #keyboard .under_fallback-layer td,
 .select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  td,
 .select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  td,
@@ -329,7 +329,7 @@
     box-shadow: none;
 }
 
-.select-layer_wheel:target    ~ #keyboard .under_wheel-layer    .modifier,
+.select-layer_mouse:target    ~ #keyboard .under_mouse-layer    .modifier,
 .select-layer_fallback:target ~ #keyboard .under_fallback-layer .modifier,
 .select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  .modifier,
 .select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  .modifier,
@@ -345,7 +345,7 @@
     color: rgba(0, 128, 0, 0.25);
 }
 
-.select-layer_wheel:target    ~ #keyboard .under_wheel-layer    .held,
+.select-layer_mouse:target    ~ #keyboard .under_mouse-layer    .held,
 .select-layer_fallback:target ~ #keyboard .under_fallback-layer .held,
 .select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  .held,
 .select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  .held,
@@ -362,7 +362,7 @@
     color: rgba(0, 0, 0, 0.25);
 }
 
-.select-layer_wheel:target    ~ #keyboard .under_wheel-layer caption,
+.select-layer_mouse:target    ~ #keyboard .under_mouse-layer caption,
 .select-layer_fallback:target ~ #keyboard .under_fallback-layer caption,
 .select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  caption,
 .select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  caption,
@@ -378,7 +378,7 @@
     opacity: 0;
 }
 
-.select-layer_wheel:target    ~ #keyboard .under_wheel-layer    .layer-key a,
+.select-layer_mouse:target    ~ #keyboard .under_mouse-layer    .layer-key a,
 .select-layer_fallback:target ~ #keyboard .under_fallback-layer .layer-key a,
 .select-layer_f-raise:target  ~ #keyboard .under_f-raise-layer  .layer-key a,
 .select-layer_f-lower:target  ~ #keyboard .under_f-lower-layer  .layer-key a,

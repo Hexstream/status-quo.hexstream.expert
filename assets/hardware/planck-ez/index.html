@@ -39,7 +39,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2024-04-20">20 april 2024</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2024-12-20">20 december 2024</time><span>.</span></p>
 
     </nav>
 
@@ -140,7 +140,7 @@
         </div>
 
         <span id="base"     class="layer-target select-layer select-layer_base     skip-history fallback-toggle"></span>
-        <span id="wheel"    class="layer-target select-layer select-layer_wheel    skip-history"></span>
+        <span id="mouse"    class="layer-target select-layer select-layer_mouse    skip-history"></span>
         <span id="fallback" class="layer-target select-layer select-layer_fallback skip-history fallback-toggle fallback"></span>
         <span id="raise"    class="layer-target select-layer select-layer_raise    skip-history fallback-toggle"></span>
         <span id="lower"    class="layer-target select-layer select-layer_lower    skip-history fallback-toggle"></span>
@@ -165,7 +165,7 @@
         <nav class="tabs" id="layers">
           <ul class="group fallback">
             <li class="layer-selector layer-selector_base layer-selector_under_fallback layer-selector_under_raise layer-selector_under_lower layer-selector_under_higher layer-selector_under_adjust layer-selector_under_nav layer-selector_under_warp layer-selector_under_crawl layer-selector_under_numpad layer-selector_under_f-raise layer-selector_under_f-lower layer-selector_under_f-higher"><a href="#base">Base</a></li>
-            <li class="layer-selector layer-selector_wheel"><a href="#wheel">Wheel</a></li>
+            <li class="layer-selector layer-selector_mouse"><a href="#mouse">Mouse</a></li>
             <li class="layer-selector layer-selector_fallback layer-selector_under_f-raise layer-selector_under_f-lower layer-selector_under_f-higher fallback"><a href="#fallback">Fallback</a></li>
           </ul>
           <ul class="group">
@@ -199,7 +199,7 @@
 
         <div class="scroll" id="keyboard">
 
-          <table id="base-layer" class="layer under_wheel-layer under_fallback-layer under_raise-layer under_lower-layer under_higher-layer under_adjust-layer under_nav-layer under_warp-layer under_crawl-layer under_numpad-layer under_f-raise-layer under_f-lower-layer under_f-higher-layer">
+          <table id="base-layer" class="layer under_mouse-layer under_fallback-layer under_raise-layer under_lower-layer under_higher-layer under_adjust-layer under_nav-layer under_warp-layer under_crawl-layer under_numpad-layer under_f-raise-layer under_f-lower-layer under_f-higher-layer">
             <tr>
               <td>⇥</td>
               <td class="normal-key contains-custom">
@@ -596,7 +596,7 @@
                   <span class="custom">Fullscreen</span>
                   <span class="original"><span>(</span>F15<span>)</span></span>
                 </div>
-                <a href="#wheel" class="held">↺Wheel</a>
+                <a href="#mouse" class="held">↺Mouse</a>
               </td>
               <td class="modifier">Super</td>
               <td class="layer-key"><a href="#lower">↺Lower</a></td>
@@ -614,12 +614,15 @@
             </tr>
           </table>
 
-          <table id="wheel-layer" class="layer">
+          <table id="mouse-layer" class="layer">
             <tr>
               <td class="danger">Esc</td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
+              <td class="yay">Right<br />click</td>
+              <td class="contains-custom control">
+                <span class="custom">1 pixel<br />▲</span>
+                <span class="original"><span>(</span>Super-▲<span>)</span></span>
+              </td>
+              <td class="yay">Left<br />click</td>
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
@@ -631,10 +634,19 @@
             </tr>
             <tr>
               <td class="modifier">Super</td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
+              <td class="contains-custom control">
+                <span class="custom">1 pixel<br />◀</span>
+                <span class="original"><span>(</span>Super-◀<span>)</span></span>
+              </td>
+              <td class="contains-custom control">
+                <span class="custom">1 pixel<br />▼</span>
+                <span class="original"><span>(</span>Super-▼<span>)</span></span>
+              </td>
+              <td class="contains-custom control">
+                <span class="custom">1 pixel<br />▶</span>
+                <span class="original"><span>(</span>Super-▶<span>)</span></span>
+              </td>
+              <td class="yay">Middle<br />click</td>
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
@@ -647,7 +659,7 @@
               <td class="modifier yay">Ctrl</td>
               <td class="nav">Wheel left</td>
               <td class="nav">Wheel right</td>
-              <td class="void"></td>
+              <td class="layer-key function"><a href="#nav">To Nav</a></td>
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
@@ -658,7 +670,7 @@
               <td class="void"></td>
             </tr>
             <tr>
-              <td class="void"></td>
+              <td class="layer-key held"><a href="#base">↺Mouse</a></td>
               <td class="nav">Wheel up</td>
               <td class="nav">Wheel down</td>
               <td class="modifier yay">⎇</td>
@@ -1849,7 +1861,7 @@
               <td class="void"></td>
               <td class="void"></td>
               <td class="void"></td>
-              <td class="contains-custom nav mouse-control_highlight">
+              <td class="contains-custom control mouse-control_highlight">
                 <span class="custom">1 pixel<br />▲</span>
                 <span class="original"><span>(</span>Super-▲<span>)</span></span>
               </td>
@@ -1865,15 +1877,15 @@
             <tr>
               <td class="void"></td>
               <td class="void"></td>
-              <td class="contains-custom nav mouse-control_highlight">
+              <td class="contains-custom control mouse-control_highlight">
                 <span class="custom">1 pixel<br />◀</span>
                 <span class="original"><span>(</span>Super-◀<span>)</span></span>
               </td>
-              <td class="contains-custom nav mouse-control_highlight">
+              <td class="contains-custom control mouse-control_highlight">
                 <span class="custom">1 pixel<br />▼</span>
                 <span class="original"><span>(</span>Super-▼<span>)</span></span>
               </td>
-              <td class="contains-custom nav mouse-control_highlight">
+              <td class="contains-custom control mouse-control_highlight">
                 <span class="custom">1 pixel<br />▶</span>
                 <span class="original"><span>(</span>Super-▶<span>)</span></span>
               </td>
@@ -1963,7 +1975,7 @@
               <td class="modifier">⎇</td>
               <td class="modifier">⇧</td>
               <td class="modifier">Ctrl</td>
-              <td class="spacebar" colspan="2"><a href="#base">To Base</a></td>
+              <td class="spacebar layer-key" colspan="2"><a href="#base">To Base</a></td>
               <td class="nav">0</td>
               <td>num .</td>
               <td>num ,</td>
