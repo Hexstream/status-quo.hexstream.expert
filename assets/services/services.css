@@ -1,7 +1,0 @@
-table .upcoming, table .redirect {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-table .upcoming a {
-    color: inherit;
-}
