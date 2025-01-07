@@ -3,11 +3,11 @@ section:not(#usage-notes) > p {
 }
 
 
-table .upcoming, table .redirect {
+#my-config_domain-names table tbody.additional, table .redirect {
     color: rgba(0, 0, 0, 0.6);
 }
 
-table .upcoming a {
+#my-config_domain-names table tbody.additional a {
     color: inherit;
 }
 
