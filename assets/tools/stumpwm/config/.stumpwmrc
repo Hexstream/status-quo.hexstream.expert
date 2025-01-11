@@ -200,7 +200,8 @@
   (setf stumpwm:*mouse-focus-policy* :click)
   (setf stumpwm:*timeout-frame-indicator-wait* 0.2
         stumpwm:*timeout-wait* 5)
-  (setf stumpwm:*window-border-style* :thick)
+  (setf stumpwm:*normal-border-width* 0
+        stumpwm:*window-border-style* :thick)
   (bind "DEL" "multiclick-reset")
   (bind "SPC" "multiclick-append")
   (bind "RET" "multiclick-apply")
