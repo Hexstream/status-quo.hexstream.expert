@@ -121,7 +121,7 @@
 
 }
 
-#custom-labels:checked ~ #highlight-custom:checked ~ #keyboard .layer .contains-custom {
+#custom-labels:checked ~ #highlight-custom:checked ~ #keyboard .layer td:has(.custom) {
     background-color: rgb(255, 191, 163);
 }
 

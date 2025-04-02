@@ -51,7 +51,7 @@
     margin-right: 0;
 }
 
-:is(#articles, #radar).tabs.contains-title h1 a {
+:is(#articles, #radar).tabs h1 a {
     color: inherit;
 }
 
