@@ -150,15 +150,15 @@
 
             <p>So I just have 3 permanent workspaces that are set up in <a href="https://github.com/Hexstream/status-quo.hexstream.expert/blob/master/assets/tools/stumpwm/config/.stumpwmrc" target="_blank">my <code>.stumpwmrc</code> file</a>:</p>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="overview_workspaces_misc">
-                <h1><a href="#overview_workspaces_misc" class="custom">① Misc</a></h1>
+                <h1><a class="self-link custom" href="#overview_workspaces_misc">① Misc</a></h1>
                 <p>For whenever I need a workspace beyond the other two.</p>
               </article>
 
               <article class="card" id="overview_workspaces_dev">
-                <h1><a href="#overview_workspaces_dev" class="custom">② Dev</a></h1>
+                <h1><a class="self-link custom" href="#overview_workspaces_dev">② Dev</a></h1>
                 <p>Most of the real action happens in this workspace.</p>
                 <p>What's more, most everything happens in 3 windows:</p>
                 <div class="cards">
@@ -180,7 +180,7 @@
               </article>
 
               <article class="card" id="overview_workspaces_games">
-                <h1><a href="#overview_workspaces_games" class="custom">③ Games</a></h1>
+                <h1><a class="self-link custom" href="#overview_workspaces_games">③ Games</a></h1>
                 <p>For entertainment, or to do something trivial real quick.</p>
               </article>
 
@@ -235,10 +235,10 @@
               </span>
             </h1>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="vgroups">
-                <h1><a href="#vgroups"><code class="built-in">vgroups</code></a></h1>
+                <h1><a class="self-link" href="#vgroups"><code class="built-in">vgroups</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> G</kbd></p>
                 <figure>
                   <a href="vgroups.png" target="_blank"><img src="vgroups.png" width="507" height="92" alt="[Example vgroups output]" /></a>
@@ -256,7 +256,7 @@
               </article>
 
               <article class="card" id="gselect">
-                <h1><a href="#gselect"><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code></a></h1>
+                <h1><a class="self-link" href="#gselect"><code class="built-in">gselect 1</code>, <code class="built-in">gselect 2</code>, <code class="built-in">gselect 3</code></a></h1>
                 <p class="hoisted binding">
                   <kbd class="key-sequence custom"><kbd>Super-1</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-2</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-3</kbd></kbd></kbd>
                 </p>
@@ -264,7 +264,7 @@
               </article>
 
               <article class="card" id="other-in-frame">
-                <h1><a href="#other-in-frame"><code class="built-in">other-in-frame</code></a></h1>
+                <h1><a class="self-link" href="#other-in-frame"><code class="built-in">other-in-frame</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-t</kbd></kbd></p>
                 <p>Display the current frame's most recently selected window.</p>
                 <p>
@@ -275,7 +275,7 @@
               </article>
 
               <article class="card" id="select-window-by-number">
-                <h1><a href="#select-window-by-number"><code class="built-in">select-window-by-number</code></a></h1>
+                <h1><a class="self-link" href="#select-window-by-number"><code class="built-in">select-window-by-number</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <var>digit</var></kbd></p>
                 <p>
                   Select the window with the corresponding <var>digit</var> in the current workspace,
@@ -285,25 +285,25 @@
               </article>
 
               <article class="card" id="pull-hidden-next">
-                <h1><a href="#pull-hidden-next"><code class="built-in">pull-hidden-next</code>, <code class="built-in">pull-hidden-previous</code></a></h1>
+                <h1><a class="self-link" href="#pull-hidden-next"><code class="built-in">pull-hidden-next</code>, <code class="built-in">pull-hidden-previous</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> n</kbd>, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> p</kbd></p>
                 <p>Select the next or previous window in the current frame.</p>
               </article>
 
               <article class="card" id="delete">
-                <h1><a href="#delete"><code class="built-in">delete</code></a></h1>
+                <h1><a class="self-link" href="#delete"><code class="built-in">delete</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-k</kbd></kbd>, <kbd class="key-sequence custom"><kbd>Super-a</kbd></kbd></p>
                 <p>Close the current window normally.</p>
               </article>
 
               <article class="card" id="kill">
-                <h1><a href="#kill"><code class="built-in">kill</code></a></h1>
+                <h1><a class="self-link" href="#kill"><code class="built-in">kill</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> <kbd>Ctrl-K</kbd></kbd></p>
                 <p>Close current window forcibly, killing the underlying application.</p>
               </article>
 
               <article class="card" id="gmove">
-                <h1><a href="#gmove"><code class="built-in">gmove</code></a></h1>
+                <h1><a class="self-link" href="#gmove"><code class="built-in">gmove</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> g m</kbd></p>
                 <p>Move the current window to another workspace.</p>
               </article>
@@ -331,10 +331,10 @@
               </span>
             </h1>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="emacs">
-                <h1><a href="#emacs"><code class="built-in">emacs</code></a></h1>
+                <h1><a class="self-link" href="#emacs"><code class="built-in">emacs</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e e</kbd> (mnemonic: "Execute Emacs")</p>
                 <p>Start an emacs instance, or switch to it if there's already one.</p>
                 <p>
@@ -345,13 +345,13 @@
               </article>
 
               <article class="card" id="google-chrome">
-                <h1><a href="#google-chrome"><code class="custom">google-chrome</code></a></h1>
+                <h1><a class="self-link" href="#google-chrome"><code class="custom">google-chrome</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e b</kbd> (mnemonic: "Execute Browser")</p>
                 <p>Make a new browser window, regardless of if there's already one or not.</p>
               </article>
 
               <article class="card" id="gnome-terminal">
-                <h1><a href="#gnome-terminal"><code class="custom">gnome-terminal</code></a></h1>
+                <h1><a class="self-link" href="#gnome-terminal"><code class="custom">gnome-terminal</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> e c</kbd> (mnemonic: "Execute Console")</p>
                 <p>Start a terminal instance, or switch to it if there's already one.</p>
                 <p>
@@ -362,7 +362,7 @@
               </article>
 
               <article class="card" id="nautilus">
-                <h1><a href="#nautilus"><code class="custom">exec nautilus</code></a></h1>
+                <h1><a class="self-link" href="#nautilus"><code class="custom">exec nautilus</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Super-e</kbd></kbd></p>
                 <p>Open file browser in home directory.</p>
                 <p>(Keybinding inspired by Windows' <kbd class="key-sequence"><kbd>Win-E</kbd></kbd>.)</p>
@@ -385,22 +385,22 @@
               </span>
             </h1>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="send-escape">
-                <h1><a href="#send-escape"><code class="built-in">send-escape</code></a></h1>
+                <h1><a class="self-link" href="#send-escape"><code class="built-in">send-escape</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> t</kbd></p>
                 <p>Send a <kbd class="key-sequence"><kbd>Ctrl-t</kbd></kbd> to the current application.</p>
               </article>
 
               <article class="card" id="banish">
-                <h1><a href="#banish"><code class="built-in">banish</code></a></h1>
+                <h1><a class="self-link" href="#banish"><code class="built-in">banish</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> b</kbd></p>
                 <p>Put the cursor out of the way at the bottom right corner of the screen.</p>
               </article>
 
               <article class="card" id="amixer-master">
-                <h1><a href="#amixer-master"><code class="custom">amixer-master</code></a></h1>
+                <h1><a class="self-link" href="#amixer-master"><code class="custom">amixer-master</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x v</kbd></p>
                 <p>Change the global sound level. Asks for a percentage.</p>
                 <p><code>1</code>, <code>2</code>, <code>3</code> and <code>4</code> are shortcuts for 33%, 50%, 75% and 100%, respectively.</p>
@@ -430,10 +430,10 @@
             </span>
           </h1>
 
-          <div class="cards cards-link-to-themselves">
+          <div class="cards">
 
             <article class="card" id="fullscreen">
-              <h1><a href="#fullscreen"><code class="built-in">fullscreen</code></a></h1>
+              <h1><a class="self-link" href="#fullscreen"><code class="built-in">fullscreen</code></a></h1>
               <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Super-f</kbd></kbd></p>
               <p>Make the current window fullscreen.</p>
             </article>
@@ -481,10 +481,10 @@
               </span>
             </h1>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="where-is">
-                <h1><a href="#where-is"><code class="built-in">where-is</code></a></h1>
+                <h1><a class="self-link" href="#where-is"><code class="built-in">where-is</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h w</kbd></p>
                 <p>Show what key sequence(s) will invoke the given <var>command</var>.</p>
                 <p>
@@ -495,19 +495,19 @@
               </article>
 
               <article class="card" id="describe-key">
-                <h1><a href="#describe-key"><code class="built-in">describe-key</code></a></h1>
+                <h1><a class="self-link" href="#describe-key"><code class="built-in">describe-key</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h k</kbd></p>
                 <p>Show what command, if any, is bound to the given <var>key sequence</var>.</p>
               </article>
 
               <article class="card" id="describe-command">
-                <h1><a href="#describe-command"><code class="built-in">describe-command</code></a></h1>
+                <h1><a class="self-link" href="#describe-command"><code class="built-in">describe-command</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h c</kbd></p>
                 <p>Show a small description for a command.</p>
               </article>
 
               <article class="card" id="partial-key-sequence-help">
-                <h1><a href="#partial-key-sequence-help">Partial key sequence help</a></h1>
+                <h1><a class="self-link" href="#partial-key-sequence-help">Partial key sequence help</a></h1>
                 <p class="hoisted binding"><kbd class="long key-sequence built-in"><var>partial-key-sequence</var> <kbd>Ctrl-h</kbd></kbd></p>
                 <p>Lists all keybindings reachable from the <var>partial-key-sequence</var>.</p>
                 <p>For instance, <kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> h <kbd>Ctrl-h</kbd></kbd> usefully lists all interactive help commands!</p>
@@ -542,37 +542,37 @@
             <p>StumpWM's ability to imitate emacs' windowing system is one of its most touted features, and yet I almost never use it. I usually have a single frame (and therefore a single window) visible in each workspace.</p>
             <p>I think I'm simply not using enough windows at once to make it worthwhile, besides rare special cases where I do need to see 2 or more windows at the same time.</p>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="vsplit">
-                <h1><a href="#vsplit"><code class="built-in">vsplit</code></a></h1>
+                <h1><a class="self-link" href="#vsplit"><code class="built-in">vsplit</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> s</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> 2</kbd> (<code>split-window-vertically</code>).</p>
                 <p>Useful if I need to see 2 windows at the same time.</p>
               </article>
 
               <article class="card" id="hsplit">
-                <h1><a href="#hsplit"><code class="built-in">hsplit</code></a></h1>
+                <h1><a class="self-link" href="#hsplit"><code class="built-in">hsplit</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> S</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> 3</kbd> (<code>split-window-horizontally</code>).</p>
                 <p>Useful in very special situations where I want to do a side-by-side comparison.</p>
               </article>
 
               <article class="card" id="only">
-                <h1><a href="#only"><code class="built-in">only</code></a></h1>
+                <h1><a class="self-link" href="#only"><code class="built-in">only</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> Q</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> 1</kbd> (<code>delete-other-windows</code>).</p>
                 <p>Effectively returns the current workspace to the usual mode of operation, in my case.</p>
               </article>
 
               <article class="card" id="fnext">
-                <h1><a href="#fnext"><code class="built-in">fnext</code></a></h1>
+                <h1><a class="self-link" href="#fnext"><code class="built-in">fnext</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> o</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> o</kbd> (<code>other-window</code>).</p>
               </article>
 
               <article class="card" id="balance-frames">
-                <h1><a href="#balance-frames"><code class="built-in">balance-frames</code></a></h1>
+                <h1><a class="self-link" href="#balance-frames"><code class="built-in">balance-frames</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> +</kbd></p>
                 <p>Equivalent to emacs' <kbd class="key-sequence"><kbd>C-x</kbd> +</kbd> (<code>balance-windows</code>).</p>
                 <p>
@@ -583,7 +583,7 @@
               </article>
 
               <article class="card" id="iresize">
-                <h1><a href="#iresize"><code class="built-in">iresize</code></a></h1>
+                <h1><a class="self-link" href="#iresize"><code class="built-in">iresize</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> r</kbd></p>
                 <p>Useful in very special situations where I need very specific frame sizes.</p>
                 <p>Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to expand or shrink the frame vertically.</p>
@@ -608,24 +608,24 @@
               </span>
             </h1>
 
-            <div class="cards cards-link-to-themselves">
+            <div class="cards">
 
               <article class="card" id="loadrc">
-                <h1><a href="#loadrc"><code class="built-in">loadrc</code></a></h1>
+                <h1><a class="self-link" href="#loadrc"><code class="built-in">loadrc</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x l</kbd></p>
                 <p>Reload <code>.stumpwmrc</code> config file.</p>
                 <p>Not quite like having a real <abbr title="Read-Eval-Print-Loop">REPL</abbr>, but usually good enough for simple casual configuration editing and testing.</p>
               </article>
 
               <article class="card" id="lastmsg">
-                <h1><a href="#lastmsg"><code class="built-in">lastmsg</code></a></h1>
+                <h1><a class="self-link" href="#lastmsg"><code class="built-in">lastmsg</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> m</kbd></p>
                 <p>Display the last StumpWM message again, in case you missed it.</p>
                 <p>Use it multiple times in a row to display previous messages.</p>
               </article>
 
               <article class="card" id="lastmsg-no-timeout">
-                <h1><a href="#lastmsg-no-timeout"><code class="custom">lastmsg-no-timeout</code></a></h1>
+                <h1><a class="self-link" href="#lastmsg-no-timeout"><code class="custom">lastmsg-no-timeout</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> M</kbd></p>
                 <p>
                   Display the last message StumpWM displayed again, "indefinitely" until another message comes up
@@ -635,7 +635,7 @@
               </article>
 
               <article class="card" id="list-window-properties">
-                <h1><a href="#list-window-properties"><code class="built-in">list-window-properties</code></a></h1>
+                <h1><a class="self-link" href="#list-window-properties"><code class="built-in">list-window-properties</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x p</kbd></p>
                 <p>
                   Display the X window properties of the current window. Potentially useful notably to know what arguments to give to <code>run-or-raise</code>
@@ -645,13 +645,13 @@
               </article>
 
               <article class="card" id="activate-screensaver">
-                <h1><a href="#activate-screensaver"><code class="custom">activate-screensaver</code></a></h1>
+                <h1><a class="self-link" href="#activate-screensaver"><code class="custom">activate-screensaver</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence custom"><kbd>Ctrl-t</kbd> x b</kbd> (mnemonic: "Blank screen")</p>
                 <p>Activate the screensaver, lock the screen.<br />But usually I just let the screensaver auto-activate with its timeout...</p>
               </article>
 
               <article class="card" id="colon">
-                <h1><a href="#colon"><code class="built-in">colon</code></a></h1>
+                <h1><a class="self-link" href="#colon"><code class="built-in">colon</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> ;</kbd></p>
                 <p>Invoke a StumpWM command by name. Similar to emacs' <kbd class="key-sequence"><kbd>M-x</kbd></kbd> (<code>execute-extended-command</code>).</p>
                 <p>Allows one to invoke a command that doesn't (yet) have an assigned keybinding.</p>
@@ -659,7 +659,7 @@
               </article>
 
               <article class="card" id="eval">
-                <h1><a href="#eval"><code class="built-in">eval</code></a></h1>
+                <h1><a class="self-link" href="#eval"><code class="built-in">eval</code></a></h1>
                 <p class="hoisted binding"><kbd class="key-sequence built-in"><kbd>Ctrl-t</kbd> :</kbd></p>
                 <p>
                   Make the underlying Common Lisp implementation evaluate an expression and print any values it returns.

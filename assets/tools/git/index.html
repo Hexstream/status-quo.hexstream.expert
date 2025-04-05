@@ -114,10 +114,10 @@
             </span>
           </h1>
 
-          <div class="cards cards-link-to-themselves">
+          <div class="cards">
 
             <article class="card" id="sb">
-              <h1><a href="#sb" class="custom"><code>git sb</code></a></h1>
+              <h1><a class="self-link" href="#sb" class="custom"><code>git sb</code></a></h1>
               <p>Alias for <code>git status -s && git branch -av</code> (or <code>git s && git b</code>).</p>
               <p>
                 Show summary of working tree and staging area relative to HEAD,
@@ -127,7 +127,7 @@
 
             <article class="card" id="d">
               <h1>
-                <a href="#d" class="custom">
+                <a class="self-link" href="#d" class="custom">
                   <code>git d [<var>paths</var>] [--stat]</code>
                   <br/>
                   <code>git dc [<var>paths</var>] [--stat]</code>
@@ -144,7 +144,7 @@
             </article>
 
             <article class="card" id="add">
-              <h1><a href="#add"><code>git add <var>paths…</var></code></a></h1>
+              <h1><a class="self-link" href="#add"><code>git add <var>paths…</var></code></a></h1>
               <p>
                 Add given files and directories in working directory to staging area.
                 <br />
@@ -169,7 +169,7 @@
             </article>
 
             <article class="card" id="commit">
-              <h1><a href="#commit"><code>git commit</code></a></h1>
+              <h1><a class="self-link" href="#commit"><code>git commit</code></a></h1>
               <p>I sometimes use the <code>-a</code> option for trivial commits, but I usually <code>git add</code> files beforehand.</p>
               <p>
                 I almost always use the <code>-m</code> option to specify the commit message on the command line, since it's usually a one-liner, in my case.
@@ -203,7 +203,7 @@
             </article>
 
             <article class="card" id="push">
-              <h1><a href="#push"><code>git push [-f] <var>remote</var> [<var>branch</var>]</code></a></h1>
+              <h1><a class="self-link" href="#push"><code>git push [-f] <var>remote</var> [<var>branch</var>]</code></a></h1>
               <p>Push <var>branch</var> (which defaults to HEAD) to <var>remote</var>.</p>
               <p>Use the <code>-f</code> option to force push if necessary.</p>
               <p>
@@ -215,7 +215,7 @@
             </article>
 
             <article class="card" id="log">
-              <h1><a href="#log"><code>git log [<var>branch</var>] [<var>paths</var>…]</code></a></h1>
+              <h1><a class="self-link" href="#log"><code>git log [<var>branch</var>] [<var>paths</var>…]</code></a></h1>
               <p>
                 Show past commits on <var>branch</var> (which defaults to HEAD).
                 <br />
@@ -224,7 +224,7 @@
             </article>
 
             <article class="card" id="show">
-              <h1><a href="#show"><code>git show [<var>commit</var>] [--stat]</code></a></h1>
+              <h1><a class="self-link" href="#show"><code>git show [<var>commit</var>] [--stat]</code></a></h1>
               <p>Show <var>commit</var> message and diff.</p>
             </article>
 
@@ -244,11 +244,11 @@
             </span>
           </h1>
 
-          <div class="cards cards-link-to-themselves">
+          <div class="cards">
 
             <article class="card" id="rm">
               <h1>
-                <a href="#rm">
+                <a class="self-link" href="#rm">
                   <code>git rm <var>files…</var></code>
                   <br/>
                   <code>git rm -r <var>directories…</var></code>
@@ -258,19 +258,19 @@
             </article>
 
             <article class="card" id="checkout_branch">
-              <h1><a href="#checkout_branch"><code>git checkout [-b] <var>branch</var></code></a></h1>
+              <h1><a class="self-link" href="#checkout_branch"><code>git checkout [-b] <var>branch</var></code></a></h1>
               <p>Switch to the given <var>branch</var>. It's best to have a clean working tree when doing so.</p>
               <p>Rarely, with -b, create given <var>branch</var> pointing at HEAD commit and switch to it.</p>
             </article>
 
             <article class="card" id="checkout_paths">
-              <h1><a href="#checkout_paths"><code>git checkout [<var>tree-ish</var>] [--] <var>paths…</var></code></a></h1>
+              <h1><a class="self-link" href="#checkout_paths"><code>git checkout [<var>tree-ish</var>] [--] <var>paths…</var></code></a></h1>
               <p>Revert files matched by <var>paths</var> to the version of them from <var>tree-ish</var>, which defaults to the staging area.</p>
               <p>Use <code>--</code> to explicitly indicate the end of options.</p>
             </article>
 
             <article class="card" id="reset">
-              <h1><a href="#reset"><code>git reset <var>paths…</var></code></a></h1>
+              <h1><a class="self-link" href="#reset"><code>git reset <var>paths…</var></code></a></h1>
               <p>Pretty much the opposite of <code>git add <var>paths</var></code>.</p>
             </article>
 
@@ -290,22 +290,22 @@
             </span>
           </h1>
 
-          <div class="cards cards-link-to-themselves">
+          <div class="cards">
 
             <article class="card" id="init">
-              <h1><a href="#init"><code>git init [--bare]</code></a></h1>
+              <h1><a class="self-link" href="#init"><code>git init [--bare]</code></a></h1>
               <p>Initializes a git repository. Creates a <code>.git</code> subdirectory unless <code>--bare</code>.</p>
               <p><code>--bare</code> option is useful on private origins. I use one for local backups.</p>
             </article>
 
             <article class="card" id="clone">
-              <h1><a href="#clone"><code>git clone <var>url</var></code></a></h1>
+              <h1><a class="self-link" href="#clone"><code>git clone <var>url</var></code></a></h1>
               <p>Clones git repo at <var>url</var> into a new directory.</p>
               <p>I almost never use this since I almost always work on my own projects, which are already cloned.</p>
             </article>
 
             <article class="card" id="remote-add">
-              <h1><a href="#remote-add"><code>git remote add <var>name</var> <var>url</var></code></a></h1>
+              <h1><a class="self-link" href="#remote-add"><code>git remote add <var>name</var> <var>url</var></code></a></h1>
               <p>Sets up remote <var>name</var> pointing at <var>url</var>.</p>
               <p>Typical remotes:</p>
               <ul class="list">
@@ -316,19 +316,19 @@
             </article>
 
             <article class="card" id="push-u">
-              <h1><a href="#push-u"><code>git push -u <var>remote</var> <var>branch</var></code></a></h1>
+              <h1><a class="self-link" href="#push-u"><code>git push -u <var>remote</var> <var>branch</var></code></a></h1>
               <p>Sets up a remote-tracking branch.</p>
             </article>
 
             <article class="card" id="rebase">
-              <h1><a href="#rebase"><code>git rebase <var>branch</var></code></a></h1>
+              <h1><a class="self-link" href="#rebase"><code>git rebase <var>branch</var></code></a></h1>
               <p>Rewrites history by replaying commits on top of <var>branch</var>, almost always <code>master</code>.</p>
               <p>Especially useful in the case of long-lived branches, which are rare in my case.</p>
             </article>
 
             <article class="card" id="rebase-i">
               <h1>
-                <a href="#rebase-i">
+                <a class="self-link" href="#rebase-i">
                   <code>git rebase -i <var>commit</var></code>
                   <br />
                   <code>git rebase -i --root</code>
@@ -348,14 +348,14 @@
             </article>
 
             <article class="card" id="merge">
-              <h1><a href="#merge"><code>git merge <var>branch</var></code></a></h1>
+              <h1><a class="self-link" href="#merge"><code>git merge <var>branch</var></code></a></h1>
               <p>Merges the <var>branch</var> into the current branch.</p>
               <p>Typically used to merge a (rebased) branch into <code>master</code>.</p>
             </article>
 
             <article class="card" id="branch-d">
               <h1>
-                <a href="#branch-d">
+                <a class="self-link" href="#branch-d">
                   <code>git branch -d <var>branch</var></code>
                   <br />
                   <code>git branch -D <var>branch</var></code>
@@ -366,7 +366,7 @@
 
             <article class="card" id="stash">
               <h1>
-                <a href="#stash">
+                <a class="self-link" href="#stash">
                   <code>git stash</code>
                   <br />
                   <code>git stash pop</code>
@@ -378,7 +378,7 @@
             </article>
 
             <article class="card" id="reset-hard">
-              <h1><a href="#reset-hard"><code>git reset --hard <var>commit</var></code></a></h1>
+              <h1><a class="self-link" href="#reset-hard"><code>git reset --hard <var>commit</var></code></a></h1>
               <p>Set HEAD to <var>commit</var> and <span class="watch-out">throw away all changes to the index and working tree.</span></p>
               <p>Useful to nuke failed experiments. <span class="watch-out">Dangerous command, proceed with caution!</span></p>
             </article>

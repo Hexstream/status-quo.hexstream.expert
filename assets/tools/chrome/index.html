@@ -94,16 +94,16 @@
 
           <p>I'm quite mouse-oriented while using web browsers, so I use very few of their keyboard shortcuts.</p>
 
-          <div class="cards cards-link-to-themselves">
+          <div class="cards">
 
             <article class="card empty" id="new-tab">
-              <h1><a href="#new-tab">New tab</a></h1>
+              <h1><a class="self-link" href="#new-tab">New tab</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-t</kbd></p>
               <p></p>
             </article>
 
             <article class="card" id="open-in-new-tab">
-              <h1><a href="#open-in-new-tab">Open in new tab</a></h1>
+              <h1><a class="self-link" href="#open-in-new-tab">Open in new tab</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-click</kbd></p>
               <p>Open link in new tab.</p>
               <p>I use this quite extensively.</p>
@@ -111,19 +111,19 @@
             </article>
 
             <article class="card empty" id="open-most-recently-closed-tab">
-              <h1><a href="#open-most-recently-closed-tab">Open most recently closed tab</a></h1>
+              <h1><a class="self-link" href="#open-most-recently-closed-tab">Open most recently closed tab</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-Shift-t</kbd></p>
               <p></p>
             </article>
 
             <article class="card" id="focus-omnibox">
-              <h1><a href="#focus-omnibox">Focus omnibox</a></h1>
+              <h1><a class="self-link" href="#focus-omnibox">Focus omnibox</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-l</kbd></p>
               <p></p>
             </article>
 
             <article class="card" id="find">
-              <h1><a href="#find">Find</a></h1>
+              <h1><a class="self-link" href="#find">Find</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-f</kbd></p>
               <p>Find and highlight occurrences of a particular text string on the page.</p>
               <p>
@@ -136,26 +136,26 @@
             </article>
 
             <article class="card" id="reload-page">
-              <h1><a href="#reload-page">Reload page</a></h1>
+              <h1><a class="self-link" href="#reload-page">Reload page</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-r</kbd></p>
               <p>Reload the page.</p>
               <p>(But usually I just click the reload button.)</p>
             </article>
 
             <article class="card" id="zoom">
-              <h1><a href="#zoom">Zoom</a></h1>
+              <h1><a class="self-link" href="#zoom">Zoom</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-+</kbd>, <kbd>Ctrl--</kbd>, <kbd>Ctrl-0</kbd></p>
               <p>Zoom in, zoom out, reset zoom to default, respectively.</p>
             </article>
 
             <article class="card" id="toggle-developer-tools">
-              <h1><a href="#toggle-developer-tools">Toggle developer tools</a></h1>
+              <h1><a class="self-link" href="#toggle-developer-tools">Toggle developer tools</a></h1>
               <p class="hoisted binding"><kbd>F12</kbd></p>
               <p>While the developer tools are open, press <kbd>ESC</kbd> to toggle the "drawer".</p>
             </article>
 
             <article class="card" id="clear-browsing-data">
-              <h1><a href="#clear-browsing-data">Clear browsing data</a></h1>
+              <h1><a class="self-link" href="#clear-browsing-data">Clear browsing data</a></h1>
               <p class="hoisted binding"><kbd>Ctrl-Shift-Delete</kbd></p>
               <p>Show the dialog for clearing browsing data.</p>
             </article>
@@ -180,7 +180,7 @@
             <!-- Having an element with ID of "adblock" seems to conflict with adblock... -->
             <article class="card" id="adblock-extension">
               <h1><a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom" target="_blank">Adblock</a></h1>
-              <p class="hoisted self-link"><a href="#adblock-extension">⚓</a></p>
+              <p class="hoisted"><a href="#adblock-extension" class="self-link">⚓</a></p>
               <p>It's impossible to browse the web without this.</p>
               <p>Blocks most ads on the web, <em>including</em> in-video ads!</p>
               <p>
@@ -199,7 +199,7 @@
 
             <article class="card" id="empty-new-tab-page">
               <h1><a href="https://chrome.google.com/webstore/detail/empty-new-tab-page/dpjamkmjmigaoobjbekmfgabipmfilij" target="_blank">Empty New Tab Page</a></h1>
-              <p class="hoisted self-link"><a href="#empty-new-tab-page">⚓</a></p>
+              <p class="hoisted"><a href="#empty-new-tab-page" class="self-link">⚓</a></p>
               <p>Gives you a zen New Tab opening experience.</p>
               <p>Opening a new tab shouldn't blast you with "information" you don't need.</p>
               <p>It also shouldn't expose your browsing history to anyone who happens to be looking over your shoulder.</p>
@@ -207,7 +207,7 @@
 
             <article class="card" id="full-page-screen-capture">
               <h1><a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl" target="_blank">Full Page Screen Capture</a></h1>
-              <p class="hoisted self-link"><a href="#full-page-screen-capture">⚓</a></p>
+              <p class="hoisted"><a href="#full-page-screen-capture" class="self-link">⚓</a></p>
               <p>
                 Very no-nonsense full page screen capture.
                 <br/>
@@ -217,7 +217,7 @@
 
             <article class="card" id="no-playlist-autoplay-for-youtube">
               <h1><a href="https://chromewebstore.google.com/detail/no-playlist-autoplay-for/dkokllldoffaconpbmbaofjbadhjggil" target="_blank">No Playlist Autoplay For YouTube</a></h1>
-              <p class="hoisted self-link"><a href="#no-playlist-autoplay-for-youtube">⚓</a></p>
+              <p class="hoisted"><a href="#no-playlist-autoplay-for-youtube" class="self-link">⚓</a></p>
               <p>
                 YouTube inexcusably does not provide a way to disable autoplay in playlists.
                 <br />
@@ -227,7 +227,7 @@
 
             <article class="card" id="keepassxc-browser">
               <h1><a href="https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk" target="_blank">KeePassXC-Browser</a></h1>
-              <p class="hoisted self-link"><a href="#keepassxc-browser">⚓</a></p>
+              <p class="hoisted"><a href="#keepassxc-browser" class="self-link">⚓</a></p>
               <p>Simple official browser integration for <a href="https://keepassxc.org/" target="_blank">my password manager</a>.</p>
             </article>
 
