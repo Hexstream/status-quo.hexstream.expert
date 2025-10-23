@@ -14,27 +14,3 @@
         margin-bottom: 0.5em;
     }
 }
-
-.subsection {
-    position: relative;
-}
-
-p.subsection {
-    overflow-x: revert;
-}
-
-.subsection:target::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-left: calc(-1 * var(--main_padding-left) / 2);
-    border-left: thin solid green;
-    animation: fadeout 0s forwards 0.75s;
-}
-
-@keyframes fadeout {
-    to {
-        opacity: 0;
-    }
-}
