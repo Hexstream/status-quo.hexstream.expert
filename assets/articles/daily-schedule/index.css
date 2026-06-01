@@ -1,0 +1,137 @@
+main {
+    margin-bottom: 0;
+}
+
+@media (min-width: 78em) {
+    main {
+        position: revert;
+    }
+
+    #page-header + .tabs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0.5em;
+    }
+
+    #page-header + .tabs > ul {
+        margin-top: 0;
+    }
+}
+
+#schedule #schedule_timeline {
+    display: flex;
+    flex-flow: column;
+    border: thick solid black;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    text-align: center;
+}
+
+@media (min-width: 50em) {
+    #schedule #schedule_timeline {
+        font-size: larger;
+    }
+}
+
+@media (min-width: 21em) {
+    #schedule #schedule_timeline a {
+        white-space: nowrap;
+    }
+}
+
+#schedule #schedule_timeline section {
+    padding: 0.3rem 0.5rem;
+    margin: 0;
+}
+
+#schedule #schedule_timeline section h1 {
+    margin-top: 0;
+}
+
+#schedule #schedule_timeline section p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#schedule #schedule_timeline .segment > :last-child {
+    margin-bottom: 0.3rem;
+}
+
+#schedule #schedule_timeline .segment {
+    font-size: larger;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#schedule #schedule_timeline .segment h1 {
+    font-size: 2em;
+}
+
+#schedule #schedule_timeline .segment h1 + p {
+    margin-top: 0;
+}
+
+#schedule #schedule_timeline .boundary {
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+#schedule #schedule_timeline .boundary h1 {
+    display: inline;
+    font-size: larger;
+}
+
+
+#schedule #schedule_timeline .split {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#schedule #schedule_timeline .split:target > span:not(#schedule_dinner) .self-link {
+    color: green;
+}
+
+#schedule #schedule_timeline .split > span {
+    padding: 0.3rem 0.5rem;
+}
+
+#schedule #schedule_timeline .split #schedule_dinner {
+    flex: none;
+    white-space: nowrap;
+    border-left: thick solid white;
+}
+
+
+#features {
+    margin-bottom: 1em;
+}
+
+#features .breadcrumbs-bar {
+    margin-bottom: 0;
+}
+
+#features .cards {
+    justify-content: center;
+}
+
+#features .cards .card {
+    padding-left: 0.75em;
+    border: none;
+    border-left: thin solid black;
+    margin-top: 1em;
+    background-color: transparent;
+}
+
+#features .cards .card h1 .checkmark {
+    display: inline-block;
+    color: green;
+    font-weight: bold;
+    transform: scale(1.2) translate(0.05em);
+}
