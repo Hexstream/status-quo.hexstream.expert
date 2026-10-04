@@ -43,7 +43,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2025-01-26">26 january 2025</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2026-10-04">4 october 2026</time><span>.</span></p>
 
     </nav>
 
@@ -144,12 +144,12 @@
         </div>
 
         <span id="base"     class="layer-target select-layer select-layer_base     skip-history fallback-toggle"></span>
-        <span id="mouse"    class="layer-target select-layer select-layer_mouse    skip-history"></span>
         <span id="fallback" class="layer-target select-layer select-layer_fallback skip-history fallback-toggle fallback"></span>
         <span id="raise"    class="layer-target select-layer select-layer_raise    skip-history fallback-toggle"></span>
         <span id="lower"    class="layer-target select-layer select-layer_lower    skip-history fallback-toggle"></span>
         <span id="higher"   class="layer-target select-layer select-layer_higher   skip-history fallback-toggle"></span>
         <span id="adjust"   class="layer-target select-layer select-layer_adjust   skip-history"></span>
+        <span id="mouse"    class="layer-target select-layer select-layer_mouse    skip-history"></span>
         <span id="nav"      class="layer-target select-layer select-layer_nav      skip-history"></span>
         <span id="warp"     class="layer-target select-layer select-layer_warp     skip-history"></span>
         <span id="crawl"    class="layer-target select-layer select-layer_crawl    skip-history"></span>
@@ -169,7 +169,6 @@
         <nav class="tabs" id="layers">
           <ul class="group fallback">
             <li class="layer-selector layer-selector_base layer-selector_under_fallback layer-selector_under_raise layer-selector_under_lower layer-selector_under_higher layer-selector_under_adjust layer-selector_under_nav layer-selector_under_warp layer-selector_under_crawl layer-selector_under_numpad layer-selector_under_f-raise layer-selector_under_f-lower layer-selector_under_f-higher"><a href="#base">Base</a></li>
-            <li class="layer-selector layer-selector_mouse"><a href="#mouse">Mouse</a></li>
             <li class="layer-selector layer-selector_fallback layer-selector_under_f-raise layer-selector_under_f-lower layer-selector_under_f-higher fallback"><a href="#fallback">Fallback</a></li>
           </ul>
           <ul class="group">
@@ -177,6 +176,9 @@
             <li class="layer-selector layer-selector_lower layer-selector_under_higher"><a href="#lower">Lower</a></li>
             <li class="layer-selector layer-selector_higher"><a href="#higher">Higher</a></li>
             <li class="layer-selector layer-selector_adjust"><a href="#adjust">Adjust</a></li>
+          </ul>
+          <ul class="group">
+            <li class="layer-selector layer-selector_mouse"><a href="#mouse">Mouse</a></li>
           </ul>
           <ul class="group">
             <li class="layer-selector layer-selector_nav layer-selector_under_warp layer-selector_under_crawl layer-selector_under_numpad"><a href="#nav">Nav</a></li>
@@ -615,79 +617,6 @@
                 <a href="#fallback" class="double-tapped">To Flbk</a>
               </td>
               <td class="layer-key"><a href="#nav">TT Nav</a></td>
-            </tr>
-          </table>
-
-          <table id="mouse-layer" class="layer">
-            <tr>
-              <td class="danger">Esc</td>
-              <td class="yay">Right<br />click</td>
-              <td class="control">
-                <span class="custom">1 pixel<br />▲</span>
-                <span class="original"><span>(</span>Super-▲<span>)</span></span>
-              </td>
-              <td class="yay">Left<br />click</td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-            </tr>
-            <tr>
-              <td class="modifier">Super</td>
-              <td class="control">
-                <span class="custom">1 pixel<br />◀</span>
-                <span class="original"><span>(</span>Super-◀<span>)</span></span>
-              </td>
-              <td class="control">
-                <span class="custom">1 pixel<br />▼</span>
-                <span class="original"><span>(</span>Super-▼<span>)</span></span>
-              </td>
-              <td class="control">
-                <span class="custom">1 pixel<br />▶</span>
-                <span class="original"><span>(</span>Super-▶<span>)</span></span>
-              </td>
-              <td class="yay">Middle<br />click</td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-            </tr>
-            <tr>
-              <td class="modifier yay">Ctrl</td>
-              <td class="nav">Wheel left</td>
-              <td class="nav">Wheel right</td>
-              <td class="mouse-control_highlight">
-                <span class="custom">Ban mouse</span>
-                <span class="original"><span>(</span>Super-n<span>)</span></span>
-              </td>
-              <td class="layer-key function"><a href="#nav">To Nav</a></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-            </tr>
-            <tr>
-              <td class="layer-key held"><a href="#base">↺Mouse</a></td>
-              <td class="nav">Wheel up</td>
-              <td class="nav">Wheel down</td>
-              <td class="modifier yay">⎇</td>
-              <td class="modifier">⇧</td>
-              <td class="modifier spacebar" colspan="2">AltGr</td>
-              <td class="modifier">Menu</td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
-              <td class="void"></td>
             </tr>
           </table>
 
@@ -1688,6 +1617,79 @@
               <td class="void"></td>
               <td class="void"></td>
               <td>🔅</td>
+            </tr>
+          </table>
+
+          <table id="mouse-layer" class="layer">
+            <tr>
+              <td class="danger">Esc</td>
+              <td class="yay">Right<br />click</td>
+              <td class="control">
+                <span class="custom">1 pixel<br />▲</span>
+                <span class="original"><span>(</span>Super-▲<span>)</span></span>
+              </td>
+              <td class="yay">Left<br />click</td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="modifier">Super</td>
+              <td class="control">
+                <span class="custom">1 pixel<br />◀</span>
+                <span class="original"><span>(</span>Super-◀<span>)</span></span>
+              </td>
+              <td class="control">
+                <span class="custom">1 pixel<br />▼</span>
+                <span class="original"><span>(</span>Super-▼<span>)</span></span>
+              </td>
+              <td class="control">
+                <span class="custom">1 pixel<br />▶</span>
+                <span class="original"><span>(</span>Super-▶<span>)</span></span>
+              </td>
+              <td class="yay">Middle<br />click</td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="modifier yay">Ctrl</td>
+              <td class="nav">Wheel left</td>
+              <td class="nav">Wheel right</td>
+              <td class="mouse-control_highlight">
+                <span class="custom">Ban mouse</span>
+                <span class="original"><span>(</span>Super-n<span>)</span></span>
+              </td>
+              <td class="layer-key function"><a href="#nav">To Nav</a></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+            </tr>
+            <tr>
+              <td class="layer-key held"><a href="#base">↺Mouse</a></td>
+              <td class="nav">Wheel up</td>
+              <td class="nav">Wheel down</td>
+              <td class="modifier yay">⎇</td>
+              <td class="modifier">⇧</td>
+              <td class="modifier spacebar" colspan="2">AltGr</td>
+              <td class="modifier">Menu</td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
+              <td class="void"></td>
             </tr>
           </table>
 
